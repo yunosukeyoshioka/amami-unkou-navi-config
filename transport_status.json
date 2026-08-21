@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-21T07:30:47.470Z",
+  "updatedAt": "2026-08-21T07:34:39.994Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -20,7 +20,7 @@
         {
           "label": "フェリー波之上 鹿児島発",
           "time": "本日",
-          "status": "conditional",
+          "status": "normal",
           "note": "通常運航致しております。"
         }
       ]
