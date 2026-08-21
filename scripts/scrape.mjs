@@ -4,6 +4,7 @@
 // FAQ文言まで拾ってしまうため、cheerioでDOM構造を絞り込んでから判定する。
 import { writeFileSync } from 'fs';
 import * as cheerio from 'cheerio';
+import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
 
 const UA = 'amami-unkou-navi-bot/1.0 (+https://github.com/yunosukeyoshioka/amami-unkou-navi-config)';
 
@@ -131,6 +132,314 @@ function airportNameFor(place) {
   return PLACE_AIRPORT_NAME_MAP[place] ?? `${place}空港`;
 }
 
+// 今日を含む/含まない先の暦日を [{iso, year, month, day}] の配列で作る
+// （時刻表PDFベースの「予定」データをどの日まで作るかに使う）。
+function datesAhead(startOffsetDays, count) {
+  const base = Date.UTC(JST_NOW.getUTCFullYear(), JST_NOW.getUTCMonth(), JST_NOW.getUTCDate());
+  return Array.from({ length: count }, (_, i) => {
+    const d = new Date(base + (startOffsetDays + i) * 24 * 60 * 60 * 1000);
+    return { iso: isoDate(d), year: d.getUTCFullYear(), month: d.getUTCMonth() + 1, day: d.getUTCDate() };
+  });
+}
+
+// ============================================================
+// 時刻表PDFから「予定（本日ライブ運航状況の対象外の日）」を組み立てる。
+// 各社サイトが実際に公開しているのは直近（当日・翌日程度）の運航状況
+// のみで、その先の日は時刻表PDF（航空会社の実運航状況とは別の、通常時の
+// 運航パターン）を参照するしかない。そのため、ここで作る便は
+// status: 'unknown' / isScheduled: true として明確に区別し、
+// 「確定した運航状況」とは混同しない。PDFの座標情報（x, y）から
+// 表の列・行を機械的に復元する（キーワード検索ではなく構造的な抽出）。
+// ============================================================
+
+async function fetchPdfTextItems(url) {
+  const res = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
+  if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
+  const data = new Uint8Array(await res.arrayBuffer());
+  const doc = await getDocument({ data, useWorkerFetch: false, isEvalSupported: false, disableFontFace: true }).promise;
+  const items = [];
+  for (let p = 1; p <= doc.numPages; p++) {
+    const page = await doc.getPage(p);
+    const content = await page.getTextContent();
+    for (const it of content.items) {
+      if (it.str.trim() === '') continue;
+      items.push({ text: it.str, x: it.transform[4], y: it.transform[5] });
+    }
+  }
+  return items;
+}
+
+// --- 奄美空港「月間時刻表」PDF（出発時刻・到着時刻・便名・航空会社・備考の
+// 5列×2表＝奄美着/奄美発が左右に並ぶレイアウト）を解析する ---
+const AIRPORT_DEST_HEADERS = [
+  'Kagoshima', 'Kikaijima', 'Tokunoshima', 'Yoron', 'Haneda', 'Narita', 'Itami', 'Kansai', 'Fukuoka', 'Naha',
+];
+const AIRPORT_DEST_JA_NAME = {
+  Kagoshima: '鹿児島', Kikaijima: '喜界島', Tokunoshima: '徳之島', Yoron: '与論',
+  Haneda: '東京(羽田)', Narita: '成田', Itami: '大阪(伊丹)', Kansai: '大阪(関西)', Fukuoka: '福岡', Naha: '沖縄(那覇)',
+};
+
+function airportFieldOf(x, side) {
+  const offset = side === 'arr' ? 0 : 242;
+  const ranges = [
+    ['time1', 45 + offset, 85 + offset],
+    ['time2', 85 + offset, 120 + offset],
+    ['flight', 120 + offset, 163 + offset],
+    ['airline', 163 + offset, 198 + offset],
+    ['remark', 198 + offset, 292 + offset],
+  ];
+  for (const [name, lo, hi] of ranges) {
+    if (x >= lo && x < hi) return name;
+  }
+  return null;
+}
+
+function parseAirportMonthlyPdf(items) {
+  const headers = items
+    .filter((it) => AIRPORT_DEST_HEADERS.includes(it.text))
+    .map((it) => ({ y: it.y, side: it.x < 250 ? 'arr' : 'dep', dest: it.text }))
+    .sort((a, b) => b.y - a.y);
+  if (headers.length === 0) return { arr: [], dep: [] };
+
+  const topmostHeaderY = headers[0].y;
+  const body = items.filter((it) => it.y <= topmostHeaderY);
+
+  const results = { arr: [], dep: [] };
+  for (const side of ['arr', 'dep']) {
+    const sideHeaders = headers.filter((h) => h.side === side);
+    const sideWords = body
+      .filter((it) => (side === 'arr' ? it.x < 250 : it.x >= 250))
+      .sort((a, b) => b.y - a.y || a.x - b.x);
+
+    for (let i = 0; i < sideHeaders.length; i++) {
+      const yStart = sideHeaders[i].y;
+      const yEnd = i + 1 < sideHeaders.length ? sideHeaders[i + 1].y : -Infinity;
+      const sectionWords = sideWords.filter((w) => w.y < yStart && w.y > yEnd);
+
+      const rows = [];
+      let curY = null;
+      let cur = [];
+      for (const w of sectionWords) {
+        if (curY === null || Math.abs(w.y - curY) < 3) {
+          cur.push(w);
+          curY = curY === null ? w.y : curY;
+        } else {
+          rows.push(cur);
+          cur = [w];
+          curY = w.y;
+        }
+      }
+      if (cur.length) rows.push(cur);
+
+      const entries = [];
+      let current = null;
+      for (const row of rows) {
+        const fields = {};
+        for (const w of row) {
+          const f = airportFieldOf(w.x, side);
+          if (!f) continue;
+          (fields[f] ??= []).push(w.text);
+        }
+        const hasTime = fields.time1 && fields.time2;
+        const hasFlight = !!fields.flight;
+        if (hasTime) {
+          if (current && current.dep === null) {
+            current.dep = fields.time1[0];
+            current.arr = fields.time2[0];
+            if (hasFlight) {
+              current.flights.push(...fields.flight);
+              current.airlines.push(...(fields.airline ?? []));
+            }
+            if (fields.remark) current.remarks.push(...fields.remark);
+          } else {
+            if (current && current.dep !== null) entries.push(current);
+            current = {
+              dest: sideHeaders[i].dest,
+              dep: fields.time1[0],
+              arr: fields.time2[0],
+              flights: [...(fields.flight ?? [])],
+              airlines: [...(fields.airline ?? [])],
+              remarks: [...(fields.remark ?? [])],
+            };
+          }
+        } else if (hasFlight) {
+          if (current && current.dep === null) {
+            current.flights.push(...fields.flight);
+            current.airlines.push(...(fields.airline ?? []));
+            if (fields.remark) current.remarks.push(...fields.remark);
+          } else {
+            if (current && current.dep !== null) entries.push(current);
+            current = {
+              dest: sideHeaders[i].dest,
+              dep: null,
+              arr: null,
+              flights: [...fields.flight],
+              airlines: [...(fields.airline ?? [])],
+              remarks: [...(fields.remark ?? [])],
+            };
+          }
+        } else if (current && fields.remark) {
+          current.remarks.push(...fields.remark);
+        }
+      }
+      if (current && current.dep !== null) entries.push(current);
+      results[side].push(...entries.filter((e) => e.flights.length > 0));
+    }
+  }
+  return results;
+}
+
+// 備考に "8/3〜25" のような有効日範囲があれば、対象日がその範囲内かを判定する
+// （範囲外の日にその便を予定として出さないため）。範囲の記載が無い備考は
+// 判定に使わない（＝毎日運航の前提で無条件に許可）。
+function remarkAllowsDate(remarks, targetYear, targetMonth, targetDay) {
+  for (const r of remarks) {
+    const m = r.match(/^(\d{1,2})\/(\d{1,2})[〜~](?:(\d{1,2})\/)?(\d{1,2})$/);
+    if (!m) continue;
+    const startMonth = Number(m[1]);
+    const startDay = Number(m[2]);
+    const endMonth = m[3] ? Number(m[3]) : startMonth;
+    const endDay = Number(m[4]);
+    const target = Date.UTC(targetYear, targetMonth - 1, targetDay);
+    const start = Date.UTC(targetYear, startMonth - 1, startDay);
+    const end = Date.UTC(targetYear, endMonth - 1, endDay);
+    if (target < start || target > end) return false;
+  }
+  return true;
+}
+
+async function fetchAirportScheduleEntries(targetDates) {
+  const monthlyHtml = await fetchHtml('https://amami-airport.co.jp/flight/monthly');
+  const $ = cheerio.load(monthlyHtml);
+
+  const neededYm = new Set(targetDates.map((d) => `${d.year}${String(d.month).padStart(2, '0')}`));
+  const pdfUrlByYm = new Map();
+  $('a[href$=".pdf"]').each((_, el) => {
+    const href = $(el).attr('href');
+    const m = href && href.match(/Monthly_(\d{6})_ja\.pdf/);
+    if (m && neededYm.has(m[1])) pdfUrlByYm.set(m[1], href);
+  });
+
+  const parsedByYm = new Map();
+  for (const [ym, url] of pdfUrlByYm) {
+    const items = await fetchPdfTextItems(url);
+    parsedByYm.set(ym, parseAirportMonthlyPdf(items));
+  }
+
+  const entries = [];
+  for (const d of targetDates) {
+    const ym = `${d.year}${String(d.month).padStart(2, '0')}`;
+    const parsed = parsedByYm.get(ym);
+    if (!parsed) continue; // その月の時刻表PDFが見つからなければ何も足さない（情報なし表示のまま）
+
+    for (const e of parsed.dep) {
+      if (!remarkAllowsDate(e.remarks, d.year, d.month, d.day)) continue;
+      const destJa = AIRPORT_DEST_JA_NAME[e.dest];
+      const destIsland = FLIGHT_DEST_ISLAND_MAP[destJa];
+      entries.push({
+        label: `${e.flights[0]}便 ${destJa}行き（予定）`,
+        time: e.dep,
+        date: d.iso,
+        status: 'unknown',
+        note: '時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。',
+        direction: 'departure',
+        islands: destIsland ? ['奄美大島', destIsland] : ['奄美大島'],
+        isScheduled: true,
+        departureLocation: '奄美空港',
+        arrivalLocation: airportNameFor(destJa),
+      });
+    }
+    for (const e of parsed.arr) {
+      if (!remarkAllowsDate(e.remarks, d.year, d.month, d.day)) continue;
+      const destJa = AIRPORT_DEST_JA_NAME[e.dest];
+      const originIsland = FLIGHT_DEST_ISLAND_MAP[destJa];
+      entries.push({
+        label: `${e.flights[0]}便 ${destJa}発（予定）`,
+        time: e.arr,
+        date: d.iso,
+        status: 'unknown',
+        note: '時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。',
+        direction: 'arrival',
+        islands: originIsland ? ['奄美大島', originIsland] : ['奄美大島'],
+        isScheduled: true,
+        departureLocation: airportNameFor(destJa),
+        arrivalLocation: '奄美空港',
+      });
+    }
+  }
+  return entries;
+}
+
+// --- マルエーフェリー「年間スケジュール（鹿児島航路）」PDF（月ごとの
+// カレンダーに、あけぼの/波之上それぞれが●＝鹿児島発、○＝那覇発、
+// 入＝鹿児島入港の日を配置したもの）を解析する。●の日だけを
+// 「鹿児島新港発（予定）」として使う（既存のライブ取得と同じ形）。---
+async function fetchAlineScheduleEntries(targetDates, coveredDates) {
+  const timeHtml = await fetchHtml('https://www.aline-ferry.com/kagoshima/time');
+  const $ = cheerio.load(timeHtml);
+
+  let scheduleUrl = null;
+  $('a[href$=".pdf"]').each((_, el) => {
+    const text = collapse($(el).text());
+    if (text.includes('年間スケジュール')) scheduleUrl = $(el).attr('href');
+  });
+  if (!scheduleUrl) throw new Error('aline: annual schedule pdf link not found (page structure may have changed)');
+
+  const items = await fetchPdfTextItems(scheduleUrl);
+  const monthHeaders = items.filter((it) => /^[０-９0-9]{1,2}月$/.test(it.text));
+  const vesselRows = items.filter((it) => it.text === 'フェリーあけぼの' || it.text === 'フェリー波之上');
+  const toHalfWidth = (s) => s.replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0));
+
+  const departuresByMonthDay = []; // [{month, day, vessel}]
+  for (const mh of monthHeaders) {
+    const month = Number(toHalfWidth(mh.text.replace('月', '')));
+    const dayWords = items.filter((it) => /^\d{1,2}$/.test(it.text) && Math.abs(it.y - (mh.y + 4.3)) < 3);
+    const dayMap = new Map();
+    for (const w of dayWords) dayMap.set(Math.round(w.x * 10) / 10, Number(w.text));
+    const dayXs = [...dayMap.keys()];
+    if (dayXs.length === 0) continue;
+
+    const blockVessels = vesselRows.filter((v) => mh.y - 40 < v.y && v.y < mh.y);
+    for (const v of blockVessels) {
+      const markers = items.filter((it) => it.text === '●' && Math.abs(it.y - v.y) < 2);
+      for (const m of markers) {
+        let nearestX = dayXs[0];
+        let nearestDist = Math.abs(dayXs[0] - m.x);
+        for (const dx of dayXs) {
+          const dist = Math.abs(dx - m.x);
+          if (dist < nearestDist) {
+            nearestDist = dist;
+            nearestX = dx;
+          }
+        }
+        if (nearestDist > 8) continue;
+        departuresByMonthDay.push({ month, day: dayMap.get(nearestX), vessel: v.text });
+      }
+    }
+  }
+
+  const entries = [];
+  for (const d of targetDates) {
+    if (coveredDates.has(d.iso)) continue; // 既にライブ取得済みの日は重複させない
+    const departures = departuresByMonthDay.filter((e) => e.month === d.month && e.day === d.day);
+    for (const dep of departures) {
+      entries.push({
+        label: `${dep.vessel} 鹿児島発（予定）`,
+        time: `${d.month}/${d.day}`,
+        date: d.iso,
+        status: 'unknown',
+        note: '時刻表に基づく予定です。出航時刻・寄港地は公式サイトでご確認ください。',
+        direction: 'departure',
+        islands: ROUTE_ISLANDS,
+        isScheduled: true,
+        departureLocation: '鹿児島新港',
+        arrivalLocation: null,
+      });
+    }
+  }
+  return entries;
+}
+
 // マルエーフェリー: 鹿児島〜奄美〜沖縄航路を担当する「あけぼの」「波之上」
 // の2隻分のブロック（div.status-archive）だけを見る。各船のお知らせ本文から
 // 「◯月◯日(木)鹿児島新港18:00発」のような出港時刻を正規表現で拾う
@@ -181,8 +490,24 @@ async function scrapeAline() {
     };
   });
 
+  // 集計（本日時点のステータス表示）はライブ取得した便のみで行う。
+  // 時刻表PDFの「予定」を混ぜると、常にunknownな予定便のせいで
+  // 本日のステータス判定がぼやけてしまうため。
   const status = worstStatus(departures.map((d) => d.status));
   const worst = departures.find((d) => d.status === status) ?? departures[0];
+
+  // ライブ取得できた日以降〜7日先までを、年間スケジュールPDFの「予定」で補う
+  // （取得に失敗しても本体のスクレイピングは止めない）。
+  const coveredDates = new Set(departures.map((d) => d.date));
+  const maxCoveredOffset = Math.max(
+    0,
+    ...[...coveredDates].map((iso) => Math.round((new Date(iso) - new Date(TODAY_ISO)) / 86400000)),
+  );
+  const scheduleTargets = datesAhead(maxCoveredOffset + 1, 6 - maxCoveredOffset);
+  const scheduleEntries = await safe(
+    () => fetchAlineScheduleEntries(scheduleTargets, coveredDates),
+    () => [],
+  );
 
   return {
     id: 'aline_ferry',
@@ -192,7 +517,7 @@ async function scrapeAline() {
     status,
     note: worst.note,
     officialUrl: 'https://aline-ferry.com/status/',
-    departures: sortByTime(departures),
+    departures: sortByTime([...departures, ...scheduleEntries]),
   };
 }
 
@@ -442,6 +767,13 @@ async function scrapeAirportDepartures() {
       ? `本日${departures.length}便中、欠航はありません。`
       : `本日${departures.length}便中${troubled.length}便に遅延・欠航等があります。`;
 
+  // 本日の発着案内は当日分しか公開されていないため、翌日〜6日先までを
+  // 月間時刻表PDFの「予定」で補う（取得に失敗しても本体は止めない）。
+  const scheduleEntries = await safe(
+    () => fetchAirportScheduleEntries(datesAhead(1, 6)),
+    () => [],
+  );
+
   return {
     id: 'amami_airport_departures',
     operatorName: '航空便',
@@ -450,7 +782,7 @@ async function scrapeAirportDepartures() {
     status,
     note,
     officialUrl: AIRPORT_URL,
-    departures,
+    departures: sortByTime([...departures, ...scheduleEntries]),
   };
 }
 
