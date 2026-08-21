@@ -1,5 +1,5 @@
-// フェリー各社の公式運航状況ページから、対象航路（鹿児島〜奄美〜沖縄）に
-// 関係する部分だけを狙って取得し、「通常運行 / 条件付き運行 / 運行見合わせ /
+// フェリー各社・奄美空港の公式ページから、鹿児島〜奄美〜沖縄航路に関係する
+// 部分だけを狙って取得し、「通常運行 / 条件付き運行 / 運行見合わせ /
 // 欠航 / 不明」に分類する。ページ全体のキーワード検索だと無関係な航路や
 // FAQ文言まで拾ってしまうため、cheerioでDOM構造を絞り込んでから判定する。
 import { writeFileSync } from 'fs';
@@ -51,7 +51,9 @@ async function fetchHtml(url) {
 const collapse = (s) => s.replace(/\s+/g, ' ').trim();
 
 // マルエーフェリー: 鹿児島〜奄美〜沖縄航路を担当する「あけぼの」「波之上」
-// の2隻分のブロック（div.status-archive）だけを見る。
+// の2隻分のブロック（div.status-archive）だけを見る。各船のお知らせ本文から
+// 「◯月◯日(木)鹿児島新港18:00発」のような出港時刻を正規表現で拾う
+// （公式サイトに寄港地別の構造化データが無いため、これが取得できる限界）。
 async function scrapeAline() {
   const html = await fetchHtml('https://aline-ferry.com/status/');
   const $ = cheerio.load(html);
@@ -72,11 +74,21 @@ async function scrapeAline() {
     throw new Error('aline: target vessel blocks not found (page structure may have changed)');
   }
 
-  const statuses = blocks.map((b) => classify(b.text));
-  const status = worstStatus(statuses);
-  // 一番状態の悪い船の見出し文（お知らせタイトル）を代表テキストとして使う
-  const worstBlock =
-    blocks.find((b) => classify(b.text) === status) ?? blocks[0];
+  const departures = blocks.map((b) => {
+    const vesselName = b.heading.includes('あけぼの') ? 'フェリーあけぼの' : 'フェリー波之上';
+    const status = classify(b.text);
+    const m = b.text.match(/(\d{1,2})月(\d{1,2})日[^0-9]{0,12}(\d{1,2}:\d{2})発/);
+    const time = m ? `${m[1]}/${m[2]} ${m[3]}` : '本日';
+    return {
+      label: `${vesselName} 鹿児島発`,
+      time,
+      status,
+      note: b.headline,
+    };
+  });
+
+  const status = worstStatus(departures.map((d) => d.status));
+  const worst = departures.find((d) => d.status === status) ?? departures[0];
 
   return {
     id: 'aline_ferry',
@@ -84,28 +96,104 @@ async function scrapeAline() {
     routeName: '鹿児島〜奄美〜沖縄',
     mode: 'ferry',
     status,
-    note: worstBlock.headline,
+    note: worst.note,
     officialUrl: 'https://aline-ferry.com/status/',
+    departures,
   };
 }
 
-// マリックスライン: トップページの運航状況バナー（下り便・上り便）のみを見る。
-// FAQセクション等の無関係なテキストは対象外。
+// マリックスライン: トップページの運航状況バナー（下り便・上り便）から
+// 詳細ページ（/service/downstreamYYYYMMDD/ 等）のリンクを取得し、
+// 寄港地ごとの入港・出港時刻とステータスを構造化データとして取得する。
+function formatMarixDateTime(dateText, timeText) {
+  // "08月22日" -> "8/22"
+  const m = dateText.match(/(\d{1,2})月(\d{1,2})日/);
+  const date = m ? `${Number(m[1])}/${Number(m[2])}` : dateText;
+  return `${date} ${timeText}`;
+}
+
+function classifyByClassList(classAttr, fallbackText) {
+  const classes = (classAttr || '').split(/\s+/);
+  if (classes.includes('cancelled') || classes.includes('cancel')) return 'cancelled';
+  if (classes.includes('suspended')) return 'suspended';
+  if (classes.includes('conditional')) return 'conditional';
+  if (classes.includes('normal')) return 'normal';
+  return classify(fallbackText);
+}
+
+async function scrapeMarixDetail(url, directionLabel) {
+  const html = await fetchHtml(url);
+  const $ = cheerio.load(html);
+
+  const departures = [];
+  $('div.service > div.single').each((_, el) => {
+    const $el = $(el);
+    const portName = collapse($el.find('.port .port_name').text());
+    if (!portName) return;
+    const statusText = collapse($el.find('.status.sub').text());
+    const status = classifyByClassList($el.attr('class'), statusText);
+
+    const entryDate = collapse($el.find('div.entry .date').text());
+    const entryTime = collapse($el.find('div.entry .time').text());
+    if (entryTime) {
+      departures.push({
+        label: `${directionLabel} ${portName} 入港`,
+        time: formatMarixDateTime(entryDate, entryTime),
+        status,
+        note: statusText || null,
+      });
+    }
+
+    const depDate = collapse($el.find('div.departure .date').text());
+    const depTime = collapse($el.find('div.departure .time').text());
+    if (depTime) {
+      departures.push({
+        label: `${directionLabel} ${portName} 出港`,
+        time: formatMarixDateTime(depDate, depTime),
+        status,
+        note: statusText || null,
+      });
+    }
+  });
+
+  return departures;
+}
+
 async function scrapeMarix() {
   const html = await fetchHtml('https://marixline.com/');
   const $ = cheerio.load(html);
 
-  const items = $('div.service_status_banner a.status_single')
+  const hrefs = $('div.service_status_banner a.status_single')
     .toArray()
-    .map((el) => collapse($(el).text()));
+    .map((el) => $(el).attr('href'))
+    .filter(Boolean);
 
-  if (items.length === 0) {
-    throw new Error('marix: status banner not found (page structure may have changed)');
+  if (hrefs.length === 0) {
+    throw new Error('marix: status banner links not found (page structure may have changed)');
   }
 
-  const statuses = items.map((t) => classify(t));
-  const status = worstStatus(statuses);
-  const worstItem = items[statuses.findIndex((s) => s === status)] ?? items[0];
+  const perDirection = await Promise.all(
+    hrefs.map((href) => {
+      const directionLabel = href.includes('downstream')
+        ? '下り便'
+        : href.includes('upstream')
+          ? '上り便'
+          : '便';
+      return scrapeMarixDetail(href, directionLabel);
+    })
+  );
+
+  const departures = perDirection.flat();
+  if (departures.length === 0) {
+    throw new Error('marix: no port schedule parsed (page structure may have changed)');
+  }
+
+  const status = worstStatus(departures.map((d) => d.status));
+  const troubled = departures.filter((d) => d.status !== 'normal' && d.status !== 'unknown');
+  const note =
+    troubled.length === 0
+      ? '本日・明日の寄港地はすべて通常運航です。'
+      : `${troubled.length}件の寄港地で条件付運航等があります。`;
 
   return {
     id: 'marix_line',
@@ -113,8 +201,9 @@ async function scrapeMarix() {
     routeName: '鹿児島〜奄美〜沖縄',
     mode: 'ferry',
     status,
-    note: worstItem.replace('もっと詳しく', '').trim(),
+    note,
     officialUrl: 'https://marixline.com/',
+    departures,
   };
 }
 
@@ -154,7 +243,7 @@ async function scrapeAirportDepartures() {
   }
 
   const rows = $(depTable).find('tr').toArray().slice(1); // 先頭はヘッダ行
-  const flights = rows
+  const rawFlights = rows
     .map((row) => {
       const tds = $(row).find('td');
       return {
@@ -167,25 +256,24 @@ async function scrapeAirportDepartures() {
     })
     .filter((f) => f.flightNo && f.scheduled);
 
-  if (flights.length === 0) {
+  if (rawFlights.length === 0) {
     throw new Error('airport: no departure rows parsed (page structure may have changed)');
   }
 
-  const classified = flights.map((f) => ({
-    flightNo: f.flightNo,
-    destination: f.destination,
-    scheduledTime: f.scheduled,
+  const departures = rawFlights.map((f) => ({
+    label: `${f.flightNo}便 ${f.destination}行き`,
+    time: f.scheduled,
     actualTime: f.changed || f.scheduled,
     status: classifyFlightStatus(f.statusText, f.scheduled, f.changed),
     note: f.statusText || null,
   }));
 
-  const status = worstStatus(classified.map((f) => f.status));
-  const troubled = classified.filter((f) => f.status !== 'normal');
+  const status = worstStatus(departures.map((d) => d.status));
+  const troubled = departures.filter((d) => d.status !== 'normal');
   const note =
     troubled.length === 0
-      ? `本日${classified.length}便中、欠航はありません。`
-      : `本日${classified.length}便中${troubled.length}便に遅延・欠航等があります。`;
+      ? `本日${departures.length}便中、欠航はありません。`
+      : `本日${departures.length}便中${troubled.length}便に遅延・欠航等があります。`;
 
   return {
     id: 'amami_airport_departures',
@@ -195,7 +283,7 @@ async function scrapeAirportDepartures() {
     status,
     note,
     officialUrl: AIRPORT_URL,
-    flights: classified,
+    departures,
   };
 }
 
@@ -217,6 +305,7 @@ const [aline, marix, airport] = await Promise.all([
     status: 'unknown',
     note: '取得に失敗しました。公式サイトでご確認ください。',
     officialUrl: 'https://aline-ferry.com/status/',
+    departures: [],
   })),
   safe(scrapeMarix, () => ({
     id: 'marix_line',
@@ -226,6 +315,7 @@ const [aline, marix, airport] = await Promise.all([
     status: 'unknown',
     note: '取得に失敗しました。公式サイトでご確認ください。',
     officialUrl: 'https://marixline.com/',
+    departures: [],
   })),
   safe(scrapeAirportDepartures, () => ({
     id: 'amami_airport_departures',
@@ -235,7 +325,7 @@ const [aline, marix, airport] = await Promise.all([
     status: 'unknown',
     note: '取得に失敗しました。公式サイトでご確認ください。',
     officialUrl: AIRPORT_URL,
-    flights: [],
+    departures: [],
   })),
 ]);
 
