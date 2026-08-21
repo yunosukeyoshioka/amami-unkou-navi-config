@@ -50,6 +50,28 @@ async function fetchHtml(url) {
 
 const collapse = (s) => s.replace(/\s+/g, ' ').trim();
 
+// 奄美群島の主要有人島。アプリ側の地区（島）絞り込みに使う。
+// マルエーフェリー・マリックスラインの鹿児島〜奄美〜沖縄航路が寄港する島。
+const ROUTE_ISLANDS = ['奄美大島', '徳之島', '沖永良部島', '与論島'];
+
+// マリックスラインは寄港地ごとに構造化データが取れるため、港名から
+// 島を一意に特定できる（鹿児島新港・本部港・那覇港は奄美群島の島ではない）。
+const PORT_ISLAND_MAP = {
+  名瀬港: '奄美大島',
+  古仁屋港: '奄美大島',
+  亀徳港: '徳之島',
+  平土野港: '徳之島',
+  和泊港: '沖永良部島',
+  与論港: '与論島',
+};
+
+// 奄美空港発の便の目的地のうち、奄美群島内の島であるもの。
+const FLIGHT_DEST_ISLAND_MAP = {
+  喜界島: '喜界島',
+  徳之島: '徳之島',
+  与論: '与論島',
+};
+
 // マルエーフェリー: 鹿児島〜奄美〜沖縄航路を担当する「あけぼの」「波之上」
 // の2隻分のブロック（div.status-archive）だけを見る。各船のお知らせ本文から
 // 「◯月◯日(木)鹿児島新港18:00発」のような出港時刻を正規表現で拾う
@@ -87,6 +109,9 @@ async function scrapeAline() {
       time,
       status,
       note: b.headline,
+      // 寄港地別の構造化データが無いため、この航路が寄港する4島すべてに
+      // タグ付けする（実際にどの島で問題が起きているかまでは区別できない）。
+      islands: ROUTE_ISLANDS,
     };
   });
 
@@ -136,6 +161,9 @@ async function scrapeMarixDetail(url, directionLabel) {
     const statusText = collapse($el.find('.status.sub').text());
     const status = classifyByClassList($el.attr('class'), statusText);
 
+    const island = PORT_ISLAND_MAP[portName];
+    const islands = island ? [island] : [];
+
     const entryDate = collapse($el.find('div.entry .date').text());
     const entryTime = collapse($el.find('div.entry .time').text());
     if (entryTime) {
@@ -144,6 +172,7 @@ async function scrapeMarixDetail(url, directionLabel) {
         time: formatMarixDateTime(entryDate, entryTime),
         status,
         note: statusText || null,
+        islands,
       });
     }
 
@@ -155,6 +184,7 @@ async function scrapeMarixDetail(url, directionLabel) {
         time: formatMarixDateTime(depDate, depTime),
         status,
         note: statusText || null,
+        islands,
       });
     }
   });
@@ -263,13 +293,19 @@ async function scrapeAirportDepartures() {
     throw new Error('airport: no departure rows parsed (page structure may have changed)');
   }
 
-  const departures = rawFlights.map((f) => ({
-    label: `${f.flightNo}便 ${f.destination}行き`,
-    time: f.scheduled,
-    actualTime: f.changed || f.scheduled,
-    status: classifyFlightStatus(f.statusText, f.scheduled, f.changed),
-    note: f.statusText || null,
-  }));
+  const departures = rawFlights.map((f) => {
+    // 奄美空港発なので必ず「奄美大島」を含め、目的地が群島内の島なら追加する。
+    const destIsland = FLIGHT_DEST_ISLAND_MAP[f.destination];
+    const islands = destIsland ? ['奄美大島', destIsland] : ['奄美大島'];
+    return {
+      label: `${f.flightNo}便 ${f.destination}行き`,
+      time: f.scheduled,
+      actualTime: f.changed || f.scheduled,
+      status: classifyFlightStatus(f.statusText, f.scheduled, f.changed),
+      note: f.statusText || null,
+      islands,
+    };
+  });
 
   const status = worstStatus(departures.map((d) => d.status));
   const troubled = departures.filter((d) => d.status !== 'normal');
