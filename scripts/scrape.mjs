@@ -76,7 +76,10 @@ async function scrapeAline() {
 
   const departures = blocks.map((b) => {
     const vesselName = b.heading.includes('あけぼの') ? 'フェリーあけぼの' : 'フェリー波之上';
-    const status = classify(b.text);
+    // 本文（text）には「遅延」等を含む定型の注意書きが全船共通で入っており、
+    // それを拾うと正常運航の船まで誤って条件付き扱いになってしまう。
+    // その船固有のお知らせ見出し（headline）だけで判定する。
+    const status = classify(b.headline);
     const m = b.text.match(/(\d{1,2})月(\d{1,2})日[^0-9]{0,12}(\d{1,2}:\d{2})発/);
     const time = m ? `${m[1]}/${m[2]} ${m[3]}` : '本日';
     return {
