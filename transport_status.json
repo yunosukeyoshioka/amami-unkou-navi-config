@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-21T05:53:21.644Z",
+  "updatedAt": "2026-08-21T06:45:57.861Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -21,10 +21,11 @@
     {
       "id": "jal_jac",
       "operatorName": "JAL / JAC",
-      "routeName": "鹿児島・那覇⇔奄美",
+      "routeName": "奄美⇔鹿児島",
       "status": "unknown",
-      "note": "自動取得に対応していません。公式サイトでご確認ください。",
-      "officialUrl": "https://www.jal.co.jp/jp/ja/flight-status/dom/"
+      "note": "取得に失敗しました。公式サイトでご確認ください。",
+      "officialUrl": "https://www.jal.co.jp/jp/ja/flight-status/dom/?FsBtn=route&DATEFLG=&DPORT=ASJ&APORT=KOJ",
+      "flights": []
     }
   ]
 }
