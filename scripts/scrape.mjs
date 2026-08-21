@@ -88,6 +88,22 @@ const FLIGHT_DEST_ISLAND_MAP = {
   与論: '与論島',
 };
 
+// 奄美空港の発着案内table「目的地」「出発地」欄に現れる地名を、実際の
+// 空港名に変換する（一般的な略称・通称を使用）。未収録の地名は
+// 「◯◯空港」を機械的に付与する（推測ではなく命名規則の適用）。
+const PLACE_AIRPORT_NAME_MAP = {
+  '大阪(伊丹)': '伊丹空港',
+  '大阪(関西)': '関西空港',
+  '東京(羽田)': '羽田空港',
+  '沖縄(那覇)': '那覇空港',
+  喜界島: '喜界空港',
+  与論: '与論空港',
+};
+
+function airportNameFor(place) {
+  return PLACE_AIRPORT_NAME_MAP[place] ?? `${place}空港`;
+}
+
 // マルエーフェリー: 鹿児島〜奄美〜沖縄航路を担当する「あけぼの」「波之上」
 // の2隻分のブロック（div.status-archive）だけを見る。各船のお知らせ本文から
 // 「◯月◯日(木)鹿児島新港18:00発」のような出港時刻を正規表現で拾う
@@ -129,6 +145,10 @@ async function scrapeAline() {
       // 寄港地別の構造化データが無いため、この航路が寄港する4島すべてに
       // タグ付けする（実際にどの島で問題が起きているかまでは区別できない）。
       islands: ROUTE_ISLANDS,
+      departureLocation: '鹿児島新港',
+      // 到着地（島側の港）は1件の告知が4島分を指すため、この時点では
+      // 特定できない（アプリ側で選択島の文脈に応じて補う）。
+      arrivalLocation: null,
     };
   });
 
@@ -170,16 +190,24 @@ async function scrapeMarixDetail(url, directionLabel) {
   const html = await fetchHtml(url);
   const $ = cheerio.load(html);
 
+  const singles = $('div.service > div.single').toArray();
+  // ページ掲載順＝この航海の寄港順（鹿児島新港 → 各島の港 → 本部港/那覇港、
+  // または上り便はその逆）なので、前後の要素から隣接港名を実データとして
+  // 求められる（推測ではなく、同じページの実際の並び順から取得）。
+  const portNames = singles.map((el) => collapse($(el).find('.port .port_name').text()));
+
   const departures = [];
-  $('div.service > div.single').each((_, el) => {
+  singles.forEach((el, index) => {
     const $el = $(el);
-    const portName = collapse($el.find('.port .port_name').text());
+    const portName = portNames[index];
     if (!portName) return;
     const statusText = collapse($el.find('.status.sub').text());
     const status = classifyByClassList($el.attr('class'), statusText);
 
     const island = PORT_ISLAND_MAP[portName];
     const islands = island ? [island] : [];
+    const prevPort = index > 0 ? portNames[index - 1] : null;
+    const nextPort = index < portNames.length - 1 ? portNames[index + 1] : null;
 
     const entryDate = collapse($el.find('div.entry .date').text());
     const entryTime = collapse($el.find('div.entry .time').text());
@@ -191,6 +219,8 @@ async function scrapeMarixDetail(url, directionLabel) {
         note: statusText || null,
         direction: 'arrival',
         islands,
+        departureLocation: prevPort,
+        arrivalLocation: portName,
       });
     }
 
@@ -204,6 +234,8 @@ async function scrapeMarixDetail(url, directionLabel) {
         note: statusText || null,
         direction: 'departure',
         islands,
+        departureLocation: portName,
+        arrivalLocation: nextPort,
       });
     }
   });
@@ -340,6 +372,8 @@ async function scrapeAirportDepartures() {
       note: f.statusText || null,
       direction: 'departure',
       islands,
+      departureLocation: '奄美空港',
+      arrivalLocation: airportNameFor(f.place),
     };
   });
 
@@ -356,6 +390,8 @@ async function scrapeAirportDepartures() {
       note: f.statusText || null,
       direction: 'arrival',
       islands,
+      departureLocation: airportNameFor(f.place),
+      arrivalLocation: '奄美空港',
     };
   });
 
