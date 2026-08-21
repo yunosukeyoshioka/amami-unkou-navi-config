@@ -65,7 +65,8 @@ const PORT_ISLAND_MAP = {
   与論港: '与論島',
 };
 
-// 奄美空港発の便の目的地のうち、奄美群島内の島であるもの。
+// 奄美空港の出発便table「目的地」・到着便table「出発地」に現れる地名のうち、
+// 奄美群島内の島であるもの（出発・到着どちらの向きでも同じ地名→島の対応）。
 const FLIGHT_DEST_ISLAND_MAP = {
   喜界島: '喜界島',
   徳之島: '徳之島',
@@ -240,12 +241,16 @@ async function scrapeMarix() {
   };
 }
 
-// 航空便: JALの公式発着案内はAkamaiのbot対策でGitHub Actionsからも
-// ブロックされる（IPレピュテーションによるブロックとみられ、ヘッドレス
-// ブラウザでも回避できなかった）。代わりに奄美空港自体の公式サイト
-// （航空会社ではなく空港ターミナルビル運営者が掲載）を使う。
-// bot対策はなく、JAL/JAC・Peach・スカイマークなど就航する全社の
-// 本日の出発便が1つの表に載っている。
+// 航空便: 徳之島・沖永良部・与論・喜界の各空港は鹿児島県が管理する第三種空港で、
+// 奄美空港のような独自のリアルタイム発着案内サイトを持たない（鹿児島県の
+// ページは施設概要のみの静的ページ）。JALの発着案内はAkamaiのbot対策で
+// GitHub Actionsからもブロックされる（ヘッドレスブラウザでも回避できず、
+// IPレピュテーションによるブロックとみられる）。
+// そのため、奄美空港自体の公式サイト（航空会社ではなく空港ターミナルビル
+// 運営者が掲載）の「出発便」表（奄美発＝各島行き）と「到着便」表
+// （各島発＝奄美着）の両方を使い、奄美空港を経由する範囲で各島の発着情報を
+// 組み立てる。沖永良部島は本日奄美空港との直行便が無いため、他社サイトが
+// 存在しない以上、この方式では情報を取得できない（一覧からは自然に外れる）。
 const AIRPORT_URL = 'https://amami-airport.co.jp/flight/today';
 
 function classifyFlightStatus(statusText, scheduled, changed) {
@@ -258,47 +263,59 @@ function classifyFlightStatus(statusText, scheduled, changed) {
   return 'normal';
 }
 
-async function scrapeAirportDepartures() {
-  const html = await fetchHtml(AIRPORT_URL);
-  const $ = cheerio.load(html);
-
-  // 「目的地」ヘッダを持つtableが出発便（到着便は「出発地」ヘッダ）。
-  // ページはレスポンシブ対応で同じ表が複製されていることがあるため、
-  // 最初に見つかったものだけを使う。
-  let depTable = null;
+function findAirportTable($, headerKeyword) {
+  let table = null;
   $('table').each((_, el) => {
-    if (depTable) return;
+    if (table) return;
     const headerText = collapse($(el).find('th').text());
-    if (headerText.includes('目的地')) depTable = el;
+    if (headerText.includes(headerKeyword)) table = el;
   });
-  if (!depTable) {
-    throw new Error('airport: departures table not found (page structure may have changed)');
-  }
+  return table;
+}
 
-  const rows = $(depTable).find('tr').toArray().slice(1); // 先頭はヘッダ行
-  const rawFlights = rows
+function parseAirportRows($, table) {
+  return $(table)
+    .find('tr')
+    .toArray()
+    .slice(1) // 先頭はヘッダ行
     .map((row) => {
       const tds = $(row).find('td');
       return {
         scheduled: collapse($(tds[0]).text()),
         changed: collapse($(tds[1]).text()),
-        destination: collapse($(tds[2]).text()),
+        place: collapse($(tds[2]).text()), // 出発便=目的地 / 到着便=出発地
         flightNo: collapse($(tds[4]).text()),
         statusText: collapse($(tds[5]).text()),
       };
     })
     .filter((f) => f.flightNo && f.scheduled);
+}
 
-  if (rawFlights.length === 0) {
-    throw new Error('airport: no departure rows parsed (page structure may have changed)');
+async function scrapeAirportDepartures() {
+  const html = await fetchHtml(AIRPORT_URL);
+  const $ = cheerio.load(html);
+
+  // ページはレスポンシブ対応で同じ表が複製されていることがあるため、
+  // 「目的地」ヘッダ＝出発便、「出発地」ヘッダ＝到着便として最初に
+  // 見つかったものだけを使う。
+  const depTable = findAirportTable($, '目的地');
+  const arrTable = findAirportTable($, '出発地');
+  if (!depTable && !arrTable) {
+    throw new Error('airport: neither departures nor arrivals table found (page structure may have changed)');
   }
 
-  const departures = rawFlights.map((f) => {
+  const rawDepartures = depTable ? parseAirportRows($, depTable) : [];
+  const rawArrivals = arrTable ? parseAirportRows($, arrTable) : [];
+  if (rawDepartures.length === 0 && rawArrivals.length === 0) {
+    throw new Error('airport: no flight rows parsed (page structure may have changed)');
+  }
+
+  const departureEntries = rawDepartures.map((f) => {
     // 奄美空港発なので必ず「奄美大島」を含め、目的地が群島内の島なら追加する。
-    const destIsland = FLIGHT_DEST_ISLAND_MAP[f.destination];
+    const destIsland = FLIGHT_DEST_ISLAND_MAP[f.place];
     const islands = destIsland ? ['奄美大島', destIsland] : ['奄美大島'];
     return {
-      label: `${f.flightNo}便 ${f.destination}行き`,
+      label: `${f.flightNo}便 ${f.place}行き`,
       time: f.scheduled,
       actualTime: f.changed || f.scheduled,
       status: classifyFlightStatus(f.statusText, f.scheduled, f.changed),
@@ -307,6 +324,22 @@ async function scrapeAirportDepartures() {
     };
   });
 
+  const arrivalEntries = rawArrivals.map((f) => {
+    // 奄美空港着なので必ず「奄美大島」を含め、出発地が群島内の島なら追加する
+    // （＝その島発の便として、島側の絞り込みでも表示されるようにする）。
+    const originIsland = FLIGHT_DEST_ISLAND_MAP[f.place];
+    const islands = originIsland ? ['奄美大島', originIsland] : ['奄美大島'];
+    return {
+      label: `${f.flightNo}便 ${f.place}発`,
+      time: f.scheduled,
+      actualTime: f.changed || f.scheduled,
+      status: classifyFlightStatus(f.statusText, f.scheduled, f.changed),
+      note: f.statusText || null,
+      islands,
+    };
+  });
+
+  const departures = [...departureEntries, ...arrivalEntries];
   const status = worstStatus(departures.map((d) => d.status));
   const troubled = departures.filter((d) => d.status !== 'normal');
   const note =
@@ -317,7 +350,7 @@ async function scrapeAirportDepartures() {
   return {
     id: 'amami_airport_departures',
     operatorName: '航空便',
-    routeName: '奄美空港発（JAL・Peach・スカイマーク他）',
+    routeName: '奄美空港発着（JAL・Peach・スカイマーク他）',
     mode: 'air',
     status,
     note,
