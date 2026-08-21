@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-21T06:57:36.208Z",
+  "updatedAt": "2026-08-21T07:07:33.696Z",
   "operators": [
     {
       "id": "aline_ferry",
       "operatorName": "マルエーフェリー",
       "routeName": "鹿児島〜奄美〜沖縄",
+      "mode": "ferry",
       "status": "conditional",
       "note": "8/20(木)鹿児島発下り便…条件付き運航と運航遅延",
       "officialUrl": "https://aline-ferry.com/status/"
@@ -14,18 +15,181 @@
       "id": "marix_line",
       "operatorName": "マリックスライン",
       "routeName": "鹿児島〜奄美〜沖縄",
+      "mode": "ferry",
       "status": "conditional",
       "note": "条件付運航  2026年8月21日 鹿児島新港 発 2026年8月22日 那覇港 向け",
       "officialUrl": "https://marixline.com/"
     },
     {
-      "id": "jal_jac",
-      "operatorName": "JAL / JAC",
-      "routeName": "奄美⇔鹿児島",
-      "status": "unknown",
-      "note": "取得に失敗しました。公式サイトでご確認ください。",
-      "officialUrl": "https://www.jal.co.jp/jp/ja/flight-status/dom/?FsBtn=route&DATEFLG=&DPORT=ASJ&APORT=KOJ",
-      "flights": []
+      "id": "amami_airport_departures",
+      "operatorName": "航空便",
+      "routeName": "奄美空港発（JAL・Peach・スカイマーク他）",
+      "mode": "air",
+      "status": "conditional",
+      "note": "本日20便中4便に遅延・欠航等があります。",
+      "officialUrl": "https://amami-airport.co.jp/flight/today",
+      "flights": [
+        {
+          "flightNo": "3722",
+          "destination": "鹿児島",
+          "scheduledTime": "08:45",
+          "actualTime": "08:50",
+          "status": "conditional",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "3831",
+          "destination": "喜界島",
+          "scheduledTime": "09:25",
+          "actualTime": "09:25",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "546",
+          "destination": "成田",
+          "scheduledTime": "10:30",
+          "actualTime": "10:30",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "3841",
+          "destination": "徳之島",
+          "scheduledTime": "10:55",
+          "actualTime": "10:55",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "3861",
+          "destination": "与論",
+          "scheduledTime": "11:15",
+          "actualTime": "11:15",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "3724",
+          "destination": "鹿児島",
+          "scheduledTime": "11:15",
+          "actualTime": "11:15",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "3726",
+          "destination": "鹿児島",
+          "scheduledTime": "11:45",
+          "actualTime": "11:50",
+          "status": "conditional",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "382",
+          "destination": "鹿児島",
+          "scheduledTime": "12:00",
+          "actualTime": "12:00",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "2464",
+          "destination": "大阪(伊丹)",
+          "scheduledTime": "12:40",
+          "actualTime": "12:40",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "3728",
+          "destination": "鹿児島",
+          "scheduledTime": "13:15",
+          "actualTime": "13:15",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "658",
+          "destination": "東京(羽田)",
+          "scheduledTime": "14:10",
+          "actualTime": "14:35",
+          "status": "conditional",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "3730",
+          "destination": "鹿児島",
+          "scheduledTime": "14:35",
+          "actualTime": "14:35",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "2468",
+          "destination": "大阪(伊丹)",
+          "scheduledTime": "14:50",
+          "actualTime": "15:00",
+          "status": "conditional",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "204",
+          "destination": "大阪(関西)",
+          "scheduledTime": "15:20",
+          "actualTime": "15:20",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "3837",
+          "destination": "喜界島",
+          "scheduledTime": "15:40",
+          "actualTime": "15:40",
+          "status": "normal",
+          "note": "出発済み"
+        },
+        {
+          "flightNo": "3734",
+          "destination": "鹿児島",
+          "scheduledTime": "17:20",
+          "actualTime": "17:20",
+          "status": "normal",
+          "note": "搭乗手続き受付中"
+        },
+        {
+          "flightNo": "3843",
+          "destination": "徳之島",
+          "scheduledTime": "18:00",
+          "actualTime": "18:00",
+          "status": "normal",
+          "note": "搭乗手続き受付中"
+        },
+        {
+          "flightNo": "3684",
+          "destination": "福岡",
+          "scheduledTime": "18:20",
+          "actualTime": "18:20",
+          "status": "normal",
+          "note": "搭乗手続き受付中"
+        },
+        {
+          "flightNo": "388",
+          "destination": "鹿児島",
+          "scheduledTime": "18:50",
+          "actualTime": "18:50",
+          "status": "normal",
+          "note": "定刻"
+        },
+        {
+          "flightNo": "3738",
+          "destination": "鹿児島",
+          "scheduledTime": "19:00",
+          "actualTime": "19:00",
+          "status": "normal",
+          "note": "搭乗手続き受付中"
+        }
+      ]
     }
   ]
 }
