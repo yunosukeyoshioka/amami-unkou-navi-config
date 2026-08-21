@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-21T09:15:33.997Z",
+  "updatedAt": "2026-08-21T09:36:03.730Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -14,6 +14,7 @@
         {
           "label": "フェリーあけぼの 鹿児島発",
           "time": "8/20 18:00",
+          "date": "2026-08-20",
           "status": "conditional",
           "note": "8/20(木)鹿児島新港発下り便…条件付き運航、運航遅延 8/22(土)那覇発上り便…条件付き運航",
           "direction": "departure",
@@ -29,6 +30,7 @@
         {
           "label": "フェリー波之上 鹿児島発",
           "time": "本日",
+          "date": "2026-08-21",
           "status": "normal",
           "note": "通常運航致しております。",
           "direction": "departure",
@@ -55,6 +57,7 @@
         {
           "label": "上り便 那覇港 出港",
           "time": "8/21 07:00",
+          "date": "2026-08-21",
           "status": "normal",
           "note": "通常運航",
           "direction": "departure",
@@ -65,6 +68,7 @@
         {
           "label": "上り便 本部港 入港",
           "time": "8/21 09:00",
+          "date": "2026-08-21",
           "status": "normal",
           "note": "通常運航",
           "direction": "arrival",
@@ -75,6 +79,7 @@
         {
           "label": "上り便 本部港 出港",
           "time": "8/21 09:20",
+          "date": "2026-08-21",
           "status": "normal",
           "note": "通常運航",
           "direction": "departure",
@@ -85,6 +90,7 @@
         {
           "label": "上り便 与論港 入港",
           "time": "8/21 11:50",
+          "date": "2026-08-21",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "arrival",
@@ -97,6 +103,7 @@
         {
           "label": "上り便 与論港 出港",
           "time": "8/21 12:10",
+          "date": "2026-08-21",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "departure",
@@ -109,6 +116,7 @@
         {
           "label": "上り便 和泊港 入港",
           "time": "8/21 14:10",
+          "date": "2026-08-21",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "arrival",
@@ -121,6 +129,7 @@
         {
           "label": "上り便 和泊港 出港",
           "time": "8/21 14:40",
+          "date": "2026-08-21",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "departure",
@@ -133,6 +142,7 @@
         {
           "label": "上り便 亀徳港 入港",
           "time": "8/21 16:30",
+          "date": "2026-08-21",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "arrival",
@@ -145,6 +155,7 @@
         {
           "label": "上り便 亀徳港 出港",
           "time": "8/21 17:00",
+          "date": "2026-08-21",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "departure",
@@ -157,6 +168,7 @@
         {
           "label": "下り便 鹿児島新港 出港",
           "time": "8/21 18:00",
+          "date": "2026-08-21",
           "status": "normal",
           "note": "通常運航",
           "direction": "departure",
@@ -167,6 +179,7 @@
         {
           "label": "上り便 名瀬港 入港",
           "time": "8/21 20:30",
+          "date": "2026-08-21",
           "status": "normal",
           "note": "通常運航",
           "direction": "arrival",
@@ -179,6 +192,7 @@
         {
           "label": "上り便 名瀬港 出港",
           "time": "8/21 21:20",
+          "date": "2026-08-21",
           "status": "normal",
           "note": "通常運航",
           "direction": "departure",
@@ -191,6 +205,7 @@
         {
           "label": "下り便 名瀬港 入港",
           "time": "8/22 05:00",
+          "date": "2026-08-22",
           "status": "normal",
           "note": "通常運航",
           "direction": "arrival",
@@ -203,6 +218,7 @@
         {
           "label": "下り便 名瀬港 出港",
           "time": "8/22 05:50",
+          "date": "2026-08-22",
           "status": "normal",
           "note": "通常運航",
           "direction": "departure",
@@ -215,6 +231,7 @@
         {
           "label": "上り便 鹿児島新港 入港",
           "time": "8/22 08:30",
+          "date": "2026-08-22",
           "status": "normal",
           "note": "通常運航",
           "direction": "arrival",
@@ -225,6 +242,7 @@
         {
           "label": "下り便 亀徳港 入港",
           "time": "8/22 09:10",
+          "date": "2026-08-22",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "arrival",
@@ -237,6 +255,7 @@
         {
           "label": "下り便 亀徳港 出港",
           "time": "8/22 09:40",
+          "date": "2026-08-22",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "departure",
@@ -249,6 +268,7 @@
         {
           "label": "下り便 和泊港 入港",
           "time": "8/22 11:30",
+          "date": "2026-08-22",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "arrival",
@@ -261,6 +281,7 @@
         {
           "label": "下り便 和泊港 出港",
           "time": "8/22 12:00",
+          "date": "2026-08-22",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "departure",
@@ -273,6 +294,7 @@
         {
           "label": "下り便 与論港 入港",
           "time": "8/22 13:40",
+          "date": "2026-08-22",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "arrival",
@@ -285,6 +307,7 @@
         {
           "label": "下り便 与論港 出港",
           "time": "8/22 14:10",
+          "date": "2026-08-22",
           "status": "conditional",
           "note": "条件付運航",
           "direction": "departure",
@@ -297,6 +320,7 @@
         {
           "label": "下り便 本部港 入港",
           "time": "8/22 16:40",
+          "date": "2026-08-22",
           "status": "normal",
           "note": "通常運航",
           "direction": "arrival",
@@ -307,6 +331,7 @@
         {
           "label": "下り便 本部港 出港",
           "time": "8/22 17:10",
+          "date": "2026-08-22",
           "status": "normal",
           "note": "通常運航",
           "direction": "departure",
@@ -317,6 +342,7 @@
         {
           "label": "下り便 那覇港 入港",
           "time": "8/22 19:00",
+          "date": "2026-08-22",
           "status": "normal",
           "note": "通常運航",
           "direction": "arrival",
@@ -338,6 +364,7 @@
         {
           "label": "3681便 福岡発",
           "time": "08:15",
+          "date": "2026-08-21",
           "actualTime": "08:20",
           "status": "conditional",
           "note": "到着済み",
@@ -351,6 +378,7 @@
         {
           "label": "3722便 鹿児島行き",
           "time": "08:45",
+          "date": "2026-08-21",
           "actualTime": "08:50",
           "status": "conditional",
           "note": "出発済み",
@@ -364,6 +392,7 @@
         {
           "label": "3721便 鹿児島発",
           "time": "08:55",
+          "date": "2026-08-21",
           "actualTime": "08:55",
           "status": "normal",
           "note": "到着済み",
@@ -377,6 +406,7 @@
         {
           "label": "3831便 喜界島行き",
           "time": "09:25",
+          "date": "2026-08-21",
           "actualTime": "09:25",
           "status": "normal",
           "note": "出発済み",
@@ -391,6 +421,7 @@
         {
           "label": "545便 成田発",
           "time": "09:40",
+          "date": "2026-08-21",
           "actualTime": "09:31",
           "status": "conditional",
           "note": "到着済み",
@@ -404,6 +435,7 @@
         {
           "label": "3842便 徳之島発",
           "time": "10:15",
+          "date": "2026-08-21",
           "actualTime": "10:15",
           "status": "normal",
           "note": "到着済み",
@@ -418,6 +450,7 @@
         {
           "label": "546便 成田行き",
           "time": "10:30",
+          "date": "2026-08-21",
           "actualTime": "10:30",
           "status": "normal",
           "note": "出発済み",
@@ -431,6 +464,7 @@
         {
           "label": "3830便 喜界島発",
           "time": "10:35",
+          "date": "2026-08-21",
           "actualTime": "10:35",
           "status": "normal",
           "note": "到着済み",
@@ -445,6 +479,7 @@
         {
           "label": "3725便 鹿児島発",
           "time": "10:45",
+          "date": "2026-08-21",
           "actualTime": "10:45",
           "status": "normal",
           "note": "到着済み",
@@ -458,6 +493,7 @@
         {
           "label": "3841便 徳之島行き",
           "time": "10:55",
+          "date": "2026-08-21",
           "actualTime": "10:55",
           "status": "normal",
           "note": "出発済み",
@@ -472,6 +508,7 @@
         {
           "label": "3727便 鹿児島発",
           "time": "11:10",
+          "date": "2026-08-21",
           "actualTime": "11:25",
           "status": "conditional",
           "note": "到着済み",
@@ -485,6 +522,7 @@
         {
           "label": "3861便 与論行き",
           "time": "11:15",
+          "date": "2026-08-21",
           "actualTime": "11:15",
           "status": "normal",
           "note": "出発済み",
@@ -499,6 +537,7 @@
         {
           "label": "3724便 鹿児島行き",
           "time": "11:15",
+          "date": "2026-08-21",
           "actualTime": "11:15",
           "status": "normal",
           "note": "出発済み",
@@ -512,6 +551,7 @@
         {
           "label": "381便 鹿児島発",
           "time": "11:20",
+          "date": "2026-08-21",
           "actualTime": "11:20",
           "status": "normal",
           "note": "到着済み",
@@ -525,6 +565,7 @@
         {
           "label": "3726便 鹿児島行き",
           "time": "11:45",
+          "date": "2026-08-21",
           "actualTime": "11:50",
           "status": "conditional",
           "note": "出発済み",
@@ -538,6 +579,7 @@
         {
           "label": "382便 鹿児島行き",
           "time": "12:00",
+          "date": "2026-08-21",
           "actualTime": "12:00",
           "status": "normal",
           "note": "出発済み",
@@ -551,6 +593,7 @@
         {
           "label": "2465便 大阪(伊丹)発",
           "time": "12:00",
+          "date": "2026-08-21",
           "actualTime": "12:00",
           "status": "normal",
           "note": "到着済み",
@@ -564,6 +607,7 @@
         {
           "label": "2464便 大阪(伊丹)行き",
           "time": "12:40",
+          "date": "2026-08-21",
           "actualTime": "12:40",
           "status": "normal",
           "note": "出発済み",
@@ -577,6 +621,7 @@
         {
           "label": "3729便 鹿児島発",
           "time": "12:45",
+          "date": "2026-08-21",
           "actualTime": "12:45",
           "status": "normal",
           "note": "到着済み",
@@ -590,6 +635,7 @@
         {
           "label": "3728便 鹿児島行き",
           "time": "13:15",
+          "date": "2026-08-21",
           "actualTime": "13:15",
           "status": "normal",
           "note": "出発済み",
@@ -603,6 +649,7 @@
         {
           "label": "659便 東京(羽田)発",
           "time": "13:35",
+          "date": "2026-08-21",
           "actualTime": "13:55",
           "status": "conditional",
           "note": "到着済み",
@@ -616,6 +663,7 @@
         {
           "label": "3731便 鹿児島発",
           "time": "14:05",
+          "date": "2026-08-21",
           "actualTime": "14:05",
           "status": "normal",
           "note": "到着済み",
@@ -629,6 +677,7 @@
         {
           "label": "658便 東京(羽田)行き",
           "time": "14:10",
+          "date": "2026-08-21",
           "actualTime": "14:35",
           "status": "conditional",
           "note": "出発済み",
@@ -642,6 +691,7 @@
         {
           "label": "2469便 大阪(伊丹)発",
           "time": "14:15",
+          "date": "2026-08-21",
           "actualTime": "14:25",
           "status": "conditional",
           "note": "到着済み",
@@ -655,6 +705,7 @@
         {
           "label": "203便 大阪(関西)発",
           "time": "14:30",
+          "date": "2026-08-21",
           "actualTime": "14:11",
           "status": "conditional",
           "note": "到着済み",
@@ -668,6 +719,7 @@
         {
           "label": "3730便 鹿児島行き",
           "time": "14:35",
+          "date": "2026-08-21",
           "actualTime": "14:35",
           "status": "normal",
           "note": "出発済み",
@@ -681,6 +733,7 @@
         {
           "label": "2468便 大阪(伊丹)行き",
           "time": "14:50",
+          "date": "2026-08-21",
           "actualTime": "15:00",
           "status": "conditional",
           "note": "出発済み",
@@ -694,6 +747,7 @@
         {
           "label": "3867便 沖縄(那覇)発",
           "time": "14:55",
+          "date": "2026-08-21",
           "actualTime": "14:55",
           "status": "normal",
           "note": "到着済み",
@@ -707,6 +761,7 @@
         {
           "label": "204便 大阪(関西)行き",
           "time": "15:20",
+          "date": "2026-08-21",
           "actualTime": "15:20",
           "status": "normal",
           "note": "出発済み",
@@ -720,6 +775,7 @@
         {
           "label": "3837便 喜界島行き",
           "time": "15:40",
+          "date": "2026-08-21",
           "actualTime": "15:40",
           "status": "normal",
           "note": "出発済み",
@@ -734,6 +790,7 @@
         {
           "label": "3836便 喜界島発",
           "time": "16:50",
+          "date": "2026-08-21",
           "actualTime": "16:50",
           "status": "normal",
           "note": "到着済み",
@@ -748,6 +805,7 @@
         {
           "label": "3734便 鹿児島行き",
           "time": "17:20",
+          "date": "2026-08-21",
           "actualTime": "17:25",
           "status": "conditional",
           "note": "出発済み",
@@ -761,6 +819,7 @@
         {
           "label": "3844便 徳之島発",
           "time": "17:20",
+          "date": "2026-08-21",
           "actualTime": "17:30",
           "status": "conditional",
           "note": "到着済み",
@@ -775,6 +834,7 @@
         {
           "label": "3735便 鹿児島発",
           "time": "17:50",
+          "date": "2026-08-21",
           "actualTime": "17:50",
           "status": "normal",
           "note": "到着済み",
@@ -788,6 +848,7 @@
         {
           "label": "3843便 徳之島行き",
           "time": "18:00",
+          "date": "2026-08-21",
           "actualTime": "18:00",
           "status": "normal",
           "note": "出発済み",
@@ -802,9 +863,10 @@
         {
           "label": "387便 鹿児島発",
           "time": "18:10",
+          "date": "2026-08-21",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "ただいま到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -815,6 +877,7 @@
         {
           "label": "3684便 福岡行き",
           "time": "18:20",
+          "date": "2026-08-21",
           "actualTime": "18:20",
           "status": "normal",
           "note": "出発済み",
@@ -828,9 +891,10 @@
         {
           "label": "3737便 鹿児島発",
           "time": "18:30",
+          "date": "2026-08-21",
           "actualTime": "18:30",
           "status": "normal",
-          "note": "定刻",
+          "note": "ただいま到着",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -841,9 +905,10 @@
         {
           "label": "388便 鹿児島行き",
           "time": "18:50",
+          "date": "2026-08-21",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "ゲートへお越し下さい",
+          "note": "搭乗ご案内中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -854,6 +919,7 @@
         {
           "label": "3738便 鹿児島行き",
           "time": "19:00",
+          "date": "2026-08-21",
           "actualTime": "19:00",
           "status": "normal",
           "note": "搭乗手続き受付中",
