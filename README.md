@@ -16,8 +16,9 @@
 フェリー各社の公式運航状況ページを [scripts/scrape.mjs](scripts/scrape.mjs) が30分おきに取得し、GitHub Actions（[.github/workflows/scrape.yml](.github/workflows/scrape.yml)）が自動でコミット・pushします。
 
 - `status`: `normal`（通常運行）/ `conditional`（条件付き運行）/ `suspended`（運行見合わせ）/ `cancelled`（欠航）/ `unknown`（取得できず）
+- `mode`: `ferry`（船）/ `air`（航空機）。アプリ側のアイコン・表示切り替えに使う
 - マルエーフェリー・マリックスラインは複数船舶・複数便がある場合、一番状態の悪いものを代表値として採用（安全側に倒す設計）
-- JAL/JACは奄美発鹿児島行きの本日の便を、実ブラウザ（Playwright + Chromium）で取得し `flights` 配列に便ごとの状況を格納します。JALのサイトはAkamaiのbot対策が入っており、単純なfetch/curlはIPレピュテーションで`403`になるため、GitHub Actions上でヘッドレスブラウザを起動して取得しています。この対策が将来強化されると再びブロックされる可能性があり、その場合は`unknown`（`flights: []`）にフォールバックし、公式サイトへの導線のみ提供します。
+- 航空便は**JALの公式サイトではなく奄美空港自体の公式サイト**（`amami-airport.co.jp/flight/today`）から取得しています。JALの発着案内はAkamaiのbot対策があり、GitHub Actions・ヘッドレスブラウザのどちらからも`403`でブロックされ取得できませんでした。空港公式サイトはbot対策がなく、しかもJAL/JAC・Peach・スカイマークなど就航する全社の本日の出発便が1つの表に載っているため、より確実で網羅的です。`flights`配列に本日の全便（便名・目的地・定刻・実績時刻・状況）が入ります
 - スクレイピング失敗時は前回コミット時点の内容がそのまま残る（壊れたデータで上書きしない）
 
 手動で今すぐ更新したい場合は、GitHubの Actions タブから `Scrape transport status` ワークフローを `workflow_dispatch` で実行してください。
