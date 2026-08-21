@@ -65,6 +65,33 @@ function sortByTime(departures) {
   return [...departures].sort((a, b) => timeSortKey(a.time) - timeSortKey(b.time));
 }
 
+// GitHub Actionsのランナーは UTC で動くため、日本時間（UTC+9）に補正した
+// Dateを作る（時刻を+9時間ずらして UTC メソッドで読むことで、日本の暦日を
+// 取り出せるようにする簡易的な手法）。
+function jstNow() {
+  return new Date(Date.now() + 9 * 60 * 60 * 1000);
+}
+
+function isoDate(d) {
+  return d.toISOString().slice(0, 10);
+}
+
+const JST_NOW = jstNow();
+const TODAY_ISO = isoDate(JST_NOW);
+
+// 「月」「日」の数字から、直近の暦日（YYYY-MM-DD）を組み立てる。取得元は
+// 常に本日・翌日程度の近い将来しか案内しないため、算出した日付が今日より
+// 大幅に過去（60日以上前）なら年をまたいだとみなして翌年の日付にする。
+function dateFromMD(month, day) {
+  const year = JST_NOW.getUTCFullYear();
+  const todayOnly = Date.UTC(JST_NOW.getUTCFullYear(), JST_NOW.getUTCMonth(), JST_NOW.getUTCDate());
+  let candidate = Date.UTC(year, month - 1, day);
+  if (candidate < todayOnly - 60 * 24 * 60 * 60 * 1000) {
+    candidate = Date.UTC(year + 1, month - 1, day);
+  }
+  return isoDate(new Date(candidate));
+}
+
 // 奄美群島の主要有人島。アプリ側の地区（島）絞り込みに使う。
 // マルエーフェリー・マリックスラインの鹿児島〜奄美〜沖縄航路が寄港する島。
 const ROUTE_ISLANDS = ['奄美大島', '徳之島', '沖永良部島', '与論島'];
@@ -136,9 +163,11 @@ async function scrapeAline() {
     const status = classify(b.headline);
     const m = b.text.match(/(\d{1,2})月(\d{1,2})日[^0-9]{0,12}(\d{1,2}:\d{2})発/);
     const time = m ? `${m[1]}/${m[2]} ${m[3]}` : '本日';
+    const date = m ? dateFromMD(Number(m[1]), Number(m[2])) : TODAY_ISO;
     return {
       label: `${vesselName} 鹿児島発`,
       time,
+      date,
       status,
       note: b.headline,
       direction: 'departure',
@@ -175,6 +204,12 @@ function formatMarixDateTime(dateText, timeText) {
   const m = dateText.match(/(\d{1,2})月(\d{1,2})日/);
   const date = m ? `${Number(m[1])}/${Number(m[2])}` : dateText;
   return `${date} ${timeText}`;
+}
+
+// "08月22日" のような表示から、暦日（YYYY-MM-DD）を求める。
+function isoDateFromJapaneseDate(dateText) {
+  const m = dateText.match(/(\d{1,2})月(\d{1,2})日/);
+  return m ? dateFromMD(Number(m[1]), Number(m[2])) : TODAY_ISO;
 }
 
 function classifyByClassList(classAttr, fallbackText) {
@@ -215,6 +250,7 @@ async function scrapeMarixDetail(url, directionLabel) {
       departures.push({
         label: `${directionLabel} ${portName} 入港`,
         time: formatMarixDateTime(entryDate, entryTime),
+        date: isoDateFromJapaneseDate(entryDate),
         status,
         note: statusText || null,
         direction: 'arrival',
@@ -230,6 +266,7 @@ async function scrapeMarixDetail(url, directionLabel) {
       departures.push({
         label: `${directionLabel} ${portName} 出港`,
         time: formatMarixDateTime(depDate, depTime),
+        date: isoDateFromJapaneseDate(depDate),
         status,
         note: statusText || null,
         direction: 'departure',
@@ -367,6 +404,7 @@ async function scrapeAirportDepartures() {
     return {
       label: `${f.flightNo}便 ${f.place}行き`,
       time: f.scheduled,
+      date: TODAY_ISO,
       actualTime: f.changed || f.scheduled,
       status: classifyFlightStatus(f.statusText, f.scheduled, f.changed),
       note: f.statusText || null,
@@ -385,6 +423,7 @@ async function scrapeAirportDepartures() {
     return {
       label: `${f.flightNo}便 ${f.place}発`,
       time: f.scheduled,
+      date: TODAY_ISO,
       actualTime: f.changed || f.scheduled,
       status: classifyFlightStatus(f.statusText, f.scheduled, f.changed),
       note: f.statusText || null,
