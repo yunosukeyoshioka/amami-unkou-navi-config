@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "links": [
+    {
+      "id": "hotel_placeholder",
+      "category": "hotel",
+      "title": "宿泊先を探す",
+      "subtitle": "延泊・振替宿泊に",
+      "url": "https://travel.rakuten.co.jp/",
+      "sourceLabel": "楽天トラベル"
+    },
+    {
+      "id": "flight_placeholder",
+      "category": "flight",
+      "title": "航空券を比較する",
+      "subtitle": "欠航時の振替便探しに",
+      "url": "https://skyticket.jp/",
+      "sourceLabel": "スカイチケット"
+    }
+  ]
+}
