@@ -16,8 +16,8 @@
 フェリー各社の公式運航状況ページを [scripts/scrape.mjs](scripts/scrape.mjs) が30分おきに取得し、GitHub Actions（[.github/workflows/scrape.yml](.github/workflows/scrape.yml)）が自動でコミット・pushします。
 
 - `status`: `normal`（通常運行）/ `conditional`（条件付き運行）/ `suspended`（運行見合わせ）/ `cancelled`（欠航）/ `unknown`（取得できず）
-- 複数船舶・複数便がある場合は一番状態の悪いものを代表値として採用（安全側に倒す設計）
-- JAL/JACは検索フォーム形式で単純な自動取得ができないため、常に `unknown`（公式サイト誘導のみ）
+- マルエーフェリー・マリックスラインは複数船舶・複数便がある場合、一番状態の悪いものを代表値として採用（安全側に倒す設計）
+- JAL/JACは奄美発鹿児島行きの本日の便を、実ブラウザ（Playwright + Chromium）で取得し `flights` 配列に便ごとの状況を格納します。JALのサイトはAkamaiのbot対策が入っており、単純なfetch/curlはIPレピュテーションで`403`になるため、GitHub Actions上でヘッドレスブラウザを起動して取得しています。この対策が将来強化されると再びブロックされる可能性があり、その場合は`unknown`（`flights: []`）にフォールバックし、公式サイトへの導線のみ提供します。
 - スクレイピング失敗時は前回コミット時点の内容がそのまま残る（壊れたデータで上書きしない）
 
 手動で今すぐ更新したい場合は、GitHubの Actions タブから `Scrape transport status` ワークフローを `workflow_dispatch` で実行してください。

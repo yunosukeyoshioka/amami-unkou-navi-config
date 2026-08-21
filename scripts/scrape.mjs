@@ -4,8 +4,15 @@
 // FAQ文言まで拾ってしまうため、cheerioでDOM構造を絞り込んでから判定する。
 import { writeFileSync } from 'fs';
 import * as cheerio from 'cheerio';
+import { chromium } from 'playwright';
 
 const UA = 'amami-unkou-navi-bot/1.0 (+https://github.com/yunosukeyoshioka/amami-unkou-navi-config)';
+
+// JALはブラウザらしいUser-Agentでないとページ自体は返すが、
+// 内部的にはAkamaiのbot対策の影響を受けるため、実ブラウザ相当の
+// User-Agentをheadless Chromiumに使わせる。
+const BROWSER_UA =
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
 // 優先度の高いキーワードから順に判定（欠航が一番強いシグナル）
 const KEYWORD_PRIORITY = [
@@ -116,17 +123,81 @@ async function scrapeMarix() {
   };
 }
 
-// JALは検索フォーム形式で単純な自動取得ができないため、
-// 常に「不明」として公式サイトへの導線のみ提供する。
-function jalEntry() {
-  return {
-    id: 'jal_jac',
-    operatorName: 'JAL / JAC',
-    routeName: '鹿児島・那覇⇔奄美',
-    status: 'unknown',
-    note: '自動取得に対応していません。公式サイトでご確認ください。',
-    officialUrl: 'https://www.jal.co.jp/jp/ja/flight-status/dom/',
-  };
+// JAL/JAC: 奄美発鹿児島行きの本日の便を、実ブラウザ（Playwright）で取得する。
+// 通常のfetchだとAkamaiのbot対策に阻まれる（IPレピュテーションによるブロックの
+// 可能性が高く、ヘッドレスブラウザでも回避できないことがある）。
+const JAL_URL =
+  'https://www.jal.co.jp/jp/ja/flight-status/dom/?FsBtn=route&DATEFLG=&DPORT=ASJ&APORT=KOJ';
+
+function classifyFlightNote(note) {
+  if (!note) return 'normal';
+  if (note.includes('欠航')) return 'cancelled';
+  if (note.includes('見合わせ')) return 'suspended';
+  return 'conditional'; // 遅延・時刻変更など
+}
+
+async function scrapeJal() {
+  const browser = await chromium.launch();
+  try {
+    const page = await browser.newPage({ userAgent: BROWSER_UA });
+    const res = await page.goto(JAL_URL, { waitUntil: 'domcontentloaded', timeout: 20000 });
+    if (!res || !res.ok()) {
+      throw new Error(`jal: HTTP ${res?.status()}`);
+    }
+    await page
+      .waitForSelector('div.hdg_inner_box, .xf-content-height', { timeout: 15000 })
+      .catch(() => {});
+
+    const rawFlights = await page.$$eval('div.hdg_inner_box', (nodes) =>
+      nodes.map((el) => ({
+        flightNo: el.querySelector('.box_flight_number')?.textContent?.trim() ?? '',
+        departureTime: el.querySelector('.departure-time')?.textContent?.trim() ?? '',
+        arrivalTime: el.querySelector('.arrival-time')?.textContent?.trim() ?? '',
+        note: el.querySelector('.attention-txt-hdr')?.textContent?.trim() || null,
+      }))
+    );
+
+    if (rawFlights.length === 0) {
+      // 曜日運航等で本日は便が無い可能性もあるため「不明」ではなく通常運行として扱わず、
+      // 便一覧が空の状態として返す（アプリ側で「本日の便はありません」と表示できる）。
+      return {
+        id: 'jal_jac',
+        operatorName: 'JAL / JAC',
+        routeName: '奄美⇔鹿児島',
+        status: 'unknown',
+        note: '本日の便情報を取得できませんでした（運航が無い曜日の可能性があります）。',
+        officialUrl: JAL_URL,
+        flights: [],
+      };
+    }
+
+    const flights = rawFlights.map((f) => ({
+      flightNo: f.flightNo,
+      departureTime: f.departureTime,
+      arrivalTime: f.arrivalTime,
+      status: classifyFlightNote(f.note),
+      note: f.note,
+    }));
+
+    const status = worstStatus(flights.map((f) => f.status));
+    const troubled = flights.filter((f) => f.status !== 'normal');
+    const note =
+      troubled.length === 0
+        ? `本日${flights.length}便すべて通常運航です。`
+        : `本日${flights.length}便中${troubled.length}便に運航状況の変化があります。`;
+
+    return {
+      id: 'jal_jac',
+      operatorName: 'JAL / JAC',
+      routeName: '奄美⇔鹿児島',
+      status,
+      note,
+      officialUrl: JAL_URL,
+      flights,
+    };
+  } finally {
+    await browser.close();
+  }
 }
 
 async function safe(fn, fallbackFactory) {
@@ -138,7 +209,7 @@ async function safe(fn, fallbackFactory) {
   }
 }
 
-const [aline, marix] = await Promise.all([
+const [aline, marix, jal] = await Promise.all([
   safe(scrapeAline, () => ({
     id: 'aline_ferry',
     operatorName: 'マルエーフェリー',
@@ -155,12 +226,21 @@ const [aline, marix] = await Promise.all([
     note: '取得に失敗しました。公式サイトでご確認ください。',
     officialUrl: 'https://marixline.com/',
   })),
+  safe(scrapeJal, () => ({
+    id: 'jal_jac',
+    operatorName: 'JAL / JAC',
+    routeName: '奄美⇔鹿児島',
+    status: 'unknown',
+    note: '取得に失敗しました。公式サイトでご確認ください。',
+    officialUrl: JAL_URL,
+    flights: [],
+  })),
 ]);
 
 const output = {
   schemaVersion: 1,
   updatedAt: new Date().toISOString(),
-  operators: [aline, marix, jalEntry()],
+  operators: [aline, marix, jal],
 };
 
 writeFileSync('transport_status.json', `${JSON.stringify(output, null, 2)}\n`);
