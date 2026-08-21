@@ -50,6 +50,21 @@ async function fetchHtml(url) {
 
 const collapse = (s) => s.replace(/\s+/g, ' ').trim();
 
+// "8/22 05:50" のような表示用文字列から、時系列に並べ替えるためのキーを作る。
+// 日付が無い（例: "08:45" だけ、または "本日"）場合は本日扱いにする。
+// 時刻自体が無い（"本日"のみ等）場合は一番最後に回す。
+function timeSortKey(timeText) {
+  const m = timeText.match(/(?:(\d{1,2})\/(\d{1,2})\s+)?(\d{1,2}):(\d{2})/);
+  if (!m) return Number.MAX_SAFE_INTEGER;
+  const [, month, day, hh, mm] = m;
+  const dayRank = month && day ? Number(month) * 100 + Number(day) : 0;
+  return dayRank * 10000 + Number(hh) * 100 + Number(mm);
+}
+
+function sortByTime(departures) {
+  return [...departures].sort((a, b) => timeSortKey(a.time) - timeSortKey(b.time));
+}
+
 // 奄美群島の主要有人島。アプリ側の地区（島）絞り込みに使う。
 // マルエーフェリー・マリックスラインの鹿児島〜奄美〜沖縄航路が寄港する島。
 const ROUTE_ISLANDS = ['奄美大島', '徳之島', '沖永良部島', '与論島'];
@@ -110,6 +125,7 @@ async function scrapeAline() {
       time,
       status,
       note: b.headline,
+      direction: 'departure',
       // 寄港地別の構造化データが無いため、この航路が寄港する4島すべてに
       // タグ付けする（実際にどの島で問題が起きているかまでは区別できない）。
       islands: ROUTE_ISLANDS,
@@ -127,7 +143,7 @@ async function scrapeAline() {
     status,
     note: worst.note,
     officialUrl: 'https://aline-ferry.com/status/',
-    departures,
+    departures: sortByTime(departures),
   };
 }
 
@@ -173,6 +189,7 @@ async function scrapeMarixDetail(url, directionLabel) {
         time: formatMarixDateTime(entryDate, entryTime),
         status,
         note: statusText || null,
+        direction: 'arrival',
         islands,
       });
     }
@@ -185,6 +202,7 @@ async function scrapeMarixDetail(url, directionLabel) {
         time: formatMarixDateTime(depDate, depTime),
         status,
         note: statusText || null,
+        direction: 'departure',
         islands,
       });
     }
@@ -237,7 +255,7 @@ async function scrapeMarix() {
     status,
     note,
     officialUrl: 'https://marixline.com/',
-    departures,
+    departures: sortByTime(departures),
   };
 }
 
@@ -320,6 +338,7 @@ async function scrapeAirportDepartures() {
       actualTime: f.changed || f.scheduled,
       status: classifyFlightStatus(f.statusText, f.scheduled, f.changed),
       note: f.statusText || null,
+      direction: 'departure',
       islands,
     };
   });
@@ -335,11 +354,12 @@ async function scrapeAirportDepartures() {
       actualTime: f.changed || f.scheduled,
       status: classifyFlightStatus(f.statusText, f.scheduled, f.changed),
       note: f.statusText || null,
+      direction: 'arrival',
       islands,
     };
   });
 
-  const departures = [...departureEntries, ...arrivalEntries];
+  const departures = sortByTime([...departureEntries, ...arrivalEntries]);
   const status = worstStatus(departures.map((d) => d.status));
   const troubled = departures.filter((d) => d.status !== 'normal');
   const note =
