@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-21T23:29:56.486Z",
+  "updatedAt": "2026-08-21T23:54:28.179Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -408,8 +408,8 @@
       "operatorName": "航空便",
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
-      "status": "normal",
-      "note": "本日40便中、欠航はありません。",
+      "status": "conditional",
+      "note": "本日40便中2便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -418,7 +418,7 @@
           "date": "2026-08-22",
           "actualTime": "08:15",
           "status": "normal",
-          "note": "ただいま到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -516,7 +516,7 @@
           "date": "2026-08-22",
           "actualTime": "08:45",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -612,9 +612,9 @@
           "label": "3721便 鹿児島発",
           "time": "08:55",
           "date": "2026-08-22",
-          "actualTime": "08:55",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "09:00",
+          "status": "conditional",
+          "note": "遅れ",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -710,8 +710,8 @@
           "label": "3831便 喜界島行き",
           "time": "09:25",
           "date": "2026-08-22",
-          "actualTime": "09:25",
-          "status": "normal",
+          "actualTime": "09:30",
+          "status": "conditional",
           "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
