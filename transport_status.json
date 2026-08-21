@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-21T05:51:59.112Z",
+  "operators": [
+    {
+      "id": "aline_ferry",
+      "operatorName": "マルエーフェリー",
+      "routeName": "鹿児島〜奄美〜沖縄",
+      "status": "conditional",
+      "note": "8/20(木)鹿児島発下り便…条件付き運航と運航遅延",
+      "officialUrl": "https://aline-ferry.com/status/"
+    },
+    {
+      "id": "marix_line",
+      "operatorName": "マリックスライン",
+      "routeName": "鹿児島〜奄美〜沖縄",
+      "status": "conditional",
+      "note": "条件付運航  2026年8月21日 鹿児島新港 発 2026年8月22日 那覇港 向け",
+      "officialUrl": "https://marixline.com/"
+    },
+    {
+      "id": "jal_jac",
+      "operatorName": "JAL / JAC",
+      "routeName": "鹿児島・那覇⇔奄美",
+      "status": "unknown",
+      "note": "自動取得に対応していません。公式サイトでご確認ください。",
+      "officialUrl": "https://www.jal.co.jp/jp/ja/flight-status/dom/"
+    }
+  ]
+}
