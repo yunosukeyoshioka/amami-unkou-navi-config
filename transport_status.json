@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-21T07:34:39.994Z",
+  "updatedAt": "2026-08-21T07:49:34.654Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -15,13 +15,25 @@
           "label": "フェリーあけぼの 鹿児島発",
           "time": "8/20 18:00",
           "status": "conditional",
-          "note": "8/20(木)鹿児島発下り便…条件付き運航と運航遅延"
+          "note": "8/20(木)鹿児島発下り便…条件付き運航と運航遅延",
+          "islands": [
+            "奄美大島",
+            "徳之島",
+            "沖永良部島",
+            "与論島"
+          ]
         },
         {
           "label": "フェリー波之上 鹿児島発",
           "time": "本日",
           "status": "normal",
-          "note": "通常運航致しております。"
+          "note": "通常運航致しております。",
+          "islands": [
+            "奄美大島",
+            "徳之島",
+            "沖永良部島",
+            "与論島"
+          ]
         }
       ]
     },
@@ -38,145 +50,201 @@
           "label": "下り便 鹿児島新港 出港",
           "time": "8/21 18:00",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": []
         },
         {
           "label": "下り便 名瀬港 入港",
           "time": "8/22 05:00",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "下り便 名瀬港 出港",
           "time": "8/22 05:50",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "下り便 亀徳港 入港",
           "time": "8/22 09:10",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "徳之島"
+          ]
         },
         {
           "label": "下り便 亀徳港 出港",
           "time": "8/22 09:40",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "徳之島"
+          ]
         },
         {
           "label": "下り便 和泊港 入港",
           "time": "8/22 11:30",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "沖永良部島"
+          ]
         },
         {
           "label": "下り便 和泊港 出港",
           "time": "8/22 12:00",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "沖永良部島"
+          ]
         },
         {
           "label": "下り便 与論港 入港",
           "time": "8/22 13:40",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "与論島"
+          ]
         },
         {
           "label": "下り便 与論港 出港",
           "time": "8/22 14:10",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "与論島"
+          ]
         },
         {
           "label": "下り便 本部港 入港",
           "time": "8/22 16:40",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": []
         },
         {
           "label": "下り便 本部港 出港",
           "time": "8/22 17:10",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": []
         },
         {
           "label": "下り便 那覇港 入港",
           "time": "8/22 19:00",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": []
         },
         {
           "label": "上り便 那覇港 出港",
           "time": "8/21 07:00",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": []
         },
         {
           "label": "上り便 本部港 入港",
           "time": "8/21 09:00",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": []
         },
         {
           "label": "上り便 本部港 出港",
           "time": "8/21 09:20",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": []
         },
         {
           "label": "上り便 与論港 入港",
           "time": "8/21 11:50",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "与論島"
+          ]
         },
         {
           "label": "上り便 与論港 出港",
           "time": "8/21 12:10",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "与論島"
+          ]
         },
         {
           "label": "上り便 和泊港 入港",
           "time": "8/21 14:10",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "沖永良部島"
+          ]
         },
         {
           "label": "上り便 和泊港 出港",
           "time": "8/21 14:40",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "沖永良部島"
+          ]
         },
         {
           "label": "上り便 亀徳港 入港",
           "time": "8/21 16:30",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "徳之島"
+          ]
         },
         {
           "label": "上り便 亀徳港 出港",
           "time": "8/21 17:00",
           "status": "conditional",
-          "note": "条件付運航"
+          "note": "条件付運航",
+          "islands": [
+            "徳之島"
+          ]
         },
         {
           "label": "上り便 名瀬港 入港",
           "time": "8/21 20:30",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "上り便 名瀬港 出港",
           "time": "8/21 21:20",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "上り便 鹿児島新港 入港",
           "time": "8/22 08:30",
           "status": "normal",
-          "note": "通常運航"
+          "note": "通常運航",
+          "islands": []
         }
       ]
     },
@@ -194,140 +262,205 @@
           "time": "08:45",
           "actualTime": "08:50",
           "status": "conditional",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "3831便 喜界島行き",
           "time": "09:25",
           "actualTime": "09:25",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島",
+            "喜界島"
+          ]
         },
         {
           "label": "546便 成田行き",
           "time": "10:30",
           "actualTime": "10:30",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "3841便 徳之島行き",
           "time": "10:55",
           "actualTime": "10:55",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島",
+            "徳之島"
+          ]
         },
         {
           "label": "3861便 与論行き",
           "time": "11:15",
           "actualTime": "11:15",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島",
+            "与論島"
+          ]
         },
         {
           "label": "3724便 鹿児島行き",
           "time": "11:15",
           "actualTime": "11:15",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "3726便 鹿児島行き",
           "time": "11:45",
           "actualTime": "11:50",
           "status": "conditional",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "382便 鹿児島行き",
           "time": "12:00",
           "actualTime": "12:00",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "2464便 大阪(伊丹)行き",
           "time": "12:40",
           "actualTime": "12:40",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "3728便 鹿児島行き",
           "time": "13:15",
           "actualTime": "13:15",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "658便 東京(羽田)行き",
           "time": "14:10",
           "actualTime": "14:35",
           "status": "conditional",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "3730便 鹿児島行き",
           "time": "14:35",
           "actualTime": "14:35",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "2468便 大阪(伊丹)行き",
           "time": "14:50",
           "actualTime": "15:00",
           "status": "conditional",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "204便 大阪(関西)行き",
           "time": "15:20",
           "actualTime": "15:20",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "3837便 喜界島行き",
           "time": "15:40",
           "actualTime": "15:40",
           "status": "normal",
-          "note": "出発済み"
+          "note": "出発済み",
+          "islands": [
+            "奄美大島",
+            "喜界島"
+          ]
         },
         {
           "label": "3734便 鹿児島行き",
           "time": "17:20",
           "actualTime": "17:20",
           "status": "normal",
-          "note": "搭乗手続き受付中"
+          "note": "搭乗手続き受付中",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "3843便 徳之島行き",
           "time": "18:00",
           "actualTime": "18:00",
           "status": "normal",
-          "note": "搭乗手続き受付中"
+          "note": "搭乗手続き受付中",
+          "islands": [
+            "奄美大島",
+            "徳之島"
+          ]
         },
         {
           "label": "3684便 福岡行き",
           "time": "18:20",
           "actualTime": "18:20",
           "status": "normal",
-          "note": "搭乗手続き受付中"
+          "note": "搭乗手続き受付中",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "388便 鹿児島行き",
           "time": "18:50",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "定刻"
+          "note": "定刻",
+          "islands": [
+            "奄美大島"
+          ]
         },
         {
           "label": "3738便 鹿児島行き",
           "time": "19:00",
           "actualTime": "19:00",
           "status": "normal",
-          "note": "搭乗手続き受付中"
+          "note": "搭乗手続き受付中",
+          "islands": [
+            "奄美大島"
+          ]
         }
       ]
     }
