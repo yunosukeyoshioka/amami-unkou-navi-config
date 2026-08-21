@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-21T08:49:28.873Z",
+  "updatedAt": "2026-08-21T09:15:33.997Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -22,7 +22,9 @@
             "徳之島",
             "沖永良部島",
             "与論島"
-          ]
+          ],
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": null
         },
         {
           "label": "フェリー波之上 鹿児島発",
@@ -35,7 +37,9 @@
             "徳之島",
             "沖永良部島",
             "与論島"
-          ]
+          ],
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": null
         }
       ]
     },
@@ -54,7 +58,9 @@
           "status": "normal",
           "note": "通常運航",
           "direction": "departure",
-          "islands": []
+          "islands": [],
+          "departureLocation": "那覇港",
+          "arrivalLocation": "本部港"
         },
         {
           "label": "上り便 本部港 入港",
@@ -62,7 +68,9 @@
           "status": "normal",
           "note": "通常運航",
           "direction": "arrival",
-          "islands": []
+          "islands": [],
+          "departureLocation": "那覇港",
+          "arrivalLocation": "本部港"
         },
         {
           "label": "上り便 本部港 出港",
@@ -70,7 +78,9 @@
           "status": "normal",
           "note": "通常運航",
           "direction": "departure",
-          "islands": []
+          "islands": [],
+          "departureLocation": "本部港",
+          "arrivalLocation": "与論港"
         },
         {
           "label": "上り便 与論港 入港",
@@ -80,7 +90,9 @@
           "direction": "arrival",
           "islands": [
             "与論島"
-          ]
+          ],
+          "departureLocation": "本部港",
+          "arrivalLocation": "与論港"
         },
         {
           "label": "上り便 与論港 出港",
@@ -90,7 +102,9 @@
           "direction": "departure",
           "islands": [
             "与論島"
-          ]
+          ],
+          "departureLocation": "与論港",
+          "arrivalLocation": "和泊港"
         },
         {
           "label": "上り便 和泊港 入港",
@@ -100,7 +114,9 @@
           "direction": "arrival",
           "islands": [
             "沖永良部島"
-          ]
+          ],
+          "departureLocation": "与論港",
+          "arrivalLocation": "和泊港"
         },
         {
           "label": "上り便 和泊港 出港",
@@ -110,7 +126,9 @@
           "direction": "departure",
           "islands": [
             "沖永良部島"
-          ]
+          ],
+          "departureLocation": "和泊港",
+          "arrivalLocation": "亀徳港"
         },
         {
           "label": "上り便 亀徳港 入港",
@@ -120,7 +138,9 @@
           "direction": "arrival",
           "islands": [
             "徳之島"
-          ]
+          ],
+          "departureLocation": "和泊港",
+          "arrivalLocation": "亀徳港"
         },
         {
           "label": "上り便 亀徳港 出港",
@@ -130,7 +150,9 @@
           "direction": "departure",
           "islands": [
             "徳之島"
-          ]
+          ],
+          "departureLocation": "亀徳港",
+          "arrivalLocation": "名瀬港"
         },
         {
           "label": "下り便 鹿児島新港 出港",
@@ -138,7 +160,9 @@
           "status": "normal",
           "note": "通常運航",
           "direction": "departure",
-          "islands": []
+          "islands": [],
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "名瀬港"
         },
         {
           "label": "上り便 名瀬港 入港",
@@ -148,7 +172,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "亀徳港",
+          "arrivalLocation": "名瀬港"
         },
         {
           "label": "上り便 名瀬港 出港",
@@ -158,7 +184,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "名瀬港",
+          "arrivalLocation": "鹿児島新港"
         },
         {
           "label": "下り便 名瀬港 入港",
@@ -168,7 +196,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "名瀬港"
         },
         {
           "label": "下り便 名瀬港 出港",
@@ -178,7 +208,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "名瀬港",
+          "arrivalLocation": "亀徳港"
         },
         {
           "label": "上り便 鹿児島新港 入港",
@@ -186,7 +218,9 @@
           "status": "normal",
           "note": "通常運航",
           "direction": "arrival",
-          "islands": []
+          "islands": [],
+          "departureLocation": "名瀬港",
+          "arrivalLocation": "鹿児島新港"
         },
         {
           "label": "下り便 亀徳港 入港",
@@ -196,7 +230,9 @@
           "direction": "arrival",
           "islands": [
             "徳之島"
-          ]
+          ],
+          "departureLocation": "名瀬港",
+          "arrivalLocation": "亀徳港"
         },
         {
           "label": "下り便 亀徳港 出港",
@@ -206,7 +242,9 @@
           "direction": "departure",
           "islands": [
             "徳之島"
-          ]
+          ],
+          "departureLocation": "亀徳港",
+          "arrivalLocation": "和泊港"
         },
         {
           "label": "下り便 和泊港 入港",
@@ -216,7 +254,9 @@
           "direction": "arrival",
           "islands": [
             "沖永良部島"
-          ]
+          ],
+          "departureLocation": "亀徳港",
+          "arrivalLocation": "和泊港"
         },
         {
           "label": "下り便 和泊港 出港",
@@ -226,7 +266,9 @@
           "direction": "departure",
           "islands": [
             "沖永良部島"
-          ]
+          ],
+          "departureLocation": "和泊港",
+          "arrivalLocation": "与論港"
         },
         {
           "label": "下り便 与論港 入港",
@@ -236,7 +278,9 @@
           "direction": "arrival",
           "islands": [
             "与論島"
-          ]
+          ],
+          "departureLocation": "和泊港",
+          "arrivalLocation": "与論港"
         },
         {
           "label": "下り便 与論港 出港",
@@ -246,7 +290,9 @@
           "direction": "departure",
           "islands": [
             "与論島"
-          ]
+          ],
+          "departureLocation": "与論港",
+          "arrivalLocation": "本部港"
         },
         {
           "label": "下り便 本部港 入港",
@@ -254,7 +300,9 @@
           "status": "normal",
           "note": "通常運航",
           "direction": "arrival",
-          "islands": []
+          "islands": [],
+          "departureLocation": "与論港",
+          "arrivalLocation": "本部港"
         },
         {
           "label": "下り便 本部港 出港",
@@ -262,7 +310,9 @@
           "status": "normal",
           "note": "通常運航",
           "direction": "departure",
-          "islands": []
+          "islands": [],
+          "departureLocation": "本部港",
+          "arrivalLocation": "那覇港"
         },
         {
           "label": "下り便 那覇港 入港",
@@ -270,7 +320,9 @@
           "status": "normal",
           "note": "通常運航",
           "direction": "arrival",
-          "islands": []
+          "islands": [],
+          "departureLocation": "本部港",
+          "arrivalLocation": "那覇港"
         }
       ]
     },
@@ -292,7 +344,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "福岡空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3722便 鹿児島行き",
@@ -303,7 +357,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
         },
         {
           "label": "3721便 鹿児島発",
@@ -314,7 +370,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3831便 喜界島行き",
@@ -326,7 +384,9 @@
           "islands": [
             "奄美大島",
             "喜界島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "喜界空港"
         },
         {
           "label": "545便 成田発",
@@ -337,7 +397,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "成田空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3842便 徳之島発",
@@ -349,7 +411,9 @@
           "islands": [
             "奄美大島",
             "徳之島"
-          ]
+          ],
+          "departureLocation": "徳之島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "546便 成田行き",
@@ -360,7 +424,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "成田空港"
         },
         {
           "label": "3830便 喜界島発",
@@ -372,7 +438,9 @@
           "islands": [
             "奄美大島",
             "喜界島"
-          ]
+          ],
+          "departureLocation": "喜界空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3725便 鹿児島発",
@@ -383,7 +451,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3841便 徳之島行き",
@@ -395,7 +465,9 @@
           "islands": [
             "奄美大島",
             "徳之島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "徳之島空港"
         },
         {
           "label": "3727便 鹿児島発",
@@ -406,7 +478,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3861便 与論行き",
@@ -418,7 +492,9 @@
           "islands": [
             "奄美大島",
             "与論島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "与論空港"
         },
         {
           "label": "3724便 鹿児島行き",
@@ -429,7 +505,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
         },
         {
           "label": "381便 鹿児島発",
@@ -440,7 +518,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3726便 鹿児島行き",
@@ -451,7 +531,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
         },
         {
           "label": "382便 鹿児島行き",
@@ -462,7 +544,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
         },
         {
           "label": "2465便 大阪(伊丹)発",
@@ -473,7 +557,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "伊丹空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "2464便 大阪(伊丹)行き",
@@ -484,7 +570,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "伊丹空港"
         },
         {
           "label": "3729便 鹿児島発",
@@ -495,7 +583,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3728便 鹿児島行き",
@@ -506,7 +596,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
         },
         {
           "label": "659便 東京(羽田)発",
@@ -517,7 +609,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "羽田空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3731便 鹿児島発",
@@ -528,7 +622,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "658便 東京(羽田)行き",
@@ -539,7 +635,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "羽田空港"
         },
         {
           "label": "2469便 大阪(伊丹)発",
@@ -550,7 +648,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "伊丹空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "203便 大阪(関西)発",
@@ -561,7 +661,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "関西空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3730便 鹿児島行き",
@@ -572,7 +674,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
         },
         {
           "label": "2468便 大阪(伊丹)行き",
@@ -583,7 +687,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "伊丹空港"
         },
         {
           "label": "3867便 沖縄(那覇)発",
@@ -594,7 +700,9 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "那覇空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "204便 大阪(関西)行き",
@@ -605,7 +713,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "関西空港"
         },
         {
           "label": "3837便 喜界島行き",
@@ -617,7 +727,9 @@
           "islands": [
             "奄美大島",
             "喜界島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "喜界空港"
         },
         {
           "label": "3836便 喜界島発",
@@ -629,7 +741,9 @@
           "islands": [
             "奄美大島",
             "喜界島"
-          ]
+          ],
+          "departureLocation": "喜界空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3734便 鹿児島行き",
@@ -640,7 +754,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
         },
         {
           "label": "3844便 徳之島発",
@@ -652,52 +768,62 @@
           "islands": [
             "奄美大島",
             "徳之島"
-          ]
+          ],
+          "departureLocation": "徳之島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3735便 鹿児島発",
           "time": "17:50",
           "actualTime": "17:50",
           "status": "normal",
-          "note": "まもなく到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3843便 徳之島行き",
           "time": "18:00",
           "actualTime": "18:00",
           "status": "normal",
-          "note": "まもなくご案内",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
             "徳之島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "徳之島空港"
         },
         {
           "label": "387便 鹿児島発",
           "time": "18:10",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "定刻",
+          "note": "ただいま到着",
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "3684便 福岡行き",
           "time": "18:20",
           "actualTime": "18:20",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "福岡空港"
         },
         {
           "label": "3737便 鹿児島発",
@@ -708,18 +834,22 @@
           "direction": "arrival",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "388便 鹿児島行き",
           "time": "18:50",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "ゲートへお越し下さい",
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
         },
         {
           "label": "3738便 鹿児島行き",
@@ -730,7 +860,9 @@
           "direction": "departure",
           "islands": [
             "奄美大島"
-          ]
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
         }
       ]
     }
