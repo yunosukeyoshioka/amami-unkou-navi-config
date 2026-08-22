@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-22T04:40:01.202Z",
+  "updatedAt": "2026-08-22T05:33:19.918Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1436,7 +1436,7 @@
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
       "status": "conditional",
-      "note": "本日40便中9便に遅延・欠航等があります。",
+      "note": "本日40便中10便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -3356,7 +3356,7 @@
           "date": "2026-08-22",
           "actualTime": "13:50",
           "status": "conditional",
-          "note": "遅れ",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3454,7 +3454,7 @@
           "date": "2026-08-22",
           "actualTime": "14:05",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3552,7 +3552,7 @@
           "date": "2026-08-22",
           "actualTime": "14:25",
           "status": "conditional",
-          "note": "搭乗手続き受付中",
+          "note": "搭乗ご案内中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3650,7 +3650,7 @@
           "date": "2026-08-22",
           "actualTime": "14:30",
           "status": "conditional",
-          "note": "遅れ",
+          "note": "ただいま到着",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3746,9 +3746,9 @@
           "label": "203便 大阪(関西)発",
           "time": "14:30",
           "date": "2026-08-22",
-          "actualTime": "14:30",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "14:10",
+          "status": "conditional",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3846,7 +3846,7 @@
           "date": "2026-08-22",
           "actualTime": "14:35",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "搭乗ご案内中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4140,7 +4140,7 @@
           "date": "2026-08-22",
           "actualTime": "15:20",
           "status": "normal",
-          "note": "定刻",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
