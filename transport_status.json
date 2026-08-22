@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-22T03:51:27.239Z",
+  "updatedAt": "2026-08-22T04:40:01.202Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1436,7 +1436,7 @@
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
       "status": "conditional",
-      "note": "本日40便中7便に遅延・欠航等があります。",
+      "note": "本日40便中9便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -3160,7 +3160,7 @@
           "date": "2026-08-22",
           "actualTime": "13:10",
           "status": "conditional",
-          "note": "遅れ",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3258,7 +3258,7 @@
           "date": "2026-08-22",
           "actualTime": "13:35",
           "status": "conditional",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3648,9 +3648,9 @@
           "label": "2469便 大阪(伊丹)発",
           "time": "14:15",
           "date": "2026-08-22",
-          "actualTime": "14:15",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "14:30",
+          "status": "conditional",
+          "note": "遅れ",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3942,8 +3942,8 @@
           "label": "2468便 大阪(伊丹)行き",
           "time": "14:50",
           "date": "2026-08-22",
-          "actualTime": "14:50",
-          "status": "normal",
+          "actualTime": "15:00",
+          "status": "conditional",
           "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
