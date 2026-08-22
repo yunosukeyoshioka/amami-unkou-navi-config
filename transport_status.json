@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-22T23:26:54.985Z",
+  "updatedAt": "2026-08-22T23:50:07.532Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -8,7 +8,7 @@
       "routeName": "鹿児島〜奄美〜沖縄",
       "mode": "ferry",
       "status": "conditional",
-      "note": "8/20(木)鹿児島新港発下り便…条件付き運航、運航遅延 8/22(土)那覇発上り便…条件付き運航",
+      "note": "8月22日(土)鹿児島新港発／下り便…条件付き運航",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
@@ -451,10 +451,10 @@
         },
         {
           "label": "フェリーあけぼの 鹿児島発",
-          "time": "8/20 18:00",
-          "date": "2026-08-20",
-          "status": "conditional",
-          "note": "8/20(木)鹿児島新港発下り便…条件付き運航、運航遅延 8/22(土)那覇発上り便…条件付き運航",
+          "time": "本日",
+          "date": "2026-08-23",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -1753,7 +1753,7 @@
           "date": "2026-08-23",
           "actualTime": "08:30",
           "status": "conditional",
-          "note": "まもなく到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -1851,7 +1851,7 @@
           "date": "2026-08-23",
           "actualTime": "08:55",
           "status": "conditional",
-          "note": "搭乗手続き受付中",
+          "note": "ゲートへお越し下さい",
           "direction": "departure",
           "islands": [
             "奄美大島"
