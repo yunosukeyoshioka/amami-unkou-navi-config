@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-22T02:04:16.277Z",
+  "updatedAt": "2026-08-22T02:53:58.550Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -11,6 +11,444 @@
       "note": "8/20(木)鹿児島新港発下り便…条件付き運航、運航遅延 8/22(土)那覇発上り便…条件付き運航",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
+        {
+          "label": "下り便 名瀬港 入港（予定）",
+          "time": "05:00",
+          "date": "2026-08-25",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "名瀬港"
+        },
+        {
+          "label": "下り便 名瀬港 入港（予定）",
+          "time": "05:00",
+          "date": "2026-08-27",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "名瀬港"
+        },
+        {
+          "label": "下り便 名瀬港 入港（予定）",
+          "time": "05:00",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "名瀬港"
+        },
+        {
+          "label": "上り便 鹿児島新港 入港（予定）",
+          "time": "08:30",
+          "date": "2026-08-25",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島",
+            "徳之島",
+            "沖永良部島",
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": null,
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 鹿児島新港 入港（予定）",
+          "time": "08:30",
+          "date": "2026-08-27",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島",
+            "徳之島",
+            "沖永良部島",
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": null,
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 鹿児島新港 入港（予定）",
+          "time": "08:30",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島",
+            "徳之島",
+            "沖永良部島",
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": null,
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "下り便 亀徳港 入港（予定）",
+          "time": "09:10",
+          "date": "2026-08-25",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "亀徳港"
+        },
+        {
+          "label": "下り便 亀徳港 入港（予定）",
+          "time": "09:10",
+          "date": "2026-08-27",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "亀徳港"
+        },
+        {
+          "label": "下り便 亀徳港 入港（予定）",
+          "time": "09:10",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "亀徳港"
+        },
+        {
+          "label": "下り便 和泊港 入港（予定）",
+          "time": "11:30",
+          "date": "2026-08-25",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "和泊港"
+        },
+        {
+          "label": "下り便 和泊港 入港（予定）",
+          "time": "11:30",
+          "date": "2026-08-27",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "和泊港"
+        },
+        {
+          "label": "下り便 和泊港 入港（予定）",
+          "time": "11:30",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "和泊港"
+        },
+        {
+          "label": "上り便 与論港 出港（予定）",
+          "time": "12:10",
+          "date": "2026-08-24",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "与論港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 与論港 出港（予定）",
+          "time": "12:10",
+          "date": "2026-08-26",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "与論港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 与論港 出港（予定）",
+          "time": "12:10",
+          "date": "2026-08-28",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "与論港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "下り便 与論港 入港（予定）",
+          "time": "13:40",
+          "date": "2026-08-25",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "与論港"
+        },
+        {
+          "label": "下り便 与論港 入港（予定）",
+          "time": "13:40",
+          "date": "2026-08-27",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "与論港"
+        },
+        {
+          "label": "下り便 与論港 入港（予定）",
+          "time": "13:40",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "与論港"
+        },
+        {
+          "label": "上り便 和泊港 出港（予定）",
+          "time": "14:40",
+          "date": "2026-08-24",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "沖永良部島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "和泊港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 和泊港 出港（予定）",
+          "time": "14:40",
+          "date": "2026-08-26",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "沖永良部島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "和泊港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 和泊港 出港（予定）",
+          "time": "14:40",
+          "date": "2026-08-28",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "沖永良部島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "和泊港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 亀徳港 出港（予定）",
+          "time": "17:00",
+          "date": "2026-08-24",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "亀徳港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 亀徳港 出港（予定）",
+          "time": "17:00",
+          "date": "2026-08-26",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "亀徳港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 亀徳港 出港（予定）",
+          "time": "17:00",
+          "date": "2026-08-28",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "亀徳港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "下り便 鹿児島新港 出港（予定）",
+          "time": "18:00",
+          "date": "2026-08-24",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島",
+            "徳之島",
+            "沖永良部島",
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": null
+        },
+        {
+          "label": "下り便 鹿児島新港 出港（予定）",
+          "time": "18:00",
+          "date": "2026-08-26",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島",
+            "徳之島",
+            "沖永良部島",
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": null
+        },
+        {
+          "label": "下り便 鹿児島新港 出港（予定）",
+          "time": "18:00",
+          "date": "2026-08-28",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島",
+            "徳之島",
+            "沖永良部島",
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": null
+        },
+        {
+          "label": "上り便 名瀬港 出港（予定）",
+          "time": "21:20",
+          "date": "2026-08-24",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "名瀬港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 名瀬港 出港（予定）",
+          "time": "21:20",
+          "date": "2026-08-26",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "名瀬港",
+          "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 名瀬港 出港（予定）",
+          "time": "21:20",
+          "date": "2026-08-28",
+          "status": "unknown",
+          "note": "公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "名瀬港",
+          "arrivalLocation": "鹿児島新港"
+        },
         {
           "label": "フェリーあけぼの 鹿児島発",
           "time": "8/20 18:00",
@@ -40,57 +478,6 @@
             "沖永良部島",
             "与論島"
           ],
-          "departureLocation": "鹿児島新港",
-          "arrivalLocation": null
-        },
-        {
-          "label": "フェリーあけぼの 鹿児島発（予定）",
-          "time": "8/24",
-          "date": "2026-08-24",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。出航時刻・寄港地は公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島",
-            "徳之島",
-            "沖永良部島",
-            "与論島"
-          ],
-          "isScheduled": true,
-          "departureLocation": "鹿児島新港",
-          "arrivalLocation": null
-        },
-        {
-          "label": "フェリー波之上 鹿児島発（予定）",
-          "time": "8/26",
-          "date": "2026-08-26",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。出航時刻・寄港地は公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島",
-            "徳之島",
-            "沖永良部島",
-            "与論島"
-          ],
-          "isScheduled": true,
-          "departureLocation": "鹿児島新港",
-          "arrivalLocation": null
-        },
-        {
-          "label": "フェリーあけぼの 鹿児島発（予定）",
-          "time": "8/28",
-          "date": "2026-08-28",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。出航時刻・寄港地は公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島",
-            "徳之島",
-            "沖永良部島",
-            "与論島"
-          ],
-          "isScheduled": true,
           "departureLocation": "鹿児島新港",
           "arrivalLocation": null
         }
@@ -2066,7 +2453,7 @@
           "date": "2026-08-22",
           "actualTime": "11:10",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2164,7 +2551,7 @@
           "date": "2026-08-22",
           "actualTime": "11:15",
           "status": "normal",
-          "note": "ゲートへお越し下さい",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2179,7 +2566,7 @@
           "date": "2026-08-22",
           "actualTime": "11:15",
           "status": "normal",
-          "note": "ゲートへお越し下さい",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2283,7 +2670,7 @@
           "date": "2026-08-22",
           "actualTime": "11:20",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2381,7 +2768,7 @@
           "date": "2026-08-22",
           "actualTime": "11:45",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2479,7 +2866,7 @@
           "date": "2026-08-22",
           "actualTime": "12:00",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "搭乗ご案内中",
           "direction": "departure",
           "islands": [
             "奄美大島"
