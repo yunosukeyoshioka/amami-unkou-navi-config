@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-22T14:52:40.805Z",
+  "updatedAt": "2026-08-22T15:27:58.774Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -468,7 +468,7 @@
         {
           "label": "フェリー波之上 鹿児島発",
           "time": "本日",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "status": "conditional",
           "note": "8月22日(土)鹿児島新港発／下り便…条件付き運航",
           "direction": "departure",
@@ -523,6 +523,18 @@
         {
           "label": "上り便 那覇港 出港（予定）",
           "time": "7:00",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [],
+          "isScheduled": true,
+          "departureLocation": "那覇港",
+          "arrivalLocation": "本部港"
+        },
+        {
+          "label": "上り便 那覇港 出港（予定）",
+          "time": "7:00",
           "date": "2026-08-27",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
@@ -543,6 +555,18 @@
           "isScheduled": true,
           "departureLocation": "名瀬港",
           "arrivalLocation": "鹿児島新港"
+        },
+        {
+          "label": "上り便 本部港 入港（予定）",
+          "time": "9:00",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [],
+          "isScheduled": true,
+          "departureLocation": "那覇港",
+          "arrivalLocation": "本部港"
         },
         {
           "label": "上り便 本部港 入港（予定）",
@@ -569,6 +593,18 @@
           "isScheduled": true,
           "departureLocation": "名瀬港",
           "arrivalLocation": "亀徳港"
+        },
+        {
+          "label": "上り便 本部港 出港（予定）",
+          "time": "9:20",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [],
+          "isScheduled": true,
+          "departureLocation": "本部港",
+          "arrivalLocation": "与論港"
         },
         {
           "label": "上り便 本部港 出港（予定）",
@@ -613,6 +649,20 @@
         {
           "label": "上り便 与論港 入港（予定）",
           "time": "11:50",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "本部港",
+          "arrivalLocation": "与論港"
+        },
+        {
+          "label": "上り便 与論港 入港（予定）",
+          "time": "11:50",
           "date": "2026-08-27",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
@@ -637,6 +687,20 @@
           "isScheduled": true,
           "departureLocation": "和泊港",
           "arrivalLocation": "与論港"
+        },
+        {
+          "label": "上り便 与論港 出港（予定）",
+          "time": "12:10",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "与論港",
+          "arrivalLocation": "和泊港"
         },
         {
           "label": "上り便 与論港 出港（予定）",
@@ -683,6 +747,20 @@
         {
           "label": "上り便 和泊港 入港（予定）",
           "time": "14:10",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "与論港",
+          "arrivalLocation": "和泊港"
+        },
+        {
+          "label": "上り便 和泊港 入港（予定）",
+          "time": "14:10",
           "date": "2026-08-27",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
@@ -697,12 +775,40 @@
         {
           "label": "上り便 和泊港 出港（予定）",
           "time": "14:40",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "沖永良部島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "和泊港",
+          "arrivalLocation": "亀徳港"
+        },
+        {
+          "label": "上り便 和泊港 出港（予定）",
+          "time": "14:40",
           "date": "2026-08-27",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
           "islands": [
             "沖永良部島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "和泊港",
+          "arrivalLocation": "亀徳港"
+        },
+        {
+          "label": "上り便 亀徳港 入港（予定）",
+          "time": "16:30",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
           ],
           "isScheduled": true,
           "departureLocation": "和泊港",
@@ -733,6 +839,20 @@
           "isScheduled": true,
           "departureLocation": "与論港",
           "arrivalLocation": "本部港"
+        },
+        {
+          "label": "上り便 亀徳港 出港（予定）",
+          "time": "17:00",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "亀徳港",
+          "arrivalLocation": "名瀬港"
         },
         {
           "label": "上り便 亀徳港 出港（予定）",
@@ -773,6 +893,18 @@
           "arrivalLocation": "名瀬港"
         },
         {
+          "label": "下り便 鹿児島新港 出港（予定）",
+          "time": "18:00",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [],
+          "isScheduled": true,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "名瀬港"
+        },
+        {
           "label": "下り便 那覇港 入港（予定）",
           "time": "19:00",
           "date": "2026-08-28",
@@ -787,6 +919,20 @@
         {
           "label": "上り便 名瀬港 入港（予定）",
           "time": "20:30",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "亀徳港",
+          "arrivalLocation": "名瀬港"
+        },
+        {
+          "label": "上り便 名瀬港 入港（予定）",
+          "time": "20:30",
           "date": "2026-08-27",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
@@ -797,6 +943,20 @@
           "isScheduled": true,
           "departureLocation": "亀徳港",
           "arrivalLocation": "名瀬港"
+        },
+        {
+          "label": "上り便 名瀬港 出港（予定）",
+          "time": "21:20",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "名瀬港",
+          "arrivalLocation": "鹿児島新港"
         },
         {
           "label": "上り便 名瀬港 出港（予定）",
@@ -1590,28 +1750,14 @@
         {
           "label": "3681便 福岡発",
           "time": "08:15",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "08:15",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "福岡空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3681便 福岡発（予定）",
-          "time": "08:15",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "福岡空港",
           "arrivalLocation": "奄美空港"
         },
@@ -1675,6 +1821,20 @@
           "label": "3681便 福岡発（予定）",
           "time": "08:15",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "福岡空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3681便 福岡発（予定）",
+          "time": "08:15",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -1688,28 +1848,14 @@
         {
           "label": "3722便 鹿児島行き",
           "time": "08:45",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "08:45",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "鹿児島空港"
-        },
-        {
-          "label": "3722便 鹿児島行き（予定）",
-          "time": "08:45",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "鹿児島空港"
         },
@@ -1773,6 +1919,20 @@
           "label": "3722便 鹿児島行き（予定）",
           "time": "08:45",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
+        },
+        {
+          "label": "3722便 鹿児島行き（予定）",
+          "time": "08:45",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -1786,28 +1946,14 @@
         {
           "label": "3721便 鹿児島発",
           "time": "08:55",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "09:00",
           "status": "conditional",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "鹿児島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3721便 鹿児島発（予定）",
-          "time": "08:55",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "鹿児島空港",
           "arrivalLocation": "奄美空港"
         },
@@ -1871,6 +2017,20 @@
           "label": "3721便 鹿児島発（予定）",
           "time": "08:55",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3721便 鹿児島発（予定）",
+          "time": "08:55",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -1884,30 +2044,15 @@
         {
           "label": "3831便 喜界島行き",
           "time": "09:25",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "09:25",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島",
             "喜界島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "喜界空港"
-        },
-        {
-          "label": "3831便 喜界島行き（予定）",
-          "time": "09:25",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島",
-            "喜界島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "喜界空港"
         },
@@ -1975,6 +2120,21 @@
           "label": "3831便 喜界島行き（予定）",
           "time": "09:25",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島",
+            "喜界島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "喜界空港"
+        },
+        {
+          "label": "3831便 喜界島行き（予定）",
+          "time": "09:25",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -1989,28 +2149,14 @@
         {
           "label": "545便 成田発",
           "time": "09:40",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "09:20",
           "status": "conditional",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "成田空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "0545便 成田発（予定）",
-          "time": "09:40",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "成田空港",
           "arrivalLocation": "奄美空港"
         },
@@ -2085,9 +2231,9 @@
           "arrivalLocation": "奄美空港"
         },
         {
-          "label": "4371便 鹿児島発（予定）",
-          "time": "10:00",
-          "date": "2026-08-23",
+          "label": "0545便 成田発（予定）",
+          "time": "09:40",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -2095,7 +2241,7 @@
             "奄美大島"
           ],
           "isScheduled": true,
-          "departureLocation": "鹿児島空港",
+          "departureLocation": "成田空港",
           "arrivalLocation": "奄美空港"
         },
         {
@@ -2129,30 +2275,15 @@
         {
           "label": "3842便 徳之島発",
           "time": "10:15",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "10:15",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島",
             "徳之島"
           ],
-          "departureLocation": "徳之島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3842便 徳之島発（予定）",
-          "time": "10:15",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島",
-            "徳之島"
-          ],
-          "isScheduled": true,
           "departureLocation": "徳之島空港",
           "arrivalLocation": "奄美空港"
         },
@@ -2220,6 +2351,21 @@
           "label": "3842便 徳之島発（予定）",
           "time": "10:15",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島",
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "徳之島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3842便 徳之島発（予定）",
+          "time": "10:15",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -2234,42 +2380,14 @@
         {
           "label": "546便 成田行き",
           "time": "10:30",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "10:30",
           "status": "normal",
-          "note": "定刻",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "成田空港"
-        },
-        {
-          "label": "3724便 鹿児島行き（予定）",
-          "time": "10:30",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "鹿児島空港"
-        },
-        {
-          "label": "0546便 成田行き（予定）",
-          "time": "10:30",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "成田空港"
         },
@@ -2361,6 +2479,20 @@
           "label": "0546便 成田行き（予定）",
           "time": "10:30",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "成田空港"
+        },
+        {
+          "label": "0546便 成田行き（予定）",
+          "time": "10:30",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -2374,30 +2506,15 @@
         {
           "label": "3830便 喜界島発",
           "time": "10:35",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "10:35",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島",
             "喜界島"
           ],
-          "departureLocation": "喜界空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3830便 喜界島発（予定）",
-          "time": "10:35",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島",
-            "喜界島"
-          ],
-          "isScheduled": true,
           "departureLocation": "喜界空港",
           "arrivalLocation": "奄美空港"
         },
@@ -2465,6 +2582,21 @@
           "label": "3830便 喜界島発（予定）",
           "time": "10:35",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島",
+            "喜界島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "喜界空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3830便 喜界島発（予定）",
+          "time": "10:35",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -2479,10 +2611,10 @@
         {
           "label": "3725便 鹿児島発",
           "time": "10:45",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "10:45",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2493,30 +2625,15 @@
         {
           "label": "3841便 徳之島行き",
           "time": "10:55",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "10:55",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島",
             "徳之島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "徳之島空港"
-        },
-        {
-          "label": "3841便 徳之島行き（予定）",
-          "time": "10:55",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島",
-            "徳之島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "徳之島空港"
         },
@@ -2584,6 +2701,21 @@
           "label": "3841便 徳之島行き（予定）",
           "time": "10:55",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島",
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "徳之島空港"
+        },
+        {
+          "label": "3841便 徳之島行き（予定）",
+          "time": "10:55",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -2598,28 +2730,14 @@
         {
           "label": "3727便 鹿児島発",
           "time": "11:10",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "11:10",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "鹿児島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3727便 鹿児島発（予定）",
-          "time": "11:10",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "鹿児島空港",
           "arrivalLocation": "奄美空港"
         },
@@ -2683,6 +2801,20 @@
           "label": "3727便 鹿児島発（予定）",
           "time": "11:10",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3727便 鹿児島発（予定）",
+          "time": "11:10",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -2696,10 +2828,10 @@
         {
           "label": "3861便 与論行き",
           "time": "11:15",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "11:15",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2711,31 +2843,16 @@
         {
           "label": "3724便 鹿児島行き",
           "time": "11:15",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "11:15",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
           "departureLocation": "奄美空港",
           "arrivalLocation": "鹿児島空港"
-        },
-        {
-          "label": "3861便 与論行き（予定）",
-          "time": "11:15",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島",
-            "与論島"
-          ],
-          "isScheduled": true,
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "与論空港"
         },
         {
           "label": "3861便 与論行き（予定）",
@@ -2801,6 +2918,21 @@
           "label": "3861便 与論行き（予定）",
           "time": "11:15",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島",
+            "与論島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "与論空港"
+        },
+        {
+          "label": "3861便 与論行き（予定）",
+          "time": "11:15",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -2815,28 +2947,14 @@
         {
           "label": "381便 鹿児島発",
           "time": "11:20",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "11:20",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "鹿児島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "0381便 鹿児島発（予定）",
-          "time": "11:20",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "鹿児島空港",
           "arrivalLocation": "奄美空港"
         },
@@ -2900,6 +3018,20 @@
           "label": "0381便 鹿児島発（予定）",
           "time": "11:20",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "0381便 鹿児島発（予定）",
+          "time": "11:20",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -2913,28 +3045,14 @@
         {
           "label": "3726便 鹿児島行き",
           "time": "11:45",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "11:45",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "鹿児島空港"
-        },
-        {
-          "label": "4372便 鹿児島行き（予定）",
-          "time": "11:45",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "鹿児島空港"
         },
@@ -2998,6 +3116,20 @@
           "label": "4372便 鹿児島行き（予定）",
           "time": "11:45",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
+        },
+        {
+          "label": "4372便 鹿児島行き（予定）",
+          "time": "11:45",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -3011,10 +3143,10 @@
         {
           "label": "382便 鹿児島行き",
           "time": "12:00",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "12:00",
           "status": "normal",
-          "note": "定刻",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3025,42 +3157,14 @@
         {
           "label": "2465便 大阪(伊丹)発",
           "time": "12:00",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "12:00",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "伊丹空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "0382便 鹿児島行き（予定）",
-          "time": "12:00",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "鹿児島空港"
-        },
-        {
-          "label": "2465便 大阪(伊丹)発（予定）",
-          "time": "12:00",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "伊丹空港",
           "arrivalLocation": "奄美空港"
         },
@@ -3194,6 +3298,34 @@
           "label": "2465便 大阪(伊丹)発（予定）",
           "time": "12:00",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "伊丹空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "0382便 鹿児島行き（予定）",
+          "time": "12:00",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
+        },
+        {
+          "label": "2465便 大阪(伊丹)発（予定）",
+          "time": "12:00",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -3207,28 +3339,14 @@
         {
           "label": "2464便 大阪(伊丹)行き",
           "time": "12:40",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "12:40",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "伊丹空港"
-        },
-        {
-          "label": "2464便 大阪(伊丹)行き（予定）",
-          "time": "12:40",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "伊丹空港"
         },
@@ -3292,6 +3410,20 @@
           "label": "2464便 大阪(伊丹)行き（予定）",
           "time": "12:40",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "伊丹空港"
+        },
+        {
+          "label": "2464便 大阪(伊丹)行き（予定）",
+          "time": "12:40",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -3305,28 +3437,14 @@
         {
           "label": "3729便 鹿児島発",
           "time": "12:45",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "13:10",
           "status": "conditional",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "鹿児島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3729便 鹿児島発（予定）",
-          "time": "12:45",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "鹿児島空港",
           "arrivalLocation": "奄美空港"
         },
@@ -3390,6 +3508,20 @@
           "label": "3729便 鹿児島発（予定）",
           "time": "12:45",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3729便 鹿児島発（予定）",
+          "time": "12:45",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -3403,28 +3535,14 @@
         {
           "label": "3728便 鹿児島行き",
           "time": "13:15",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "13:15",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "鹿児島空港"
-        },
-        {
-          "label": "3728便 鹿児島行き（予定）",
-          "time": "13:15",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "鹿児島空港"
         },
@@ -3488,6 +3606,20 @@
           "label": "3728便 鹿児島行き（予定）",
           "time": "13:15",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
+        },
+        {
+          "label": "3728便 鹿児島行き（予定）",
+          "time": "13:15",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -3501,28 +3633,14 @@
         {
           "label": "659便 東京(羽田)発",
           "time": "13:35",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "13:50",
           "status": "conditional",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "羽田空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "0659便 東京(羽田)発（予定）",
-          "time": "13:35",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "羽田空港",
           "arrivalLocation": "奄美空港"
         },
@@ -3586,6 +3704,20 @@
           "label": "0659便 東京(羽田)発（予定）",
           "time": "13:35",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "羽田空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "0659便 東京(羽田)発（予定）",
+          "time": "13:35",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -3599,28 +3731,14 @@
         {
           "label": "3731便 鹿児島発",
           "time": "14:05",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "14:05",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "鹿児島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3731便 鹿児島発（予定）",
-          "time": "14:05",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "鹿児島空港",
           "arrivalLocation": "奄美空港"
         },
@@ -3684,6 +3802,20 @@
           "label": "3731便 鹿児島発（予定）",
           "time": "14:05",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3731便 鹿児島発（予定）",
+          "time": "14:05",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -3697,28 +3829,14 @@
         {
           "label": "658便 東京(羽田)行き",
           "time": "14:10",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "14:10",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "羽田空港"
-        },
-        {
-          "label": "0658便 東京(羽田)行き（予定）",
-          "time": "14:10",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "羽田空港"
         },
@@ -3782,6 +3900,20 @@
           "label": "0658便 東京(羽田)行き（予定）",
           "time": "14:10",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "羽田空港"
+        },
+        {
+          "label": "0658便 東京(羽田)行き（予定）",
+          "time": "14:10",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -3795,28 +3927,14 @@
         {
           "label": "2469便 大阪(伊丹)発",
           "time": "14:15",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "14:30",
           "status": "conditional",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "伊丹空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "2469便 大阪(伊丹)発（予定）",
-          "time": "14:15",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "伊丹空港",
           "arrivalLocation": "奄美空港"
         },
@@ -3880,6 +3998,20 @@
           "label": "2469便 大阪(伊丹)発（予定）",
           "time": "14:15",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "伊丹空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "2469便 大阪(伊丹)発（予定）",
+          "time": "14:15",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -3893,28 +4025,14 @@
         {
           "label": "203便 大阪(関西)発",
           "time": "14:30",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "14:10",
           "status": "conditional",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "関西空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "0203便 大阪(関西)発（予定）",
-          "time": "14:30",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "関西空港",
           "arrivalLocation": "奄美空港"
         },
@@ -3978,6 +4096,20 @@
           "label": "0203便 大阪(関西)発（予定）",
           "time": "14:30",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "関西空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "0203便 大阪(関西)発（予定）",
+          "time": "14:30",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -3991,28 +4123,14 @@
         {
           "label": "3730便 鹿児島行き",
           "time": "14:35",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "14:35",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "鹿児島空港"
-        },
-        {
-          "label": "3730便 鹿児島行き（予定）",
-          "time": "14:35",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "鹿児島空港"
         },
@@ -4076,6 +4194,20 @@
           "label": "3730便 鹿児島行き（予定）",
           "time": "14:35",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
+        },
+        {
+          "label": "3730便 鹿児島行き（予定）",
+          "time": "14:35",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -4089,28 +4221,14 @@
         {
           "label": "2468便 大阪(伊丹)行き",
           "time": "14:50",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "14:50",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "伊丹空港"
-        },
-        {
-          "label": "2468便 大阪(伊丹)行き（予定）",
-          "time": "14:50",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "伊丹空港"
         },
@@ -4174,6 +4292,20 @@
           "label": "2468便 大阪(伊丹)行き（予定）",
           "time": "14:50",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "伊丹空港"
+        },
+        {
+          "label": "2468便 大阪(伊丹)行き（予定）",
+          "time": "14:50",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -4187,28 +4319,14 @@
         {
           "label": "3867便 沖縄(那覇)発",
           "time": "14:55",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "14:55",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "那覇空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3867便 沖縄(那覇)発（予定）",
-          "time": "14:55",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "那覇空港",
           "arrivalLocation": "奄美空港"
         },
@@ -4272,6 +4390,20 @@
           "label": "3867便 沖縄(那覇)発（予定）",
           "time": "14:55",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "那覇空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3867便 沖縄(那覇)発（予定）",
+          "time": "14:55",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -4285,28 +4417,14 @@
         {
           "label": "204便 大阪(関西)行き",
           "time": "15:20",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "15:20",
           "status": "normal",
-          "note": "定刻",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "関西空港"
-        },
-        {
-          "label": "0204便 大阪(関西)行き（予定）",
-          "time": "15:20",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "関西空港"
         },
@@ -4370,6 +4488,20 @@
           "label": "0204便 大阪(関西)行き（予定）",
           "time": "15:20",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "関西空港"
+        },
+        {
+          "label": "0204便 大阪(関西)行き（予定）",
+          "time": "15:20",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -4383,30 +4515,15 @@
         {
           "label": "3837便 喜界島行き",
           "time": "15:40",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "15:40",
           "status": "normal",
-          "note": "出発済み",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島",
             "喜界島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "喜界空港"
-        },
-        {
-          "label": "4355便 喜界島行き（予定）",
-          "time": "15:40",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島",
-            "喜界島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "喜界空港"
         },
@@ -4474,6 +4591,21 @@
           "label": "4355便 喜界島行き（予定）",
           "time": "15:40",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島",
+            "喜界島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "喜界空港"
+        },
+        {
+          "label": "4355便 喜界島行き（予定）",
+          "time": "15:40",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -4488,30 +4620,15 @@
         {
           "label": "3836便 喜界島発",
           "time": "16:50",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "16:50",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島",
             "喜界島"
           ],
-          "departureLocation": "喜界空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "4356便 喜界島発（予定）",
-          "time": "16:50",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島",
-            "喜界島"
-          ],
-          "isScheduled": true,
           "departureLocation": "喜界空港",
           "arrivalLocation": "奄美空港"
         },
@@ -4579,6 +4696,21 @@
           "label": "4356便 喜界島発（予定）",
           "time": "16:50",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島",
+            "喜界島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "喜界空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "4356便 喜界島発（予定）",
+          "time": "16:50",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -4593,10 +4725,10 @@
         {
           "label": "3734便 鹿児島行き",
           "time": "17:20",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "17:20",
           "status": "normal",
-          "note": "出発済み",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4607,44 +4739,15 @@
         {
           "label": "3844便 徳之島発",
           "time": "17:20",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "17:20",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島",
             "徳之島"
           ],
-          "departureLocation": "徳之島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3734便 鹿児島行き（予定）",
-          "time": "17:20",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "鹿児島空港"
-        },
-        {
-          "label": "4362便 徳之島発（予定）",
-          "time": "17:20",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島",
-            "徳之島"
-          ],
-          "isScheduled": true,
           "departureLocation": "徳之島空港",
           "arrivalLocation": "奄美空港"
         },
@@ -4782,6 +4885,35 @@
           "label": "4362便 徳之島発（予定）",
           "time": "17:20",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島",
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "徳之島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3734便 鹿児島行き（予定）",
+          "time": "17:20",
+          "date": "2026-08-29",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
+        },
+        {
+          "label": "4362便 徳之島発（予定）",
+          "time": "17:20",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -4796,28 +4928,14 @@
         {
           "label": "3735便 鹿児島発",
           "time": "17:50",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "17:50",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "鹿児島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3735便 鹿児島発（予定）",
-          "time": "17:50",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "鹿児島空港",
           "arrivalLocation": "奄美空港"
         },
@@ -4881,6 +4999,20 @@
           "label": "3735便 鹿児島発（予定）",
           "time": "17:50",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3735便 鹿児島発（予定）",
+          "time": "17:50",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -4894,30 +5026,15 @@
         {
           "label": "3843便 徳之島行き",
           "time": "18:00",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "18:00",
           "status": "normal",
-          "note": "出発済み",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島",
             "徳之島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "徳之島空港"
-        },
-        {
-          "label": "3843便 徳之島行き（予定）",
-          "time": "18:00",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島",
-            "徳之島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "徳之島空港"
         },
@@ -4985,6 +5102,21 @@
           "label": "3843便 徳之島行き（予定）",
           "time": "18:00",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島",
+            "徳之島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "徳之島空港"
+        },
+        {
+          "label": "3843便 徳之島行き（予定）",
+          "time": "18:00",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -4999,28 +5131,14 @@
         {
           "label": "387便 鹿児島発",
           "time": "18:10",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "鹿児島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "0387便 鹿児島発（予定）",
-          "time": "18:10",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "鹿児島空港",
           "arrivalLocation": "奄美空港"
         },
@@ -5084,6 +5202,20 @@
           "label": "0387便 鹿児島発（予定）",
           "time": "18:10",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "0387便 鹿児島発（予定）",
+          "time": "18:10",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5097,28 +5229,14 @@
         {
           "label": "3684便 福岡行き",
           "time": "18:20",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "18:20",
           "status": "normal",
-          "note": "出発済み",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "福岡空港"
-        },
-        {
-          "label": "3684便 福岡行き（予定）",
-          "time": "18:20",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "福岡空港"
         },
@@ -5182,6 +5300,20 @@
           "label": "3684便 福岡行き（予定）",
           "time": "18:20",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "福岡空港"
+        },
+        {
+          "label": "3684便 福岡行き（予定）",
+          "time": "18:20",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -5195,28 +5327,14 @@
         {
           "label": "3737便 鹿児島発",
           "time": "18:30",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "18:30",
           "status": "normal",
-          "note": "到着済み",
+          "note": "営業開始時間前",
           "direction": "arrival",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "鹿児島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "3737便 鹿児島発（予定）",
-          "time": "18:30",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "鹿児島空港",
           "arrivalLocation": "奄美空港"
         },
@@ -5280,6 +5398,20 @@
           "label": "3737便 鹿児島発（予定）",
           "time": "18:30",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "3737便 鹿児島発（予定）",
+          "time": "18:30",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5293,28 +5425,14 @@
         {
           "label": "388便 鹿児島行き",
           "time": "18:50",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "出発済み",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "鹿児島空港"
-        },
-        {
-          "label": "0388便 鹿児島行き（予定）",
-          "time": "18:50",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "鹿児島空港"
         },
@@ -5378,6 +5496,20 @@
           "label": "0388便 鹿児島行き（予定）",
           "time": "18:50",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
+        },
+        {
+          "label": "0388便 鹿児島行き（予定）",
+          "time": "18:50",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
@@ -5391,28 +5523,14 @@
         {
           "label": "3738便 鹿児島行き",
           "time": "19:00",
-          "date": "2026-08-22",
+          "date": "2026-08-23",
           "actualTime": "19:00",
           "status": "normal",
-          "note": "出発済み",
+          "note": "営業開始時間前",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "鹿児島空港"
-        },
-        {
-          "label": "3738便 鹿児島行き（予定）",
-          "time": "19:00",
-          "date": "2026-08-23",
-          "status": "unknown",
-          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "鹿児島空港"
         },
@@ -5476,6 +5594,20 @@
           "label": "3738便 鹿児島行き（予定）",
           "time": "19:00",
           "date": "2026-08-28",
+          "status": "unknown",
+          "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": true,
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "鹿児島空港"
+        },
+        {
+          "label": "3738便 鹿児島行き（予定）",
+          "time": "19:00",
+          "date": "2026-08-29",
           "status": "unknown",
           "note": "時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。",
           "direction": "departure",
