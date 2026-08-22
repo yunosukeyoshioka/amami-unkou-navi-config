@@ -136,7 +136,7 @@ function airportNameFor(place) {
 // （時刻表PDFベースの「予定」データをどの日まで作るかに使う）。
 function datesAhead(startOffsetDays, count) {
   const base = Date.UTC(JST_NOW.getUTCFullYear(), JST_NOW.getUTCMonth(), JST_NOW.getUTCDate());
-  return Array.from({ length: count }, (_, i) => {
+  return Array.from({ length: Math.max(0, count) }, (_, i) => {
     const d = new Date(base + (startOffsetDays + i) * 24 * 60 * 60 * 1000);
     return { iso: isoDate(d), year: d.getUTCFullYear(), month: d.getUTCMonth() + 1, day: d.getUTCDate() };
   });
@@ -440,6 +440,163 @@ async function fetchAlineScheduleEntries(targetDates, coveredDates) {
   return entries;
 }
 
+// --- マリックスライン「年間運航スケジュール」PDF（鹿児島⇄沖縄の寄港地別
+// 入港・出港"時刻"が１日目/２日目の相対日で固定されており、月ごとの
+// 「鹿児島発日」「沖縄・奄美群島発日」カレンダーと組み合わせれば、任意の
+// 未来日の寄港スケジュールを実データから機械的に再現できる。マルエー
+// フェリーと違い寄港地ごとの時刻まで公開されているため、ライブ取得と
+// 同じ粒度（入港/出港ペア）で「予定」を作れる。---
+const MARIX_DOWNSTREAM_TEMPLATE = [
+  { port: '鹿児島新港', dayOffset: 1, dep: '18:00' },
+  { port: '名瀬港', dayOffset: 2, arr: '5:00', dep: '5:50' },
+  { port: '亀徳港', dayOffset: 2, arr: '9:10', dep: '9:40' },
+  { port: '和泊港', dayOffset: 2, arr: '11:30', dep: '12:00' },
+  { port: '与論港', dayOffset: 2, arr: '13:40', dep: '14:10' },
+  { port: '本部港', dayOffset: 2, arr: '16:40', dep: '17:10' },
+  { port: '那覇港', dayOffset: 2, arr: '19:00' },
+];
+const MARIX_UPSTREAM_TEMPLATE = [
+  { port: '那覇港', dayOffset: 1, dep: '7:00' },
+  { port: '本部港', dayOffset: 1, arr: '9:00', dep: '9:20' },
+  { port: '与論港', dayOffset: 1, arr: '11:50', dep: '12:10' },
+  { port: '和泊港', dayOffset: 1, arr: '14:10', dep: '14:40' },
+  { port: '亀徳港', dayOffset: 1, arr: '16:30', dep: '17:00' },
+  { port: '名瀬港', dayOffset: 1, arr: '20:30', dep: '21:20' },
+  { port: '鹿児島新港', dayOffset: 2, arr: '8:30' },
+];
+
+// 「YYYY年M月」の見出しごとに、クイーンコーラルプラス／クロスの出港日
+// （日にちの数字だけの並び）を抜き出す。見出し文言のうしろにPDFレンダリング
+// 順の都合で無関係なタイトル文言が紛れ込むことがあるため、両船とも実際に
+// 日付が取れた月だけを採用し、実在する12か月（年度）分に絞る。
+function extractMarixMonthDayLists(pageText) {
+  const monthPositions = [...pageText.matchAll(/(\d{4})年(\d{1,2})月/g)];
+  const results = [];
+  for (let i = 0; i < monthPositions.length; i++) {
+    const m = monthPositions[i];
+    const start = m.index + m[0].length;
+    const end = i + 1 < monthPositions.length ? monthPositions[i + 1].index : pageText.length;
+    const block = pageText.slice(start, end);
+    const plusIdx = block.indexOf('クイーンコーラルプラス');
+    const crossIdx = block.indexOf('クイーンコーラルクロス');
+    if (plusIdx === -1 || crossIdx === -1) continue;
+    const plusDays = (block.slice(plusIdx + 'クイーンコーラルプラス'.length, crossIdx).match(/\d+/g) ?? []).map(Number);
+    const crossDays = (block.slice(crossIdx + 'クイーンコーラルクロス'.length).match(/\d+/g) ?? []).map(Number);
+    if (plusDays.length === 0 || crossDays.length === 0) continue;
+    results.push({ year: Number(m[1]), month: Number(m[2]), plus: plusDays, cross: crossDays });
+  }
+  return results.slice(0, 12); // 年度分（12か月）のみ
+}
+
+// 「※10/28鹿児島発下り便運航なし」等、カレンダー上は出港日でも実際には
+// 運航しない例外日を拾う（カレンダーの数字だけでは表現できないため）。
+function extractMarixExceptions(pageText, marker) {
+  const re = new RegExp(`※(\\d{1,2})/(\\d{1,2})${marker}運航なし`, 'g');
+  return [...pageText.matchAll(re)].map((m) => ({ month: Number(m[1]), day: Number(m[2]) }));
+}
+
+function isMarixDepartureDay(calendar, exceptions, vessel, year, month, day) {
+  const monthEntry = calendar.find((c) => c.year === year && c.month === month);
+  if (!monthEntry) return false;
+  if (!monthEntry[vessel].includes(day)) return false;
+  return !exceptions.some((e) => e.month === month && e.day === day);
+}
+
+async function fetchMarixScheduleEntries(targetDates, coveredDates) {
+  if (targetDates.length === 0) return [];
+  const guideHtml = await fetchHtml('https://marixline.com/price_schedule/');
+  const $ = cheerio.load(guideHtml);
+  let scheduleUrl = null;
+  $('a[href$=".pdf"]').each((_, el) => {
+    const text = collapse($(el).text());
+    if (text.includes('年間運航スケジュール')) scheduleUrl = $(el).attr('href');
+  });
+  if (!scheduleUrl) throw new Error('marix: annual schedule pdf link not found (page structure may have changed)');
+
+  const data = await fetch(scheduleUrl, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
+  if (!data.ok) throw new Error(`${scheduleUrl} -> HTTP ${data.status}`);
+  const buf = new Uint8Array(await data.arrayBuffer());
+  const doc = await getDocument({ data: buf, useWorkerFetch: false, isEvalSupported: false, disableFontFace: true }).promise;
+  const pageTexts = [];
+  for (let p = 1; p <= doc.numPages; p++) {
+    const page = await doc.getPage(p);
+    const content = await page.getTextContent();
+    pageTexts.push(content.items.map((it) => it.str).join(''));
+  }
+  if (pageTexts.length < 2) throw new Error('marix: expected 2 pages in annual schedule pdf (page structure may have changed)');
+
+  const downstreamCalendar = extractMarixMonthDayLists(pageTexts[0]);
+  const upstreamCalendar = extractMarixMonthDayLists(pageTexts[1]);
+  const downstreamExceptions = extractMarixExceptions(pageTexts[0], '鹿児島発下り便');
+  const upstreamExceptions = extractMarixExceptions(pageTexts[1], '那覇発上り便');
+
+  const targetIsoSet = new Set(targetDates.map((d) => d.iso));
+  // 出港日（day1）は対象期間の前日まで遡って走査する必要がある
+  // （day2＝翌日にまたがる寄港がある場合、出港日自体は対象期間の外にありうるため）。
+  const scanStart = targetDates[0];
+  const scanBase = Date.UTC(scanStart.year, scanStart.month - 1, scanStart.day - 1);
+  const candidateDates = Array.from({ length: targetDates.length + 1 }, (_, i) => {
+    const d = new Date(scanBase + i * 24 * 60 * 60 * 1000);
+    return { year: d.getUTCFullYear(), month: d.getUTCMonth() + 1, day: d.getUTCDate() };
+  });
+
+  const entries = [];
+  for (const vessel of ['plus', 'cross']) {
+    for (const direction of ['downstream', 'upstream']) {
+      const calendar = direction === 'downstream' ? downstreamCalendar : upstreamCalendar;
+      const exceptions = direction === 'downstream' ? downstreamExceptions : upstreamExceptions;
+      const template = direction === 'downstream' ? MARIX_DOWNSTREAM_TEMPLATE : MARIX_UPSTREAM_TEMPLATE;
+      const directionLabel = direction === 'downstream' ? '下り便' : '上り便';
+
+      for (const cd of candidateDates) {
+        if (!isMarixDepartureDay(calendar, exceptions, vessel, cd.year, cd.month, cd.day)) continue;
+        const depBase = Date.UTC(cd.year, cd.month - 1, cd.day);
+
+        template.forEach((portTpl, index) => {
+          const portDate = new Date(depBase + (portTpl.dayOffset - 1) * 24 * 60 * 60 * 1000);
+          const iso = isoDate(portDate);
+          if (!targetIsoSet.has(iso) || coveredDates.has(iso)) return;
+
+          const island = PORT_ISLAND_MAP[portTpl.port];
+          const islands = island ? [island] : [];
+          const prevPort = index > 0 ? template[index - 1].port : null;
+          const nextPort = index < template.length - 1 ? template[index + 1].port : null;
+
+          if (portTpl.arr) {
+            entries.push({
+              label: `${directionLabel} ${portTpl.port} 入港（予定）`,
+              time: portTpl.arr,
+              date: iso,
+              status: 'unknown',
+              note: '時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。',
+              direction: 'arrival',
+              islands,
+              isScheduled: true,
+              departureLocation: prevPort,
+              arrivalLocation: portTpl.port,
+            });
+          }
+          if (portTpl.dep) {
+            entries.push({
+              label: `${directionLabel} ${portTpl.port} 出港（予定）`,
+              time: portTpl.dep,
+              date: iso,
+              status: 'unknown',
+              note: '時刻表に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。',
+              direction: 'departure',
+              islands,
+              isScheduled: true,
+              departureLocation: portTpl.port,
+              arrivalLocation: nextPort,
+            });
+          }
+        });
+      }
+    }
+  }
+  return entries;
+}
+
 // マルエーフェリー: 鹿児島〜奄美〜沖縄航路を担当する「あけぼの」「波之上」
 // の2隻分のブロック（div.status-archive）だけを見る。各船のお知らせ本文から
 // 「◯月◯日(木)鹿児島新港18:00発」のような出港時刻を正規表現で拾う
@@ -546,9 +703,15 @@ function classifyByClassList(classAttr, fallbackText) {
   return classify(fallbackText);
 }
 
-async function scrapeMarixDetail(url, directionLabel) {
+async function scrapeMarixDetail(url) {
   const html = await fetchHtml(url);
   const $ = cheerio.load(html);
+
+  // URLの命名規則（downstream/upstream）はページ側の実際の運航に対して
+  // 常に正しいとは限らない（臨時便が別URL形式で案内されることがある）ため、
+  // ページ自身のタイトルに含まれる「上り便」「下り便」から判定する。
+  const pageTitle = collapse($('title').text());
+  const directionLabel = pageTitle.includes('上り便') ? '上り便' : pageTitle.includes('下り便') ? '下り便' : '便';
 
   const singles = $('div.service > div.single').toArray();
   // ページ掲載順＝この航海の寄港順（鹿児島新港 → 各島の港 → 本部港/那覇港、
@@ -618,18 +781,18 @@ async function scrapeMarix() {
     throw new Error('marix: status banner links not found (page structure may have changed)');
   }
 
-  const perDirection = await Promise.all(
-    hrefs.map((href) => {
-      const directionLabel = href.includes('downstream')
-        ? '下り便'
-        : href.includes('upstream')
-          ? '上り便'
-          : '便';
-      return scrapeMarixDetail(href, directionLabel);
-    })
-  );
+  // トップページのバナーには、通常の下り便・上り便に加えて、同じ寄港を
+  // 指す臨時便の別URLが同時に載ることがある（寄港地・時刻が重複するため、
+  // 完全に同一の便として下記で重複排除する）。
+  const perDirection = await Promise.all([...new Set(hrefs)].map((href) => scrapeMarixDetail(href)));
 
-  const departures = perDirection.flat();
+  const seen = new Set();
+  const departures = perDirection.flat().filter((d) => {
+    const key = `${d.label}|${d.time}|${d.date}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
   if (departures.length === 0) {
     throw new Error('marix: no port schedule parsed (page structure may have changed)');
   }
@@ -641,6 +804,18 @@ async function scrapeMarix() {
       ? '本日・明日の寄港地はすべて通常運航です。'
       : `${troubled.length}件の寄港地で条件付運航等があります。`;
 
+  // ライブ取得できた日（本日・翌日）より先〜7日先までを、年間運航スケジュール
+  // PDFの「予定」で補う（取得に失敗しても本体のスクレイピングは止めない）。
+  const coveredDates = new Set(departures.map((d) => d.date));
+  const maxCoveredOffset = Math.max(
+    0,
+    ...[...coveredDates].map((iso) => Math.round((new Date(iso) - new Date(TODAY_ISO)) / 86400000)),
+  );
+  const scheduleEntries = await safe(
+    () => fetchMarixScheduleEntries(datesAhead(maxCoveredOffset + 1, 6 - maxCoveredOffset), coveredDates),
+    () => [],
+  );
+
   return {
     id: 'marix_line',
     operatorName: 'マリックスライン',
@@ -649,7 +824,7 @@ async function scrapeMarix() {
     status,
     note,
     officialUrl: 'https://marixline.com/',
-    departures: sortByTime(departures),
+    departures: sortByTime([...departures, ...scheduleEntries]),
   };
 }
 
