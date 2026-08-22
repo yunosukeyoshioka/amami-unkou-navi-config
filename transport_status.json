@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-22T22:52:58.274Z",
+  "updatedAt": "2026-08-22T23:26:54.985Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1743,17 +1743,17 @@
       "operatorName": "航空便",
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
-      "status": "normal",
-      "note": "本日40便中、欠航はありません。",
+      "status": "conditional",
+      "note": "本日40便中2便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
           "label": "3681便 福岡発",
           "time": "08:15",
           "date": "2026-08-23",
-          "actualTime": "08:15",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "08:30",
+          "status": "conditional",
+          "note": "まもなく到着",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -1849,8 +1849,8 @@
           "label": "3722便 鹿児島行き",
           "time": "08:45",
           "date": "2026-08-23",
-          "actualTime": "08:45",
-          "status": "normal",
+          "actualTime": "08:55",
+          "status": "conditional",
           "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
