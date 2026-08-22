@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-22T02:59:58.293Z",
+  "updatedAt": "2026-08-22T03:51:27.239Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1436,7 +1436,7 @@
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
       "status": "conditional",
-      "note": "本日40便中3便に遅延・欠航等があります。",
+      "note": "本日40便中7便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -2880,7 +2880,7 @@
           "date": "2026-08-22",
           "actualTime": "12:00",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3062,7 +3062,7 @@
           "date": "2026-08-22",
           "actualTime": "12:40",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3158,9 +3158,9 @@
           "label": "3729便 鹿児島発",
           "time": "12:45",
           "date": "2026-08-22",
-          "actualTime": "12:45",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "13:10",
+          "status": "conditional",
+          "note": "遅れ",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3256,8 +3256,8 @@
           "label": "3728便 鹿児島行き",
           "time": "13:15",
           "date": "2026-08-22",
-          "actualTime": "13:15",
-          "status": "normal",
+          "actualTime": "13:35",
+          "status": "conditional",
           "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
@@ -3354,9 +3354,9 @@
           "label": "659便 東京(羽田)発",
           "time": "13:35",
           "date": "2026-08-22",
-          "actualTime": "13:35",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "13:50",
+          "status": "conditional",
+          "note": "遅れ",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3550,8 +3550,8 @@
           "label": "658便 東京(羽田)行き",
           "time": "14:10",
           "date": "2026-08-22",
-          "actualTime": "14:10",
-          "status": "normal",
+          "actualTime": "14:25",
+          "status": "conditional",
           "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
