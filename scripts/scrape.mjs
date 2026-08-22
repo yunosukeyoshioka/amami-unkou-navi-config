@@ -374,70 +374,121 @@ async function fetchAirportScheduleEntries(targetDates) {
 // カレンダーに、あけぼの/波之上それぞれが●＝鹿児島発、○＝那覇発、
 // 入＝鹿児島入港の日を配置したもの）を解析する。●の日だけを
 // 「鹿児島新港発（予定）」として使う（既存のライブ取得と同じ形）。---
-async function fetchAlineScheduleEntries(targetDates, coveredDates) {
-  const timeHtml = await fetchHtml('https://www.aline-ferry.com/kagoshima/time');
-  const $ = cheerio.load(timeHtml);
-
-  let scheduleUrl = null;
-  $('a[href$=".pdf"]').each((_, el) => {
-    const text = collapse($(el).text());
-    if (text.includes('年間スケジュール')) scheduleUrl = $(el).attr('href');
+// 公式サイトの「乗船検索」（Web予約と同じ検索機能）に日付・区間を指定して
+// POSTし、実際の乗船日時・下船日時（＝寄港地ごとの到着・出発時刻）を取得
+// する。この路線はマルエーフェリーとマリックスラインが共同運航しており、
+// 相手会社の日は「※下記参照」と表示されるため、その場合はnullを返す
+// （その日はA'LINE側の便を作らない＝マリックスライン側の実データに委ねる）。
+async function fetchAlineSearchResult(dateObj, startPortId, endPortId) {
+  const dateStr = `${dateObj.year}年${String(dateObj.month).padStart(2, '0')}月${String(dateObj.day).padStart(2, '0')}日`;
+  const res = await fetch('https://www.aline-ferry.com/search/result.php', {
+    method: 'POST',
+    headers: { 'User-Agent': UA, 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ startDate: dateStr, startPort: String(startPortId), endPort: String(endPortId) }),
+    signal: AbortSignal.timeout(15000),
   });
-  if (!scheduleUrl) throw new Error('aline: annual schedule pdf link not found (page structure may have changed)');
+  if (!res.ok) throw new Error(`aline search -> HTTP ${res.status}`);
+  const $ = cheerio.load(await res.text());
 
-  const items = await fetchPdfTextItems(scheduleUrl);
-  const monthHeaders = items.filter((it) => /^[０-９0-9]{1,2}月$/.test(it.text));
-  const vesselRows = items.filter((it) => it.text === 'フェリーあけぼの' || it.text === 'フェリー波之上');
-  const toHalfWidth = (s) => s.replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0));
+  const row = $('table.s-result tbody tr').first();
+  const tds = row.find('td');
+  const vesselName = collapse($(tds[1]).text());
+  if (!vesselName || vesselName.includes('下記参照') || vesselName.includes('出港船なし')) return null;
 
-  const departuresByMonthDay = []; // [{month, day, vessel}]
-  for (const mh of monthHeaders) {
-    const month = Number(toHalfWidth(mh.text.replace('月', '')));
-    const dayWords = items.filter((it) => /^\d{1,2}$/.test(it.text) && Math.abs(it.y - (mh.y + 4.3)) < 3);
-    const dayMap = new Map();
-    for (const w of dayWords) dayMap.set(Math.round(w.x * 10) / 10, Number(w.text));
-    const dayXs = [...dayMap.keys()];
-    if (dayXs.length === 0) continue;
+  const parse = (text) => {
+    const m = collapse(text).match(/(\d{4})年(\d{1,2})月(\d{1,2})日\s*(\d{1,2}:\d{2})/);
+    return m ? { date: `${m[1]}-${m[2].padStart(2, '0')}-${m[3].padStart(2, '0')}`, time: m[4] } : null;
+  };
+  const board = parse($(tds[2]).text());
+  const alight = parse($(tds[3]).text());
+  if (!board || !alight) return null;
 
-    const blockVessels = vesselRows.filter((v) => mh.y - 40 < v.y && v.y < mh.y);
-    for (const v of blockVessels) {
-      const markers = items.filter((it) => it.text === '●' && Math.abs(it.y - v.y) < 2);
-      for (const m of markers) {
-        let nearestX = dayXs[0];
-        let nearestDist = Math.abs(dayXs[0] - m.x);
-        for (const dx of dayXs) {
-          const dist = Math.abs(dx - m.x);
-          if (dist < nearestDist) {
-            nearestDist = dist;
-            nearestX = dx;
-          }
-        }
-        if (nearestDist > 8) continue;
-        departuresByMonthDay.push({ month, day: dayMap.get(nearestX), vessel: v.text });
-      }
-    }
-  }
+  return { vessel: vesselName, board, alight };
+}
+
+const ALINE_PORT_ID = { 鹿児島新港: 50, 名瀬港: 70, 亀徳港: 78, 和泊港: 80, 与論港: 82 };
+const ALINE_ISLAND_PORTS = ['名瀬港', '亀徳港', '和泊港', '与論港'];
+
+async function fetchAlineScheduleEntries(targetDates, coveredDates) {
+  if (targetDates.length === 0) return [];
 
   const entries = [];
   for (const d of targetDates) {
     if (coveredDates.has(d.iso)) continue; // 既にライブ取得済みの日は重複させない
-    const departures = departuresByMonthDay.filter((e) => e.month === d.month && e.day === d.day);
-    for (const dep of departures) {
-      entries.push({
-        label: `${dep.vessel} 鹿児島発（予定）`,
-        time: `${d.month}/${d.day}`,
-        date: d.iso,
-        status: 'unknown',
-        note: '時刻表に基づく予定です。出航時刻・寄港地は公式サイトでご確認ください。',
-        direction: 'departure',
-        islands: ROUTE_ISLANDS,
-        isScheduled: true,
-        departureLocation: '鹿児島新港',
-        arrivalLocation: null,
-      });
+
+    for (const isDownstream of [true, false]) {
+      // まず代表として名瀬港との組で運航の有無を確認する。この路線は
+      // マルエーフェリーとマリックスラインの共同運航で、相手会社の日は
+      // 「※下記参照」と返るため、その日はA'LINE側の便を作らない
+      // （年間スケジュールPDFのマーカーはサイト更新で意味が変わることが
+      // あり信用できないため、日付ごとに実際の検索結果で判定する）。
+      const [checkStart, checkEnd] = isDownstream
+        ? [ALINE_PORT_ID['鹿児島新港'], ALINE_PORT_ID['名瀬港']]
+        : [ALINE_PORT_ID['名瀬港'], ALINE_PORT_ID['鹿児島新港']];
+      const checkResult = await safe(() => fetchAlineSearchResult(d, checkStart, checkEnd), () => null);
+      if (!checkResult) continue;
+
+      const directionLabel = isDownstream ? '下り便' : '上り便';
+
+      for (const portName of ALINE_ISLAND_PORTS) {
+        const result =
+          portName === '名瀬港'
+            ? checkResult
+            : await safe(
+                () =>
+                  fetchAlineSearchResult(
+                    d,
+                    isDownstream ? ALINE_PORT_ID['鹿児島新港'] : ALINE_PORT_ID[portName],
+                    isDownstream ? ALINE_PORT_ID[portName] : ALINE_PORT_ID['鹿児島新港'],
+                  ),
+                () => null,
+              );
+        if (!result) continue;
+
+        const island = PORT_ISLAND_MAP[portName];
+        const islands = island ? [island] : [];
+        const [boardLoc, alightLoc] = isDownstream ? ['鹿児島新港', portName] : [portName, '鹿児島新港'];
+
+        // 鹿児島新港側のイベント（出港＝下り便の起点／入港＝上り便の終点）は
+        // 複数の島へ向かう・複数の島から来る便を1件で表しているため、
+        // 到着地・出発地を単一の島に断定しない（不明としてnullにする）。
+        entries.push({
+          label: `${directionLabel} ${boardLoc} 出港（予定）`,
+          time: result.board.time,
+          date: result.board.date,
+          status: 'unknown',
+          note: '公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。',
+          direction: 'departure',
+          islands: isDownstream ? ROUTE_ISLANDS : islands,
+          isScheduled: true,
+          departureLocation: boardLoc,
+          arrivalLocation: isDownstream ? null : alightLoc,
+        });
+        entries.push({
+          label: `${directionLabel} ${alightLoc} 入港（予定）`,
+          time: result.alight.time,
+          date: result.alight.date,
+          status: 'unknown',
+          note: '公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。',
+          direction: 'arrival',
+          islands: isDownstream ? islands : ROUTE_ISLANDS,
+          isScheduled: true,
+          departureLocation: isDownstream ? boardLoc : null,
+          arrivalLocation: alightLoc,
+        });
+      }
     }
   }
-  return entries;
+
+  // 同じ乗船・下船の組が複数の島問い合わせで重複しうる（鹿児島側の出港情報など）ため、
+  // label＋time＋dateの組で重複排除する。
+  const seen = new Set();
+  return entries.filter((e) => {
+    const key = `${e.label}|${e.time}|${e.date}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 // --- マリックスライン「年間運航スケジュール」PDF（鹿児島⇄沖縄の寄港地別
