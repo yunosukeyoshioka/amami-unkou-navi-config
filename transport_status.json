@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-23T07:38:32.702Z",
+  "updatedAt": "2026-08-23T08:32:53.158Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1156,7 +1156,7 @@
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
       "status": "conditional",
-      "note": "本日40便中11便に遅延・欠航等があります。",
+      "note": "本日40便中13便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -4033,9 +4033,9 @@
           "label": "3836便 喜界島発",
           "time": "16:50",
           "date": "2026-08-23",
-          "actualTime": "16:50",
-          "status": "normal",
-          "note": "遅れ",
+          "actualTime": "17:00",
+          "status": "conditional",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4138,9 +4138,9 @@
           "label": "3734便 鹿児島行き",
           "time": "17:20",
           "date": "2026-08-23",
-          "actualTime": "17:20",
-          "status": "normal",
-          "note": "搭乗手続き受付中",
+          "actualTime": "17:30",
+          "status": "conditional",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4154,7 +4154,7 @@
           "date": "2026-08-23",
           "actualTime": "17:20",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4840,7 +4840,7 @@
           "date": "2026-08-23",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "定刻",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5029,6 +5029,48 @@
           "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "鹿児島空港"
+        }
+      ]
+    },
+    {
+      "id": "aline_cargo_琉球エキスプレス５",
+      "operatorName": "マルエーフェリー（貨物専用便）",
+      "routeName": "琉球エキスプレス５／東京 -（名古屋）- 志布志 - 名瀬 - 那覇",
+      "mode": "cargo",
+      "status": "conditional",
+      "note": "油津港にて「日本のひなた宮崎国スポセーリング競技リハーサル大会」実施及び台風18号の影響に伴う、スケジュール変更のご案内",
+      "officialUrl": "https://aline-ferry.com/status/",
+      "departures": [
+        {
+          "label": "琉球エキスプレス５ 名瀬港",
+          "time": "本日",
+          "date": "2026-08-23",
+          "status": "conditional",
+          "note": "油津港にて「日本のひなた宮崎国スポセーリング競技リハーサル大会」実施及び台風18号の影響に伴う、スケジュール変更のご案内",
+          "islands": [
+            "奄美大島"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aline_cargo_琉球エキスプレス２",
+      "operatorName": "マルエーフェリー（貨物専用便）",
+      "routeName": "琉球エキスプレス２／大阪 - 志布志 - 名瀬 - 那覇",
+      "mode": "cargo",
+      "status": "normal",
+      "note": "通常運航致しております。",
+      "officialUrl": "https://aline-ferry.com/status/",
+      "departures": [
+        {
+          "label": "琉球エキスプレス２ 名瀬港",
+          "time": "本日",
+          "date": "2026-08-23",
+          "status": "normal",
+          "note": "通常運航致しております。",
+          "islands": [
+            "奄美大島"
+          ]
         }
       ]
     }

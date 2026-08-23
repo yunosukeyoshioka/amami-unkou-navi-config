@@ -729,6 +729,87 @@ async function scrapeAline() {
   };
 }
 
+// マルエーフェリー系列の貨物専用便「琉球エキスプレス」シリーズ（2/3/5号）は、
+// 鹿児島発着の「あけぼの」「波之上」（旅客船）とは別に、大阪・神戸・東京・
+// 北九州など鹿児島県外を起点に運航している。3隻は航路間（阪神・東京・北九州）
+// で配船が入れ替わることがあるため、航路名では絞り込まず、運航状況ページの
+// 寄港地一覧に「名瀬」を含むブロック（＝現在、実際に奄美大島に寄港している便）
+// だけを対象にする。同じ物流ブランド名でも旅客を乗せない貨物専用便であるため
+// mode: 'cargo' として別項目にする。
+async function scrapeAlineCargo() {
+  const html = await fetchHtml('https://aline-ferry.com/status/');
+  const $ = cheerio.load(html);
+
+  const blocks = $('div.status-archive')
+    .toArray()
+    .map((el) => {
+      const $el = $(el);
+      const heading = collapse($el.find('h3').first().text());
+      const headline = collapse($el.find('h4').first().text()) || heading;
+      const text = collapse($el.text());
+      return { heading, headline, text };
+    })
+    .filter((b) => b.heading.includes('琉球エキスプレス') && b.heading.includes('名瀬'));
+
+  return blocks.map((b) => {
+    const vesselMatch = b.heading.match(/琉球エキスプレス[０-９0-9]+/);
+    const vesselName = vesselMatch ? vesselMatch[0] : '琉球エキスプレス';
+    const routeName = b.heading.replace(vesselName, '').trim();
+    const status = classify(b.headline);
+
+    const departures = [];
+    const arr = b.text.match(/(\d{1,2})月(\d{1,2})日[^0-9]{0,12}(\d{1,2})[時:](\d{2})分?\s*名瀬港\s*入港/);
+    if (arr) {
+      departures.push({
+        label: `${vesselName} 名瀬港 入港`,
+        time: `${arr[1]}/${arr[2]} ${arr[3]}:${arr[4]}`,
+        date: dateFromMD(Number(arr[1]), Number(arr[2])),
+        status,
+        note: b.headline,
+        direction: 'arrival',
+        islands: ['奄美大島'],
+        arrivalLocation: '名瀬港',
+      });
+    }
+    const dep = b.text.match(/(\d{1,2})月(\d{1,2})日[^0-9]{0,12}(\d{1,2})[時:](\d{2})分?\s*名瀬港\s*出港/);
+    if (dep) {
+      departures.push({
+        label: `${vesselName} 名瀬港 出港`,
+        time: `${dep[1]}/${dep[2]} ${dep[3]}:${dep[4]}`,
+        date: dateFromMD(Number(dep[1]), Number(dep[2])),
+        status,
+        note: b.headline,
+        direction: 'departure',
+        islands: ['奄美大島'],
+        departureLocation: '名瀬港',
+      });
+    }
+    if (departures.length === 0) {
+      // 本文から具体的な日時を拾えない場合も、状況だけは伝える
+      // （「通常運航」時は名瀬入出港時刻に触れない見出しのことが多いため）。
+      departures.push({
+        label: `${vesselName} 名瀬港`,
+        time: '本日',
+        date: TODAY_ISO,
+        status,
+        note: b.headline,
+        islands: ['奄美大島'],
+      });
+    }
+
+    return {
+      id: `aline_cargo_${vesselName}`,
+      operatorName: `マルエーフェリー（貨物専用便）`,
+      routeName: `${vesselName}／${routeName}`,
+      mode: 'cargo',
+      status,
+      note: b.headline,
+      officialUrl: 'https://aline-ferry.com/status/',
+      departures: sortByTime(departures),
+    };
+  });
+}
+
 // マリックスライン: トップページの運航状況バナー（下り便・上り便）から
 // 詳細ページ（/service/downstreamYYYYMMDD/ 等）のリンクを取得し、
 // 寄港地ごとの入港・出港時刻とステータスを構造化データとして取得する。
@@ -1021,7 +1102,7 @@ async function safe(fn, fallbackFactory) {
   }
 }
 
-const [aline, marix, airport] = await Promise.all([
+const [aline, marix, airport, alineCargo] = await Promise.all([
   safe(scrapeAline, () => ({
     id: 'aline_ferry',
     operatorName: 'マルエーフェリー',
@@ -1052,12 +1133,16 @@ const [aline, marix, airport] = await Promise.all([
     officialUrl: AIRPORT_URL,
     departures: [],
   })),
+  // 貨物専用便は現在名瀬に寄港している便が無ければ0件が正常であるため、
+  // 失敗時のフォールバックも「取得できず」のダミー1件ではなく空配列にする
+  // （存在しないことと取得失敗を区別できないが、常設の航路ではないため）。
+  safe(scrapeAlineCargo, () => []),
 ]);
 
 const output = {
   schemaVersion: 1,
   updatedAt: new Date().toISOString(),
-  operators: [aline, marix, airport],
+  operators: [aline, marix, airport, ...alineCargo],
 };
 
 writeFileSync('transport_status.json', `${JSON.stringify(output, null, 2)}\n`);
