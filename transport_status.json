@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-23T09:34:01.733Z",
+  "updatedAt": "2026-08-23T10:30:00.791Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -4742,7 +4742,7 @@
           "date": "2026-08-23",
           "actualTime": "18:30",
           "status": "normal",
-          "note": "まもなく到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4840,7 +4840,7 @@
           "date": "2026-08-23",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "搭乗ご案内中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4938,7 +4938,7 @@
           "date": "2026-08-23",
           "actualTime": "19:00",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
