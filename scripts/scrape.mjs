@@ -23,7 +23,7 @@ const KEYWORD_PRIORITY = [
 
 // 深刻度の順序（不明を除く）。複数区間・複数便がある場合はこの順で
 // 「一番悪いステータス」を代表値として採用する（安全側に倒すため）。
-const SEVERITY = ['normal', 'conditional', 'suspended', 'cancelled'];
+const SEVERITY = ['normal', 'delayed', 'conditional', 'suspended', 'cancelled'];
 
 function classify(text) {
   for (const { keyword, status } of KEYWORD_PRIORITY) {
@@ -975,10 +975,10 @@ const AIRPORT_URL = 'https://amami-airport.co.jp/flight/today';
 function classifyFlightStatus(statusText, scheduled, changed) {
   if (statusText.includes('欠航')) return 'cancelled';
   if (statusText.includes('見合わせ')) return 'suspended';
-  if (statusText.includes('遅延')) return 'conditional';
+  if (statusText.includes('遅延')) return 'delayed';
   // ステータス文言に出ない遅延（「出発済み」のまま定刻から変更された等）も
   // 時刻変更の有無で拾う。
-  if (changed && changed !== scheduled) return 'conditional';
+  if (changed && changed !== scheduled) return 'delayed';
   return 'normal';
 }
 
