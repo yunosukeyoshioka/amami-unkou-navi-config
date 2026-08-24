@@ -10,11 +10,11 @@
       "sourceLabel": "楽天トラベル"
     },
     {
-      "id": "flight_placeholder",
+      "id": "flight_skyticket",
       "category": "flight",
       "title": "航空券を比較する",
       "subtitle": "欠航時の振替便探しに",
-      "url": "https://skyticket.jp/",
+      "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3779460&pid=892684664",
       "sourceLabel": "スカイチケット"
     }
   ]
