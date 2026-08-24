@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "「奄美運航なび」アプリの代替手段・運航状況の設定を配信するための静的ホスティング用リポジトリです。",
+  "description": "「奄美運行ナビ」アプリの代替手段・運航状況の設定を配信するための静的ホスティング用リポジトリです。",
   "scripts": {
     "scrape": "node scripts/scrape.mjs"
   },
