@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-24T08:55:44.056Z",
+  "updatedAt": "2026-08-24T09:56:18.294Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -304,11 +304,11 @@
           "arrivalLocation": "鹿児島新港"
         },
         {
-          "label": "フェリー波之上 鹿児島発",
-          "time": "8/22 18:00",
-          "date": "2026-08-22",
+          "label": "フェリーあけぼの 鹿児島発",
+          "time": "8/26 07:00",
+          "date": "2026-08-26",
           "status": "cancelled",
-          "note": "8月22日(土)鹿児島新港発下り／条件付き運航 8月24日(月)那覇港発上り便／欠航およびスケジュール変更",
+          "note": "8/24（月）鹿児島新港発下り便／欠航 8/26（水）那覇港発上り便／欠航",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -320,11 +320,11 @@
           "arrivalLocation": null
         },
         {
-          "label": "フェリーあけぼの 鹿児島発",
-          "time": "8/26 07:00",
-          "date": "2026-08-26",
-          "status": "cancelled",
-          "note": "8/24（月）鹿児島新港発下り便／欠航 8/26（水）那覇港発上り便／欠航",
+          "label": "フェリー波之上 鹿児島発",
+          "time": "本日",
+          "date": "2026-08-24",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -1438,7 +1438,7 @@
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
       "status": "delayed",
-      "note": "本日40便中8便に遅延・欠航等があります。",
+      "note": "本日40便中9便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -4597,7 +4597,7 @@
           "date": "2026-08-24",
           "actualTime": "17:50",
           "status": "normal",
-          "note": "ただいま到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4800,7 +4800,7 @@
           "date": "2026-08-24",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4898,7 +4898,7 @@
           "date": "2026-08-24",
           "actualTime": "18:20",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4996,7 +4996,7 @@
           "date": "2026-08-24",
           "actualTime": "18:50",
           "status": "delayed",
-          "note": "定刻",
+          "note": "ただいま到着",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5092,9 +5092,9 @@
           "label": "388便 鹿児島行き",
           "time": "18:50",
           "date": "2026-08-24",
-          "actualTime": "18:50",
-          "status": "normal",
-          "note": "搭乗手続き受付中",
+          "actualTime": "18:55",
+          "status": "delayed",
+          "note": "搭乗ご案内中",
           "direction": "departure",
           "islands": [
             "奄美大島"
