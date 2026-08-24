@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-23T23:49:30.124Z",
+  "updatedAt": "2026-08-24T01:31:59.753Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1437,8 +1437,8 @@
       "operatorName": "航空便",
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
-      "status": "conditional",
-      "note": "本日40便中2便に遅延・欠航等があります。",
+      "status": "delayed",
+      "note": "本日40便中3便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -1446,7 +1446,7 @@
           "time": "08:15",
           "date": "2026-08-24",
           "actualTime": "08:25",
-          "status": "conditional",
+          "status": "delayed",
           "note": "到着済み",
           "direction": "arrival",
           "islands": [
@@ -1544,8 +1544,8 @@
           "time": "08:45",
           "date": "2026-08-24",
           "actualTime": "08:50",
-          "status": "conditional",
-          "note": "搭乗ご案内中",
+          "status": "delayed",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -1643,7 +1643,7 @@
           "date": "2026-08-24",
           "actualTime": "08:55",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -1741,7 +1741,7 @@
           "date": "2026-08-24",
           "actualTime": "09:25",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -1844,9 +1844,9 @@
           "label": "545便 成田発",
           "time": "09:40",
           "date": "2026-08-24",
-          "actualTime": "09:40",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "09:34",
+          "status": "delayed",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -1958,7 +1958,7 @@
           "date": "2026-08-24",
           "actualTime": "10:15",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -2063,7 +2063,7 @@
           "date": "2026-08-24",
           "actualTime": "10:30",
           "status": "normal",
-          "note": "定刻",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5312,16 +5312,16 @@
       "operatorName": "マルエーフェリー（貨物専用便）",
       "routeName": "琉球エキスプレス２／大阪 - 志布志 - 名瀬 - 那覇",
       "mode": "cargo",
-      "status": "normal",
-      "note": "通常運航致しております。",
+      "status": "unknown",
+      "note": "運航船舶変更のご案内",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
           "label": "琉球エキスプレス２ 名瀬港",
           "time": "本日",
           "date": "2026-08-24",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "unknown",
+          "note": "運航船舶変更のご案内",
           "islands": [
             "奄美大島"
           ]
