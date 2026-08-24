@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "links": [
     {
-      "id": "hotel_placeholder",
+      "id": "hotel_rakuten_travel",
       "category": "hotel",
       "title": "宿泊先を探す",
       "subtitle": "延泊・振替宿泊に",
-      "url": "https://travel.rakuten.co.jp/",
+      "url": "https://hb.afl.rakuten.co.jp/hgc/56cb10c3.ae8dc173.56cb10c4.4357c05d/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2F&link_type=hybrid_url&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6Imh5YnJpZF91cmwiLCJjb2wiOjF9",
       "sourceLabel": "楽天トラベル"
     },
     {
