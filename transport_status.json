@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-26T03:12:07.659Z",
+  "updatedAt": "2026-08-26T04:11:52.155Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1642,7 +1642,7 @@
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
       "status": "cancelled",
-      "note": "本日40便中25便に遅延・欠航等があります。",
+      "note": "本日40便中27便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -3016,7 +3016,7 @@
           "date": "2026-08-26",
           "actualTime": "12:00",
           "status": "normal",
-          "note": "まもなく到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3196,9 +3196,9 @@
           "label": "2464便 大阪(伊丹)行き",
           "time": "12:40",
           "date": "2026-08-26",
-          "actualTime": "12:50",
+          "actualTime": "13:30",
           "status": "delayed",
-          "note": "搭乗手続き受付中",
+          "note": "ゲートへお越し下さい",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3282,7 +3282,7 @@
           "date": "2026-08-26",
           "actualTime": "12:45",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3380,7 +3380,7 @@
           "date": "2026-08-26",
           "actualTime": "13:15",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "搭乗ご案内中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4555,8 +4555,8 @@
           "time": "17:20",
           "date": "2026-08-26",
           "actualTime": "17:20",
-          "status": "normal",
-          "note": "定刻",
+          "status": "cancelled",
+          "note": "欠航",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -5143,8 +5143,8 @@
           "time": "18:30",
           "date": "2026-08-26",
           "actualTime": "18:30",
-          "status": "normal",
-          "note": "定刻",
+          "status": "cancelled",
+          "note": "欠航",
           "direction": "arrival",
           "islands": [
             "奄美大島"
