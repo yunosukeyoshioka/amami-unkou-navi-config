@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-26T11:03:44.429Z",
+  "updatedAt": "2026-08-26T11:58:14.459Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -5439,16 +5439,16 @@
       "operatorName": "マルエーフェリー（貨物専用便）",
       "routeName": "琉球エキスプレス５／東京 -（名古屋）- 志布志 - 名瀬 - 那覇",
       "mode": "cargo",
-      "status": "cancelled",
-      "note": "台風18号の影響に伴う、スケジュール変更及び欠航のご案内",
+      "status": "conditional",
+      "note": "台風18号の影響に伴う、スケジュール変更のご案内",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
           "label": "琉球エキスプレス５ 名瀬港",
           "time": "本日",
           "date": "2026-08-26",
-          "status": "cancelled",
-          "note": "台風18号の影響に伴う、スケジュール変更及び欠航のご案内",
+          "status": "conditional",
+          "note": "台風18号の影響に伴う、スケジュール変更のご案内",
           "islands": [
             "奄美大島"
           ]
