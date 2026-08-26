@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-26T07:27:56.982Z",
+  "updatedAt": "2026-08-26T08:20:52.431Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -5242,7 +5242,7 @@
           "date": "2026-08-26",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "天候調査中",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5461,7 +5461,7 @@
       "routeName": "琉球エキスプレス２／大阪 - 志布志 - 名瀬 - 那覇",
       "mode": "cargo",
       "status": "unknown",
-      "note": "運航船舶変更のご案内",
+      "note": "船舶動静のご案内",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
@@ -5469,7 +5469,7 @@
           "time": "本日",
           "date": "2026-08-26",
           "status": "unknown",
-          "note": "運航船舶変更のご案内",
+          "note": "船舶動静のご案内",
           "islands": [
             "奄美大島"
           ]
