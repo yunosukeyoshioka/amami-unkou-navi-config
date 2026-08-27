@@ -1,17 +1,18 @@
 {
-  "schemaVersion": 1,
-  "updatedAt": "2026-08-27T14:48:37.000Z",
-  "operatorName": "しまバス",
-  "operatorUrl": "https://shimabus.co.jp/",
+  "schemaVersion": 2,
+  "updatedAt": "2026-08-27T15:25:14.388Z",
   "routes": [
     {
       "id": "tatsugo_loop",
+      "island": "奄美大島",
+      "operatorName": "しまバス",
+      "operatorUrl": "https://shimabus.co.jp/",
       "name": "龍郷町周遊線（東まわり・龍郷役場まわり）",
       "area": "龍郷町",
       "officialUrl": "https://shimabus.co.jp/rosen/suburban-line-new/",
       "pdfUrl": "https://shimabus.co.jp/wp-content/uploads/2025/04/20250401tatsugo.pdf",
       "parsed": true,
-      "dayTypes": [
+      "groups": [
         {
           "id": "weekday",
           "label": "平日",
@@ -241,63 +242,63 @@
               "destination": "赤木名 外金久",
               "stops": [
                 {
-                  "name": "こしゅく第１公園",
+                  "name": "こしゅく第１公園-",
                   "time": "7:46"
                 },
                 {
-                  "name": "朝仁",
+                  "name": "朝仁-",
                   "time": "7:52"
                 },
                 {
-                  "name": "朝仁トンネル前",
+                  "name": "朝仁トンネル前-",
                   "time": "7:55"
                 },
                 {
-                  "name": "長浜",
+                  "name": "長浜-",
                   "time": "7:57"
                 },
                 {
-                  "name": "奄美中央病院前",
+                  "name": "奄美中央病院前-",
                   "time": "7:58"
                 },
                 {
-                  "name": "名瀬合同庁舎前",
+                  "name": "名瀬合同庁舎前-",
                   "time": "8:00"
                 },
                 {
-                  "name": "塩浜入口",
+                  "name": "塩浜入口-",
                   "time": "8:01"
                 },
                 {
-                  "name": "朝日通り",
+                  "name": "朝日通り-",
                   "time": "8:05"
                 },
                 {
-                  "name": "しまバス本社前",
+                  "name": "しまバス本社前-",
                   "time": "8:07"
                 },
                 {
-                  "name": "奄美市役所前",
+                  "name": "奄美市役所前-",
                   "time": "8:09"
                 },
                 {
-                  "name": "佐大熊（県道沿い）",
+                  "name": "佐大熊（県道沿い）-",
                   "time": "8:18"
                 },
                 {
-                  "name": "山羊島ホテル前",
+                  "name": "山羊島ホテル前-",
                   "time": "8:22"
                 },
                 {
-                  "name": "だいわ大熊店前",
+                  "name": "だいわ大熊店前-",
                   "time": "8:27"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い-",
                   "time": "8:35"
                 },
                 {
-                  "name": "ビッグⅡ前",
+                  "name": "ビッグⅡ前-",
                   "time": "8:37"
                 }
               ]
@@ -504,63 +505,63 @@
               "destination": "奄美空港",
               "stops": [
                 {
-                  "name": "こしゅく第１公園",
+                  "name": "こしゅく第１公園-",
                   "time": "9:46"
                 },
                 {
-                  "name": "朝仁",
+                  "name": "朝仁-",
                   "time": "9:52"
                 },
                 {
-                  "name": "朝仁トンネル前",
+                  "name": "朝仁トンネル前-",
                   "time": "9:55"
                 },
                 {
-                  "name": "長浜",
+                  "name": "長浜-",
                   "time": "9:57"
                 },
                 {
-                  "name": "奄美中央病院前",
+                  "name": "奄美中央病院前-",
                   "time": "9:58"
                 },
                 {
-                  "name": "名瀬合同庁舎前",
+                  "name": "名瀬合同庁舎前-",
                   "time": "10:00"
                 },
                 {
-                  "name": "塩浜入口",
+                  "name": "塩浜入口-",
                   "time": "10:01"
                 },
                 {
-                  "name": "朝日通り",
+                  "name": "朝日通り-",
                   "time": "10:05"
                 },
                 {
-                  "name": "しまバス本社前",
+                  "name": "しまバス本社前-",
                   "time": "10:07"
                 },
                 {
-                  "name": "奄美市役所前",
+                  "name": "奄美市役所前-",
                   "time": "10:09"
                 },
                 {
-                  "name": "佐大熊（県道沿い）",
+                  "name": "佐大熊（県道沿い）-",
                   "time": "10:18"
                 },
                 {
-                  "name": "山羊島ホテル前",
+                  "name": "山羊島ホテル前-",
                   "time": "10:22"
                 },
                 {
-                  "name": "だいわ大熊店前",
+                  "name": "だいわ大熊店前-",
                   "time": "10:27"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い-",
                   "time": "10:35"
                 },
                 {
-                  "name": "ビッグⅡ前",
+                  "name": "ビッグⅡ前-",
                   "time": "10:37"
                 }
               ]
@@ -816,63 +817,63 @@
               "destination": "奄美空港",
               "stops": [
                 {
-                  "name": "こしゅく第１公園",
+                  "name": "こしゅく第１公園-",
                   "time": "11:16"
                 },
                 {
-                  "name": "朝仁",
+                  "name": "朝仁-",
                   "time": "11:22"
                 },
                 {
-                  "name": "朝仁トンネル前",
+                  "name": "朝仁トンネル前-",
                   "time": "11:25"
                 },
                 {
-                  "name": "長浜",
+                  "name": "長浜-",
                   "time": "11:27"
                 },
                 {
-                  "name": "奄美中央病院前",
+                  "name": "奄美中央病院前-",
                   "time": "11:28"
                 },
                 {
-                  "name": "名瀬合同庁舎前",
+                  "name": "名瀬合同庁舎前-",
                   "time": "11:30"
                 },
                 {
-                  "name": "塩浜入口",
+                  "name": "塩浜入口-",
                   "time": "11:31"
                 },
                 {
-                  "name": "朝日通り",
+                  "name": "朝日通り-",
                   "time": "11:35"
                 },
                 {
-                  "name": "しまバス本社前",
+                  "name": "しまバス本社前-",
                   "time": "11:37"
                 },
                 {
-                  "name": "奄美市役所前",
+                  "name": "奄美市役所前-",
                   "time": "11:39"
                 },
                 {
-                  "name": "佐大熊（県道沿い）",
+                  "name": "佐大熊（県道沿い）-",
                   "time": "11:48"
                 },
                 {
-                  "name": "山羊島ホテル前",
+                  "name": "山羊島ホテル前-",
                   "time": "11:52"
                 },
                 {
-                  "name": "だいわ大熊店前",
+                  "name": "だいわ大熊店前-",
                   "time": "11:57"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い-",
                   "time": "12:05"
                 },
                 {
-                  "name": "ビッグⅡ前",
+                  "name": "ビッグⅡ前-",
                   "time": "12:07"
                 }
               ]
@@ -1128,63 +1129,63 @@
               "destination": "奄美空港",
               "stops": [
                 {
-                  "name": "こしゅく第１公園",
+                  "name": "こしゅく第１公園-",
                   "time": "12:46"
                 },
                 {
-                  "name": "朝仁",
+                  "name": "朝仁-",
                   "time": "12:52"
                 },
                 {
-                  "name": "朝仁トンネル前",
+                  "name": "朝仁トンネル前-",
                   "time": "12:55"
                 },
                 {
-                  "name": "長浜",
+                  "name": "長浜-",
                   "time": "12:57"
                 },
                 {
-                  "name": "奄美中央病院前",
+                  "name": "奄美中央病院前-",
                   "time": "12:58"
                 },
                 {
-                  "name": "名瀬合同庁舎前",
+                  "name": "名瀬合同庁舎前-",
                   "time": "13:00"
                 },
                 {
-                  "name": "塩浜入口",
+                  "name": "塩浜入口-",
                   "time": "13:01"
                 },
                 {
-                  "name": "朝日通り",
+                  "name": "朝日通り-",
                   "time": "13:05"
                 },
                 {
-                  "name": "しまバス本社前",
+                  "name": "しまバス本社前-",
                   "time": "13:07"
                 },
                 {
-                  "name": "奄美市役所前",
+                  "name": "奄美市役所前-",
                   "time": "13:09"
                 },
                 {
-                  "name": "佐大熊（県道沿い）",
+                  "name": "佐大熊（県道沿い）-",
                   "time": "13:18"
                 },
                 {
-                  "name": "山羊島ホテル前",
+                  "name": "山羊島ホテル前-",
                   "time": "13:22"
                 },
                 {
-                  "name": "だいわ大熊店前",
+                  "name": "だいわ大熊店前-",
                   "time": "13:27"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い-",
                   "time": "13:35"
                 },
                 {
-                  "name": "ビッグⅡ前",
+                  "name": "ビッグⅡ前-",
                   "time": "13:37"
                 }
               ]
@@ -1440,63 +1441,63 @@
               "destination": "奄美空港",
               "stops": [
                 {
-                  "name": "こしゅく第１公園",
+                  "name": "こしゅく第１公園-",
                   "time": "14:16"
                 },
                 {
-                  "name": "朝仁",
+                  "name": "朝仁-",
                   "time": "14:22"
                 },
                 {
-                  "name": "朝仁トンネル前",
+                  "name": "朝仁トンネル前-",
                   "time": "14:25"
                 },
                 {
-                  "name": "長浜",
+                  "name": "長浜-",
                   "time": "14:27"
                 },
                 {
-                  "name": "奄美中央病院前",
+                  "name": "奄美中央病院前-",
                   "time": "14:28"
                 },
                 {
-                  "name": "名瀬合同庁舎前",
+                  "name": "名瀬合同庁舎前-",
                   "time": "14:30"
                 },
                 {
-                  "name": "塩浜入口",
+                  "name": "塩浜入口-",
                   "time": "14:31"
                 },
                 {
-                  "name": "朝日通り",
+                  "name": "朝日通り-",
                   "time": "14:35"
                 },
                 {
-                  "name": "しまバス本社前",
+                  "name": "しまバス本社前-",
                   "time": "14:37"
                 },
                 {
-                  "name": "奄美市役所前",
+                  "name": "奄美市役所前-",
                   "time": "14:39"
                 },
                 {
-                  "name": "佐大熊（県道沿い）",
+                  "name": "佐大熊（県道沿い）-",
                   "time": "14:48"
                 },
                 {
-                  "name": "山羊島ホテル前",
+                  "name": "山羊島ホテル前-",
                   "time": "14:52"
                 },
                 {
-                  "name": "だいわ大熊店前",
+                  "name": "だいわ大熊店前-",
                   "time": "14:57"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い-",
                   "time": "15:05"
                 },
                 {
-                  "name": "ビッグⅡ前",
+                  "name": "ビッグⅡ前-",
                   "time": "15:07"
                 }
               ]
@@ -1752,63 +1753,63 @@
               "destination": "奄美空港",
               "stops": [
                 {
-                  "name": "こしゅく第１公園",
+                  "name": "こしゅく第１公園-",
                   "time": "15:46"
                 },
                 {
-                  "name": "朝仁",
+                  "name": "朝仁-",
                   "time": "15:52"
                 },
                 {
-                  "name": "朝仁トンネル前",
+                  "name": "朝仁トンネル前-",
                   "time": "15:55"
                 },
                 {
-                  "name": "長浜",
+                  "name": "長浜-",
                   "time": "15:57"
                 },
                 {
-                  "name": "奄美中央病院前",
+                  "name": "奄美中央病院前-",
                   "time": "15:58"
                 },
                 {
-                  "name": "名瀬合同庁舎前",
+                  "name": "名瀬合同庁舎前-",
                   "time": "16:00"
                 },
                 {
-                  "name": "塩浜入口",
+                  "name": "塩浜入口-",
                   "time": "16:01"
                 },
                 {
-                  "name": "朝日通り",
+                  "name": "朝日通り-",
                   "time": "16:05"
                 },
                 {
-                  "name": "しまバス本社前",
+                  "name": "しまバス本社前-",
                   "time": "16:07"
                 },
                 {
-                  "name": "奄美市役所前",
+                  "name": "奄美市役所前-",
                   "time": "16:09"
                 },
                 {
-                  "name": "佐大熊（県道沿い）",
+                  "name": "佐大熊（県道沿い）-",
                   "time": "16:18"
                 },
                 {
-                  "name": "山羊島ホテル前",
+                  "name": "山羊島ホテル前-",
                   "time": "16:22"
                 },
                 {
-                  "name": "だいわ大熊店前",
+                  "name": "だいわ大熊店前-",
                   "time": "16:27"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い-",
                   "time": "16:35"
                 },
                 {
-                  "name": "ビッグⅡ前",
+                  "name": "ビッグⅡ前-",
                   "time": "16:37"
                 }
               ]
@@ -2064,39 +2065,39 @@
               "destination": "赤木名 外金久",
               "stops": [
                 {
-                  "name": "平田町奥又",
+                  "name": "平田町奥又-",
                   "time": "16:50"
                 },
                 {
-                  "name": "県立大島病院前",
+                  "name": "県立大島病院前-",
                   "time": "16:52"
                 },
                 {
-                  "name": "奄美小学校前",
+                  "name": "奄美小学校前-",
                   "time": "16:54"
                 },
                 {
-                  "name": "大島高等学校前",
+                  "name": "大島高等学校前-",
                   "time": "16:55"
                 },
                 {
-                  "name": "朝日通り",
+                  "name": "朝日通り-",
                   "time": "17:04"
                 },
                 {
-                  "name": "しまバス本社前",
+                  "name": "しまバス本社前-",
                   "time": "17:06"
                 },
                 {
-                  "name": "和光園前",
+                  "name": "和光園前-",
                   "time": "17:10"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い-",
                   "time": "17:21"
                 },
                 {
-                  "name": "ビッグⅡ前",
+                  "name": "ビッグⅡ前-",
                   "time": "17:23"
                 }
               ]
@@ -2243,35 +2244,35 @@
               "destination": "秋名",
               "stops": [
                 {
-                  "name": "平田町奥又",
+                  "name": "平田町奥又-",
                   "time": "18:10"
                 },
                 {
-                  "name": "県立大島病院前",
+                  "name": "県立大島病院前-",
                   "time": "18:12"
                 },
                 {
-                  "name": "奄美小学校前",
+                  "name": "奄美小学校前-",
                   "time": "18:14"
                 },
                 {
-                  "name": "大島高等学校前",
+                  "name": "大島高等学校前-",
                   "time": "18:15"
                 },
                 {
-                  "name": "朝日通り",
+                  "name": "朝日通り-",
                   "time": "18:21"
                 },
                 {
-                  "name": "佐大熊（県道沿い）",
+                  "name": "佐大熊（県道沿い）-",
                   "time": "18:25"
                 },
                 {
-                  "name": "だいわ大熊店前",
+                  "name": "だいわ大熊店前-",
                   "time": "18:31"
                 },
                 {
-                  "name": "ビッグⅡ前",
+                  "name": "ビッグⅡ前-",
                   "time": "18:44"
                 }
               ]
@@ -2358,7 +2359,7 @@
               ]
             },
             {
-              "destination": null,
+              "destination": "秋名",
               "stops": [
                 {
                   "name": "ビッグⅡ奄美店",
@@ -2410,37 +2411,37 @@
               "destination": "秋名",
               "stops": [
                 {
-                  "name": "平田町奥又",
+                  "name": "平田町奥又-",
                   "time": "18:55"
                 },
                 {
-                  "name": "県立大島病院前",
+                  "name": "県立大島病院前-",
                   "time": "18:57"
                 },
                 {
-                  "name": "奄美小学校前",
+                  "name": "奄美小学校前-",
                   "time": "18:59"
                 },
                 {
-                  "name": "大島高等学校前",
+                  "name": "大島高等学校前-",
                   "time": "19:00"
                 },
                 {
-                  "name": "しまバス本社前",
+                  "name": "しまバス本社前-",
                   "time": "19:07"
                 },
                 {
-                  "name": "和光園前",
+                  "name": "和光園前-",
                   "time": "19:11"
                 },
                 {
-                  "name": "ビッグⅡ前",
+                  "name": "ビッグⅡ前-",
                   "time": "19:30"
                 }
               ]
             },
             {
-              "destination": null,
+              "destination": "秋名",
               "stops": [
                 {
                   "name": "ビッグⅡ前",
@@ -2814,7 +2815,7 @@
                   "time": "10:27"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い",
                   "time": "10:35"
                 },
                 {
@@ -2824,7 +2825,7 @@
               ]
             },
             {
-              "destination": "こしゅく",
+              "destination": "こしゅく 第１公園",
               "stops": [
                 {
                   "name": "ビッグⅡ前",
@@ -2837,12 +2838,7 @@
                 {
                   "name": "だいわ大熊店",
                   "time": "9:59"
-                }
-              ]
-            },
-            {
-              "destination": "第１公園",
-              "stops": [
+                },
                 {
                   "name": "佐大熊（県道沿い）",
                   "time": "10:05"
@@ -2983,7 +2979,7 @@
               ]
             },
             {
-              "destination": "平田町",
+              "destination": "平田町 奥又",
               "stops": [
                 {
                   "name": "ビッグⅡ奄美店",
@@ -3131,7 +3127,7 @@
                   "time": "11:57"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い",
                   "time": "12:05"
                 },
                 {
@@ -3443,7 +3439,7 @@
                   "time": "13:27"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い",
                   "time": "13:35"
                 },
                 {
@@ -3755,7 +3751,7 @@
                   "time": "15:27"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い",
                   "time": "15:35"
                 },
                 {
@@ -4043,7 +4039,7 @@
                   "time": "17:10"
                 },
                 {
-                  "name": "中勝",
+                  "name": "中勝国道沿い",
                   "time": "17:21"
                 },
                 {
@@ -4309,7 +4305,7 @@
               ]
             },
             {
-              "destination": null,
+              "destination": "秋名",
               "stops": [
                 {
                   "name": "ビッグⅡ奄美店",
@@ -4363,12 +4359,15 @@
     },
     {
       "id": "toguchi_line",
+      "island": "奄美大島",
+      "operatorName": "しまバス",
+      "operatorUrl": "https://shimabus.co.jp/",
       "name": "戸口線（戸口⇔名瀬）",
       "area": "龍郷町",
       "officialUrl": "https://shimabus.co.jp/rosen/suburban-line-new/",
       "pdfUrl": "https://shimabus.co.jp/wp-content/uploads/2023/09/20231001_toguchisen.pdf",
       "parsed": true,
-      "dayTypes": [
+      "groups": [
         {
           "id": "weekday",
           "label": "平日",
@@ -4432,7 +4431,7 @@
               ]
             },
             {
-              "destination": "ビッグⅡ",
+              "destination": "ビッグⅡ前",
               "stops": [
                 {
                   "name": "上⼾⼝",
@@ -4453,7 +4452,7 @@
               ]
             },
             {
-              "destination": "せとうち 海の駅",
+              "destination": "県⽴⼤島病院前",
               "stops": [
                 {
                   "name": "ビッグⅡ前",
@@ -5102,7 +5101,7 @@
               ]
             },
             {
-              "destination": "ビッグⅡ",
+              "destination": "ビッグⅡ前",
               "stops": [
                 {
                   "name": "上⼾⼝",
@@ -5123,7 +5122,7 @@
               ]
             },
             {
-              "destination": "せとうち 海の駅",
+              "destination": "県⽴⼤島病院前",
               "stops": [
                 {
                   "name": "ビッグⅡ前",
@@ -5713,6 +5712,9 @@
     },
     {
       "id": "airport_line",
+      "island": "奄美大島",
+      "operatorName": "しまバス",
+      "operatorUrl": "https://shimabus.co.jp/",
       "name": "空港線（こしゅく第１公園⇔奄美空港）",
       "area": "奄美市・笠利町",
       "officialUrl": "https://shimabus.co.jp/rosen/suburban-line-new/",
@@ -5721,6 +5723,9 @@
     },
     {
       "id": "koniya_sumiyo_line",
+      "island": "奄美大島",
+      "operatorName": "しまバス",
+      "operatorUrl": "https://shimabus.co.jp/",
       "name": "せとうち海の駅（古仁屋）・住用線",
       "area": "瀬戸内町・住用町",
       "officialUrl": "https://shimabus.co.jp/rosen/suburban-line-new/",
@@ -5729,6 +5734,9 @@
     },
     {
       "id": "sani_line",
+      "island": "奄美大島",
+      "operatorName": "しまバス",
+      "operatorUrl": "https://shimabus.co.jp/",
       "name": "佐仁線（笠利町佐仁⇔市街地）",
       "area": "笠利町",
       "officialUrl": "https://shimabus.co.jp/rosen/suburban-line-new/",
@@ -5737,11 +5745,5386 @@
     },
     {
       "id": "toguchi_uken_line",
+      "island": "奄美大島",
+      "operatorName": "しまバス",
+      "operatorUrl": "https://shimabus.co.jp/",
       "name": "新村・石良・湯湾・宇検線",
       "area": "宇検村",
       "officialUrl": "https://shimabus.co.jp/rosen/suburban-line-new/",
       "parsed": false,
       "note": "時刻表PDFが画像形式のため、便ごとの時刻を自動表示できません。下のボタンから公式PDFをご確認ください。"
+    },
+    {
+      "id": "kikai_bus",
+      "island": "喜界島",
+      "operatorName": "喜界町公共ライドシェアバス",
+      "operatorUrl": "https://www.town.kikai.lg.jp/kankou/kanko-iju/kotsuannai/chonai.html",
+      "name": "南中央線・北中央線",
+      "area": "喜界町",
+      "officialUrl": "https://www.town.kikai.lg.jp/kankou/kanko-iju/kotsuannai/chonai.html",
+      "parsed": false,
+      "note": "時刻表PDF内に、運休便を示す線が図として引かれており、文字情報だけでは運休の有無を確実に判定できないため、公式PDFをご案内しています。"
+    },
+    {
+      "id": "tokunoshima_kuko_line",
+      "island": "徳之島",
+      "operatorName": "徳之島総合陸運",
+      "operatorUrl": "https://www.sogorikuun.com/",
+      "name": "亀津～平土野～空港線",
+      "area": "徳之島町・天城町",
+      "officialUrl": "https://www.sogorikuun.com/bus_time/",
+      "parsed": true,
+      "groups": [
+        {
+          "id": "weekday",
+          "label": "平日",
+          "trips": [
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "7:53"
+                },
+                {
+                  "name": "亀津",
+                  "time": "8:00"
+                },
+                {
+                  "name": "井之川",
+                  "time": "8:14"
+                },
+                {
+                  "name": "母間",
+                  "time": "8:23"
+                },
+                {
+                  "name": "花徳",
+                  "time": "8:28"
+                },
+                {
+                  "name": "平土野",
+                  "time": "8:41"
+                },
+                {
+                  "name": "空港",
+                  "time": "8:47"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "8:53"
+                },
+                {
+                  "name": "亀津",
+                  "time": "9:00"
+                },
+                {
+                  "name": "井之川",
+                  "time": "9:14"
+                },
+                {
+                  "name": "母間",
+                  "time": "9:23"
+                },
+                {
+                  "name": "花徳",
+                  "time": "9:28"
+                },
+                {
+                  "name": "平土野",
+                  "time": "9:41"
+                },
+                {
+                  "name": "空港",
+                  "time": "9:47"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "9:53"
+                },
+                {
+                  "name": "亀津",
+                  "time": "10:00"
+                },
+                {
+                  "name": "井之川",
+                  "time": "10:14"
+                },
+                {
+                  "name": "母間",
+                  "time": "10:23"
+                },
+                {
+                  "name": "花徳",
+                  "time": "10:28"
+                },
+                {
+                  "name": "平土野",
+                  "time": "10:41"
+                },
+                {
+                  "name": "空港",
+                  "time": "10:47"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "11:43"
+                },
+                {
+                  "name": "亀津",
+                  "time": "11:50"
+                },
+                {
+                  "name": "井之川",
+                  "time": "12:04"
+                },
+                {
+                  "name": "母間",
+                  "time": "12:13"
+                },
+                {
+                  "name": "花徳",
+                  "time": "12:18"
+                },
+                {
+                  "name": "平土野",
+                  "time": "12:31"
+                },
+                {
+                  "name": "空港",
+                  "time": "12:37"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "13:33"
+                },
+                {
+                  "name": "亀津",
+                  "time": "13:40"
+                },
+                {
+                  "name": "井之川",
+                  "time": "13:54"
+                },
+                {
+                  "name": "母間",
+                  "time": "14:03"
+                },
+                {
+                  "name": "花徳",
+                  "time": "14:08"
+                },
+                {
+                  "name": "平土野",
+                  "time": "14:21"
+                },
+                {
+                  "name": "空港",
+                  "time": "14:27"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "15:23"
+                },
+                {
+                  "name": "亀津",
+                  "time": "15:30"
+                },
+                {
+                  "name": "井之川",
+                  "time": "15:44"
+                },
+                {
+                  "name": "母間",
+                  "time": "15:53"
+                },
+                {
+                  "name": "花徳",
+                  "time": "15:58"
+                },
+                {
+                  "name": "平土野",
+                  "time": "16:11"
+                },
+                {
+                  "name": "空港",
+                  "time": "16:17"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "16:13"
+                },
+                {
+                  "name": "亀津",
+                  "time": "16:20"
+                },
+                {
+                  "name": "井之川",
+                  "time": "16:34"
+                },
+                {
+                  "name": "母間",
+                  "time": "16:43"
+                },
+                {
+                  "name": "花徳",
+                  "time": "16:48"
+                },
+                {
+                  "name": "平土野",
+                  "time": "17:01"
+                },
+                {
+                  "name": "空港",
+                  "time": "17:07"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "17:33"
+                },
+                {
+                  "name": "亀津",
+                  "time": "17:40"
+                },
+                {
+                  "name": "井之川",
+                  "time": "17:54"
+                },
+                {
+                  "name": "母間",
+                  "time": "18:03"
+                },
+                {
+                  "name": "花徳",
+                  "time": "18:08"
+                },
+                {
+                  "name": "平土野",
+                  "time": "18:21"
+                },
+                {
+                  "name": "空港",
+                  "time": "18:27"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "holiday",
+          "label": "土日祝",
+          "trips": [
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "7:53"
+                },
+                {
+                  "name": "亀津",
+                  "time": "8:00"
+                },
+                {
+                  "name": "井之川",
+                  "time": "8:14"
+                },
+                {
+                  "name": "母間",
+                  "time": "8:23"
+                },
+                {
+                  "name": "花徳",
+                  "time": "8:28"
+                },
+                {
+                  "name": "平土野",
+                  "time": "8:41"
+                },
+                {
+                  "name": "空港",
+                  "time": "8:47"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "8:53"
+                },
+                {
+                  "name": "亀津",
+                  "time": "9:00"
+                },
+                {
+                  "name": "井之川",
+                  "time": "9:14"
+                },
+                {
+                  "name": "母間",
+                  "time": "9:23"
+                },
+                {
+                  "name": "花徳",
+                  "time": "9:28"
+                },
+                {
+                  "name": "平土野",
+                  "time": "9:41"
+                },
+                {
+                  "name": "空港",
+                  "time": "9:47"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "11:43"
+                },
+                {
+                  "name": "亀津",
+                  "time": "11:50"
+                },
+                {
+                  "name": "井之川",
+                  "time": "12:04"
+                },
+                {
+                  "name": "母間",
+                  "time": "12:13"
+                },
+                {
+                  "name": "花徳",
+                  "time": "12:18"
+                },
+                {
+                  "name": "平土野",
+                  "time": "12:31"
+                },
+                {
+                  "name": "空港",
+                  "time": "12:37"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "13:33"
+                },
+                {
+                  "name": "亀津",
+                  "time": "13:40"
+                },
+                {
+                  "name": "井之川",
+                  "time": "13:54"
+                },
+                {
+                  "name": "母間",
+                  "time": "14:03"
+                },
+                {
+                  "name": "花徳",
+                  "time": "14:08"
+                },
+                {
+                  "name": "平土野",
+                  "time": "14:21"
+                },
+                {
+                  "name": "空港",
+                  "time": "14:27"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "16:13"
+                },
+                {
+                  "name": "亀津",
+                  "time": "16:20"
+                },
+                {
+                  "name": "井之川",
+                  "time": "16:34"
+                },
+                {
+                  "name": "母間",
+                  "time": "16:43"
+                },
+                {
+                  "name": "花徳",
+                  "time": "16:48"
+                },
+                {
+                  "name": "平土野",
+                  "time": "17:01"
+                },
+                {
+                  "name": "空港",
+                  "time": "17:07"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "新港",
+                  "time": "17:33"
+                },
+                {
+                  "name": "亀津",
+                  "time": "17:40"
+                },
+                {
+                  "name": "井之川",
+                  "time": "17:54"
+                },
+                {
+                  "name": "母間",
+                  "time": "18:03"
+                },
+                {
+                  "name": "花徳",
+                  "time": "18:08"
+                },
+                {
+                  "name": "平土野",
+                  "time": "18:21"
+                },
+                {
+                  "name": "空港",
+                  "time": "18:27"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tokunoshima_kuko_line_return",
+      "island": "徳之島",
+      "operatorName": "徳之島総合陸運",
+      "operatorUrl": "https://www.sogorikuun.com/",
+      "name": "空港～平土野～亀津線",
+      "area": "天城町・徳之島町",
+      "officialUrl": "https://www.sogorikuun.com/bus_time/",
+      "parsed": true,
+      "groups": [
+        {
+          "id": "weekday",
+          "label": "平日",
+          "trips": [
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "7:05"
+                },
+                {
+                  "name": "平土野",
+                  "time": "7:11"
+                },
+                {
+                  "name": "花徳",
+                  "time": "7:24"
+                },
+                {
+                  "name": "母間",
+                  "time": "7:29"
+                },
+                {
+                  "name": "井之川",
+                  "time": "7:38"
+                },
+                {
+                  "name": "新港",
+                  "time": "7:49"
+                },
+                {
+                  "name": "亀津",
+                  "time": "7:59"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "8:00"
+                },
+                {
+                  "name": "平土野",
+                  "time": "8:06"
+                },
+                {
+                  "name": "花徳",
+                  "time": "8:19"
+                },
+                {
+                  "name": "母間",
+                  "time": "8:24"
+                },
+                {
+                  "name": "井之川",
+                  "time": "8:33"
+                },
+                {
+                  "name": "新港",
+                  "time": "8:44"
+                },
+                {
+                  "name": "亀津",
+                  "time": "8:54"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "9:15"
+                },
+                {
+                  "name": "平土野",
+                  "time": "9:21"
+                },
+                {
+                  "name": "花徳",
+                  "time": "9:34"
+                },
+                {
+                  "name": "母間",
+                  "time": "9:39"
+                },
+                {
+                  "name": "井之川",
+                  "time": "9:48"
+                },
+                {
+                  "name": "新港",
+                  "time": "9:59"
+                },
+                {
+                  "name": "亀津",
+                  "time": "10:09"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "10:10"
+                },
+                {
+                  "name": "平土野",
+                  "time": "10:16"
+                },
+                {
+                  "name": "花徳",
+                  "time": "10:29"
+                },
+                {
+                  "name": "母間",
+                  "time": "10:34"
+                },
+                {
+                  "name": "井之川",
+                  "time": "10:43"
+                },
+                {
+                  "name": "新港",
+                  "time": "10:54"
+                },
+                {
+                  "name": "亀津",
+                  "time": "11:04"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "11:20"
+                },
+                {
+                  "name": "平土野",
+                  "time": "11:26"
+                },
+                {
+                  "name": "花徳",
+                  "time": "11:39"
+                },
+                {
+                  "name": "母間",
+                  "time": "11:44"
+                },
+                {
+                  "name": "井之川",
+                  "time": "11:53"
+                },
+                {
+                  "name": "新港",
+                  "time": "12:04"
+                },
+                {
+                  "name": "亀津",
+                  "time": "12:14"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "13:00"
+                },
+                {
+                  "name": "平土野",
+                  "time": "13:06"
+                },
+                {
+                  "name": "花徳",
+                  "time": "13:19"
+                },
+                {
+                  "name": "母間",
+                  "time": "13:24"
+                },
+                {
+                  "name": "井之川",
+                  "time": "13:33"
+                },
+                {
+                  "name": "新港",
+                  "time": "13:44"
+                },
+                {
+                  "name": "亀津",
+                  "time": "13:54"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "15:00"
+                },
+                {
+                  "name": "平土野",
+                  "time": "15:06"
+                },
+                {
+                  "name": "花徳",
+                  "time": "15:19"
+                },
+                {
+                  "name": "母間",
+                  "time": "15:24"
+                },
+                {
+                  "name": "井之川",
+                  "time": "15:33"
+                },
+                {
+                  "name": "新港",
+                  "time": "15:44"
+                },
+                {
+                  "name": "亀津",
+                  "time": "15:54"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "17:25"
+                },
+                {
+                  "name": "平土野",
+                  "time": "17:31"
+                },
+                {
+                  "name": "花徳",
+                  "time": "17:44"
+                },
+                {
+                  "name": "母間",
+                  "time": "17:49"
+                },
+                {
+                  "name": "井之川",
+                  "time": "17:58"
+                },
+                {
+                  "name": "新港",
+                  "time": "18:09"
+                },
+                {
+                  "name": "亀津",
+                  "time": "18:19"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "holiday",
+          "label": "土日祝",
+          "trips": [
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "7:05"
+                },
+                {
+                  "name": "平土野",
+                  "time": "7:11"
+                },
+                {
+                  "name": "花徳",
+                  "time": "7:24"
+                },
+                {
+                  "name": "母間",
+                  "time": "7:29"
+                },
+                {
+                  "name": "井之川",
+                  "time": "7:38"
+                },
+                {
+                  "name": "新港",
+                  "time": "7:49"
+                },
+                {
+                  "name": "亀津",
+                  "time": "7:59"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "9:15"
+                },
+                {
+                  "name": "平土野",
+                  "time": "9:21"
+                },
+                {
+                  "name": "花徳",
+                  "time": "9:34"
+                },
+                {
+                  "name": "母間",
+                  "time": "9:39"
+                },
+                {
+                  "name": "井之川",
+                  "time": "9:48"
+                },
+                {
+                  "name": "新港",
+                  "time": "9:59"
+                },
+                {
+                  "name": "亀津",
+                  "time": "10:09"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "10:10"
+                },
+                {
+                  "name": "平土野",
+                  "time": "10:16"
+                },
+                {
+                  "name": "花徳",
+                  "time": "10:29"
+                },
+                {
+                  "name": "母間",
+                  "time": "10:34"
+                },
+                {
+                  "name": "井之川",
+                  "time": "10:43"
+                },
+                {
+                  "name": "新港",
+                  "time": "10:54"
+                },
+                {
+                  "name": "亀津",
+                  "time": "11:04"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "13:00"
+                },
+                {
+                  "name": "平土野",
+                  "time": "13:06"
+                },
+                {
+                  "name": "花徳",
+                  "time": "13:19"
+                },
+                {
+                  "name": "母間",
+                  "time": "13:24"
+                },
+                {
+                  "name": "井之川",
+                  "time": "13:33"
+                },
+                {
+                  "name": "新港",
+                  "time": "13:44"
+                },
+                {
+                  "name": "亀津",
+                  "time": "13:54"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "15:00"
+                },
+                {
+                  "name": "平土野",
+                  "time": "15:06"
+                },
+                {
+                  "name": "花徳",
+                  "time": "15:19"
+                },
+                {
+                  "name": "母間",
+                  "time": "15:24"
+                },
+                {
+                  "name": "井之川",
+                  "time": "15:33"
+                },
+                {
+                  "name": "新港",
+                  "time": "15:44"
+                },
+                {
+                  "name": "亀津",
+                  "time": "15:54"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "17:25"
+                },
+                {
+                  "name": "平土野",
+                  "time": "17:31"
+                },
+                {
+                  "name": "花徳",
+                  "time": "17:44"
+                },
+                {
+                  "name": "母間",
+                  "time": "17:49"
+                },
+                {
+                  "name": "井之川",
+                  "time": "17:58"
+                },
+                {
+                  "name": "新港",
+                  "time": "18:09"
+                },
+                {
+                  "name": "亀津",
+                  "time": "18:19"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tokunoshima_inutabu_line",
+      "island": "徳之島",
+      "operatorName": "徳之島総合陸運",
+      "operatorUrl": "https://www.sogorikuun.com/",
+      "name": "亀津～犬田布～平土野線（往復）",
+      "area": "徳之島町・伊仙町・天城町",
+      "officialUrl": "https://www.sogorikuun.com/bus_time/",
+      "parsed": true,
+      "groups": [
+        {
+          "id": "weekday",
+          "label": "平日",
+          "trips": [
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "平土野",
+                  "time": "6:27"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "6:35"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "6:40"
+                },
+                {
+                  "name": "河地",
+                  "time": "6:45"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "6:50"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "6:59"
+                },
+                {
+                  "name": "亀津",
+                  "time": "7:28"
+                }
+              ]
+            },
+            {
+              "destination": "平土野",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "7:30"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "7:59"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "8:08"
+                },
+                {
+                  "name": "河地",
+                  "time": "8:13"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "8:18"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "8:23"
+                },
+                {
+                  "name": "平土野",
+                  "time": "8:31"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "平土野",
+                  "time": "9:25"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "9:33"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "9:38"
+                },
+                {
+                  "name": "河地",
+                  "time": "9:43"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "9:48"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "9:57"
+                },
+                {
+                  "name": "亀津",
+                  "time": "10:26"
+                }
+              ]
+            },
+            {
+              "destination": "平土野",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "10:40"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "11:09"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "11:18"
+                },
+                {
+                  "name": "河地",
+                  "time": "11:23"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "11:28"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "11:33"
+                },
+                {
+                  "name": "平土野",
+                  "time": "11:41"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "平土野",
+                  "time": "12:26"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "12:34"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "12:39"
+                },
+                {
+                  "name": "河地",
+                  "time": "12:44"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "12:49"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "12:58"
+                },
+                {
+                  "name": "亀津",
+                  "time": "13:27"
+                }
+              ]
+            },
+            {
+              "destination": "犬田布",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "12:40"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "13:09"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "13:18"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "犬田布",
+                  "time": "13:20"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "13:29"
+                },
+                {
+                  "name": "亀津",
+                  "time": "13:58"
+                }
+              ]
+            },
+            {
+              "destination": "平土野",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "14:30"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "14:59"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "15:08"
+                },
+                {
+                  "name": "河地",
+                  "time": "15:13"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "15:18"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "15:23"
+                },
+                {
+                  "name": "平土野",
+                  "time": "15:31"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "平土野",
+                  "time": "15:41"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "15:49"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "15:54"
+                },
+                {
+                  "name": "河地",
+                  "time": "15:59"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "16:04"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "16:13"
+                },
+                {
+                  "name": "亀津",
+                  "time": "16:42"
+                }
+              ]
+            },
+            {
+              "destination": "犬田布",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "16:40"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "17:09"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "17:18"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "犬田布",
+                  "time": "17:20"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "17:29"
+                },
+                {
+                  "name": "亀津",
+                  "time": "17:58"
+                }
+              ]
+            },
+            {
+              "destination": "平土野",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "18:40"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "19:09"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "19:18"
+                },
+                {
+                  "name": "河地",
+                  "time": "19:23"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "19:28"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "19:33"
+                },
+                {
+                  "name": "平土野",
+                  "time": "19:41"
+                }
+              ]
+            },
+            {
+              "destination": "平土野",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "19:10"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "19:39"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "19:48"
+                },
+                {
+                  "name": "河地",
+                  "time": "19:53"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "19:58"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "20:03"
+                },
+                {
+                  "name": "平土野",
+                  "time": "20:11"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "holiday",
+          "label": "土日祝",
+          "trips": [
+            {
+              "destination": "平土野",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "7:30"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "7:59"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "8:08"
+                },
+                {
+                  "name": "河地",
+                  "time": "8:13"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "8:18"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "8:23"
+                },
+                {
+                  "name": "平土野",
+                  "time": "8:31"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "平土野",
+                  "time": "9:25"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "9:33"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "9:38"
+                },
+                {
+                  "name": "河地",
+                  "time": "9:43"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "9:48"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "9:57"
+                },
+                {
+                  "name": "亀津",
+                  "time": "10:26"
+                }
+              ]
+            },
+            {
+              "destination": "平土野",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "10:40"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "11:09"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "11:18"
+                },
+                {
+                  "name": "河地",
+                  "time": "11:23"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "11:28"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "11:33"
+                },
+                {
+                  "name": "平土野",
+                  "time": "11:41"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "平土野",
+                  "time": "12:26"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "12:34"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "12:39"
+                },
+                {
+                  "name": "河地",
+                  "time": "12:44"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "12:49"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "12:58"
+                },
+                {
+                  "name": "亀津",
+                  "time": "13:27"
+                }
+              ]
+            },
+            {
+              "destination": "犬田布",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "12:40"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "13:09"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "13:18"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "犬田布",
+                  "time": "13:20"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "13:29"
+                },
+                {
+                  "name": "亀津",
+                  "time": "13:58"
+                }
+              ]
+            },
+            {
+              "destination": "平土野",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "14:30"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "14:59"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "15:08"
+                },
+                {
+                  "name": "河地",
+                  "time": "15:13"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "15:18"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "15:23"
+                },
+                {
+                  "name": "平土野",
+                  "time": "15:31"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "平土野",
+                  "time": "15:41"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "15:49"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "15:54"
+                },
+                {
+                  "name": "河地",
+                  "time": "15:59"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "16:04"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "16:13"
+                },
+                {
+                  "name": "亀津",
+                  "time": "16:42"
+                }
+              ]
+            },
+            {
+              "destination": "犬田布",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "16:40"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "17:09"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "17:18"
+                }
+              ]
+            },
+            {
+              "destination": "亀津",
+              "stops": [
+                {
+                  "name": "犬田布",
+                  "time": "17:20"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "17:29"
+                },
+                {
+                  "name": "亀津",
+                  "time": "17:58"
+                }
+              ]
+            },
+            {
+              "destination": "平土野",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "18:40"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "19:09"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "19:18"
+                },
+                {
+                  "name": "河地",
+                  "time": "19:23"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "19:28"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "19:33"
+                },
+                {
+                  "name": "平土野",
+                  "time": "19:41"
+                }
+              ]
+            },
+            {
+              "destination": "平土野",
+              "stops": [
+                {
+                  "name": "亀津",
+                  "time": "19:10"
+                },
+                {
+                  "name": "伊仙",
+                  "time": "19:39"
+                },
+                {
+                  "name": "犬田布",
+                  "time": "19:48"
+                },
+                {
+                  "name": "河地",
+                  "time": "19:53"
+                },
+                {
+                  "name": "西阿木名",
+                  "time": "19:58"
+                },
+                {
+                  "name": "瀬滝",
+                  "time": "20:03"
+                },
+                {
+                  "name": "平土野",
+                  "time": "20:11"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "okinoerabu_kuko_line",
+      "island": "沖永良部島",
+      "operatorName": "沖永良部バス企業団",
+      "operatorUrl": "https://okinoerabubus.org/",
+      "name": "空港線・知名国頭線",
+      "area": "和泊町・知名町",
+      "officialUrl": "https://okinoerabubus.org/scheduled/timetable/",
+      "pdfUrl": "https://okinoerabubus.org/wp-content/uploads/2026/04/schedule_202604.pdf",
+      "parsed": true,
+      "groups": [
+        {
+          "id": "unknown",
+          "label": "",
+          "trips": [
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "7:35"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "7:36"
+                },
+                {
+                  "name": "小米",
+                  "time": "7:36"
+                },
+                {
+                  "name": "町体前",
+                  "time": "7:38"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "7:41"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "7:43"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "7:45"
+                },
+                {
+                  "name": "知中前",
+                  "time": "7:46"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "7:47"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "7:49"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "7:50"
+                },
+                {
+                  "name": "屋者",
+                  "time": "7:51"
+                },
+                {
+                  "name": "余多",
+                  "time": "7:53"
+                },
+                {
+                  "name": "高校前",
+                  "time": "7:54"
+                },
+                {
+                  "name": "古里",
+                  "time": "7:56"
+                },
+                {
+                  "name": "皆川",
+                  "time": "7:58"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "8:00"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "8:02"
+                },
+                {
+                  "name": "Ａ コ ー プ 前",
+                  "time": "8:04"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "8:07"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "8:10"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "8:11"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "8:12"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "8:13"
+                },
+                {
+                  "name": "和中前",
+                  "time": "8:18"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "8:20"
+                },
+                {
+                  "name": "西原",
+                  "time": "8:23"
+                },
+                {
+                  "name": "国頭",
+                  "time": "8:29"
+                },
+                {
+                  "name": "空港",
+                  "time": "8:33"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "国頭",
+                  "time": "7:40"
+                },
+                {
+                  "name": "西原",
+                  "time": "7:46"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "7:49"
+                },
+                {
+                  "name": "和中前",
+                  "time": "7:51"
+                },
+                {
+                  "name": "ホテルシーワールド",
+                  "time": "7:53"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "7:56"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "7:57"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "7:58"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "7:59"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "8:02"
+                },
+                {
+                  "name": "A コ ー プ 前",
+                  "time": "8:05"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "8:07"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "8:09"
+                },
+                {
+                  "name": "古里",
+                  "time": "8:11"
+                },
+                {
+                  "name": "高校前",
+                  "time": "8:13"
+                },
+                {
+                  "name": "余多",
+                  "time": "8:14"
+                },
+                {
+                  "name": "屋者",
+                  "time": "8:16"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "8:17"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "8:18"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "8:20"
+                },
+                {
+                  "name": "知中前",
+                  "time": "8:21"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "8:22"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "8:25"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "8:27"
+                },
+                {
+                  "name": "町体前",
+                  "time": "8:29"
+                },
+                {
+                  "name": "小米",
+                  "time": "8:31"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "8:31"
+                },
+                {
+                  "name": "知名",
+                  "time": "8:32"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "国頭",
+                  "time": "8:30"
+                },
+                {
+                  "name": "西原",
+                  "time": "8:36"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "8:39"
+                },
+                {
+                  "name": "和中前",
+                  "time": "8:41"
+                },
+                {
+                  "name": "ホテルシーワールド",
+                  "time": "8:43"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "8:46"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "8:47"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "8:48"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "8:49"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "8:52"
+                },
+                {
+                  "name": "A コ ー プ 前",
+                  "time": "8:55"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "8:57"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "8:59"
+                },
+                {
+                  "name": "古里",
+                  "time": "9:01"
+                },
+                {
+                  "name": "高校前",
+                  "time": "9:03"
+                },
+                {
+                  "name": "余多",
+                  "time": "9:04"
+                },
+                {
+                  "name": "屋者",
+                  "time": "9:06"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "9:07"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "9:08"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "9:10"
+                },
+                {
+                  "name": "知中前",
+                  "time": "9:11"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "9:12"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "9:15"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "9:17"
+                },
+                {
+                  "name": "町体前",
+                  "time": "9:19"
+                },
+                {
+                  "name": "小米",
+                  "time": "9:21"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "9:21"
+                },
+                {
+                  "name": "知名",
+                  "time": "9:22"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "9:05"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "9:06"
+                },
+                {
+                  "name": "小米",
+                  "time": "9:06"
+                },
+                {
+                  "name": "町体前",
+                  "time": "9:08"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "9:11"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "9:13"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "9:15"
+                },
+                {
+                  "name": "知中前",
+                  "time": "9:16"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "9:17"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "9:19"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "9:20"
+                },
+                {
+                  "name": "屋者",
+                  "time": "9:21"
+                },
+                {
+                  "name": "余多",
+                  "time": "9:23"
+                },
+                {
+                  "name": "高校前",
+                  "time": "9:24"
+                },
+                {
+                  "name": "古里",
+                  "time": "9:26"
+                },
+                {
+                  "name": "皆川",
+                  "time": "9:28"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "9:30"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "9:32"
+                },
+                {
+                  "name": "Ａ コ ー プ 前",
+                  "time": "9:34"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "9:37"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "9:40"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "9:41"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "9:42"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "9:43"
+                },
+                {
+                  "name": "和中前",
+                  "time": "9:48"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "9:50"
+                },
+                {
+                  "name": "西原",
+                  "time": "9:53"
+                },
+                {
+                  "name": "国頭",
+                  "time": "9:59"
+                },
+                {
+                  "name": "空港",
+                  "time": "10:03"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "9:25"
+                },
+                {
+                  "name": "国頭",
+                  "time": "9:29"
+                },
+                {
+                  "name": "西原",
+                  "time": "9:35"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "9:38"
+                },
+                {
+                  "name": "和中前",
+                  "time": "9:40"
+                },
+                {
+                  "name": "ホテルシーワールド",
+                  "time": "9:42"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "9:45"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "9:46"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "9:47"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "9:48"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "9:51"
+                },
+                {
+                  "name": "A コ ー プ 前",
+                  "time": "9:54"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "9:56"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "9:58"
+                },
+                {
+                  "name": "皆川",
+                  "time": "10:00"
+                },
+                {
+                  "name": "古里",
+                  "time": "10:02"
+                },
+                {
+                  "name": "高校前",
+                  "time": "10:04"
+                },
+                {
+                  "name": "余多",
+                  "time": "10:05"
+                },
+                {
+                  "name": "屋者",
+                  "time": "10:07"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "10:08"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "10:09"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "10:11"
+                },
+                {
+                  "name": "知中前",
+                  "time": "10:12"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "10:13"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "10:16"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "10:18"
+                },
+                {
+                  "name": "町体前",
+                  "time": "10:20"
+                },
+                {
+                  "name": "小米",
+                  "time": "10:22"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "10:22"
+                },
+                {
+                  "name": "知名",
+                  "time": "10:23"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "10:15"
+                },
+                {
+                  "name": "国頭",
+                  "time": "10:19"
+                },
+                {
+                  "name": "西原",
+                  "time": "10:25"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "10:28"
+                },
+                {
+                  "name": "和中前",
+                  "time": "10:30"
+                },
+                {
+                  "name": "ホテルシーワールド",
+                  "time": "10:32"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "10:35"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "10:36"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "10:37"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "10:38"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "10:41"
+                },
+                {
+                  "name": "A コ ー プ 前",
+                  "time": "10:44"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "10:46"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "10:48"
+                },
+                {
+                  "name": "皆川",
+                  "time": "10:50"
+                },
+                {
+                  "name": "古里",
+                  "time": "10:52"
+                },
+                {
+                  "name": "高校前",
+                  "time": "10:54"
+                },
+                {
+                  "name": "余多",
+                  "time": "10:55"
+                },
+                {
+                  "name": "屋者",
+                  "time": "10:57"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "10:58"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "10:59"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "11:01"
+                },
+                {
+                  "name": "知中前",
+                  "time": "11:02"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "11:03"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "11:06"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "11:08"
+                },
+                {
+                  "name": "町体前",
+                  "time": "11:10"
+                },
+                {
+                  "name": "小米",
+                  "time": "11:12"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "11:12"
+                },
+                {
+                  "name": "知名",
+                  "time": "11:13"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "10:25"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "10:26"
+                },
+                {
+                  "name": "小米",
+                  "time": "10:26"
+                },
+                {
+                  "name": "町体前",
+                  "time": "10:28"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "10:31"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "10:33"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "10:35"
+                },
+                {
+                  "name": "知中前",
+                  "time": "10:36"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "10:37"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "10:39"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "10:40"
+                },
+                {
+                  "name": "屋者",
+                  "time": "10:41"
+                },
+                {
+                  "name": "余多",
+                  "time": "10:43"
+                },
+                {
+                  "name": "高校前",
+                  "time": "10:44"
+                },
+                {
+                  "name": "古里",
+                  "time": "10:46"
+                },
+                {
+                  "name": "皆川",
+                  "time": "10:48"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "10:50"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "10:52"
+                },
+                {
+                  "name": "Ａ コ ー プ 前",
+                  "time": "10:54"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "10:57"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "11:00"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "11:01"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "11:02"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "11:03"
+                },
+                {
+                  "name": "和中前",
+                  "time": "11:08"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "11:10"
+                },
+                {
+                  "name": "西原",
+                  "time": "11:13"
+                },
+                {
+                  "name": "国頭",
+                  "time": "11:19"
+                },
+                {
+                  "name": "空港",
+                  "time": "11:23"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "11:25"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "11:26"
+                },
+                {
+                  "name": "小米",
+                  "time": "11:26"
+                },
+                {
+                  "name": "町体前",
+                  "time": "11:28"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "11:31"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "11:33"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "11:35"
+                },
+                {
+                  "name": "知中前",
+                  "time": "11:36"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "11:37"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "11:39"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "11:40"
+                },
+                {
+                  "name": "屋者",
+                  "time": "11:41"
+                },
+                {
+                  "name": "余多",
+                  "time": "11:43"
+                },
+                {
+                  "name": "高校前",
+                  "time": "11:44"
+                },
+                {
+                  "name": "古里",
+                  "time": "11:46"
+                },
+                {
+                  "name": "皆川",
+                  "time": "11:48"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "11:50"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "11:52"
+                },
+                {
+                  "name": "Ａ コ ー プ 前",
+                  "time": "11:54"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "11:57"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "12:00"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "12:01"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "12:02"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "12:03"
+                },
+                {
+                  "name": "和中前",
+                  "time": "12:08"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "12:10"
+                },
+                {
+                  "name": "西原",
+                  "time": "12:13"
+                },
+                {
+                  "name": "国頭",
+                  "time": "12:19"
+                },
+                {
+                  "name": "空港",
+                  "time": "12:23"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "11:45"
+                },
+                {
+                  "name": "国頭",
+                  "time": "11:49"
+                },
+                {
+                  "name": "西原",
+                  "time": "11:55"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "11:58"
+                },
+                {
+                  "name": "和中前",
+                  "time": "12:00"
+                },
+                {
+                  "name": "ホテルシーワールド",
+                  "time": "12:02"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "12:05"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "12:06"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "12:07"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "12:08"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "12:11"
+                },
+                {
+                  "name": "A コ ー プ 前",
+                  "time": "12:14"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "12:16"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "12:18"
+                },
+                {
+                  "name": "皆川",
+                  "time": "12:20"
+                },
+                {
+                  "name": "古里",
+                  "time": "12:22"
+                },
+                {
+                  "name": "高校前",
+                  "time": "12:24"
+                },
+                {
+                  "name": "余多",
+                  "time": "12:25"
+                },
+                {
+                  "name": "屋者",
+                  "time": "12:27"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "12:28"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "12:29"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "12:31"
+                },
+                {
+                  "name": "知中前",
+                  "time": "12:32"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "12:33"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "12:36"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "12:38"
+                },
+                {
+                  "name": "町体前",
+                  "time": "12:40"
+                },
+                {
+                  "name": "小米",
+                  "time": "12:42"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "12:42"
+                },
+                {
+                  "name": "知名",
+                  "time": "12:43"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "12:30"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "12:31"
+                },
+                {
+                  "name": "小米",
+                  "time": "12:31"
+                },
+                {
+                  "name": "町体前",
+                  "time": "12:33"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "12:36"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "12:38"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "12:40"
+                },
+                {
+                  "name": "知中前",
+                  "time": "12:41"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "12:42"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "12:44"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "12:45"
+                },
+                {
+                  "name": "屋者",
+                  "time": "12:46"
+                },
+                {
+                  "name": "余多",
+                  "time": "12:48"
+                },
+                {
+                  "name": "高校前",
+                  "time": "12:49"
+                },
+                {
+                  "name": "古里",
+                  "time": "12:51"
+                },
+                {
+                  "name": "皆川",
+                  "time": "12:53"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "12:55"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "12:57"
+                },
+                {
+                  "name": "Ａ コ ー プ 前",
+                  "time": "12:59"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "13:02"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "13:05"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "13:06"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "13:07"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "13:08"
+                },
+                {
+                  "name": "和中前",
+                  "time": "13:13"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "13:15"
+                },
+                {
+                  "name": "西原",
+                  "time": "13:18"
+                },
+                {
+                  "name": "国頭",
+                  "time": "13:24"
+                },
+                {
+                  "name": "空港",
+                  "time": "13:28"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "12:35"
+                },
+                {
+                  "name": "国頭",
+                  "time": "12:39"
+                },
+                {
+                  "name": "西原",
+                  "time": "12:45"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "12:48"
+                },
+                {
+                  "name": "和中前",
+                  "time": "12:50"
+                },
+                {
+                  "name": "ホテルシーワールド",
+                  "time": "12:52"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "12:55"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "12:56"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "12:57"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "12:58"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "13:01"
+                },
+                {
+                  "name": "A コ ー プ 前",
+                  "time": "13:04"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "13:06"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "13:08"
+                },
+                {
+                  "name": "皆川",
+                  "time": "13:10"
+                },
+                {
+                  "name": "古里",
+                  "time": "13:12"
+                },
+                {
+                  "name": "高校前",
+                  "time": "13:14"
+                },
+                {
+                  "name": "余多",
+                  "time": "13:15"
+                },
+                {
+                  "name": "屋者",
+                  "time": "13:17"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "13:18"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "13:19"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "13:21"
+                },
+                {
+                  "name": "知中前",
+                  "time": "13:22"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "13:23"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "13:26"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "13:28"
+                },
+                {
+                  "name": "町体前",
+                  "time": "13:30"
+                },
+                {
+                  "name": "小米",
+                  "time": "13:32"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "13:32"
+                },
+                {
+                  "name": "知名",
+                  "time": "13:33"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "14:00"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "14:01"
+                },
+                {
+                  "name": "小米",
+                  "time": "14:01"
+                },
+                {
+                  "name": "町体前",
+                  "time": "14:03"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "14:06"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "14:08"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "14:10"
+                },
+                {
+                  "name": "知中前",
+                  "time": "14:11"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "14:12"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "14:14"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "14:15"
+                },
+                {
+                  "name": "屋者",
+                  "time": "14:16"
+                },
+                {
+                  "name": "余多",
+                  "time": "14:18"
+                },
+                {
+                  "name": "高校前",
+                  "time": "14:19"
+                },
+                {
+                  "name": "古里",
+                  "time": "14:21"
+                },
+                {
+                  "name": "皆川",
+                  "time": "14:23"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "14:25"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "14:27"
+                },
+                {
+                  "name": "Ａ コ ー プ 前",
+                  "time": "14:29"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "14:32"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "14:35"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "14:36"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "14:37"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "14:38"
+                },
+                {
+                  "name": "和中前",
+                  "time": "14:43"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "14:45"
+                },
+                {
+                  "name": "西原",
+                  "time": "14:48"
+                },
+                {
+                  "name": "国頭",
+                  "time": "14:54"
+                },
+                {
+                  "name": "空港",
+                  "time": "14:58"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "14:15"
+                },
+                {
+                  "name": "国頭",
+                  "time": "14:19"
+                },
+                {
+                  "name": "西原",
+                  "time": "14:25"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "14:28"
+                },
+                {
+                  "name": "和中前",
+                  "time": "14:30"
+                },
+                {
+                  "name": "ホテルシーワールド",
+                  "time": "14:32"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "14:35"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "14:36"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "14:37"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "14:38"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "14:41"
+                },
+                {
+                  "name": "A コ ー プ 前",
+                  "time": "14:44"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "14:46"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "14:48"
+                },
+                {
+                  "name": "皆川",
+                  "time": "14:50"
+                },
+                {
+                  "name": "古里",
+                  "time": "14:52"
+                },
+                {
+                  "name": "高校前",
+                  "time": "14:54"
+                },
+                {
+                  "name": "余多",
+                  "time": "14:55"
+                },
+                {
+                  "name": "屋者",
+                  "time": "14:57"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "14:58"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "14:59"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "15:01"
+                },
+                {
+                  "name": "知中前",
+                  "time": "15:02"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "15:03"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "15:06"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "15:08"
+                },
+                {
+                  "name": "町体前",
+                  "time": "15:10"
+                },
+                {
+                  "name": "小米",
+                  "time": "15:12"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "15:12"
+                },
+                {
+                  "name": "知名",
+                  "time": "15:13"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "15:05"
+                },
+                {
+                  "name": "国頭",
+                  "time": "15:09"
+                },
+                {
+                  "name": "西原",
+                  "time": "15:15"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "15:18"
+                },
+                {
+                  "name": "和中前",
+                  "time": "15:20"
+                },
+                {
+                  "name": "ホテルシーワールド",
+                  "time": "15:22"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "15:25"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "15:26"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "15:27"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "15:28"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "15:31"
+                },
+                {
+                  "name": "A コ ー プ 前",
+                  "time": "15:34"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "15:36"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "15:38"
+                },
+                {
+                  "name": "皆川",
+                  "time": "15:40"
+                },
+                {
+                  "name": "古里",
+                  "time": "15:42"
+                },
+                {
+                  "name": "高校前",
+                  "time": "15:44"
+                },
+                {
+                  "name": "余多",
+                  "time": "15:45"
+                },
+                {
+                  "name": "屋者",
+                  "time": "15:47"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "15:48"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "15:49"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "15:51"
+                },
+                {
+                  "name": "知中前",
+                  "time": "15:52"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "15:53"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "15:56"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "15:58"
+                },
+                {
+                  "name": "町体前",
+                  "time": "16:00"
+                },
+                {
+                  "name": "小米",
+                  "time": "16:02"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "16:02"
+                },
+                {
+                  "name": "知名",
+                  "time": "16:03"
+                }
+              ]
+            },
+            {
+              "destination": "空港",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "15:20"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "15:21"
+                },
+                {
+                  "name": "小米",
+                  "time": "15:21"
+                },
+                {
+                  "name": "町体前",
+                  "time": "15:23"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "15:26"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "15:28"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "15:30"
+                },
+                {
+                  "name": "知中前",
+                  "time": "15:31"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "15:32"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "15:34"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "15:35"
+                },
+                {
+                  "name": "屋者",
+                  "time": "15:36"
+                },
+                {
+                  "name": "余多",
+                  "time": "15:38"
+                },
+                {
+                  "name": "高校前",
+                  "time": "15:39"
+                },
+                {
+                  "name": "古里",
+                  "time": "15:41"
+                },
+                {
+                  "name": "皆川",
+                  "time": "15:43"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "15:45"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "15:47"
+                },
+                {
+                  "name": "Ａ コ ー プ 前",
+                  "time": "15:49"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "15:52"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "15:55"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "15:56"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "15:57"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "15:58"
+                },
+                {
+                  "name": "和中前",
+                  "time": "16:03"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "16:05"
+                },
+                {
+                  "name": "西原",
+                  "time": "16:08"
+                },
+                {
+                  "name": "国頭",
+                  "time": "16:14"
+                },
+                {
+                  "name": "空港",
+                  "time": "16:18"
+                }
+              ]
+            },
+            {
+              "destination": "国頭",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "16:10"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "16:11"
+                },
+                {
+                  "name": "小米",
+                  "time": "16:11"
+                },
+                {
+                  "name": "町体前",
+                  "time": "16:13"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "16:16"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "16:18"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "16:20"
+                },
+                {
+                  "name": "知中前",
+                  "time": "16:21"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "16:22"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "16:24"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "16:25"
+                },
+                {
+                  "name": "屋者",
+                  "time": "16:26"
+                },
+                {
+                  "name": "余多",
+                  "time": "16:28"
+                },
+                {
+                  "name": "高校前",
+                  "time": "16:29"
+                },
+                {
+                  "name": "古里",
+                  "time": "16:31"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "16:33"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "16:35"
+                },
+                {
+                  "name": "Ａ コ ー プ 前",
+                  "time": "16:37"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "16:40"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "16:43"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "16:44"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "16:45"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "16:46"
+                },
+                {
+                  "name": "和中前",
+                  "time": "16:51"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "16:53"
+                },
+                {
+                  "name": "西原",
+                  "time": "16:56"
+                },
+                {
+                  "name": "国頭",
+                  "time": "17:02"
+                }
+              ]
+            },
+            {
+              "destination": "国頭",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "16:40"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "16:41"
+                },
+                {
+                  "name": "小米",
+                  "time": "16:41"
+                },
+                {
+                  "name": "町体前",
+                  "time": "16:43"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "16:46"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "16:48"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "16:50"
+                },
+                {
+                  "name": "知中前",
+                  "time": "16:51"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "16:52"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "16:54"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "16:55"
+                },
+                {
+                  "name": "屋者",
+                  "time": "16:56"
+                },
+                {
+                  "name": "余多",
+                  "time": "16:58"
+                },
+                {
+                  "name": "高校前",
+                  "time": "16:59"
+                },
+                {
+                  "name": "古里",
+                  "time": "17:01"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "17:03"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "17:05"
+                },
+                {
+                  "name": "Ａ コ ー プ 前",
+                  "time": "17:07"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "17:10"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "17:13"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "17:14"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "17:15"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "17:16"
+                },
+                {
+                  "name": "和中前",
+                  "time": "17:21"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "17:23"
+                },
+                {
+                  "name": "西原",
+                  "time": "17:26"
+                },
+                {
+                  "name": "国頭",
+                  "time": "17:32"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "空港",
+                  "time": "16:40"
+                },
+                {
+                  "name": "国頭",
+                  "time": "16:44"
+                },
+                {
+                  "name": "西原",
+                  "time": "16:50"
+                },
+                {
+                  "name": "喜美留",
+                  "time": "16:53"
+                },
+                {
+                  "name": "和中前",
+                  "time": "16:55"
+                },
+                {
+                  "name": "ホテルシーワールド",
+                  "time": "16:57"
+                },
+                {
+                  "name": "手 々 知 名",
+                  "time": "17:00"
+                },
+                {
+                  "name": "和泊着",
+                  "time": "17:01"
+                },
+                {
+                  "name": "和泊発",
+                  "time": "17:02"
+                },
+                {
+                  "name": "和 泊 役 場",
+                  "time": "17:03"
+                },
+                {
+                  "name": "タラソ",
+                  "time": "17:06"
+                },
+                {
+                  "name": "A コ ー プ 前",
+                  "time": "17:09"
+                },
+                {
+                  "name": "南栄前",
+                  "time": "17:11"
+                },
+                {
+                  "name": "皆 川 入 口",
+                  "time": "17:13"
+                },
+                {
+                  "name": "皆川",
+                  "time": "17:15"
+                },
+                {
+                  "name": "古里",
+                  "time": "17:17"
+                },
+                {
+                  "name": "高校前",
+                  "time": "17:19"
+                },
+                {
+                  "name": "余多",
+                  "time": "17:20"
+                },
+                {
+                  "name": "屋者",
+                  "time": "17:22"
+                },
+                {
+                  "name": "ガ ジ マ ル 辻",
+                  "time": "17:23"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "17:24"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "17:26"
+                },
+                {
+                  "name": "知中前",
+                  "time": "17:27"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "17:28"
+                },
+                {
+                  "name": "知 名 役 場前",
+                  "time": "17:31"
+                },
+                {
+                  "name": "徳 洲 会 病院",
+                  "time": "17:33"
+                },
+                {
+                  "name": "町体前",
+                  "time": "17:35"
+                },
+                {
+                  "name": "小米",
+                  "time": "17:37"
+                },
+                {
+                  "name": "大 蔵 医 院",
+                  "time": "17:37"
+                },
+                {
+                  "name": "知名",
+                  "time": "17:38"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "okinoerabu_nagamine_line",
+      "island": "沖永良部島",
+      "operatorName": "沖永良部バス企業団",
+      "operatorUrl": "https://okinoerabubus.org/",
+      "name": "永嶺線・後蘭線・ガジマル線",
+      "area": "知名町・和泊町",
+      "officialUrl": "https://okinoerabubus.org/scheduled/timetable/",
+      "pdfUrl": "https://okinoerabubus.org/wp-content/uploads/2026/04/schedule_202604.pdf",
+      "parsed": true,
+      "groups": [
+        {
+          "id": "unknown",
+          "label": "",
+          "trips": [
+            {
+              "destination": "和泊",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "7:25"
+                },
+                {
+                  "name": "大蔵医院",
+                  "time": "7:26"
+                },
+                {
+                  "name": "小米",
+                  "time": "7:26"
+                },
+                {
+                  "name": "町体前",
+                  "time": "7:28"
+                },
+                {
+                  "name": "徳洲会病院",
+                  "time": "7:30"
+                },
+                {
+                  "name": "あしびの郷",
+                  "time": "7:32"
+                },
+                {
+                  "name": "知名役場前",
+                  "time": "7:34"
+                },
+                {
+                  "name": "屋子母",
+                  "time": "7:37"
+                },
+                {
+                  "name": "大津勘",
+                  "time": "7:40"
+                },
+                {
+                  "name": "徳時",
+                  "time": "7:42"
+                },
+                {
+                  "name": "住吉",
+                  "time": "7:45"
+                },
+                {
+                  "name": "正名",
+                  "time": "7:47"
+                },
+                {
+                  "name": "田皆",
+                  "time": "7:51"
+                },
+                {
+                  "name": "新城",
+                  "time": "7:56"
+                },
+                {
+                  "name": "新城中",
+                  "time": "7:57"
+                },
+                {
+                  "name": "仁志",
+                  "time": "8:02"
+                },
+                {
+                  "name": "谷山",
+                  "time": "8:05"
+                },
+                {
+                  "name": "後蘭",
+                  "time": "8:07"
+                },
+                {
+                  "name": "内城",
+                  "time": "8:10"
+                },
+                {
+                  "name": "城中前",
+                  "time": "8:12"
+                },
+                {
+                  "name": "大城",
+                  "time": "8:14"
+                },
+                {
+                  "name": "玉城",
+                  "time": "8:17"
+                },
+                {
+                  "name": "和中央",
+                  "time": "8:20"
+                },
+                {
+                  "name": "和",
+                  "time": "8:21"
+                },
+                {
+                  "name": "和泊",
+                  "time": "8:24"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "和泊",
+                  "time": "7:31"
+                },
+                {
+                  "name": "和",
+                  "time": "7:34"
+                },
+                {
+                  "name": "和中央",
+                  "time": "7:35"
+                },
+                {
+                  "name": "玉城",
+                  "time": "7:38"
+                },
+                {
+                  "name": "大城",
+                  "time": "7:41"
+                },
+                {
+                  "name": "城中前",
+                  "time": "7:43"
+                },
+                {
+                  "name": "内城",
+                  "time": "7:45"
+                },
+                {
+                  "name": "タシキ又",
+                  "time": "7:47"
+                },
+                {
+                  "name": "中永嶺",
+                  "time": "7:49"
+                },
+                {
+                  "name": "永嶺",
+                  "time": "7:50"
+                },
+                {
+                  "name": "仁志",
+                  "time": "7:53"
+                },
+                {
+                  "name": "新城",
+                  "time": "7:56"
+                },
+                {
+                  "name": "上城",
+                  "time": "7:58"
+                },
+                {
+                  "name": "下城",
+                  "time": "8:03"
+                },
+                {
+                  "name": "田皆",
+                  "time": "8:09"
+                },
+                {
+                  "name": "正名",
+                  "time": "8:13"
+                },
+                {
+                  "name": "住吉",
+                  "time": "8:15"
+                },
+                {
+                  "name": "徳時",
+                  "time": "8:18"
+                },
+                {
+                  "name": "大津勘",
+                  "time": "8:20"
+                },
+                {
+                  "name": "泉商店前",
+                  "time": "8:21"
+                },
+                {
+                  "name": "消防車庫",
+                  "time": "8:22"
+                },
+                {
+                  "name": "屋子母公民館",
+                  "time": "8:22"
+                },
+                {
+                  "name": "屋子母",
+                  "time": "8:23"
+                },
+                {
+                  "name": "知名役場前",
+                  "time": "8:25"
+                },
+                {
+                  "name": "あしびの郷",
+                  "time": "8:28"
+                },
+                {
+                  "name": "徳洲会病院",
+                  "time": "8:30"
+                },
+                {
+                  "name": "町体前",
+                  "time": "8:32"
+                },
+                {
+                  "name": "小米",
+                  "time": "8:34"
+                },
+                {
+                  "name": "大蔵医院",
+                  "time": "8:34"
+                },
+                {
+                  "name": "知名",
+                  "time": "8:35"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "和泊",
+                  "time": "8:30"
+                },
+                {
+                  "name": "手々知名",
+                  "time": "8:31"
+                },
+                {
+                  "name": "和小前",
+                  "time": "8:33"
+                },
+                {
+                  "name": "上手々知名",
+                  "time": "8:34"
+                },
+                {
+                  "name": "出花",
+                  "time": "8:37"
+                },
+                {
+                  "name": "伊延",
+                  "time": "8:40"
+                },
+                {
+                  "name": "畦布",
+                  "time": "8:42"
+                },
+                {
+                  "name": "根折",
+                  "time": "8:46"
+                },
+                {
+                  "name": "越山",
+                  "time": "8:48"
+                },
+                {
+                  "name": "瀬名",
+                  "time": "8:50"
+                },
+                {
+                  "name": "瀬名入口",
+                  "time": "8:51"
+                },
+                {
+                  "name": "内城",
+                  "time": "8:53"
+                },
+                {
+                  "name": "竿津",
+                  "time": "8:58"
+                },
+                {
+                  "name": "赤嶺",
+                  "time": "8:59"
+                },
+                {
+                  "name": "久志検",
+                  "time": "9:00"
+                },
+                {
+                  "name": "上平川",
+                  "time": "9:02"
+                },
+                {
+                  "name": "下平川",
+                  "time": "9:04"
+                },
+                {
+                  "name": "ガジマル辻",
+                  "time": "9:05"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "9:06"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "9:08"
+                },
+                {
+                  "name": "知中前",
+                  "time": "9:09"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "9:10"
+                },
+                {
+                  "name": "知名役場前",
+                  "time": "9:13"
+                },
+                {
+                  "name": "徳洲会病院",
+                  "time": "9:15"
+                },
+                {
+                  "name": "町体前",
+                  "time": "9:17"
+                },
+                {
+                  "name": "小米",
+                  "time": "9:19"
+                },
+                {
+                  "name": "大蔵医院",
+                  "time": "9:19"
+                },
+                {
+                  "name": "知名",
+                  "time": "9:20"
+                }
+              ]
+            },
+            {
+              "destination": "和泊",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "9:46"
+                },
+                {
+                  "name": "大蔵医院",
+                  "time": "9:47"
+                },
+                {
+                  "name": "小米",
+                  "time": "9:47"
+                },
+                {
+                  "name": "町体前",
+                  "time": "9:49"
+                },
+                {
+                  "name": "知名役場前",
+                  "time": "9:52"
+                },
+                {
+                  "name": "徳洲会病院",
+                  "time": "9:54"
+                },
+                {
+                  "name": "瀬利覚",
+                  "time": "9:56"
+                },
+                {
+                  "name": "知中前",
+                  "time": "9:57"
+                },
+                {
+                  "name": "黒貫",
+                  "time": "9:58"
+                },
+                {
+                  "name": "芦清良",
+                  "time": "10:00"
+                },
+                {
+                  "name": "ガジマル辻",
+                  "time": "10:01"
+                },
+                {
+                  "name": "下平川",
+                  "time": "10:02"
+                },
+                {
+                  "name": "上平川",
+                  "time": "10:04"
+                },
+                {
+                  "name": "久志検",
+                  "time": "10:06"
+                },
+                {
+                  "name": "赤嶺",
+                  "time": "10:07"
+                },
+                {
+                  "name": "竿津",
+                  "time": "10:08"
+                },
+                {
+                  "name": "内城",
+                  "time": "10:13"
+                },
+                {
+                  "name": "瀬名入口",
+                  "time": "10:15"
+                },
+                {
+                  "name": "瀬名",
+                  "time": "10:16"
+                },
+                {
+                  "name": "越山",
+                  "time": "10:18"
+                },
+                {
+                  "name": "根折",
+                  "time": "10:20"
+                },
+                {
+                  "name": "畦布",
+                  "time": "10:24"
+                },
+                {
+                  "name": "伊延",
+                  "time": "10:26"
+                },
+                {
+                  "name": "出花",
+                  "time": "10:29"
+                },
+                {
+                  "name": "上手々知名",
+                  "time": "10:32"
+                },
+                {
+                  "name": "和小前",
+                  "time": "10:33"
+                },
+                {
+                  "name": "手々知名",
+                  "time": "10:35"
+                },
+                {
+                  "name": "和泊",
+                  "time": "10:36"
+                }
+              ]
+            },
+            {
+              "destination": "和泊",
+              "stops": [
+                {
+                  "name": "知名",
+                  "time": "10:57"
+                },
+                {
+                  "name": "大蔵医院",
+                  "time": "10:58"
+                },
+                {
+                  "name": "小米",
+                  "time": "10:58"
+                },
+                {
+                  "name": "町体前",
+                  "time": "11:00"
+                },
+                {
+                  "name": "徳洲会病院",
+                  "time": "11:02"
+                },
+                {
+                  "name": "あしびの郷",
+                  "time": "11:04"
+                },
+                {
+                  "name": "知名役場前",
+                  "time": "11:06"
+                },
+                {
+                  "name": "屋子母",
+                  "time": "11:09"
+                },
+                {
+                  "name": "屋子母公民館",
+                  "time": "11:10"
+                },
+                {
+                  "name": "消防車庫",
+                  "time": "11:11"
+                },
+                {
+                  "name": "泉商店前",
+                  "time": "11:12"
+                },
+                {
+                  "name": "大津勘",
+                  "time": "11:13"
+                },
+                {
+                  "name": "徳時",
+                  "time": "11:15"
+                },
+                {
+                  "name": "住吉",
+                  "time": "11:18"
+                },
+                {
+                  "name": "正名",
+                  "time": "11:20"
+                },
+                {
+                  "name": "田皆",
+                  "time": "11:24"
+                },
+                {
+                  "name": "下城",
+                  "time": "11:29"
+                },
+                {
+                  "name": "上城",
+                  "time": "11:34"
+                },
+                {
+                  "name": "新城",
+                  "time": "11:36"
+                },
+                {
+                  "name": "仁志",
+                  "time": "11:39"
+                },
+                {
+                  "name": "永嶺",
+                  "time": "11:42"
+                },
+                {
+                  "name": "中永嶺",
+                  "time": "11:43"
+                },
+                {
+                  "name": "タシキ又",
+                  "time": "11:45"
+                },
+                {
+                  "name": "内城",
+                  "time": "11:47"
+                },
+                {
+                  "name": "城中前",
+                  "time": "11:49"
+                },
+                {
+                  "name": "大城",
+                  "time": "11:51"
+                },
+                {
+                  "name": "玉城",
+                  "time": "11:54"
+                },
+                {
+                  "name": "和中央",
+                  "time": "11:57"
+                },
+                {
+                  "name": "和",
+                  "time": "11:58"
+                },
+                {
+                  "name": "和泊",
+                  "time": "12:01"
+                }
+              ]
+            },
+            {
+              "destination": "知名",
+              "stops": [
+                {
+                  "name": "和泊",
+                  "time": "11:01"
+                },
+                {
+                  "name": "和",
+                  "time": "11:04"
+                },
+                {
+                  "name": "和中央",
+                  "time": "11:05"
+                },
+                {
+                  "name": "玉城",
+                  "time": "11:08"
+                },
+                {
+                  "name": "大城",
+                  "time": "11:11"
+                },
+                {
+                  "name": "城中前",
+                  "time": "11:13"
+                },
+                {
+                  "name": "内城",
+                  "time": "11:15"
+                },
+                {
+                  "name": "後蘭",
+                  "time": "11:18"
+                },
+                {
+                  "name": "谷山",
+                  "time": "11:20"
+                },
+                {
+                  "name": "仁志",
+                  "time": "11:23"
+                },
+                {
+                  "name": "新城中",
+                  "time": "11:29"
+                },
+                {
+                  "name": "新城",
+                  "time": "11:29"
+                },
+                {
+                  "name": "田皆",
+                  "time": "11:34"
+                },
+                {
+                  "name": "正名",
+                  "time": "11:38"
+                },
+                {
+                  "name": "住吉",
+                  "time": "11:40"
+                },
+                {
+                  "name": "徳時",
+                  "time": "11:43"
+                },
+                {
+                  "name": "大津勘",
+                  "time": "11:45"
+                },
+                {
+                  "name": "屋子母",
+                  "time": "11:48"
+                },
+                {
+                  "name": "知名役場前",
+                  "time": "11:50"
+                },
+                {
+                  "name": "あしびの郷",
+                  "time": "11:53"
+                },
+                {
+                  "name": "徳洲会病院",
+                  "time": "11:55"
+                },
+                {
+                  "name": "町体前",
+                  "time": "11:57"
+                },
+                {
+                  "name": "小米",
+                  "time": "11:59"
+                },
+                {
+                  "name": "大蔵医院",
+                  "time": "11:59"
+                },
+                {
+                  "name": "知名",
+                  "time": "12:00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yoron_loop",
+      "island": "与論島",
+      "operatorName": "南陸運",
+      "operatorUrl": "https://www.yoron.jp/kiji0037625/index.html",
+      "name": "島内循環線（北回り・南回り）",
+      "area": "与論町",
+      "officialUrl": "https://www.yoron.jp/kiji0037625/index.html",
+      "pdfUrl": "https://www.yoron.jp/kiji0037625/3_7625_2376_up_jgmeba6o.pdf",
+      "parsed": true,
+      "groups": [
+        {
+          "id": "north",
+          "label": "北回り",
+          "trips": [
+            {
+              "destination": "南バス前",
+              "stops": [
+                {
+                  "name": "南バス前",
+                  "time": "7:30"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "7:32"
+                },
+                {
+                  "name": "品覇",
+                  "time": "7:34"
+                },
+                {
+                  "name": "セ福ンター祉",
+                  "time": "7:38"
+                },
+                {
+                  "name": "那間",
+                  "time": "7:42"
+                },
+                {
+                  "name": "古里",
+                  "time": "7:45"
+                },
+                {
+                  "name": "古里入口",
+                  "time": "7:46"
+                },
+                {
+                  "name": "入ゆりが口浜",
+                  "time": "7:49"
+                },
+                {
+                  "name": "東区",
+                  "time": "7:50"
+                },
+                {
+                  "name": "西区",
+                  "time": "7:51"
+                },
+                {
+                  "name": "与論小前",
+                  "time": "7:52"
+                },
+                {
+                  "name": "与論中前",
+                  "time": "7:53"
+                },
+                {
+                  "name": "石仁",
+                  "time": "7:54"
+                },
+                {
+                  "name": "立長入口",
+                  "time": "7:57"
+                },
+                {
+                  "name": "役場前",
+                  "time": "8:01"
+                },
+                {
+                  "name": "与論病院",
+                  "time": "8:05"
+                },
+                {
+                  "name": "ンホーターム前セ",
+                  "time": "8:07"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "8:10"
+                },
+                {
+                  "name": "南バス前",
+                  "time": "8:13"
+                }
+              ]
+            },
+            {
+              "destination": "南バス前",
+              "stops": [
+                {
+                  "name": "南バス前",
+                  "time": "9:30"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "9:32"
+                },
+                {
+                  "name": "品覇",
+                  "time": "9:34"
+                },
+                {
+                  "name": "セ福ンター祉",
+                  "time": "9:38"
+                },
+                {
+                  "name": "那間",
+                  "time": "9:42"
+                },
+                {
+                  "name": "古里",
+                  "time": "9:45"
+                },
+                {
+                  "name": "古里入口",
+                  "time": "9:46"
+                },
+                {
+                  "name": "入ゆりが口浜",
+                  "time": "9:49"
+                },
+                {
+                  "name": "東区",
+                  "time": "9:50"
+                },
+                {
+                  "name": "西区",
+                  "time": "9:51"
+                },
+                {
+                  "name": "与論小前",
+                  "time": "9:52"
+                },
+                {
+                  "name": "与論中前",
+                  "time": "9:53"
+                },
+                {
+                  "name": "石仁",
+                  "time": "9:54"
+                },
+                {
+                  "name": "立長入口",
+                  "time": "9:57"
+                },
+                {
+                  "name": "役場前",
+                  "time": "10:01"
+                },
+                {
+                  "name": "与論病院",
+                  "time": "10:05"
+                },
+                {
+                  "name": "ンホーターム前セ",
+                  "time": "10:07"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "10:10"
+                },
+                {
+                  "name": "南バス前",
+                  "time": "10:13"
+                }
+              ]
+            },
+            {
+              "destination": "南バス前",
+              "stops": [
+                {
+                  "name": "南バス前",
+                  "time": "10:30"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "10:32"
+                },
+                {
+                  "name": "品覇",
+                  "time": "10:34"
+                },
+                {
+                  "name": "セ福ンター祉",
+                  "time": "10:38"
+                },
+                {
+                  "name": "那間",
+                  "time": "10:42"
+                },
+                {
+                  "name": "古里",
+                  "time": "10:45"
+                },
+                {
+                  "name": "古里入口",
+                  "time": "10:46"
+                },
+                {
+                  "name": "入ゆりが口浜",
+                  "time": "10:49"
+                },
+                {
+                  "name": "東区",
+                  "time": "10:50"
+                },
+                {
+                  "name": "西区",
+                  "time": "10:51"
+                },
+                {
+                  "name": "与論小前",
+                  "time": "10:52"
+                },
+                {
+                  "name": "与論中前",
+                  "time": "10:53"
+                },
+                {
+                  "name": "石仁",
+                  "time": "10:54"
+                },
+                {
+                  "name": "立長入口",
+                  "time": "10:57"
+                },
+                {
+                  "name": "役場前",
+                  "time": "11:01"
+                },
+                {
+                  "name": "与論病院",
+                  "time": "11:05"
+                },
+                {
+                  "name": "ンホーターム前セ",
+                  "time": "11:07"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "11:10"
+                },
+                {
+                  "name": "南バス前",
+                  "time": "11:13"
+                }
+              ]
+            },
+            {
+              "destination": "南バス前",
+              "stops": [
+                {
+                  "name": "南バス前",
+                  "time": "14:30"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "14:32"
+                },
+                {
+                  "name": "品覇",
+                  "time": "14:34"
+                },
+                {
+                  "name": "セ福ンター祉",
+                  "time": "14:38"
+                },
+                {
+                  "name": "那間",
+                  "time": "14:42"
+                },
+                {
+                  "name": "古里",
+                  "time": "14:45"
+                },
+                {
+                  "name": "古里入口",
+                  "time": "14:46"
+                },
+                {
+                  "name": "入ゆりが口浜",
+                  "time": "14:49"
+                },
+                {
+                  "name": "東区",
+                  "time": "14:50"
+                },
+                {
+                  "name": "西区",
+                  "time": "14:51"
+                },
+                {
+                  "name": "与論小前",
+                  "time": "14:52"
+                },
+                {
+                  "name": "与論中前",
+                  "time": "14:53"
+                },
+                {
+                  "name": "石仁",
+                  "time": "14:54"
+                },
+                {
+                  "name": "立長入口",
+                  "time": "14:57"
+                },
+                {
+                  "name": "役場前",
+                  "time": "15:01"
+                },
+                {
+                  "name": "与論病院",
+                  "time": "15:05"
+                },
+                {
+                  "name": "ンホーターム前セ",
+                  "time": "15:07"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "15:10"
+                },
+                {
+                  "name": "南バス前",
+                  "time": "15:13"
+                }
+              ]
+            },
+            {
+              "destination": "南バス前",
+              "stops": [
+                {
+                  "name": "南バス前",
+                  "time": "15:30"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "15:32"
+                },
+                {
+                  "name": "品覇",
+                  "time": "15:34"
+                },
+                {
+                  "name": "セ福ンター祉",
+                  "time": "15:38"
+                },
+                {
+                  "name": "那間",
+                  "time": "15:42"
+                },
+                {
+                  "name": "古里",
+                  "time": "15:45"
+                },
+                {
+                  "name": "古里入口",
+                  "time": "15:46"
+                },
+                {
+                  "name": "入ゆりが口浜",
+                  "time": "15:49"
+                },
+                {
+                  "name": "東区",
+                  "time": "15:50"
+                },
+                {
+                  "name": "西区",
+                  "time": "15:51"
+                },
+                {
+                  "name": "与論小前",
+                  "time": "15:52"
+                },
+                {
+                  "name": "与論中前",
+                  "time": "15:53"
+                },
+                {
+                  "name": "石仁",
+                  "time": "15:54"
+                },
+                {
+                  "name": "立長入口",
+                  "time": "15:57"
+                },
+                {
+                  "name": "役場前",
+                  "time": "16:01"
+                },
+                {
+                  "name": "与論病院",
+                  "time": "16:05"
+                },
+                {
+                  "name": "ンホーターム前セ",
+                  "time": "16:07"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "16:10"
+                },
+                {
+                  "name": "南バス前",
+                  "time": "16:13"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "south",
+          "label": "南回り",
+          "trips": [
+            {
+              "destination": "南バス前",
+              "stops": [
+                {
+                  "name": "南バス前",
+                  "time": "8:30"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "8:32"
+                },
+                {
+                  "name": "ンホーターム前セ",
+                  "time": "8:36"
+                },
+                {
+                  "name": "与論病院",
+                  "time": "8:38"
+                },
+                {
+                  "name": "役場前",
+                  "time": "8:42"
+                },
+                {
+                  "name": "立長入口",
+                  "time": "8:46"
+                },
+                {
+                  "name": "石仁",
+                  "time": "8:49"
+                },
+                {
+                  "name": "与論中前",
+                  "time": "8:50"
+                },
+                {
+                  "name": "与論小前",
+                  "time": "8:51"
+                },
+                {
+                  "name": "西区",
+                  "time": "8:52"
+                },
+                {
+                  "name": "東区",
+                  "time": "8:53"
+                },
+                {
+                  "name": "入ゆりが口浜",
+                  "time": "8:54"
+                },
+                {
+                  "name": "古里入口",
+                  "time": "8:57"
+                },
+                {
+                  "name": "古里",
+                  "time": "8:58"
+                },
+                {
+                  "name": "那間",
+                  "time": "9:01"
+                },
+                {
+                  "name": "セ福ンター祉",
+                  "time": "9:05"
+                },
+                {
+                  "name": "品覇",
+                  "time": "9:09"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "9:11"
+                },
+                {
+                  "name": "南バス前",
+                  "time": "9:13"
+                }
+              ]
+            },
+            {
+              "destination": "南バス前",
+              "stops": [
+                {
+                  "name": "南バス前",
+                  "time": "11:30"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "11:32"
+                },
+                {
+                  "name": "ンホーターム前セ",
+                  "time": "11:36"
+                },
+                {
+                  "name": "与論病院",
+                  "time": "11:38"
+                },
+                {
+                  "name": "役場前",
+                  "time": "11:42"
+                },
+                {
+                  "name": "立長入口",
+                  "time": "11:46"
+                },
+                {
+                  "name": "石仁",
+                  "time": "11:49"
+                },
+                {
+                  "name": "与論中前",
+                  "time": "11:50"
+                },
+                {
+                  "name": "与論小前",
+                  "time": "11:51"
+                },
+                {
+                  "name": "西区",
+                  "time": "11:52"
+                },
+                {
+                  "name": "東区",
+                  "time": "11:53"
+                },
+                {
+                  "name": "入ゆりが口浜",
+                  "time": "11:54"
+                },
+                {
+                  "name": "古里入口",
+                  "time": "11:57"
+                },
+                {
+                  "name": "古里",
+                  "time": "11:58"
+                },
+                {
+                  "name": "那間",
+                  "time": "12:01"
+                },
+                {
+                  "name": "セ福ンター祉",
+                  "time": "12:05"
+                },
+                {
+                  "name": "品覇",
+                  "time": "12:09"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "12:11"
+                },
+                {
+                  "name": "南バス前",
+                  "time": "12:13"
+                }
+              ]
+            },
+            {
+              "destination": "南バス前",
+              "stops": [
+                {
+                  "name": "南バス前",
+                  "time": "13:00"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "13:02"
+                },
+                {
+                  "name": "ンホーターム前セ",
+                  "time": "13:06"
+                },
+                {
+                  "name": "与論病院",
+                  "time": "13:08"
+                },
+                {
+                  "name": "役場前",
+                  "time": "13:12"
+                },
+                {
+                  "name": "立長入口",
+                  "time": "13:16"
+                },
+                {
+                  "name": "石仁",
+                  "time": "13:19"
+                },
+                {
+                  "name": "与論中前",
+                  "time": "13:20"
+                },
+                {
+                  "name": "与論小前",
+                  "time": "13:21"
+                },
+                {
+                  "name": "西区",
+                  "time": "13:22"
+                },
+                {
+                  "name": "東区",
+                  "time": "13:23"
+                },
+                {
+                  "name": "入ゆりが口浜",
+                  "time": "13:24"
+                },
+                {
+                  "name": "古里入口",
+                  "time": "13:27"
+                },
+                {
+                  "name": "古里",
+                  "time": "13:28"
+                },
+                {
+                  "name": "那間",
+                  "time": "13:31"
+                },
+                {
+                  "name": "セ福ンター祉",
+                  "time": "13:35"
+                },
+                {
+                  "name": "品覇",
+                  "time": "13:39"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "13:41"
+                },
+                {
+                  "name": "南バス前",
+                  "time": "13:43"
+                }
+              ]
+            },
+            {
+              "destination": "南バス前",
+              "stops": [
+                {
+                  "name": "南バス前",
+                  "time": "16:40"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "16:42"
+                },
+                {
+                  "name": "ンホーターム前セ",
+                  "time": "16:46"
+                },
+                {
+                  "name": "与論病院",
+                  "time": "16:48"
+                },
+                {
+                  "name": "役場前",
+                  "time": "16:52"
+                },
+                {
+                  "name": "立長入口",
+                  "time": "16:56"
+                },
+                {
+                  "name": "石仁",
+                  "time": "16:59"
+                },
+                {
+                  "name": "与論中前",
+                  "time": "17:00"
+                },
+                {
+                  "name": "与論小前",
+                  "time": "17:01"
+                },
+                {
+                  "name": "西区",
+                  "time": "17:02"
+                },
+                {
+                  "name": "東区",
+                  "time": "17:03"
+                },
+                {
+                  "name": "入ゆりが口浜",
+                  "time": "17:04"
+                },
+                {
+                  "name": "古里入口",
+                  "time": "17:07"
+                },
+                {
+                  "name": "古里",
+                  "time": "17:08"
+                },
+                {
+                  "name": "那間",
+                  "time": "17:11"
+                },
+                {
+                  "name": "セ福ンター祉",
+                  "time": "17:15"
+                },
+                {
+                  "name": "品覇",
+                  "time": "17:19"
+                },
+                {
+                  "name": "海茶岸前花",
+                  "time": "17:21"
+                },
+                {
+                  "name": "南バス前",
+                  "time": "17:23"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
