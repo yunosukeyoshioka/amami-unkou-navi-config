@@ -6,6 +6,7 @@ import { writeFileSync } from 'fs';
 import * as cheerio from 'cheerio';
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
 import { scrapeBusTimetable } from './bus_timetable.mjs';
+import { scrapePowerOutage } from './power_outage.mjs';
 
 const UA = 'amami-unkou-navi-bot/1.0 (+https://github.com/yunosukeyoshioka/amami-unkou-navi-config)';
 
@@ -1103,7 +1104,7 @@ async function safe(fn, fallbackFactory) {
   }
 }
 
-const [aline, marix, airport, alineCargo, busTimetable] = await Promise.all([
+const [aline, marix, airport, alineCargo, busTimetable, powerOutage] = await Promise.all([
   safe(scrapeAline, () => ({
     id: 'aline_ferry',
     operatorName: 'マルエーフェリー',
@@ -1141,6 +1142,9 @@ const [aline, marix, airport, alineCargo, busTimetable] = await Promise.all([
   // 島バス（しまバス）の時刻表。運航状況と違って日々変わるものではないため
   // 取得に失敗しても運航状況の更新自体は止めない。
   safe(scrapeBusTimetable, () => null),
+  // 九州電力送配電の停電情報（市町村別）。取得に失敗しても他の情報の
+  // 更新は止めない。
+  safe(scrapePowerOutage, () => null),
 ]);
 
 const output = {
@@ -1157,5 +1161,12 @@ if (busTimetable) {
   console.log('wrote bus_timetable.json');
 } else {
   console.error('bus timetable scrape failed entirely; bus_timetable.json not updated this run');
+}
+
+if (powerOutage) {
+  writeFileSync('power_outage.json', `${JSON.stringify(powerOutage, null, 2)}\n`);
+  console.log('wrote power_outage.json');
+} else {
+  console.error('power outage scrape failed entirely; power_outage.json not updated this run');
 }
 console.log(JSON.stringify(output, null, 2));
