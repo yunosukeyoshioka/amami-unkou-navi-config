@@ -5,6 +5,7 @@
 import { writeFileSync } from 'fs';
 import * as cheerio from 'cheerio';
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
+import { scrapeBusTimetable } from './bus_timetable.mjs';
 
 const UA = 'amami-unkou-navi-bot/1.0 (+https://github.com/yunosukeyoshioka/amami-unkou-navi-config)';
 
@@ -1102,7 +1103,7 @@ async function safe(fn, fallbackFactory) {
   }
 }
 
-const [aline, marix, airport, alineCargo] = await Promise.all([
+const [aline, marix, airport, alineCargo, busTimetable] = await Promise.all([
   safe(scrapeAline, () => ({
     id: 'aline_ferry',
     operatorName: 'マルエーフェリー',
@@ -1137,6 +1138,9 @@ const [aline, marix, airport, alineCargo] = await Promise.all([
   // 失敗時のフォールバックも「取得できず」のダミー1件ではなく空配列にする
   // （存在しないことと取得失敗を区別できないが、常設の航路ではないため）。
   safe(scrapeAlineCargo, () => []),
+  // 島バス（しまバス）の時刻表。運航状況と違って日々変わるものではないため
+  // 取得に失敗しても運航状況の更新自体は止めない。
+  safe(scrapeBusTimetable, () => null),
 ]);
 
 const output = {
@@ -1147,4 +1151,11 @@ const output = {
 
 writeFileSync('transport_status.json', `${JSON.stringify(output, null, 2)}\n`);
 console.log('wrote transport_status.json');
+
+if (busTimetable) {
+  writeFileSync('bus_timetable.json', `${JSON.stringify(busTimetable, null, 2)}\n`);
+  console.log('wrote bus_timetable.json');
+} else {
+  console.error('bus timetable scrape failed entirely; bus_timetable.json not updated this run');
+}
 console.log(JSON.stringify(output, null, 2));
