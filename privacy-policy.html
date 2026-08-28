@@ -1,0 +1,350 @@
+<!doctype html>
+<title>奄美運行ナビ プライバシーポリシー</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F2F6F5;
+    --surface: #FFFFFF;
+    --surface-border: #DCE7E4;
+    --text-primary: #10201D;
+    --text-secondary: #435650;
+    --text-muted: #7C918C;
+    --accent: #0D8477;
+    --accent-soft: #E2F2EF;
+    --rule: #D3E2DF;
+    --shadow: 0 1px 2px rgba(16,32,29,0.04), 0 8px 24px rgba(16,32,29,0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #081119;
+      --surface: #0D1922;
+      --surface-border: rgba(255,255,255,0.08);
+      --text-primary: #E8F1F8;
+      --text-secondary: #93A8A5;
+      --text-muted: #7C9490;
+      --accent: #5EEAD4;
+      --accent-soft: rgba(94,234,212,0.10);
+      --rule: rgba(255,255,255,0.12);
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 28px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #081119;
+    --surface: #0D1922;
+    --surface-border: rgba(255,255,255,0.08);
+    --text-primary: #E8F1F8;
+    --text-secondary: #93A8A5;
+    --text-muted: #7C9490;
+    --accent: #5EEAD4;
+    --accent-soft: rgba(94,234,212,0.10);
+    --rule: rgba(255,255,255,0.12);
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 28px rgba(0,0,0,0.35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    line-height: 1.9;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header.doc-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  header.doc-head img {
+    width: 44px; height: 44px;
+    border-radius: 11px;
+    box-shadow: var(--shadow);
+    flex-shrink: 0;
+  }
+  header.doc-head .app-name {
+    font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+  }
+
+  h1 {
+    font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    font-weight: 700;
+    font-size: clamp(26px, 5vw, 34px);
+    letter-spacing: 0.01em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+  .pill {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--surface-border);
+    border-radius: 999px;
+    padding: 5px 13px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .lede {
+    color: var(--text-secondary);
+    font-size: 16px;
+    padding-bottom: 32px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  section.clause {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 4px 20px;
+    padding: 34px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  section.clause:last-of-type { border-bottom: none; }
+
+  .clause-num {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    border-left: 2px solid var(--accent);
+    padding-left: 10px;
+    height: fit-content;
+    line-height: 1.4;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .clause-body h2 {
+    font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    font-size: 18.5px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    letter-spacing: 0.01em;
+  }
+  .clause-body p {
+    margin: 0 0 12px;
+    color: var(--text-primary);
+    max-width: 62ch;
+  }
+  .clause-body p:last-child { margin-bottom: 0; }
+  .clause-body ul {
+    margin: 0 0 12px;
+    padding-left: 1.3em;
+  }
+  .clause-body li {
+    margin-bottom: 8px;
+    max-width: 60ch;
+  }
+  .clause-body li:last-child { margin-bottom: 0; }
+
+  .service-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4px 0 14px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 13.5px;
+  }
+  .service-table th, .service-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    font-weight: 400;
+  }
+  .service-table th {
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: 12px;
+  }
+  .service-table td.name { font-weight: 700; white-space: nowrap; }
+  .service-table a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+  .service-table a:hover, .clause-body a:hover { opacity: 0.75; }
+  .clause-body a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+
+  .table-wrap { overflow-x: auto; }
+
+  .no-collect {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-top: 4px;
+    color: var(--text-secondary);
+    box-shadow: var(--shadow);
+  }
+
+  footer.doc-foot {
+    margin-top: 40px;
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  footer.doc-foot a { color: var(--accent); text-decoration: none; }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto !important; }
+  }
+
+  @media (max-width: 480px) {
+    section.clause { grid-template-columns: 1fr; }
+    .clause-num { border-left: none; border-top: 2px solid var(--accent); padding-left: 0; padding-top: 6px; }
+  }
+</style>
+
+<div class="page">
+  <header class="doc-head">
+    <img src="data:image/png;base64,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" alt="奄美運行ナビ アイコン" />
+    <span class="app-name">奄美運行ナビ</span>
+  </header>
+
+  <h1>プライバシーポリシー</h1>
+  <div class="meta-row">
+    <span class="pill">制定日: 2026年8月28日</span>
+    <span class="pill">最終更新日: 2026年8月28日</span>
+  </div>
+
+  <p class="lede">
+    「奄美運行ナビ」（以下「本アプリ」）の開発者（以下「開発者」）は、本アプリの提供にあたり、
+    利用者の皆さまの情報をどのように取り扱うかについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。
+  </p>
+
+  <section class="clause">
+    <div class="clause-num">01</div>
+    <div class="clause-body">
+      <h2>本アプリが取得しない情報</h2>
+      <p>本アプリは会員登録・ログイン機能を持たず、氏名・電話番号・メールアドレスなどの入力を求めることは一切ありません。</p>
+      <div class="no-collect">📍　端末のGPS位置情報も取得しません。天気予報の地点は、利用者が画面上で市町村を選ぶ方式です。</div>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">02</div>
+    <div class="clause-body">
+      <h2>取得する情報とその利用目的</h2>
+      <ul>
+        <li><strong>広告識別子・端末情報</strong>：広告表示のため、Google AdMob（下記04）を通じて広告ID等の識別子や端末情報が収集される場合があります。iOSでは、この目的での追跡（トラッキング）についてApp Tracking Transparencyの許可ダイアログで同意を求めます。</li>
+        <li><strong>通知の許可状態</strong>：新しい台風が気象庁から発表された際に端末通知でお知らせする機能のため、通知の許可状態のみをOSから参照します。この通知は端末内で完結し、開発者のサーバーには送信されません。</li>
+        <li><strong>閲覧地域・キャッシュデータ</strong>：選択中の島・市町村や、直近に取得できた台風・天気・運航状況のデータを、通信不安定時のオフライン表示のために端末内（shared preferences）にのみ保存します。これらは開発者のサーバーに送信・収集されることはありません。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">03</div>
+    <div class="clause-body">
+      <h2>情報の外部送信</h2>
+      <p>本アプリは、表示するデータを取得するために、以下の外部サービスへ通信します。いずれも氏名・連絡先などの個人を特定できる情報は送信しません（利用者が選んだ市町村の座標や機種情報など、通信に通常伴う技術的情報を除く）。</p>
+      <div class="table-wrap">
+        <table class="service-table">
+          <tr><th>サービス</th><th>用途</th></tr>
+          <tr><td class="name">気象庁</td><td>台風情報・警報注意報の取得</td></tr>
+          <tr><td class="name">Open‑Meteo</td><td>天気予報の取得</td></tr>
+          <tr><td class="name">GitHub Pages<br>（開発者運営リポジトリ）</td><td>フェリー・貨物船の運航状況、停電情報の取得</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">04</div>
+    <div class="clause-body">
+      <h2>広告配信（Google AdMob）</h2>
+      <p>
+        本アプリはGoogle AdMobを利用して広告を表示しています。AdMobは広告の表示・パーソナライズ・効果測定のため、
+        広告ID等の識別子をGoogleのプライバシーポリシーに基づいて取り扱います。詳細は下記のGoogle社のポリシーをご確認ください。
+      </p>
+      <p>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>　／　
+        <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob と広告ID について</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">05</div>
+    <div class="clause-body">
+      <h2>情報の保存期間・削除</h2>
+      <p>
+        端末内に保存されるキャッシュデータ・通知許可状態は、本アプリをアンインストールすることで端末から削除されます。
+        開発者は、これらの情報をサーバー上に保存・蓄積していません。
+      </p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">06</div>
+    <div class="clause-body">
+      <h2>お子さまのご利用について</h2>
+      <p>
+        本アプリは特定の年齢層を対象とせず、子どもから収集することを意図した情報はありません。
+        18歳未満の方が広告のパーソナライズに関する選択を行う場合は、保護者の方にご確認のうえご利用ください。
+      </p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">07</div>
+    <div class="clause-body">
+      <h2>本ポリシーの変更</h2>
+      <p>
+        本ポリシーの内容は、法令の変更や本アプリの機能追加に応じて、予告なく改定されることがあります。
+        改定後の内容は、本ページに掲載した時点から効力を持つものとします。重要な変更がある場合は、本ページの「最終更新日」を更新してお知らせします。
+      </p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-num">08</div>
+    <div class="clause-body">
+      <h2>お問い合わせ</h2>
+      <p>
+        本アプリの取り扱いに関するご質問・ご意見は、以下の連絡先までお願いいたします。
+      </p>
+      <p><a href="mailto:yunosukeyoshioka@gmail.com">yunosukeyoshioka@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer class="doc-foot">
+    <span>奄美運行ナビ — 本アプリは気象庁・各交通機関・各自治体の公式アプリではありません。</span>
+  </footer>
+</div>
