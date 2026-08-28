@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-28T05:34:32.832Z",
-  "sourceReleaseAt": "2026-08-28T14:34:04+09:00",
+  "updatedAt": "2026-08-28T18:28:40.780Z",
+  "sourceReleaseAt": "2026-08-29T03:28:03+09:00",
   "officialUrl": "https://www.kyuden.co.jp/td_teiden/kyushu.html",
-  "amamiRegionBlackoutCount": "約8,020戸",
+  "amamiRegionBlackoutCount": "約5,910戸",
   "comment": "台風18号の影響に伴い、停電が発生し、大変ご迷惑をおかけしております。\n鹿児島県で発生している停電につきましては、８月30日夜遅く頃までの復旧を目指し、作業を行っています。\n\n【お詫び】停電情報の表示不具合について（復旧）\n当社ホームページに掲載している停電情報（停電地域および停電戸数）の一部について、8月25日15時～19時頃にかけて最新の情報に更新されない不具合が発生しておりましたが、現在は、復旧し正常に表示されております。お客さまにはご迷惑とご心配をおかけしましたことを深くお詫び申し上げます。",
   "municipalities": [
     {
@@ -34,9 +34,9 @@
       "cityId": "525",
       "cityName": "瀬戸内町",
       "island": "奄美大島",
-      "blackoutCount": "約80戸",
-      "hasOutage": true,
-      "restoration": "8月28日夕方"
+      "blackoutCount": "0戸",
+      "hasOutage": false,
+      "restoration": null
     },
     {
       "cityId": "527",
@@ -58,25 +58,25 @@
       "cityId": "530",
       "cityName": "徳之島町",
       "island": "徳之島",
-      "blackoutCount": "約2,500戸",
+      "blackoutCount": "約1,830戸",
       "hasOutage": true,
-      "restoration": "8月30日午前中"
+      "restoration": "確認中"
     },
     {
       "cityId": "531",
       "cityName": "天城町",
       "island": "徳之島",
-      "blackoutCount": "約2,380戸",
+      "blackoutCount": "約1,990戸",
       "hasOutage": true,
-      "restoration": "8月30日夜遅く"
+      "restoration": "確認中"
     },
     {
       "cityId": "532",
       "cityName": "伊仙町",
       "island": "徳之島",
-      "blackoutCount": "約3,060戸",
+      "blackoutCount": "約2,090戸",
       "hasOutage": true,
-      "restoration": "確認中"
+      "restoration": "8月29日午後"
     },
     {
       "cityId": "533",
