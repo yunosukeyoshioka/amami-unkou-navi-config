@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30T21:26:27.464Z",
+  "updatedAt": "2026-08-30T23:46:38.426Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1802,8 +1802,8 @@
           "label": "下り便 鹿児島新港 出港",
           "time": "8/31 18:00",
           "date": "2026-08-31",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "航行経路変更",
           "direction": "departure",
           "islands": [],
           "departureLocation": "鹿児島新港",
@@ -1839,8 +1839,8 @@
           "label": "下り便 名瀬港 入港",
           "time": "9/1 05:00",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "航行経路変更",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -1852,8 +1852,8 @@
           "label": "下り便 名瀬港 出港",
           "time": "9/1 05:50",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "航行経路変更",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -1876,8 +1876,8 @@
           "label": "下り便 亀徳港 入港",
           "time": "9/1 09:10",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "―",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -1889,8 +1889,8 @@
           "label": "下り便 亀徳港 出港",
           "time": "9/1 09:40",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "―",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -1902,8 +1902,8 @@
           "label": "下り便 和泊港 入港",
           "time": "9/1 11:30",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "―",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -1915,8 +1915,8 @@
           "label": "下り便 和泊港 出港",
           "time": "9/1 12:00",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "―",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -1928,8 +1928,8 @@
           "label": "下り便 与論港 入港",
           "time": "9/1 13:40",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "―",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -1941,8 +1941,8 @@
           "label": "下り便 与論港 出港",
           "time": "9/1 14:10",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "―",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -1952,10 +1952,10 @@
         },
         {
           "label": "下り便 本部港 入港",
-          "time": "9/1 16:40",
+          "time": "9/1 14:20",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "航行経路変更",
           "direction": "arrival",
           "islands": [],
           "departureLocation": "与論港",
@@ -1963,10 +1963,10 @@
         },
         {
           "label": "下り便 本部港 出港",
-          "time": "9/1 17:10",
+          "time": "9/1 14:40",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "航行経路変更",
           "direction": "departure",
           "islands": [],
           "departureLocation": "本部港",
@@ -1974,10 +1974,10 @@
         },
         {
           "label": "下り便 那覇港 入港",
-          "time": "9/1 19:00",
+          "time": "9/1 16:30",
           "date": "2026-09-01",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "unknown",
+          "note": "航行経路変更",
           "direction": "arrival",
           "islands": [],
           "departureLocation": "本部港",
@@ -2000,7 +2000,7 @@
           "date": "2026-08-31",
           "actualTime": "08:15",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2098,7 +2098,7 @@
           "date": "2026-08-31",
           "actualTime": "08:45",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2196,7 +2196,7 @@
           "date": "2026-08-31",
           "actualTime": "08:55",
           "status": "normal",
-          "note": "定刻",
+          "note": "まもなく到着",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5641,16 +5641,16 @@
       "operatorName": "マルエーフェリー（貨物専用便）",
       "routeName": "琉球エキスプレス２／大阪 - 志布志 - 名瀬 - 那覇",
       "mode": "cargo",
-      "status": "unknown",
-      "note": "船舶動静のご案内",
+      "status": "normal",
+      "note": "通常運航致しております。",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
           "label": "琉球エキスプレス２ 名瀬港",
           "time": "本日",
           "date": "2026-08-31",
-          "status": "unknown",
-          "note": "船舶動静のご案内",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "islands": [
             "奄美大島"
           ]
