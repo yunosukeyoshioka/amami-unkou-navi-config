@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-01T17:24:45.694Z",
+  "updatedAt": "2026-09-01T20:06:35.309Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -304,11 +304,11 @@
           "arrivalLocation": "鹿児島新港"
         },
         {
-          "label": "フェリー波之上 鹿児島発",
-          "time": "9/1 07:00",
+          "label": "フェリーあけぼの 鹿児島発",
+          "time": "9/1 18:00",
           "date": "2026-09-01",
-          "status": "conditional",
-          "note": "■9月1日(火)那覇港発上り便…スケジュール変更",
+          "status": "cancelled",
+          "note": "■9/1(火)鹿児島新港発(下り便)…スケジュール変更・条件付き運航 ■9/3(木)那覇港発(上り便)…欠航",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -320,11 +320,11 @@
           "arrivalLocation": null
         },
         {
-          "label": "フェリーあけぼの 鹿児島発",
-          "time": "9/1 18:00",
-          "date": "2026-09-01",
-          "status": "cancelled",
-          "note": "■9/1(火)鹿児島新港発(下り便)…スケジュール変更・条件付き運航 ■9/3(木)那覇港発(上り便)…欠航",
+          "label": "フェリー波之上 鹿児島発",
+          "time": "本日",
+          "date": "2026-09-02",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "奄美大島",
