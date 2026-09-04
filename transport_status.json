@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-04T06:31:24.378Z",
+  "updatedAt": "2026-09-04T11:41:54.318Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -8,7 +8,7 @@
       "routeName": "鹿児島〜奄美〜沖縄",
       "mode": "ferry",
       "status": "cancelled",
-      "note": "9/3（木）那覇港発上り便…欠航 9/4（金）鹿児島新港発下り便…欠航 9/6（日）那覇港発上り便…欠航 9/4（金）那覇港発上り便…臨時便運航",
+      "note": "■9/4(金)鹿児島新港発下り便…欠航 ■9/6(日)那覇港発上り便…欠航 ■9/4(金)那覇港発上り便…臨時便 ■9/5(土)鹿児島発下り便…臨時便計画中",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
@@ -308,7 +308,7 @@
           "time": "9/4 07:00",
           "date": "2026-09-04",
           "status": "cancelled",
-          "note": "9/3（木）那覇港発上り便…欠航 9/4（金）鹿児島新港発下り便…欠航 9/6（日）那覇港発上り便…欠航 9/4（金）那覇港発上り便…臨時便運航",
+          "note": "■9/4(金)鹿児島新港発下り便…欠航 ■9/6(日)那覇港発上り便…欠航 ■9/4(金)那覇港発上り便…臨時便 ■9/5(土)鹿児島発下り便…臨時便計画中",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -1562,7 +1562,7 @@
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
       "status": "cancelled",
-      "note": "本日36便中18便に遅延・欠航等があります。",
+      "note": "本日36便中19便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -4469,7 +4469,7 @@
           "date": "2026-09-04",
           "actualTime": "17:50",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4566,8 +4566,8 @@
           "time": "18:00",
           "date": "2026-09-04",
           "actualTime": "18:00",
-          "status": "cancelled",
-          "note": "欠航",
+          "status": "normal",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -4670,9 +4670,9 @@
           "label": "387便 鹿児島発",
           "time": "18:10",
           "date": "2026-09-04",
-          "actualTime": "18:10",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "18:35",
+          "status": "delayed",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4770,7 +4770,7 @@
           "date": "2026-09-04",
           "actualTime": "18:20",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4964,9 +4964,9 @@
           "label": "388便 鹿児島行き",
           "time": "18:50",
           "date": "2026-09-04",
-          "actualTime": "18:50",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "19:05",
+          "status": "delayed",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5163,16 +5163,16 @@
       "operatorName": "マルエーフェリー（貨物専用便）",
       "routeName": "琉球エキスプレス５／東京 -（名古屋）- 志布志 - 名瀬 - 那覇",
       "mode": "cargo",
-      "status": "conditional",
-      "note": "台風24号の影響に伴う、スケジュール変更のご案内",
+      "status": "cancelled",
+      "note": "台風24号の影響に伴う、スケジュール変更及び欠航のご案内",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
           "label": "琉球エキスプレス５ 名瀬港",
           "time": "本日",
           "date": "2026-09-04",
-          "status": "conditional",
-          "note": "台風24号の影響に伴う、スケジュール変更のご案内",
+          "status": "cancelled",
+          "note": "台風24号の影響に伴う、スケジュール変更及び欠航のご案内",
           "islands": [
             "奄美大島"
           ]
