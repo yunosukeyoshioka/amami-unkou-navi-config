@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-04T01:20:05.644Z",
+  "updatedAt": "2026-09-04T06:31:24.378Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1562,7 +1562,7 @@
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
       "status": "cancelled",
-      "note": "本日36便中17便に遅延・欠航等があります。",
+      "note": "本日36便中18便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -1864,8 +1864,8 @@
           "time": "09:25",
           "date": "2026-09-04",
           "actualTime": "09:25",
-          "status": "cancelled",
-          "note": "欠航",
+          "status": "normal",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2173,7 +2173,7 @@
           "date": "2026-09-04",
           "actualTime": "10:30",
           "status": "normal",
-          "note": "搭乗ご案内中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2375,8 +2375,8 @@
           "time": "10:55",
           "date": "2026-09-04",
           "actualTime": "10:55",
-          "status": "cancelled",
-          "note": "欠航",
+          "status": "normal",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2479,9 +2479,9 @@
           "label": "3727便 鹿児島発",
           "time": "11:10",
           "date": "2026-09-04",
-          "actualTime": "11:10",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "11:20",
+          "status": "delayed",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2676,8 +2676,8 @@
           "time": "11:15",
           "date": "2026-09-04",
           "actualTime": "11:15",
-          "status": "cancelled",
-          "note": "欠航",
+          "status": "normal",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2782,7 +2782,7 @@
           "date": "2026-09-04",
           "actualTime": "11:20",
           "status": "normal",
-          "note": "天候調査中",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2880,7 +2880,7 @@
           "date": "2026-09-04",
           "actualTime": "11:45",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2978,7 +2978,7 @@
           "date": "2026-09-04",
           "actualTime": "12:00",
           "status": "normal",
-          "note": "天候調査中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3075,8 +3075,8 @@
           "time": "12:05",
           "date": "2026-09-04",
           "actualTime": "12:05",
-          "status": "cancelled",
-          "note": "欠航",
+          "status": "normal",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3174,7 +3174,7 @@
           "date": "2026-09-04",
           "actualTime": "12:50",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3272,7 +3272,7 @@
           "date": "2026-09-04",
           "actualTime": "13:20",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3368,9 +3368,9 @@
           "label": "659便 東京(羽田)発",
           "time": "13:35",
           "date": "2026-09-04",
-          "actualTime": "13:35",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "14:25",
+          "status": "delayed",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3466,9 +3466,9 @@
           "label": "3731便 鹿児島発",
           "time": "14:05",
           "date": "2026-09-04",
-          "actualTime": "14:05",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "14:15",
+          "status": "delayed",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3564,9 +3564,9 @@
           "label": "658便 東京(羽田)行き",
           "time": "14:20",
           "date": "2026-09-04",
-          "actualTime": "14:20",
-          "status": "normal",
-          "note": "搭乗手続き受付中",
+          "actualTime": "14:55",
+          "status": "delayed",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3664,7 +3664,7 @@
           "date": "2026-09-04",
           "actualTime": "14:30",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3760,9 +3760,9 @@
           "label": "3730便 鹿児島行き",
           "time": "14:35",
           "date": "2026-09-04",
-          "actualTime": "14:35",
-          "status": "normal",
-          "note": "搭乗手続き受付中",
+          "actualTime": "14:40",
+          "status": "delayed",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3958,7 +3958,7 @@
           "date": "2026-09-04",
           "actualTime": "15:20",
           "status": "normal",
-          "note": "定刻",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4672,7 +4672,7 @@
           "date": "2026-09-04",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "天候調査中",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4966,7 +4966,7 @@
           "date": "2026-09-04",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "天候調査中",
+          "note": "定刻",
           "direction": "departure",
           "islands": [
             "奄美大島"
