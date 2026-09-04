@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-04T16:09:16.333Z",
-  "sourceReleaseAt": "2026-09-05T01:08:04+09:00",
+  "updatedAt": "2026-09-04T19:04:16.471Z",
+  "sourceReleaseAt": "2026-09-05T04:03:03+09:00",
   "officialUrl": "https://www.kyuden.co.jp/td_teiden/kyushu.html",
-  "amamiRegionBlackoutCount": "約2,410戸",
+  "amamiRegionBlackoutCount": "0戸",
   "comment": null,
   "municipalities": [
     {
@@ -50,9 +50,9 @@
       "cityId": "529",
       "cityName": "喜界町",
       "island": "喜界島",
-      "blackoutCount": "約2,410戸",
-      "hasOutage": true,
-      "restoration": "確認中"
+      "blackoutCount": "0戸",
+      "hasOutage": false,
+      "restoration": null
     },
     {
       "cityId": "530",
