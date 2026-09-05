@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-05T08:18:15.115Z",
-  "sourceReleaseAt": "2026-09-05T17:17:04+09:00",
+  "updatedAt": "2026-09-05T11:58:50.174Z",
+  "sourceReleaseAt": "2026-09-05T20:57:03+09:00",
   "officialUrl": "https://www.kyuden.co.jp/td_teiden/kyushu.html",
-  "amamiRegionBlackoutCount": "約70戸",
+  "amamiRegionBlackoutCount": "0戸",
   "comment": null,
   "municipalities": [
     {
@@ -52,7 +52,7 @@
       "island": "喜界島",
       "blackoutCount": "0戸",
       "hasOutage": false,
-      "restoration": null
+      "restoration": "高圧配電線への送電完了"
     },
     {
       "cityId": "530",
@@ -82,9 +82,9 @@
       "cityId": "533",
       "cityName": "和泊町",
       "island": "沖永良部島",
-      "blackoutCount": "約70戸",
-      "hasOutage": true,
-      "restoration": "9月5日19時頃"
+      "blackoutCount": "0戸",
+      "hasOutage": false,
+      "restoration": null
     },
     {
       "cityId": "534",
