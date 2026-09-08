@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-08T10:01:24.678Z",
+  "updatedAt": "2026-09-08T14:43:56.950Z",
   "operators": [
     {
       "id": "aline_ferry",
       "operatorName": "マルエーフェリー",
       "routeName": "鹿児島〜奄美〜沖縄",
       "mode": "ferry",
-      "status": "conditional",
-      "note": "■９月７日(月)下り便…条件付き運航・運航遅延",
+      "status": "normal",
+      "note": "通常運航致しております。",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
@@ -305,10 +305,10 @@
         },
         {
           "label": "フェリーあけぼの 鹿児島発",
-          "time": "9/7 18:00",
-          "date": "2026-09-07",
-          "status": "conditional",
-          "note": "■９月７日(月)下り便…条件付き運航・運航遅延",
+          "time": "本日",
+          "date": "2026-09-08",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "奄美大島",
