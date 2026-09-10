@@ -5,6 +5,7 @@
 import { writeFileSync } from 'fs';
 import * as cheerio from 'cheerio';
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
+import { scrapeAdditionalSupplyServices } from './cargo_schedule.mjs';
 import { scrapeBusTimetable } from './bus_timetable.mjs';
 import { scrapePowerOutage } from './power_outage.mjs';
 
@@ -1104,7 +1105,7 @@ async function safe(fn, fallbackFactory) {
   }
 }
 
-const [aline, marix, airport, alineCargo, busTimetable, powerOutage] = await Promise.all([
+const [aline, marix, airport, alineCargo, supplyServices, busTimetable, powerOutage] = await Promise.all([
   safe(scrapeAline, () => ({
     id: 'aline_ferry',
     operatorName: 'マルエーフェリー',
@@ -1139,6 +1140,10 @@ const [aline, marix, airport, alineCargo, busTimetable, powerOutage] = await Pro
   // 失敗時のフォールバックも「取得できず」のダミー1件ではなく空配列にする
   // （存在しないことと取得失敗を区別できないが、常設の航路ではないため）。
   safe(scrapeAlineCargo, () => []),
+  // 各島へ生活物資を運ぶ貨物専用船と、喜界航路の貨客フェリー。
+  // 公式時刻表から分かるのは予定であり、入港中とは扱わない。
+  // いずれかの公式情報源が取得できない場合は不完全なJSONで上書きしない。
+  scrapeAdditionalSupplyServices(),
   // 島バス（しまバス）の時刻表。運航状況と違って日々変わるものではないため
   // 取得に失敗しても運航状況の更新自体は止めない。
   safe(scrapeBusTimetable, () => null),
@@ -1150,7 +1155,7 @@ const [aline, marix, airport, alineCargo, busTimetable, powerOutage] = await Pro
 const output = {
   schemaVersion: 1,
   updatedAt: new Date().toISOString(),
-  operators: [aline, marix, airport, ...alineCargo],
+  operators: [aline, marix, airport, ...alineCargo, ...supplyServices],
 };
 
 writeFileSync('transport_status.json', `${JSON.stringify(output, null, 2)}\n`);
