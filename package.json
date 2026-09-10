@@ -5,7 +5,8 @@
   "type": "module",
   "description": "「奄美運行ナビ」アプリの代替手段・運航状況の設定を配信するための静的ホスティング用リポジトリです。",
   "scripts": {
-    "scrape": "node scripts/scrape.mjs"
+    "scrape": "node scripts/scrape.mjs",
+    "test": "node --test scripts/*.test.mjs"
   },
   "license": "UNLICENSED",
   "dependencies": {
