@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-10T07:51:52.679Z",
+  "updatedAt": "2026-09-10T12:10:08.361Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -4209,7 +4209,7 @@
           "date": "2026-09-10",
           "actualTime": "16:50",
           "status": "normal",
-          "note": "まもなく到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4314,7 +4314,7 @@
           "date": "2026-09-10",
           "actualTime": "17:20",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4419,7 +4419,7 @@
           "date": "2026-09-10",
           "actualTime": "17:25",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4517,7 +4517,7 @@
           "date": "2026-09-10",
           "actualTime": "17:50",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4615,7 +4615,7 @@
           "date": "2026-09-10",
           "actualTime": "18:00",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -4720,7 +4720,7 @@
           "date": "2026-09-10",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4818,7 +4818,7 @@
           "date": "2026-09-10",
           "actualTime": "18:20",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4916,7 +4916,7 @@
           "date": "2026-09-10",
           "actualTime": "18:30",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5014,7 +5014,7 @@
           "date": "2026-09-10",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5112,7 +5112,7 @@
           "date": "2026-09-10",
           "actualTime": "19:00",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
