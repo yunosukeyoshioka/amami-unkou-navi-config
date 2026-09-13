@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-13T18:02:50.137Z",
+  "updatedAt": "2026-09-13T21:04:28.775Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1901,7 +1901,7 @@
           "date": "2026-09-14",
           "actualTime": "08:15",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -1999,7 +1999,7 @@
           "date": "2026-09-14",
           "actualTime": "08:45",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2097,7 +2097,7 @@
           "date": "2026-09-14",
           "actualTime": "08:55",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2195,7 +2195,7 @@
           "date": "2026-09-14",
           "actualTime": "09:25",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2300,7 +2300,7 @@
           "date": "2026-09-14",
           "actualTime": "09:40",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2398,7 +2398,7 @@
           "date": "2026-09-14",
           "actualTime": "10:10",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -2503,7 +2503,7 @@
           "date": "2026-09-14",
           "actualTime": "10:30",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2601,7 +2601,7 @@
           "date": "2026-09-14",
           "actualTime": "10:35",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -2706,7 +2706,7 @@
           "date": "2026-09-14",
           "actualTime": "10:55",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2811,7 +2811,7 @@
           "date": "2026-09-14",
           "actualTime": "11:10",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2825,7 +2825,7 @@
           "date": "2026-09-14",
           "actualTime": "11:10",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3007,7 +3007,7 @@
           "date": "2026-09-14",
           "actualTime": "11:15",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -3112,7 +3112,7 @@
           "date": "2026-09-14",
           "actualTime": "11:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3210,7 +3210,7 @@
           "date": "2026-09-14",
           "actualTime": "11:45",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3308,7 +3308,7 @@
           "date": "2026-09-14",
           "actualTime": "12:00",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3406,7 +3406,7 @@
           "date": "2026-09-14",
           "actualTime": "12:05",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3504,7 +3504,7 @@
           "date": "2026-09-14",
           "actualTime": "12:50",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3602,7 +3602,7 @@
           "date": "2026-09-14",
           "actualTime": "13:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3700,7 +3700,7 @@
           "date": "2026-09-14",
           "actualTime": "13:45",
           "status": "delayed",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3798,7 +3798,7 @@
           "date": "2026-09-14",
           "actualTime": "14:25",
           "status": "delayed",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3896,7 +3896,7 @@
           "date": "2026-09-14",
           "actualTime": "14:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3994,7 +3994,7 @@
           "date": "2026-09-14",
           "actualTime": "14:20",
           "status": "delayed",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4092,7 +4092,7 @@
           "date": "2026-09-14",
           "actualTime": "14:55",
           "status": "delayed",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4190,7 +4190,7 @@
           "date": "2026-09-14",
           "actualTime": "14:55",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4288,7 +4288,7 @@
           "date": "2026-09-14",
           "actualTime": "15:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4386,7 +4386,7 @@
           "date": "2026-09-14",
           "actualTime": "15:40",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -4491,7 +4491,7 @@
           "date": "2026-09-14",
           "actualTime": "16:50",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4596,7 +4596,7 @@
           "date": "2026-09-14",
           "actualTime": "17:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4701,7 +4701,7 @@
           "date": "2026-09-14",
           "actualTime": "17:25",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4799,7 +4799,7 @@
           "date": "2026-09-14",
           "actualTime": "17:50",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4897,7 +4897,7 @@
           "date": "2026-09-14",
           "actualTime": "18:00",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -5002,7 +5002,7 @@
           "date": "2026-09-14",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5100,7 +5100,7 @@
           "date": "2026-09-14",
           "actualTime": "18:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5198,7 +5198,7 @@
           "date": "2026-09-14",
           "actualTime": "18:30",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5296,7 +5296,7 @@
           "date": "2026-09-14",
           "actualTime": "19:05",
           "status": "delayed",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5394,7 +5394,7 @@
           "date": "2026-09-14",
           "actualTime": "19:00",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
