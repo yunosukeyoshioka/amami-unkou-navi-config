@@ -97,3 +97,56 @@ export async function fetchKagoshimaAirportHtml(url) {
   if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
   return res.text();
 }
+
+function worstStatus(statuses) {
+  const SEVERITY = ['normal', 'delayed', 'conditional', 'suspended', 'cancelled'];
+  const known = statuses.filter((s) => s !== 'unknown');
+  if (known.length === 0) return 'unknown';
+  return known.reduce((worst, s) => (SEVERITY.indexOf(s) > SEVERITY.indexOf(worst) ? s : worst));
+}
+
+function sortByTime(departures) {
+  const key = (t) => {
+    const m = t.match(/(\d{1,2}):(\d{2})/);
+    return m ? Number(m[1]) * 100 + Number(m[2]) : Number.MAX_SAFE_INTEGER;
+  };
+  return [...departures].sort((a, b) => key(a.time) - key(b.time));
+}
+
+function jstTodayIso() {
+  return new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
+export async function scrapeKagoshimaAirportDepartures() {
+  const [depHtml, arrHtml] = await Promise.all([
+    fetchKagoshimaAirportHtml(KOJ_URL_DEP),
+    fetchKagoshimaAirportHtml(KOJ_URL_ARR),
+  ]);
+  const departures = parseKagoshimaAirportHtml(depHtml, 'departure');
+  const arrivals = parseKagoshimaAirportHtml(arrHtml, 'arrival');
+  const todayIso = jstTodayIso();
+  const all = sortByTime([...departures, ...arrivals]).map((d) => ({ ...d, date: todayIso }));
+
+  if (all.length === 0) {
+    throw new Error('kagoshima airport: no amami-islands flights parsed (page structure may have changed)');
+  }
+
+  const status = worstStatus(all.map((d) => d.status));
+  const troubled = all.filter((d) => d.status !== 'normal');
+  const note =
+    troubled.length === 0
+      ? `本日${all.length}便中、欠航はありません。`
+      : `本日${all.length}便中${troubled.length}便に遅延・欠航等があります。`;
+
+  return {
+    id: 'kagoshima_airport_departures',
+    operatorName: '航空便',
+    routeName: '鹿児島空港発着（JAL・JAC他）',
+    mode: 'air',
+    hubAirportName: '鹿児島空港',
+    status,
+    note,
+    officialUrl: KOJ_URL_DEP,
+    departures: all,
+  };
+}

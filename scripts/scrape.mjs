@@ -8,6 +8,7 @@ import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
 import { scrapeAdditionalSupplyServices } from './cargo_schedule.mjs';
 import { scrapeBusTimetable } from './bus_timetable.mjs';
 import { scrapePowerOutage } from './power_outage.mjs';
+import { scrapeKagoshimaAirportDepartures } from './airport_kagoshima.mjs';
 
 const UA = 'amami-unkou-navi-bot/1.0 (+https://github.com/yunosukeyoshioka/amami-unkou-navi-config)';
 
@@ -1089,6 +1090,7 @@ async function scrapeAirportDepartures() {
     operatorName: '航空便',
     routeName: '奄美空港発着（JAL・Peach・スカイマーク他）',
     mode: 'air',
+    hubAirportName: '奄美空港',
     status,
     note,
     officialUrl: AIRPORT_URL,
@@ -1105,7 +1107,7 @@ async function safe(fn, fallbackFactory) {
   }
 }
 
-const [aline, marix, airport, alineCargo, supplyServices, busTimetable, powerOutage] = await Promise.all([
+const [aline, marix, airport, kagoshimaAirport, alineCargo, supplyServices, busTimetable, powerOutage] = await Promise.all([
   safe(scrapeAline, () => ({
     id: 'aline_ferry',
     operatorName: 'マルエーフェリー',
@@ -1131,9 +1133,21 @@ const [aline, marix, airport, alineCargo, supplyServices, busTimetable, powerOut
     operatorName: '航空便',
     routeName: '奄美空港発（JAL・Peach・スカイマーク他）',
     mode: 'air',
+    hubAirportName: '奄美空港',
     status: 'unknown',
     note: '取得に失敗しました。公式サイトでご確認ください。',
     officialUrl: AIRPORT_URL,
+    departures: [],
+  })),
+  safe(scrapeKagoshimaAirportDepartures, () => ({
+    id: 'kagoshima_airport_departures',
+    operatorName: '航空便',
+    routeName: '鹿児島空港発着（JAL・JAC他）',
+    mode: 'air',
+    hubAirportName: '鹿児島空港',
+    status: 'unknown',
+    note: '取得に失敗しました。公式サイトでご確認ください。',
+    officialUrl: 'https://www.koj-ab.co.jp/flight/today-dom-departure.html',
     departures: [],
   })),
   // 貨物専用便は現在名瀬に寄港している便が無ければ0件が正常であるため、
@@ -1155,7 +1169,7 @@ const [aline, marix, airport, alineCargo, supplyServices, busTimetable, powerOut
 const output = {
   schemaVersion: 1,
   updatedAt: new Date().toISOString(),
-  operators: [aline, marix, airport, ...alineCargo, ...supplyServices],
+  operators: [aline, marix, airport, kagoshimaAirport, ...alineCargo, ...supplyServices],
 };
 
 writeFileSync('transport_status.json', `${JSON.stringify(output, null, 2)}\n`);
