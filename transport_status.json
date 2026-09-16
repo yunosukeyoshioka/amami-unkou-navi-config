@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-16T09:28:12.090Z",
+  "updatedAt": "2026-09-16T14:20:05.236Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -4706,7 +4706,7 @@
           "date": "2026-09-16",
           "actualTime": "18:15",
           "status": "delayed",
-          "note": "ただいま到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4804,7 +4804,7 @@
           "date": "2026-09-16",
           "actualTime": "18:35",
           "status": "delayed",
-          "note": "ゲートへお越し下さい",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4900,9 +4900,9 @@
           "label": "3737便 鹿児島発",
           "time": "18:30",
           "date": "2026-09-16",
-          "actualTime": "18:55",
+          "actualTime": "19:00",
           "status": "delayed",
-          "note": "遅れ",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5000,7 +5000,7 @@
           "date": "2026-09-16",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "ゲートへお越し下さい",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5096,9 +5096,9 @@
           "label": "3738便 鹿児島行き",
           "time": "19:00",
           "date": "2026-09-16",
-          "actualTime": "19:20",
+          "actualTime": "19:25",
           "status": "delayed",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
