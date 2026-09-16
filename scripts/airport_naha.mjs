@@ -94,3 +94,55 @@ export async function fetchNahaAirportJson(url) {
   if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
   return res.json();
 }
+
+function worstStatus(statuses) {
+  const SEVERITY = ['normal', 'delayed', 'conditional', 'suspended', 'cancelled'];
+  const known = statuses.filter((s) => s !== 'unknown');
+  if (known.length === 0) return 'unknown';
+  return known.reduce((worst, s) => (SEVERITY.indexOf(s) > SEVERITY.indexOf(worst) ? s : worst));
+}
+
+function sortByTime(departures) {
+  const key = (t) => {
+    const m = t.match(/(\d{1,2}):(\d{2})/);
+    return m ? Number(m[1]) * 100 + Number(m[2]) : Number.MAX_SAFE_INTEGER;
+  };
+  return [...departures].sort((a, b) => key(a.time) - key(b.time));
+}
+
+function jstTodayIso() {
+  return new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
+export async function scrapeNahaAirportDepartures() {
+  const payload = await fetchNahaAirportJson(NAHA_JSON_URL);
+  if (payload.status !== 'success' || !Array.isArray(payload.data)) {
+    throw new Error('naha airport: unexpected JSON payload shape (API may have changed)');
+  }
+
+  const todayIso = jstTodayIso();
+  const entries = sortByTime(parseNahaAirportJson(payload.data, { todayIso }));
+
+  if (entries.length === 0) {
+    throw new Error('naha airport: no amami-islands flights parsed (API may have changed)');
+  }
+
+  const status = worstStatus(entries.map((d) => d.status));
+  const troubled = entries.filter((d) => d.status !== 'normal');
+  const note =
+    troubled.length === 0
+      ? `本日${entries.length}便中、欠航はありません。`
+      : `本日${entries.length}便中${troubled.length}便に遅延・欠航等があります。`;
+
+  return {
+    id: 'naha_airport_departures',
+    operatorName: '航空便',
+    routeName: '那覇空港発着（JAL・JTA他）',
+    mode: 'air',
+    hubAirportName: '那覇空港',
+    status,
+    note,
+    officialUrl: NAHA_OFFICIAL_URL,
+    departures: entries,
+  };
+}

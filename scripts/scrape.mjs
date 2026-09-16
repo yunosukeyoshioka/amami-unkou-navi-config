@@ -9,6 +9,7 @@ import { scrapeAdditionalSupplyServices } from './cargo_schedule.mjs';
 import { scrapeBusTimetable } from './bus_timetable.mjs';
 import { scrapePowerOutage } from './power_outage.mjs';
 import { scrapeKagoshimaAirportDepartures } from './airport_kagoshima.mjs';
+import { scrapeNahaAirportDepartures } from './airport_naha.mjs';
 
 const UA = 'amami-unkou-navi-bot/1.0 (+https://github.com/yunosukeyoshioka/amami-unkou-navi-config)';
 
@@ -1107,7 +1108,7 @@ async function safe(fn, fallbackFactory) {
   }
 }
 
-const [aline, marix, airport, kagoshimaAirport, alineCargo, supplyServices, busTimetable, powerOutage] = await Promise.all([
+const [aline, marix, airport, kagoshimaAirport, nahaAirport, alineCargo, supplyServices, busTimetable, powerOutage] = await Promise.all([
   safe(scrapeAline, () => ({
     id: 'aline_ferry',
     operatorName: 'マルエーフェリー',
@@ -1150,6 +1151,17 @@ const [aline, marix, airport, kagoshimaAirport, alineCargo, supplyServices, busT
     officialUrl: 'https://www.koj-ab.co.jp/flight/today-dom-departure.html',
     departures: [],
   })),
+  safe(scrapeNahaAirportDepartures, () => ({
+    id: 'naha_airport_departures',
+    operatorName: '航空便',
+    routeName: '那覇空港発着（JAL・JTA他）',
+    mode: 'air',
+    hubAirportName: '那覇空港',
+    status: 'unknown',
+    note: '取得に失敗しました。公式サイトでご確認ください。',
+    officialUrl: 'https://www.naha-airport.co.jp/flight/today/',
+    departures: [],
+  })),
   // 貨物専用便は現在名瀬に寄港している便が無ければ0件が正常であるため、
   // 失敗時のフォールバックも「取得できず」のダミー1件ではなく空配列にする
   // （存在しないことと取得失敗を区別できないが、常設の航路ではないため）。
@@ -1169,7 +1181,7 @@ const [aline, marix, airport, kagoshimaAirport, alineCargo, supplyServices, busT
 const output = {
   schemaVersion: 1,
   updatedAt: new Date().toISOString(),
-  operators: [aline, marix, airport, kagoshimaAirport, ...alineCargo, ...supplyServices],
+  operators: [aline, marix, airport, kagoshimaAirport, nahaAirport, ...alineCargo, ...supplyServices],
 };
 
 writeFileSync('transport_status.json', `${JSON.stringify(output, null, 2)}\n`);
