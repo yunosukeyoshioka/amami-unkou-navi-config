@@ -86,6 +86,45 @@ function scheduledArrival({
   };
 }
 
+// scheduledArrivalの汎用版。入港・出港どちらのイベントも生成でき、
+// 「下り便」「上り便」ラベル接頭辞と区間の出発地・到着地（前後の寄港地）を
+// 指定できる。往復・寄港地別に入出港時刻が公開されている航路
+// （奄美海運のフェリーきかい等）向け。
+function scheduledEvent({
+  operatorName,
+  vessel,
+  routeName,
+  islands,
+  port,
+  date,
+  time,
+  officialUrl,
+  mode = 'cargo',
+  direction,
+  labelPrefix,
+  departureLocation,
+  arrivalLocation,
+}) {
+  const directionLabel = direction === 'arrival' ? '入港' : '出港';
+  const prefix = labelPrefix ? `${labelPrefix} ` : '';
+  return {
+    label: `${prefix}${vessel ?? operatorName} ${port} ${directionLabel}（予定）`,
+    time,
+    date,
+    status: 'unknown',
+    note: '公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。',
+    direction,
+    islands,
+    departureLocation,
+    arrivalLocation,
+    isScheduled: true,
+    vessel: vessel ?? null,
+    routeName,
+    officialUrl,
+    mode,
+  };
+}
+
 function operatorResult({
   id,
   operatorName,
@@ -303,6 +342,34 @@ export function buildKaniyakuCargoSchedule(
   });
 }
 
+// フェリーきかいの寄港地→島。鹿児島（鹿児島本港北埠頭）はどの島にも
+// 属さないため、この対応表には含めない。
+const KIKAI_PORT_ISLAND = {
+  湾港: '喜界島',
+  名瀬港: '奄美大島',
+  古仁屋港: '奄美大島',
+  平土野港: '徳之島',
+};
+const KIKAI_ROUTE_ISLANDS = ['喜界島', '奄美大島', '徳之島'];
+
+// 週3便運航スケジュール（公式PDF）から復元した寄港地別テンプレート。
+// dayOffsetは「基準日（下り便は平土野入港日、上り便は平土野出港日。
+// いずれも火・木・土）」からの相対日数。
+const KIKAI_DOWN_TEMPLATE = [
+  { port: '鹿児島', dayOffset: -1, dep: '17:30' },
+  { port: '湾港', dayOffset: 0, arr: '04:30', dep: '05:00' },
+  { port: '名瀬港', dayOffset: 0, arr: '07:00', dep: '07:30' },
+  { port: '古仁屋港', dayOffset: 0, arr: '09:40', dep: '10:00' },
+  { port: '平土野港', dayOffset: 0, arr: '12:20' },
+];
+const KIKAI_UP_TEMPLATE = [
+  { port: '平土野港', dayOffset: 0, dep: '12:50' },
+  { port: '古仁屋港', dayOffset: 0, arr: '15:10', dep: '15:30' },
+  { port: '名瀬港', dayOffset: 0, arr: '17:50', dep: '18:20' },
+  { port: '湾港', dayOffset: 0, arr: '20:30', dep: '21:00' },
+  { port: '鹿児島', dayOffset: 1, arr: '08:30' },
+];
+
 export function buildAmamiKaiunSchedule(
   pdfText,
   { from = new Date(), days = 14 } = {},
@@ -330,35 +397,70 @@ export function buildAmamiKaiunSchedule(
     '07:00',
     '09:40',
     '12:20',
+    '12:50',
+    '15:10',
+    '17:50',
+    '20:30',
+    '08:30',
   ];
   if (!required.every((marker) => text.includes(marker))) {
     throw new Error('奄美海運の週3便ダイヤを確認できません');
   }
 
-  const ports = [
-    ['喜界島', '湾港', '04:30'],
-    ['奄美大島', '名瀬港', '07:00'],
-    ['奄美大島', '古仁屋港', '09:40'],
-    ['徳之島', '平土野港', '12:20'],
-  ];
   const departures = [];
   for (const date of dateRange(from, days)) {
     if (![2, 4, 6].includes(date.getUTCDay())) continue;
-    const iso = date.toISOString().slice(0, 10);
-    for (const [island, port, time] of ports) {
-      departures.push(
-        scheduledArrival({
+    for (const [template, labelPrefix] of [
+      [KIKAI_DOWN_TEMPLATE, '下り便'],
+      [KIKAI_UP_TEMPLATE, '上り便'],
+    ]) {
+      template.forEach((stop, index) => {
+        const stopDate = addDays(date, stop.dayOffset);
+        const iso = isoDate(
+          stopDate.getUTCFullYear(),
+          stopDate.getUTCMonth() + 1,
+          stopDate.getUTCDate(),
+        );
+        const island = KIKAI_PORT_ISLAND[stop.port];
+        const islands = island ? [island] : KIKAI_ROUTE_ISLANDS;
+        const prevPort = index > 0 ? template[index - 1].port : null;
+        const nextPort =
+          index < template.length - 1 ? template[index + 1].port : null;
+        const common = {
           operatorName: '奄美海運',
           vessel: 'フェリーきかい',
           routeName: '鹿児島〜喜界〜名瀬〜古仁屋〜平土野',
-          island,
-          port,
+          islands,
+          port: stop.port,
           date: iso,
-          time,
           officialUrl: 'https://www.aline-ferry.com/amami/time/',
           mode: 'ferry',
-        }),
-      );
+          labelPrefix,
+        };
+
+        if (stop.arr) {
+          departures.push(
+            scheduledEvent({
+              ...common,
+              time: stop.arr,
+              direction: 'arrival',
+              departureLocation: prevPort,
+              arrivalLocation: stop.port,
+            }),
+          );
+        }
+        if (stop.dep) {
+          departures.push(
+            scheduledEvent({
+              ...common,
+              time: stop.dep,
+              direction: 'departure',
+              departureLocation: stop.port,
+              arrivalLocation: nextPort,
+            }),
+          );
+        }
+      });
     }
   }
 

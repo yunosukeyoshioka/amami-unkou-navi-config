@@ -77,33 +77,161 @@ test('鹿児島荷役は時刻未公表の島を推測せず日付だけで案�
   );
 });
 
-test('奄美海運の現行週3便から喜界・奄美・徳之島の次回入港を作る', () => {
+test('奄美海運の現行週3便から下り便・上り便の全寄港地の入出港を作る', () => {
   const pdfText =
     '平土野行き 月・水・金 鹿児島 喜 界 名 瀬 古仁屋 平土野 ' +
     '04 ： 30 入港 07 ： 00 入港 09 ： 40 入港 ' +
-    'フェリーきかい週 3 便運航スケジュール 12 ： 20 入港 火・木・土';
+    'フェリーきかい週 3 便運航スケジュール 12 ： 20 入港 火・木・土 ' +
+    '鹿児島行 火・木・土 水・金・日 平土野 古仁屋 名 瀬 喜 界 鹿児島 ' +
+    '12 ： 50 出港 15 ： 10 入港 15 ： 30 出港 ' +
+    '17 ： 50 入港 18 ： 20 出港 20 ： 30 入港 21 ： 00 出港 08 ： 30 入港';
 
   const result = buildAmamiKaiunSchedule(pdfText, {
     from: new Date('2026-09-10T00:00:00+09:00'),
-    days: 4,
+    days: 2,
   });
 
+  // 2026-09-10（木）が基準日。下り便は前日（09-09水）鹿児島発、
+  // 上り便は翌日（09-11金）鹿児島着で、いずれも「下り便」「上り便」の
+  // ラベル接頭辞と区間の出発地・到着地が付与されている。
   assert.deepEqual(
     result.departures.map((entry) => ({
       date: entry.date,
       time: entry.time,
+      label: entry.label,
       island: entry.islands[0],
-      port: entry.arrivalLocation,
+      departureLocation: entry.departureLocation,
+      arrivalLocation: entry.arrivalLocation,
     })),
     [
-      { date: '2026-09-10', time: '04:30', island: '喜界島', port: '湾港' },
-      { date: '2026-09-10', time: '07:00', island: '奄美大島', port: '名瀬港' },
-      { date: '2026-09-10', time: '09:40', island: '奄美大島', port: '古仁屋港' },
-      { date: '2026-09-10', time: '12:20', island: '徳之島', port: '平土野港' },
-      { date: '2026-09-12', time: '04:30', island: '喜界島', port: '湾港' },
-      { date: '2026-09-12', time: '07:00', island: '奄美大島', port: '名瀬港' },
-      { date: '2026-09-12', time: '09:40', island: '奄美大島', port: '古仁屋港' },
-      { date: '2026-09-12', time: '12:20', island: '徳之島', port: '平土野港' },
+      {
+        date: '2026-09-09',
+        time: '17:30',
+        label: '下り便 フェリーきかい 鹿児島 出港（予定）',
+        island: '喜界島',
+        departureLocation: '鹿児島',
+        arrivalLocation: '湾港',
+      },
+      {
+        date: '2026-09-10',
+        time: '04:30',
+        label: '下り便 フェリーきかい 湾港 入港（予定）',
+        island: '喜界島',
+        departureLocation: '鹿児島',
+        arrivalLocation: '湾港',
+      },
+      {
+        date: '2026-09-10',
+        time: '05:00',
+        label: '下り便 フェリーきかい 湾港 出港（予定）',
+        island: '喜界島',
+        departureLocation: '湾港',
+        arrivalLocation: '名瀬港',
+      },
+      {
+        date: '2026-09-10',
+        time: '07:00',
+        label: '下り便 フェリーきかい 名瀬港 入港（予定）',
+        island: '奄美大島',
+        departureLocation: '湾港',
+        arrivalLocation: '名瀬港',
+      },
+      {
+        date: '2026-09-10',
+        time: '07:30',
+        label: '下り便 フェリーきかい 名瀬港 出港（予定）',
+        island: '奄美大島',
+        departureLocation: '名瀬港',
+        arrivalLocation: '古仁屋港',
+      },
+      {
+        date: '2026-09-10',
+        time: '09:40',
+        label: '下り便 フェリーきかい 古仁屋港 入港（予定）',
+        island: '奄美大島',
+        departureLocation: '名瀬港',
+        arrivalLocation: '古仁屋港',
+      },
+      {
+        date: '2026-09-10',
+        time: '10:00',
+        label: '下り便 フェリーきかい 古仁屋港 出港（予定）',
+        island: '奄美大島',
+        departureLocation: '古仁屋港',
+        arrivalLocation: '平土野港',
+      },
+      {
+        date: '2026-09-10',
+        time: '12:20',
+        label: '下り便 フェリーきかい 平土野港 入港（予定）',
+        island: '徳之島',
+        departureLocation: '古仁屋港',
+        arrivalLocation: '平土野港',
+      },
+      {
+        date: '2026-09-10',
+        time: '12:50',
+        label: '上り便 フェリーきかい 平土野港 出港（予定）',
+        island: '徳之島',
+        departureLocation: '平土野港',
+        arrivalLocation: '古仁屋港',
+      },
+      {
+        date: '2026-09-10',
+        time: '15:10',
+        label: '上り便 フェリーきかい 古仁屋港 入港（予定）',
+        island: '奄美大島',
+        departureLocation: '平土野港',
+        arrivalLocation: '古仁屋港',
+      },
+      {
+        date: '2026-09-10',
+        time: '15:30',
+        label: '上り便 フェリーきかい 古仁屋港 出港（予定）',
+        island: '奄美大島',
+        departureLocation: '古仁屋港',
+        arrivalLocation: '名瀬港',
+      },
+      {
+        date: '2026-09-10',
+        time: '17:50',
+        label: '上り便 フェリーきかい 名瀬港 入港（予定）',
+        island: '奄美大島',
+        departureLocation: '古仁屋港',
+        arrivalLocation: '名瀬港',
+      },
+      {
+        date: '2026-09-10',
+        time: '18:20',
+        label: '上り便 フェリーきかい 名瀬港 出港（予定）',
+        island: '奄美大島',
+        departureLocation: '名瀬港',
+        arrivalLocation: '湾港',
+      },
+      {
+        date: '2026-09-10',
+        time: '20:30',
+        label: '上り便 フェリーきかい 湾港 入港（予定）',
+        island: '喜界島',
+        departureLocation: '名瀬港',
+        arrivalLocation: '湾港',
+      },
+      {
+        date: '2026-09-10',
+        time: '21:00',
+        label: '上り便 フェリーきかい 湾港 出港（予定）',
+        island: '喜界島',
+        departureLocation: '湾港',
+        arrivalLocation: '鹿児島',
+      },
+      {
+        date: '2026-09-11',
+        time: '08:30',
+        label: '上り便 フェリーきかい 鹿児島 入港（予定）',
+        island: '喜界島',
+        departureLocation: '湾港',
+        arrivalLocation: '鹿児島',
+      },
     ],
   );
 });
