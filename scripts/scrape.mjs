@@ -414,13 +414,16 @@ async function fetchAlineSearchResult(dateObj, startPortId, endPortId) {
 const ALINE_PORT_ID = { 鹿児島新港: 50, 名瀬港: 70, 亀徳港: 78, 和泊港: 80, 与論港: 82 };
 const ALINE_ISLAND_PORTS = ['名瀬港', '亀徳港', '和泊港', '与論港'];
 
-async function fetchAlineScheduleEntries(targetDates, coveredDates) {
+// 乗船検索が返す船名（フェリーあけぼの／フェリー波之上）ごとの、公式お知らせ
+// ページ由来のステータス・見出し文。本日分の寄港地別エントリに、対応する
+// 船の実際の運航状況（欠航・条件付き等）を反映するために使う。該当する
+// 船が無い日（未来の予定日）は undefined になり、その場合は従来どおり
+// 「予定」（isScheduled: true, status: 'unknown'）として扱う。
+async function fetchAlineScheduleEntries(targetDates, statusByVessel = new Map()) {
   if (targetDates.length === 0) return [];
 
   const entries = [];
   for (const d of targetDates) {
-    if (coveredDates.has(d.iso)) continue; // 既にライブ取得済みの日は重複させない
-
     for (const isDownstream of [true, false]) {
       // まず代表として名瀬港との組で運航の有無を確認する。この路線は
       // マルエーフェリーとマリックスラインの共同運航で、相手会社の日は
@@ -434,6 +437,13 @@ async function fetchAlineScheduleEntries(targetDates, coveredDates) {
       if (!checkResult) continue;
 
       const directionLabel = isDownstream ? '下り便' : '上り便';
+      const vesselInfo = statusByVessel.get(checkResult.vessel);
+      const isScheduled = vesselInfo === undefined;
+      const entryStatus = vesselInfo?.status ?? 'unknown';
+      const entryNote =
+        vesselInfo?.note ??
+        '公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。';
+      const labelSuffix = isScheduled ? '（予定）' : '';
 
       for (const portName of ALINE_ISLAND_PORTS) {
         const result =
@@ -458,26 +468,26 @@ async function fetchAlineScheduleEntries(targetDates, coveredDates) {
         // 複数の島へ向かう・複数の島から来る便を1件で表しているため、
         // 到着地・出発地を単一の島に断定しない（不明としてnullにする）。
         entries.push({
-          label: `${directionLabel} ${boardLoc} 出港（予定）`,
+          label: `${directionLabel} ${boardLoc} 出港${labelSuffix}`,
           time: result.board.time,
           date: result.board.date,
-          status: 'unknown',
-          note: '公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。',
+          status: entryStatus,
+          note: entryNote,
           direction: 'departure',
           islands: isDownstream ? ROUTE_ISLANDS : islands,
-          isScheduled: true,
+          isScheduled,
           departureLocation: boardLoc,
           arrivalLocation: isDownstream ? null : alightLoc,
         });
         entries.push({
-          label: `${directionLabel} ${alightLoc} 入港（予定）`,
+          label: `${directionLabel} ${alightLoc} 入港${labelSuffix}`,
           time: result.alight.time,
           date: result.alight.date,
-          status: 'unknown',
-          note: '公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。',
+          status: entryStatus,
+          note: entryNote,
           direction: 'arrival',
           islands: isDownstream ? islands : ROUTE_ISLANDS,
-          isScheduled: true,
+          isScheduled,
           departureLocation: isDownstream ? boardLoc : null,
           arrivalLocation: alightLoc,
         });
@@ -654,9 +664,11 @@ async function fetchMarixScheduleEntries(targetDates, coveredDates) {
 }
 
 // マルエーフェリー: 鹿児島〜奄美〜沖縄航路を担当する「あけぼの」「波之上」
-// の2隻分のブロック（div.status-archive）だけを見る。各船のお知らせ本文から
-// 「◯月◯日(木)鹿児島新港18:00発」のような出港時刻を正規表現で拾う
-// （公式サイトに寄港地別の構造化データが無いため、これが取得できる限界）。
+// の2隻分のブロック（div.status-archive）から、お知らせ見出し（欠航・
+// 条件付き運航等）だけを船名ごとに取得する。寄港地ごとの詳細な入出港
+// 時刻は、この見出しとは別に公式サイトの「乗船検索」（[fetchAlineScheduleEntries]）
+// から取得し、対応する船のステータスをそこに反映する
+// （お知らせページ単体には寄港地別の構造化データが無いため）。
 async function scrapeAline() {
   const html = await fetchHtml('https://aline-ferry.com/status/');
   const $ = cheerio.load(html);
@@ -668,8 +680,7 @@ async function scrapeAline() {
       const heading = collapse($el.find('h3').first().text());
       // h4はその船の直近のお知らせ見出し（例: 「8/20(木)鹿児島発下り便…条件付き運航」）
       const headline = collapse($el.find('h4').first().text()) || heading;
-      const text = collapse($el.text());
-      return { heading, headline, text };
+      return { heading, headline };
     })
     .filter((b) => b.heading.includes('あけぼの') || b.heading.includes('波之上'));
 
@@ -677,50 +688,27 @@ async function scrapeAline() {
     throw new Error('aline: target vessel blocks not found (page structure may have changed)');
   }
 
-  const departures = blocks.map((b) => {
-    const vesselName = b.heading.includes('あけぼの') ? 'フェリーあけぼの' : 'フェリー波之上';
-    // 本文（text）には「遅延」等を含む定型の注意書きが全船共通で入っており、
-    // それを拾うと正常運航の船まで誤って条件付き扱いになってしまう。
-    // その船固有のお知らせ見出し（headline）だけで判定する。
-    const status = classify(b.headline);
-    const m = b.text.match(/(\d{1,2})月(\d{1,2})日[^0-9]{0,12}(\d{1,2}:\d{2})発/);
-    const time = m ? `${m[1]}/${m[2]} ${m[3]}` : '本日';
-    const date = m ? dateFromMD(Number(m[1]), Number(m[2])) : TODAY_ISO;
-    return {
-      label: `${vesselName} 鹿児島発`,
-      time,
-      date,
-      status,
-      note: b.headline,
-      direction: 'departure',
-      // 寄港地別の構造化データが無いため、この航路が寄港する4島すべてに
-      // タグ付けする（実際にどの島で問題が起きているかまでは区別できない）。
-      islands: ROUTE_ISLANDS,
-      departureLocation: '鹿児島新港',
-      // 到着地（島側の港）は1件の告知が4島分を指すため、この時点では
-      // 特定できない（アプリ側で選択島の文脈に応じて補う）。
-      arrivalLocation: null,
-    };
-  });
+  const statusByVessel = new Map(
+    blocks.map((b) => {
+      const vesselName = b.heading.includes('あけぼの') ? 'フェリーあけぼの' : 'フェリー波之上';
+      return [vesselName, { status: classify(b.headline), note: b.headline }];
+    }),
+  );
 
-  // 集計（本日時点のステータス表示）はライブ取得した便のみで行う。
-  // 時刻表PDFの「予定」を混ぜると、常にunknownな予定便のせいで
+  // 本日〜6日先までを、寄港地別の入出港時刻つきで組み立てる
+  // （本日分は上記お知らせのステータスを反映した実データ、それ以外の
+  // 日は「予定」として扱われる。詳細は [fetchAlineScheduleEntries] 参照）。
+  const departures = await fetchAlineScheduleEntries(datesAhead(0, 7), statusByVessel);
+  if (departures.length === 0) {
+    throw new Error('aline: no departures parsed (search API may have changed)');
+  }
+
+  // 集計（本日時点のステータス表示）は本日分の実データのみで行う。
+  // 翌日以降の「予定」を混ぜると、常にunknownな予定便のせいで
   // 本日のステータス判定がぼやけてしまうため。
-  const status = worstStatus(departures.map((d) => d.status));
-  const worst = departures.find((d) => d.status === status) ?? departures[0];
-
-  // ライブ取得できた日以降〜7日先までを、年間スケジュールPDFの「予定」で補う
-  // （取得に失敗しても本体のスクレイピングは止めない）。
-  const coveredDates = new Set(departures.map((d) => d.date));
-  const maxCoveredOffset = Math.max(
-    0,
-    ...[...coveredDates].map((iso) => Math.round((new Date(iso) - new Date(TODAY_ISO)) / 86400000)),
-  );
-  const scheduleTargets = datesAhead(maxCoveredOffset + 1, 6 - maxCoveredOffset);
-  const scheduleEntries = await safe(
-    () => fetchAlineScheduleEntries(scheduleTargets, coveredDates),
-    () => [],
-  );
+  const todayDepartures = departures.filter((d) => d.date === TODAY_ISO);
+  const status = worstStatus(todayDepartures.map((d) => d.status));
+  const worst = todayDepartures.find((d) => d.status === status) ?? todayDepartures[0] ?? departures[0];
 
   return {
     id: 'aline_ferry',
@@ -730,7 +718,7 @@ async function scrapeAline() {
     status,
     note: worst.note,
     officialUrl: 'https://aline-ferry.com/status/',
-    departures: sortByTime([...departures, ...scheduleEntries]),
+    departures: sortByTime(departures),
   };
 }
 
