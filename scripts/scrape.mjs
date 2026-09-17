@@ -412,7 +412,11 @@ async function fetchAlineSearchResult(dateObj, startPortId, endPortId) {
 }
 
 const ALINE_PORT_ID = { 鹿児島新港: 50, 名瀬港: 70, 亀徳港: 78, 和泊港: 80, 与論港: 82 };
-const ALINE_ISLAND_PORTS = ['名瀬港', '亀徳港', '和泊港', '与論港'];
+// 下り便の寄港順（鹿児島新港→名瀬港→亀徳港→和泊港→与論港）。上り便は
+// この逆順になる。隣接する2港ずつを区間として乗船検索することで、
+// 「名瀬港発→亀徳港着」のような島間区間の出港・入港時刻も取得する
+// （鹿児島新港からの直行区間だけでは、鹿児島発の時刻しか得られないため）。
+const ALINE_ROUTE_PORTS = ['鹿児島新港', '名瀬港', '亀徳港', '和泊港', '与論港'];
 
 // 乗船検索が返す船名（フェリーあけぼの／フェリー波之上）ごとの、公式お知らせ
 // ページ由来のステータス・見出し文。本日分の寄港地別エントリに、対応する
@@ -425,15 +429,17 @@ async function fetchAlineScheduleEntries(targetDates, statusByVessel = new Map()
   const entries = [];
   for (const d of targetDates) {
     for (const isDownstream of [true, false]) {
-      // まず代表として名瀬港との組で運航の有無を確認する。この路線は
-      // マルエーフェリーとマリックスラインの共同運航で、相手会社の日は
-      // 「※下記参照」と返るため、その日はA'LINE側の便を作らない
+      const routePorts = isDownstream ? ALINE_ROUTE_PORTS : [...ALINE_ROUTE_PORTS].reverse();
+
+      // まず代表として最初の区間（鹿児島新港⇄名瀬港）で運航の有無を確認する。
+      // この路線はマルエーフェリーとマリックスラインの共同運航で、相手会社の
+      // 日は「※下記参照」と返るため、その日はA'LINE側の便を作らない
       // （年間スケジュールPDFのマーカーはサイト更新で意味が変わることが
       // あり信用できないため、日付ごとに実際の検索結果で判定する）。
-      const [checkStart, checkEnd] = isDownstream
-        ? [ALINE_PORT_ID['鹿児島新港'], ALINE_PORT_ID['名瀬港']]
-        : [ALINE_PORT_ID['名瀬港'], ALINE_PORT_ID['鹿児島新港']];
-      const checkResult = await safe(() => fetchAlineSearchResult(d, checkStart, checkEnd), () => null);
+      const checkResult = await safe(
+        () => fetchAlineSearchResult(d, ALINE_PORT_ID[routePorts[0]], ALINE_PORT_ID[routePorts[1]]),
+        () => null,
+      );
       if (!checkResult) continue;
 
       const directionLabel = isDownstream ? '下り便' : '上り便';
@@ -445,57 +451,63 @@ async function fetchAlineScheduleEntries(targetDates, statusByVessel = new Map()
         '公式サイトの乗船検索に基づく予定です。実際の運航状況は前日以降、公式サイトでご確認ください。';
       const labelSuffix = isScheduled ? '（予定）' : '';
 
-      for (const portName of ALINE_ISLAND_PORTS) {
+      // 隣接する港のペアごとに、その区間の乗船（出港）・下船（入港）時刻を
+      // 取得する（例: 下り便なら 鹿児島新港→名瀬港、名瀬港→亀徳港、…）。
+      // 乗船検索の startDate は「その区間の実際の乗船日」を指定する必要が
+      // あり、日付をまたぐ航海では区間ごとに異なる（例: 1日目に鹿児島を
+      // 出た便が2日目に名瀬港を出港する）。前区間の下船日を次区間の検索日
+      // として引き継ぐことで、これに対応する（固定の d のままだと、区間の
+      // 実際の乗船日と検索日がずれて「※下記参照」扱いになってしまう）。
+      let searchDate = d;
+      for (let i = 0; i < routePorts.length - 1; i++) {
+        const fromPort = routePorts[i];
+        const toPort = routePorts[i + 1];
         const result =
-          portName === '名瀬港'
+          i === 0
             ? checkResult
             : await safe(
-                () =>
-                  fetchAlineSearchResult(
-                    d,
-                    isDownstream ? ALINE_PORT_ID['鹿児島新港'] : ALINE_PORT_ID[portName],
-                    isDownstream ? ALINE_PORT_ID[portName] : ALINE_PORT_ID['鹿児島新港'],
-                  ),
+                () => fetchAlineSearchResult(searchDate, ALINE_PORT_ID[fromPort], ALINE_PORT_ID[toPort]),
                 () => null,
               );
         if (!result) continue;
 
-        const island = PORT_ISLAND_MAP[portName];
-        const islands = island ? [island] : [];
-        const [boardLoc, alightLoc] = isDownstream ? ['鹿児島新港', portName] : [portName, '鹿児島新港'];
+        const [alightYear, alightMonth, alightDay] = result.alight.date.split('-').map(Number);
+        searchDate = { year: alightYear, month: alightMonth, day: alightDay };
 
-        // 鹿児島新港側のイベント（出港＝下り便の起点／入港＝上り便の終点）は
-        // 複数の島へ向かう・複数の島から来る便を1件で表しているため、
-        // 到着地・出発地を単一の島に断定しない（不明としてnullにする）。
+        const fromIsland = PORT_ISLAND_MAP[fromPort];
+        const toIsland = PORT_ISLAND_MAP[toPort];
+
         entries.push({
-          label: `${directionLabel} ${boardLoc} 出港${labelSuffix}`,
+          label: `${directionLabel} ${fromPort} 出港${labelSuffix}`,
           time: result.board.time,
           date: result.board.date,
           status: entryStatus,
           note: entryNote,
           direction: 'departure',
-          islands: isDownstream ? ROUTE_ISLANDS : islands,
+          // 鹿児島新港発の区間は複数の島へ向かう便を1件で表すため、
+          // 島を単一に断定せず群島4島すべてにタグ付けする。
+          islands: fromIsland ? [fromIsland] : ROUTE_ISLANDS,
           isScheduled,
-          departureLocation: boardLoc,
-          arrivalLocation: isDownstream ? null : alightLoc,
+          departureLocation: fromPort,
+          arrivalLocation: toPort,
         });
         entries.push({
-          label: `${directionLabel} ${alightLoc} 入港${labelSuffix}`,
+          label: `${directionLabel} ${toPort} 入港${labelSuffix}`,
           time: result.alight.time,
           date: result.alight.date,
           status: entryStatus,
           note: entryNote,
           direction: 'arrival',
-          islands: isDownstream ? islands : ROUTE_ISLANDS,
+          islands: toIsland ? [toIsland] : ROUTE_ISLANDS,
           isScheduled,
-          departureLocation: isDownstream ? boardLoc : null,
-          arrivalLocation: alightLoc,
+          departureLocation: fromPort,
+          arrivalLocation: toPort,
         });
       }
     }
   }
 
-  // 同じ乗船・下船の組が複数の島問い合わせで重複しうる（鹿児島側の出港情報など）ため、
+  // 同じ乗船・下船の組が複数の区間問い合わせで重複しうるため、
   // label＋time＋dateの組で重複排除する。
   const seen = new Set();
   return entries.filter((e) => {
