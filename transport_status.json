@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-18T10:59:04.756Z",
+  "updatedAt": "2026-09-18T14:55:27.557Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -5666,7 +5666,7 @@
           "time": "20:15",
           "actualTime": "20:00",
           "status": "delayed",
-          "note": "早着予定",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "徳之島"
