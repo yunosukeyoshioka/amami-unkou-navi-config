@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-19T08:55:57.803Z",
+  "updatedAt": "2026-09-19T13:02:28.711Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -2035,7 +2035,7 @@
       "mode": "air",
       "hubAirportName": "奄美空港",
       "status": "delayed",
-      "note": "本日36便中14便に遅延・欠航等があります。",
+      "note": "本日36便中15便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -4739,7 +4739,7 @@
           "date": "2026-09-19",
           "actualTime": "17:45",
           "status": "delayed",
-          "note": "ただいま到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4942,7 +4942,7 @@
           "date": "2026-09-19",
           "actualTime": "18:05",
           "status": "delayed",
-          "note": "遅れ",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5040,7 +5040,7 @@
           "date": "2026-09-19",
           "actualTime": "18:15",
           "status": "delayed",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -5145,7 +5145,7 @@
           "date": "2026-09-19",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5243,7 +5243,7 @@
           "date": "2026-09-19",
           "actualTime": "18:35",
           "status": "delayed",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5341,7 +5341,7 @@
           "date": "2026-09-19",
           "actualTime": "18:30",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5437,9 +5437,9 @@
           "label": "388便 鹿児島行き",
           "time": "18:50",
           "date": "2026-09-19",
-          "actualTime": "18:50",
-          "status": "normal",
-          "note": "搭乗手続き受付中",
+          "actualTime": "19:00",
+          "status": "delayed",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5537,7 +5537,7 @@
           "date": "2026-09-19",
           "actualTime": "19:00",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5638,7 +5638,7 @@
       "mode": "air",
       "hubAirportName": "鹿児島空港",
       "status": "delayed",
-      "note": "本日18便中5便に遅延・欠航等があります。",
+      "note": "本日18便中6便に遅延・欠航等があります。",
       "officialUrl": "https://www.koj-ab.co.jp/flight/today-dom-departure.html",
       "departures": [
         {
@@ -5854,9 +5854,9 @@
         {
           "label": "3808便 沖永良部発",
           "time": "18:10",
-          "actualTime": "18:30",
+          "actualTime": "18:35",
           "status": "delayed",
-          "note": "遅れ",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -5870,7 +5870,7 @@
           "time": "18:35",
           "actualTime": "18:35",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5882,9 +5882,9 @@
         {
           "label": "3798便 徳之島発",
           "time": "20:15",
-          "actualTime": "20:15",
-          "status": "normal",
-          "note": null,
+          "actualTime": "20:25",
+          "status": "delayed",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "徳之島"
