@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-20T23:07:18.348Z",
+  "updatedAt": "2026-09-21T01:28:41.280Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -8,15 +8,15 @@
       "routeName": "鹿児島〜奄美〜沖縄",
       "mode": "ferry",
       "status": "conditional",
-      "note": "■9/21(月)那覇港発上り便…条件付き運航",
+      "note": "■９月２１日(月)下り便…条件付き運航",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
           "label": "下り便 名瀬港 入港",
           "time": "05:00",
           "date": "2026-09-22",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -30,7 +30,7 @@
           "time": "05:00",
           "date": "2026-09-24",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -43,8 +43,8 @@
           "label": "下り便 名瀬港 入港",
           "time": "05:00",
           "date": "2026-09-26",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -58,7 +58,7 @@
           "time": "05:00",
           "date": "2026-09-28",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -71,8 +71,8 @@
           "label": "下り便 名瀬港 出港",
           "time": "05:50",
           "date": "2026-09-22",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -86,7 +86,7 @@
           "time": "05:50",
           "date": "2026-09-24",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -99,8 +99,8 @@
           "label": "下り便 名瀬港 出港",
           "time": "05:50",
           "date": "2026-09-26",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -114,7 +114,7 @@
           "time": "05:50",
           "date": "2026-09-28",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -128,7 +128,7 @@
           "time": "08:30",
           "date": "2026-09-22",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -144,8 +144,8 @@
           "label": "上り便 鹿児島新港 入港",
           "time": "08:30",
           "date": "2026-09-24",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -162,7 +162,7 @@
           "time": "08:30",
           "date": "2026-09-26",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -178,8 +178,8 @@
           "label": "上り便 鹿児島新港 入港",
           "time": "08:30",
           "date": "2026-09-28",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -195,8 +195,8 @@
           "label": "下り便 亀徳港 入港",
           "time": "09:10",
           "date": "2026-09-22",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -210,7 +210,7 @@
           "time": "09:10",
           "date": "2026-09-24",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -223,8 +223,8 @@
           "label": "下り便 亀徳港 入港",
           "time": "09:10",
           "date": "2026-09-26",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -238,7 +238,7 @@
           "time": "09:10",
           "date": "2026-09-28",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -251,8 +251,8 @@
           "label": "下り便 亀徳港 出港",
           "time": "09:40",
           "date": "2026-09-22",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -266,7 +266,7 @@
           "time": "09:40",
           "date": "2026-09-24",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -279,8 +279,8 @@
           "label": "下り便 亀徳港 出港",
           "time": "09:40",
           "date": "2026-09-26",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -294,7 +294,7 @@
           "time": "09:40",
           "date": "2026-09-28",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -307,8 +307,8 @@
           "label": "下り便 和泊港 入港",
           "time": "11:30",
           "date": "2026-09-22",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -322,7 +322,7 @@
           "time": "11:30",
           "date": "2026-09-24",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -335,8 +335,8 @@
           "label": "下り便 和泊港 入港",
           "time": "11:30",
           "date": "2026-09-26",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -350,7 +350,7 @@
           "time": "11:30",
           "date": "2026-09-28",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -363,8 +363,8 @@
           "label": "下り便 和泊港 出港",
           "time": "12:00",
           "date": "2026-09-22",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -378,7 +378,7 @@
           "time": "12:00",
           "date": "2026-09-24",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -391,8 +391,8 @@
           "label": "下り便 和泊港 出港",
           "time": "12:00",
           "date": "2026-09-26",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -406,7 +406,7 @@
           "time": "12:00",
           "date": "2026-09-28",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -420,7 +420,7 @@
           "time": "12:10",
           "date": "2026-09-21",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -433,8 +433,8 @@
           "label": "上り便 与論港 出港",
           "time": "12:10",
           "date": "2026-09-23",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -448,7 +448,7 @@
           "time": "12:10",
           "date": "2026-09-25",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -461,8 +461,8 @@
           "label": "上り便 与論港 出港",
           "time": "12:10",
           "date": "2026-09-27",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -475,8 +475,8 @@
           "label": "下り便 与論港 入港",
           "time": "13:40",
           "date": "2026-09-22",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -490,7 +490,7 @@
           "time": "13:40",
           "date": "2026-09-24",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -503,8 +503,8 @@
           "label": "下り便 与論港 入港",
           "time": "13:40",
           "date": "2026-09-26",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -518,7 +518,7 @@
           "time": "13:40",
           "date": "2026-09-28",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -532,7 +532,7 @@
           "time": "14:10",
           "date": "2026-09-21",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -545,8 +545,8 @@
           "label": "上り便 和泊港 入港",
           "time": "14:10",
           "date": "2026-09-23",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -560,7 +560,7 @@
           "time": "14:10",
           "date": "2026-09-25",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -573,8 +573,8 @@
           "label": "上り便 和泊港 入港",
           "time": "14:10",
           "date": "2026-09-27",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -588,7 +588,7 @@
           "time": "14:40",
           "date": "2026-09-21",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -601,8 +601,8 @@
           "label": "上り便 和泊港 出港",
           "time": "14:40",
           "date": "2026-09-23",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -616,7 +616,7 @@
           "time": "14:40",
           "date": "2026-09-25",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -629,8 +629,8 @@
           "label": "上り便 和泊港 出港",
           "time": "14:40",
           "date": "2026-09-27",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -644,7 +644,7 @@
           "time": "16:30",
           "date": "2026-09-21",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -657,8 +657,8 @@
           "label": "上り便 亀徳港 入港",
           "time": "16:30",
           "date": "2026-09-23",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -672,7 +672,7 @@
           "time": "16:30",
           "date": "2026-09-25",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -685,8 +685,8 @@
           "label": "上り便 亀徳港 入港",
           "time": "16:30",
           "date": "2026-09-27",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -700,7 +700,7 @@
           "time": "17:00",
           "date": "2026-09-21",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -713,8 +713,8 @@
           "label": "上り便 亀徳港 出港",
           "time": "17:00",
           "date": "2026-09-23",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -728,7 +728,7 @@
           "time": "17:00",
           "date": "2026-09-25",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -741,8 +741,8 @@
           "label": "上り便 亀徳港 出港",
           "time": "17:00",
           "date": "2026-09-27",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -755,8 +755,8 @@
           "label": "下り便 鹿児島新港 出港",
           "time": "18:00",
           "date": "2026-09-21",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -773,7 +773,7 @@
           "time": "18:00",
           "date": "2026-09-23",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -789,8 +789,8 @@
           "label": "下り便 鹿児島新港 出港",
           "time": "18:00",
           "date": "2026-09-25",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -807,7 +807,7 @@
           "time": "18:00",
           "date": "2026-09-27",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -824,7 +824,7 @@
           "time": "20:30",
           "date": "2026-09-21",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -837,8 +837,8 @@
           "label": "上り便 名瀬港 入港",
           "time": "20:30",
           "date": "2026-09-23",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -852,7 +852,7 @@
           "time": "20:30",
           "date": "2026-09-25",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -865,8 +865,8 @@
           "label": "上り便 名瀬港 入港",
           "time": "20:30",
           "date": "2026-09-27",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -880,7 +880,7 @@
           "time": "21:20",
           "date": "2026-09-21",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -893,8 +893,8 @@
           "label": "上り便 名瀬港 出港",
           "time": "21:20",
           "date": "2026-09-23",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -908,7 +908,7 @@
           "time": "21:20",
           "date": "2026-09-25",
           "status": "conditional",
-          "note": "■9/21(月)那覇港発上り便…条件付き運航",
+          "note": "■9/21(月)那覇港発上り便…条件付き運航、寄港地変更",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -921,8 +921,8 @@
           "label": "上り便 名瀬港 出港",
           "time": "21:20",
           "date": "2026-09-27",
-          "status": "normal",
-          "note": "通常運航致しております。",
+          "status": "conditional",
+          "note": "■９月２１日(月)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2216,7 +2216,7 @@
           "date": "2026-09-21",
           "actualTime": "08:15",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2314,7 +2314,7 @@
           "date": "2026-09-21",
           "actualTime": "08:45",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2412,7 +2412,7 @@
           "date": "2026-09-21",
           "actualTime": "08:55",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2510,7 +2510,7 @@
           "date": "2026-09-21",
           "actualTime": "09:25",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2615,7 +2615,7 @@
           "date": "2026-09-21",
           "actualTime": "09:40",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2713,7 +2713,7 @@
           "date": "2026-09-21",
           "actualTime": "10:10",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -2818,7 +2818,7 @@
           "date": "2026-09-21",
           "actualTime": "10:30",
           "status": "normal",
-          "note": "定刻",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5860,7 +5860,7 @@
           "time": "08:55",
           "actualTime": "08:55",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5874,7 +5874,7 @@
           "time": "10:25",
           "actualTime": "10:25",
           "status": "normal",
-          "note": null,
+          "note": "ただいま到着",
           "direction": "arrival",
           "islands": [
             "喜界島"
@@ -5888,7 +5888,7 @@
           "time": "10:35",
           "actualTime": "10:35",
           "status": "normal",
-          "note": null,
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
