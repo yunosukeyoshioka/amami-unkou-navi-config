@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-22T21:08:41.557Z",
+  "updatedAt": "2026-09-22T23:45:18.688Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -2216,7 +2216,7 @@
           "date": "2026-09-23",
           "actualTime": "08:15",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2314,7 +2314,7 @@
           "date": "2026-09-23",
           "actualTime": "08:45",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "搭乗ご案内中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2412,7 +2412,7 @@
           "date": "2026-09-23",
           "actualTime": "08:55",
           "status": "normal",
-          "note": "定刻",
+          "note": "まもなく到着",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5818,7 +5818,7 @@
           "time": "07:20",
           "actualTime": "07:20",
           "status": "normal",
-          "note": null,
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -5832,7 +5832,7 @@
           "time": "07:35",
           "actualTime": "07:35",
           "status": "normal",
-          "note": null,
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "喜界島"
@@ -5846,7 +5846,7 @@
           "time": "07:50",
           "actualTime": "07:50",
           "status": "normal",
-          "note": null,
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5860,7 +5860,7 @@
           "time": "08:55",
           "actualTime": "08:55",
           "status": "normal",
-          "note": null,
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5902,7 +5902,7 @@
           "time": "11:10",
           "actualTime": "11:10",
           "status": "normal",
-          "note": null,
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -5930,7 +5930,7 @@
           "time": "13:00",
           "actualTime": "13:00",
           "status": "normal",
-          "note": null,
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5944,7 +5944,7 @@
           "time": "13:30",
           "actualTime": "13:30",
           "status": "normal",
-          "note": null,
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "喜界島"
@@ -5972,7 +5972,7 @@
           "time": "14:55",
           "actualTime": "14:55",
           "status": "normal",
-          "note": null,
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -5986,7 +5986,7 @@
           "time": "16:05",
           "actualTime": "16:05",
           "status": "normal",
-          "note": null,
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "徳之島"
