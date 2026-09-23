@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-23T09:28:35.248Z",
+  "updatedAt": "2026-09-23T14:22:45.238Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -5317,7 +5317,7 @@
           "date": "2026-09-23",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "ただいま到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5513,7 +5513,7 @@
           "date": "2026-09-23",
           "actualTime": "18:30",
           "status": "normal",
-          "note": "ただいま到着",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5611,7 +5611,7 @@
           "date": "2026-09-23",
           "actualTime": "18:50",
           "status": "normal",
-          "note": "ゲートへお越し下さい",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5709,7 +5709,7 @@
           "date": "2026-09-23",
           "actualTime": "19:00",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -6042,7 +6042,7 @@
           "time": "18:35",
           "actualTime": "18:35",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -6056,7 +6056,7 @@
           "time": "20:15",
           "actualTime": "20:15",
           "status": "normal",
-          "note": null,
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "徳之島"
