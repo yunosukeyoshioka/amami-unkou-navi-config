@@ -148,13 +148,35 @@ function operatorResult({
 }
 
 export function parseKyodoScheduleItems(items) {
-  const title = asciiDigits(items.map((item) => item.text).join(' '));
-  const titleMatch = title.match(/(\d{4})年\s*(\d{1,2})月/);
-  if (!titleMatch) {
+  const normalized = items.map((item) => ({
+    ...item,
+    text: asciiDigits(item.text),
+  }));
+
+  // タイトル部分は「2026年」「運航予定表」「10月」のように複数の
+  // テキストアイテムへ分かれて格納されることがあり、PDF内部の並び順は
+  // 見た目のx座標順とは限らない。そのため文字列を単純結合して正規表現
+  // マッチするのではなく、「年」を含むアイテムを起点に、同じ行（yが
+  // 最も近い）にある「M月」単体のアイテムを探して年月を特定する。
+  const yearItem = normalized.find((item) => /\d{4}年/.test(item.text));
+  if (!yearItem) {
     throw new Error('共同組海運の配船表から年月を特定できません');
   }
-  const year = Number(titleMatch[1]);
-  const month = Number(titleMatch[2]);
+  const year = Number(yearItem.text.match(/(\d{4})年/)[1]);
+
+  const sameItemMonth = yearItem.text.match(/(\d{1,2})月/);
+  let month;
+  if (sameItemMonth) {
+    month = Number(sameItemMonth[1]);
+  } else {
+    const monthItem = normalized
+      .filter((item) => /^\d{1,2}月$/.test(item.text.trim()))
+      .sort((a, b) => Math.abs(a.y - yearItem.y) - Math.abs(b.y - yearItem.y))[0];
+    if (!monthItem) {
+      throw new Error('共同組海運の配船表から年月を特定できません');
+    }
+    month = Number(monthItem.text.trim().match(/(\d{1,2})月/)[1]);
+  }
 
   const headers = items
     .filter((item) => /^\d{1,2}$/.test(asciiDigits(item.text.trim())))
