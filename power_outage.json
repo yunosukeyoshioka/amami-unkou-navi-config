@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-26T18:28:03.138Z",
-  "sourceReleaseAt": "2026-09-27T03:26:03+09:00",
+  "updatedAt": "2026-09-26T21:27:38.316Z",
+  "sourceReleaseAt": "2026-09-27T06:27:03+09:00",
   "officialUrl": "https://www.kyuden.co.jp/td_teiden/kyushu.html",
-  "amamiRegionBlackoutCount": "約320戸",
+  "amamiRegionBlackoutCount": "0戸",
   "comment": null,
   "municipalities": [
     {
@@ -34,9 +34,9 @@
       "cityId": "525",
       "cityName": "瀬戸内町",
       "island": "奄美大島",
-      "blackoutCount": "約320戸",
-      "hasOutage": true,
-      "restoration": "確認中"
+      "blackoutCount": "0戸",
+      "hasOutage": false,
+      "restoration": null
     },
     {
       "cityId": "527",
