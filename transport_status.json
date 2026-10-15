@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-14T21:54:04.520Z",
+  "updatedAt": "2026-10-15T00:23:02.375Z",
   "operators": [
     {
       "id": "aline_ferry",
       "operatorName": "マルエーフェリー",
       "routeName": "鹿児島〜奄美〜沖縄",
       "mode": "ferry",
-      "status": "normal",
-      "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+      "status": "conditional",
+      "note": "■10月15日(木)下り便…条件付き運航",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
           "label": "下り便 名瀬港 入港",
           "time": "05:00",
           "date": "2026-10-16",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -43,8 +43,8 @@
           "label": "下り便 名瀬港 入港",
           "time": "05:00",
           "date": "2026-10-19",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -71,8 +71,8 @@
           "label": "下り便 名瀬港 入港",
           "time": "05:00",
           "date": "2026-10-22",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -85,8 +85,8 @@
           "label": "下り便 名瀬港 出港",
           "time": "05:50",
           "date": "2026-10-16",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -113,8 +113,8 @@
           "label": "下り便 名瀬港 出港",
           "time": "05:50",
           "date": "2026-10-19",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -141,8 +141,8 @@
           "label": "下り便 名瀬港 出港",
           "time": "05:50",
           "date": "2026-10-22",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -172,8 +172,8 @@
           "label": "上り便 鹿児島新港 入港",
           "time": "08:30",
           "date": "2026-10-18",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -206,8 +206,8 @@
           "label": "上り便 鹿児島新港 入港",
           "time": "08:30",
           "date": "2026-10-21",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -240,8 +240,8 @@
           "label": "下り便 亀徳港 入港",
           "time": "09:10",
           "date": "2026-10-16",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -268,8 +268,8 @@
           "label": "下り便 亀徳港 入港",
           "time": "09:10",
           "date": "2026-10-19",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -296,8 +296,8 @@
           "label": "下り便 亀徳港 入港",
           "time": "09:10",
           "date": "2026-10-22",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -310,8 +310,8 @@
           "label": "下り便 亀徳港 出港",
           "time": "09:40",
           "date": "2026-10-16",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -338,8 +338,8 @@
           "label": "下り便 亀徳港 出港",
           "time": "09:40",
           "date": "2026-10-19",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -366,8 +366,8 @@
           "label": "下り便 亀徳港 出港",
           "time": "09:40",
           "date": "2026-10-22",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -380,8 +380,8 @@
           "label": "下り便 和泊港 入港",
           "time": "11:30",
           "date": "2026-10-16",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -408,8 +408,8 @@
           "label": "下り便 和泊港 入港",
           "time": "11:30",
           "date": "2026-10-19",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -436,8 +436,8 @@
           "label": "下り便 和泊港 入港",
           "time": "11:30",
           "date": "2026-10-22",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -450,8 +450,8 @@
           "label": "下り便 和泊港 出港",
           "time": "12:00",
           "date": "2026-10-16",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -478,8 +478,8 @@
           "label": "下り便 和泊港 出港",
           "time": "12:00",
           "date": "2026-10-19",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -506,8 +506,8 @@
           "label": "下り便 和泊港 出港",
           "time": "12:00",
           "date": "2026-10-22",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -534,8 +534,8 @@
           "label": "上り便 与論港 出港",
           "time": "12:10",
           "date": "2026-10-17",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -562,8 +562,8 @@
           "label": "上り便 与論港 出港",
           "time": "12:10",
           "date": "2026-10-20",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -590,8 +590,8 @@
           "label": "下り便 与論港 入港",
           "time": "13:40",
           "date": "2026-10-16",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -618,8 +618,8 @@
           "label": "下り便 与論港 入港",
           "time": "13:40",
           "date": "2026-10-19",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -646,8 +646,8 @@
           "label": "下り便 与論港 入港",
           "time": "13:40",
           "date": "2026-10-22",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -674,8 +674,8 @@
           "label": "上り便 和泊港 入港",
           "time": "14:10",
           "date": "2026-10-17",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -702,8 +702,8 @@
           "label": "上り便 和泊港 入港",
           "time": "14:10",
           "date": "2026-10-20",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -744,8 +744,8 @@
           "label": "上り便 和泊港 出港",
           "time": "14:40",
           "date": "2026-10-17",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -772,8 +772,8 @@
           "label": "上り便 和泊港 出港",
           "time": "14:40",
           "date": "2026-10-20",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -814,8 +814,8 @@
           "label": "上り便 亀徳港 入港",
           "time": "16:30",
           "date": "2026-10-17",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -842,8 +842,8 @@
           "label": "上り便 亀徳港 入港",
           "time": "16:30",
           "date": "2026-10-20",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -884,8 +884,8 @@
           "label": "上り便 亀徳港 出港",
           "time": "17:00",
           "date": "2026-10-17",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -912,8 +912,8 @@
           "label": "上り便 亀徳港 出港",
           "time": "17:00",
           "date": "2026-10-20",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -940,8 +940,8 @@
           "label": "下り便 鹿児島新港 出港",
           "time": "18:00",
           "date": "2026-10-15",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -974,8 +974,8 @@
           "label": "下り便 鹿児島新港 出港",
           "time": "18:00",
           "date": "2026-10-18",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -1008,8 +1008,8 @@
           "label": "下り便 鹿児島新港 出港",
           "time": "18:00",
           "date": "2026-10-21",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -1039,8 +1039,8 @@
           "label": "上り便 名瀬港 入港",
           "time": "20:30",
           "date": "2026-10-17",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -1067,8 +1067,8 @@
           "label": "上り便 名瀬港 入港",
           "time": "20:30",
           "date": "2026-10-20",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -1109,8 +1109,8 @@
           "label": "上り便 名瀬港 出港",
           "time": "21:20",
           "date": "2026-10-17",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -1137,8 +1137,8 @@
           "label": "上り便 名瀬港 出港",
           "time": "21:20",
           "date": "2026-10-20",
-          "status": "normal",
-          "note": "通常運航致しております。 ■寄港地変更：亀徳港→平土野港",
+          "status": "conditional",
+          "note": "■10月15日(木)下り便…条件付き運航",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2116,17 +2116,17 @@
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
       "hubAirportName": "奄美空港",
-      "status": "normal",
-      "note": "本日34便中、欠航はありません。",
+      "status": "delayed",
+      "note": "本日34便中2便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
           "label": "3681便 福岡発",
           "time": "08:15",
           "date": "2026-10-15",
-          "actualTime": "08:15",
-          "status": "normal",
-          "note": "定刻",
+          "actualTime": "08:30",
+          "status": "delayed",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2222,9 +2222,9 @@
           "label": "3722便 鹿児島行き",
           "time": "08:45",
           "date": "2026-10-15",
-          "actualTime": "08:45",
-          "status": "normal",
-          "note": "搭乗手続き受付中",
+          "actualTime": "08:55",
+          "status": "delayed",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2322,7 +2322,7 @@
           "date": "2026-10-15",
           "actualTime": "08:55",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2420,7 +2420,7 @@
           "date": "2026-10-15",
           "actualTime": "09:25",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -5691,8 +5691,8 @@
       "routeName": "鹿児島空港発着（JAL・JAC他）",
       "mode": "air",
       "hubAirportName": "鹿児島空港",
-      "status": "normal",
-      "note": "本日18便中、欠航はありません。",
+      "status": "delayed",
+      "note": "本日18便中2便に遅延・欠航等があります。",
       "officialUrl": "https://www.koj-ab.co.jp/flight/today-dom-departure.html",
       "departures": [
         {
@@ -5700,7 +5700,7 @@
           "time": "07:25",
           "actualTime": "07:25",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -5714,7 +5714,7 @@
           "time": "07:35",
           "actualTime": "07:35",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "喜界島"
@@ -5728,7 +5728,7 @@
           "time": "07:50",
           "actualTime": "07:50",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5742,7 +5742,7 @@
           "time": "08:55",
           "actualTime": "08:55",
           "status": "normal",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5824,9 +5824,9 @@
         {
           "label": "3785便 喜界島行き",
           "time": "13:30",
-          "actualTime": "13:30",
-          "status": "normal",
-          "note": "搭乗手続き受付中",
+          "actualTime": "14:15",
+          "status": "delayed",
+          "note": "使用機手配による遅れ",
           "direction": "departure",
           "islands": [
             "喜界島"
@@ -5894,9 +5894,9 @@
         {
           "label": "3786便 喜界島発",
           "time": "16:20",
-          "actualTime": "16:20",
-          "status": "normal",
-          "note": null,
+          "actualTime": "17:05",
+          "status": "delayed",
+          "note": "遅れ",
           "direction": "arrival",
           "islands": [
             "喜界島"
