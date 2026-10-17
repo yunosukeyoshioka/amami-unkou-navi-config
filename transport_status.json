@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-17T11:05:21.530Z",
+  "updatedAt": "2026-10-17T14:20:57.971Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -5673,9 +5673,9 @@
         {
           "label": "3798便 徳之島発",
           "time": "20:15",
-          "actualTime": "20:00",
+          "actualTime": "20:05",
           "status": "delayed",
-          "note": "早着予定",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "徳之島"
