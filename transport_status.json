@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-18T09:49:11.974Z",
+  "updatedAt": "2026-10-18T13:52:56.924Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -5447,7 +5447,7 @@
           "date": "2026-10-18",
           "actualTime": "19:00",
           "status": "normal",
-          "note": "搭乗ご案内中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5548,7 +5548,7 @@
       "mode": "air",
       "hubAirportName": "鹿児島空港",
       "status": "delayed",
-      "note": "本日18便中4便に遅延・欠航等があります。",
+      "note": "本日18便中5便に遅延・欠航等があります。",
       "officialUrl": "https://www.koj-ab.co.jp/flight/today-dom-departure.html",
       "departures": [
         {
@@ -5792,9 +5792,9 @@
         {
           "label": "3798便 徳之島発",
           "time": "20:15",
-          "actualTime": "20:15",
-          "status": "normal",
-          "note": null,
+          "actualTime": "20:05",
+          "status": "delayed",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "徳之島"
