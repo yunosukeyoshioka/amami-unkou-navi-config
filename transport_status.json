@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T09:31:04.354Z",
+  "updatedAt": "2026-10-21T14:59:47.991Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -5177,7 +5177,7 @@
           "date": "2026-10-21",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "遅れ",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5373,7 +5373,7 @@
           "date": "2026-10-21",
           "actualTime": "19:55",
           "status": "delayed",
-          "note": "遅れ",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5469,9 +5469,9 @@
           "label": "388便 鹿児島行き",
           "time": "18:50",
           "date": "2026-10-21",
-          "actualTime": "19:05",
+          "actualTime": "19:10",
           "status": "delayed",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5569,7 +5569,7 @@
           "date": "2026-10-21",
           "actualTime": "20:20",
           "status": "delayed",
-          "note": "搭乗手続き受付中",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5886,9 +5886,9 @@
         {
           "label": "3808便 沖永良部発",
           "time": "18:10",
-          "actualTime": "18:25",
+          "actualTime": "18:35",
           "status": "delayed",
-          "note": "遅れ",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -5902,7 +5902,7 @@
           "time": "18:35",
           "actualTime": "18:35",
           "status": "normal",
-          "note": "定刻",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5916,7 +5916,7 @@
           "time": "20:15",
           "actualTime": "20:15",
           "status": "normal",
-          "note": null,
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "徳之島"
