@@ -6,6 +6,8 @@ import {
   buildKaniyakuCargoSchedule,
   parseKyodoScheduleItems,
   requireAllSupplySources,
+  findPdfLink,
+  parseEffectiveFrom,
   resolvePdfLink,
 } from './cargo_schedule.mjs';
 
@@ -261,4 +263,69 @@ test('一社でも取得失敗した場合は不完全なJSON更新を許可し�
       ]),
     /official PDF unavailable/,
   );
+});
+
+// 公式PDF（2026年11月2日から週4便）のテキスト抽出結果に近い文面。
+const KIKAI_WEEKLY4_PDF_TEXT =
+  '《 運航スケジュール 》 【下り便】 鹿児島発奄美各島行き 運航日 ' +
+  '鹿児島発（1日目） 月・火・木・金 奄美各島発着（２日目） 火・水・金・土 ' +
+  '鹿児島 喜 界 名 瀬 古仁屋 平土野 17：30出港 ' +
+  '04：30入港 05：00出港 07：00入港 07：30出港 09：40入港 10：00出港 12：20入港 ' +
+  '【上り便】 奄美各島発鹿児島行き 運航日 奄美各島発着（１日目） 火・水・金・土 ' +
+  '鹿児島着（２日目） 水・木・土・日 平土野 古仁屋 名 瀬 喜 界 鹿児島 ' +
+  '12：50出港 15：10入港 15：30出港 17：50入港 18：20出港 20：30入港 21：00出港 08：30入港';
+
+test('奄美海運の週4便は火・水・金・土を奄美各島の寄港日として時刻を作る', () => {
+  const result = buildAmamiKaiunSchedule(KIKAI_WEEKLY4_PDF_TEXT, {
+    from: new Date('2026-11-02T00:00:00+09:00'),
+    days: 7,
+  });
+
+  const nameseArrivals = result.departures
+    .filter(
+      (entry) =>
+        entry.islands[0] === '奄美大島' &&
+        entry.arrivalLocation === '名瀬港' &&
+        entry.direction === 'arrival' &&
+        entry.time === '07:00',
+    )
+    .map((entry) => entry.date);
+  // 2026-11-03(火) 04(水) 06(金) 07(土)。月・木・日には寄港しない。
+  assert.deepEqual(nameseArrivals, [
+    '2026-11-03',
+    '2026-11-04',
+    '2026-11-06',
+    '2026-11-07',
+  ]);
+  assert.match(result.departures[0].label, /フェリーあまみ／フェリーきかい/);
+});
+
+test('週4便の適用開始日より前の基準日には予定を作らない', () => {
+  const result = buildAmamiKaiunSchedule(KIKAI_WEEKLY4_PDF_TEXT, {
+    from: new Date('2026-10-30T00:00:00+09:00'),
+    days: 8,
+    baseDateFrom: '2026-11-02',
+  });
+
+  const dates = [
+    ...new Set(
+      result.departures
+        .filter((entry) => entry.direction === 'arrival' && entry.time === '07:00')
+        .map((entry) => entry.date),
+    ),
+  ];
+  // 10-30(金)は週4便の寄港日だが、適用開始日(11-02)より前なので含めない。
+  assert.deepEqual(dates, ['2026-11-03', '2026-11-04', '2026-11-06']);
+});
+
+test('PDFリンク文言から週4便の適用開始日を読み取る', () => {
+  const html = `
+    <a href="/a.pdf">2026年11月2日から　運航スケジュール週４便（あまみ・きかい）</a>
+    <a href="/b.pdf">2026年10月30日まで　運航スケジュール週３便（きかい）</a>
+  `;
+  const link = findPdfLink(html, /週4便/, 'https://example.com/amami/time/');
+
+  assert.equal(link.url, 'https://example.com/a.pdf');
+  assert.equal(parseEffectiveFrom(link.text), '2026-11-02');
+  assert.equal(findPdfLink(html, /週5便/, 'https://example.com/'), null);
 });

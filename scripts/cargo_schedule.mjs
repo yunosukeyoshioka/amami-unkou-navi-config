@@ -392,9 +392,52 @@ const KIKAI_UP_TEMPLATE = [
   { port: '鹿児島', dayOffset: 1, arr: '08:30' },
 ];
 
+// 奄美海運の運航体制。いずれも寄港地・時刻は同じで、運航日だけが異なる。
+// islandDays は「奄美各島に寄港する日」（基準日）の曜日（日=0）。
+const KIKAI_REGIMES = {
+  weekly3: {
+    islandDays: [2, 4, 6],
+    vessel: 'フェリーきかい',
+    routeName: 'フェリーきかい／鹿児島〜喜界〜奄美〜徳之島',
+    markers: ['フェリーきかい週3便運航スケジュール', '月・水・金', '火・木・土'],
+  },
+  // 公式PDFには「フェリーあまみ・フェリーきかいは4ヶ月毎に下り便・上り便の
+  // 運航船舶を入替え」とあり、どちらがどの便かは特定できないため併記する。
+  weekly4: {
+    islandDays: [2, 3, 5, 6],
+    vessel: 'フェリーあまみ／フェリーきかい',
+    routeName: 'フェリーあまみ・きかい／鹿児島〜喜界〜奄美〜徳之島',
+    markers: [
+      '【下り便】',
+      '【上り便】',
+      '月・火・木・金',
+      '火・水・金・土',
+      '水・木・土・日',
+    ],
+  },
+};
+const KIKAI_COMMON_MARKERS = [
+  '喜界',
+  '名瀬',
+  '古仁屋',
+  '平土野',
+  '04:30',
+  '07:00',
+  '09:40',
+  '12:20',
+  '12:50',
+  '15:10',
+  '17:50',
+  '20:30',
+  '08:30',
+];
+
+// baseDateFrom（以上）・baseDateBefore（未満）は、基準日（奄美各島寄港日）を
+// 絞り込むISO日付。体制切替日をまたぐ期間に、別々のPDFから作った結果を
+// 重複なくつなぐために使う。
 export function buildAmamiKaiunSchedule(
   pdfText,
-  { from = new Date(), days = 14 } = {},
+  { from = new Date(), days = 14, baseDateFrom, baseDateBefore } = {},
 ) {
   const text = asciiDigits(pdfText)
     .replace(/[⽉月]/g, '月')
@@ -407,31 +450,25 @@ export function buildAmamiKaiunSchedule(
     .replace(/[⼊入]/g, '入')
     .replace(/[：:]/g, ':')
     .replace(/\s+/g, '');
-  const required = [
-    'フェリーきかい週3便運航スケジュール',
-    '月・水・金',
-    '火・木・土',
-    '喜界',
-    '名瀬',
-    '古仁屋',
-    '平土野',
-    '04:30',
-    '07:00',
-    '09:40',
-    '12:20',
-    '12:50',
-    '15:10',
-    '17:50',
-    '20:30',
-    '08:30',
-  ];
-  if (!required.every((marker) => text.includes(marker))) {
-    throw new Error('奄美海運の週3便ダイヤを確認できません');
+  const regime = Object.values(KIKAI_REGIMES).find((candidate) =>
+    [...candidate.markers, ...KIKAI_COMMON_MARKERS].every((marker) =>
+      text.includes(marker),
+    ),
+  );
+  if (!regime) {
+    throw new Error('奄美海運の運航ダイヤを確認できません');
   }
 
   const departures = [];
   for (const date of dateRange(from, days)) {
-    if (![2, 4, 6].includes(date.getUTCDay())) continue;
+    if (!regime.islandDays.includes(date.getUTCDay())) continue;
+    const baseIso = isoDate(
+      date.getUTCFullYear(),
+      date.getUTCMonth() + 1,
+      date.getUTCDate(),
+    );
+    if (baseDateFrom && baseIso < baseDateFrom) continue;
+    if (baseDateBefore && baseIso >= baseDateBefore) continue;
     for (const [template, labelPrefix] of [
       [KIKAI_DOWN_TEMPLATE, '下り便'],
       [KIKAI_UP_TEMPLATE, '上り便'],
@@ -450,7 +487,7 @@ export function buildAmamiKaiunSchedule(
           index < template.length - 1 ? template[index + 1].port : null;
         const common = {
           operatorName: '奄美海運',
-          vessel: 'フェリーきかい',
+          vessel: regime.vessel,
           routeName: '鹿児島〜喜界〜名瀬〜古仁屋〜平土野',
           islands,
           port: stop.port,
@@ -489,7 +526,7 @@ export function buildAmamiKaiunSchedule(
   return operatorResult({
     id: 'amami_kaiun_freight_ferry',
     operatorName: '奄美海運（貨物取扱あり）',
-    routeName: 'フェリーきかい／鹿児島〜喜界〜奄美〜徳之島',
+    routeName: regime.routeName,
     mode: 'ferry',
     officialUrl: 'https://www.aline-ferry.com/amami/time/',
     departures,
@@ -534,21 +571,59 @@ async function fetchPdfItems(url) {
   return items;
 }
 
-export function resolvePdfLink(html, linkText, baseUrl) {
+export function findPdfLink(html, linkText, baseUrl) {
   const $ = load(html);
-  const href = $('a')
+  const link = $('a')
     .toArray()
     .map((element) => ({
       href: $(element).attr('href'),
       text: asciiDigits($(element).text()).replace(/\s+/g, ''),
     }))
     .find(
-      (link) =>
-        link.href?.toLowerCase().includes('.pdf') &&
-        linkText.test(link.text),
-    )?.href;
-  if (!href) throw new Error('公式ページから配船表PDFを特定できません');
-  return new URL(href, baseUrl).href;
+      (candidate) =>
+        candidate.href?.toLowerCase().includes('.pdf') &&
+        linkText.test(candidate.text),
+    );
+  if (!link) return null;
+  return { url: new URL(link.href, baseUrl).href, text: link.text };
+}
+
+export function resolvePdfLink(html, linkText, baseUrl) {
+  const link = findPdfLink(html, linkText, baseUrl);
+  if (!link) throw new Error('公式ページから配船表PDFを特定できません');
+  return link.url;
+}
+
+// リンク文言「2026年11月2日から…」の適用開始日をISO日付で返す。
+export function parseEffectiveFrom(linkText) {
+  const match = /(\d{4})年(\d{1,2})月(\d{1,2})日から/.exec(linkText);
+  if (!match) return null;
+  return isoDate(Number(match[1]), Number(match[2]), Number(match[3]));
+}
+
+// 奄美海運の公式ページは、体制切替の前後で週3便・週4便のPDFを並べて掲載する。
+// 週4便のPDFは適用開始日（リンク文言）より前の日には使えないため、その日以降の
+// 基準日だけを作る。週4便が掲載されていなければ週3便のPDFをそのまま使う。
+// 切替前の週3便PDFは様式が変わっていて読み取れないため、併用しない
+// （読み取れない日の時刻は捏造せず、予定を載せない）。
+export async function scrapeAmamiKaiun(baseUrl, options = {}) {
+  const html = await fetchText(baseUrl);
+  const weekly4 = findPdfLink(html, /週4便/, baseUrl);
+  const link = weekly4 ?? findPdfLink(html, /週3便/, baseUrl);
+  if (!link) throw new Error('公式ページから配船表PDFを特定できません');
+
+  let baseDateFrom;
+  if (weekly4) {
+    baseDateFrom = parseEffectiveFrom(weekly4.text);
+    if (!baseDateFrom) {
+      throw new Error('奄美海運の週4便の適用開始日を確認できません');
+    }
+  }
+  const items = await fetchPdfItems(link.url);
+  return buildAmamiKaiunSchedule(items.map((item) => item.text).join(' '), {
+    ...options,
+    baseDateFrom,
+  });
 }
 
 export function requireAllSupplySources(settled) {
@@ -573,19 +648,7 @@ export async function scrapeAdditionalSupplyServices() {
       const html = await fetchText('https://www.kaniyaku.co.jp/passage/');
       return buildKaniyakuCargoSchedule(load(html).text());
     })(),
-    (async () => {
-      const baseUrl = 'https://www.aline-ferry.com/amami/time/';
-      const html = await fetchText(baseUrl);
-      const url = resolvePdfLink(
-        html,
-        /週3便スケジュール（ヨコ）/,
-        baseUrl,
-      );
-      const items = await fetchPdfItems(url);
-      return buildAmamiKaiunSchedule(
-        items.map((item) => item.text).join(' '),
-      );
-    })(),
+    scrapeAmamiKaiun('https://www.aline-ferry.com/amami/time/'),
   ];
 
   const settled = await Promise.allSettled(tasks);
