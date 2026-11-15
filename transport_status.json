@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-15T15:49:08.022Z",
+  "updatedAt": "2026-11-15T20:56:45.200Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -5261,8 +5261,8 @@
       "routeName": "鹿児島空港発着（JAL・JAC他）",
       "mode": "air",
       "hubAirportName": "鹿児島空港",
-      "status": "delayed",
-      "note": "本日20便中6便に遅延・欠航等があります。",
+      "status": "normal",
+      "note": "本日20便中、欠航はありません。",
       "officialUrl": "https://www.koj-ab.co.jp/flight/today-dom-departure.html",
       "departures": [
         {
@@ -5270,7 +5270,7 @@
           "time": "07:25",
           "actualTime": "07:25",
           "status": "normal",
-          "note": "出発済み",
+          "note": null,
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -5281,10 +5281,10 @@
         },
         {
           "label": "3783便 喜界島行き",
-          "time": "07:40",
-          "actualTime": "07:40",
+          "time": "07:35",
+          "actualTime": "07:35",
           "status": "normal",
-          "note": "出発済み",
+          "note": null,
           "direction": "departure",
           "islands": [
             "喜界島"
@@ -5298,7 +5298,7 @@
           "time": "07:45",
           "actualTime": "07:45",
           "status": "normal",
-          "note": "出発済み",
+          "note": null,
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5312,7 +5312,7 @@
           "time": "08:50",
           "actualTime": "08:50",
           "status": "normal",
-          "note": "出発済み",
+          "note": null,
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5323,10 +5323,10 @@
         },
         {
           "label": "3780便 喜界島発",
-          "time": "10:25",
-          "actualTime": "10:25",
+          "time": "10:20",
+          "actualTime": "10:20",
           "status": "normal",
-          "note": "到着済み",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "喜界島"
@@ -5338,9 +5338,9 @@
         {
           "label": "3800便 沖永良部発",
           "time": "10:35",
-          "actualTime": "10:45",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "10:35",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -5352,9 +5352,9 @@
         {
           "label": "3825便 与論行き",
           "time": "11:15",
-          "actualTime": "11:20",
-          "status": "delayed",
-          "note": "出発済み",
+          "actualTime": "11:15",
+          "status": "normal",
+          "note": null,
           "direction": "departure",
           "islands": [
             "与論島"
@@ -5366,9 +5366,9 @@
         {
           "label": "3792便 徳之島発",
           "time": "11:15",
-          "actualTime": "11:25",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "11:15",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5378,25 +5378,11 @@
           "date": "2026-11-16"
         },
         {
-          "label": "3803便 沖永良部行き",
-          "time": "12:35",
-          "actualTime": "12:35",
-          "status": "normal",
-          "note": "出発済み",
-          "direction": "departure",
-          "islands": [
-            "沖永良部島"
-          ],
-          "departureLocation": "鹿児島空港",
-          "arrivalLocation": "沖永良部空港",
-          "date": "2026-11-16"
-        },
-        {
           "label": "3795便 徳之島行き",
-          "time": "13:00",
-          "actualTime": "13:00",
+          "time": "11:30",
+          "actualTime": "11:30",
           "status": "normal",
-          "note": "出発済み",
+          "note": null,
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5406,25 +5392,39 @@
           "date": "2026-11-16"
         },
         {
-          "label": "3785便 喜界島行き",
-          "time": "13:50",
-          "actualTime": "13:50",
+          "label": "3803便 沖永良部行き",
+          "time": "13:00",
+          "actualTime": "13:00",
           "status": "normal",
-          "note": "出発済み",
+          "note": null,
           "direction": "departure",
           "islands": [
-            "喜界島"
+            "沖永良部島"
           ],
           "departureLocation": "鹿児島空港",
-          "arrivalLocation": "喜界空港",
+          "arrivalLocation": "沖永良部空港",
+          "date": "2026-11-16"
+        },
+        {
+          "label": "3794便 徳之島発",
+          "time": "14:30",
+          "actualTime": "14:30",
+          "status": "normal",
+          "note": null,
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "departureLocation": "徳之島空港",
+          "arrivalLocation": "鹿児島空港",
           "date": "2026-11-16"
         },
         {
           "label": "3826便 与論発",
           "time": "14:45",
-          "actualTime": "14:55",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "14:45",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -5438,7 +5438,7 @@
           "time": "15:00",
           "actualTime": "15:00",
           "status": "normal",
-          "note": "出発済み",
+          "note": null,
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -5448,17 +5448,17 @@
           "date": "2026-11-16"
         },
         {
-          "label": "3804便 沖永良部発",
-          "time": "15:50",
-          "actualTime": "15:50",
+          "label": "3785便 喜界島行き",
+          "time": "15:20",
+          "actualTime": "15:20",
           "status": "normal",
-          "note": "到着済み",
-          "direction": "arrival",
+          "note": null,
+          "direction": "departure",
           "islands": [
-            "沖永良部島"
+            "喜界島"
           ],
-          "departureLocation": "沖永良部空港",
-          "arrivalLocation": "鹿児島空港",
+          "departureLocation": "鹿児島空港",
+          "arrivalLocation": "喜界空港",
           "date": "2026-11-16"
         },
         {
@@ -5466,7 +5466,7 @@
           "time": "16:15",
           "actualTime": "16:15",
           "status": "normal",
-          "note": "出発済み",
+          "note": null,
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5476,25 +5476,25 @@
           "date": "2026-11-16"
         },
         {
-          "label": "3794便 徳之島発",
-          "time": "16:15",
-          "actualTime": "16:15",
+          "label": "3804便 沖永良部発",
+          "time": "16:20",
+          "actualTime": "16:20",
           "status": "normal",
-          "note": "到着済み",
+          "note": null,
           "direction": "arrival",
           "islands": [
-            "徳之島"
+            "沖永良部島"
           ],
-          "departureLocation": "徳之島空港",
+          "departureLocation": "沖永良部空港",
           "arrivalLocation": "鹿児島空港",
           "date": "2026-11-16"
         },
         {
           "label": "3786便 喜界島発",
-          "time": "16:35",
-          "actualTime": "16:40",
-          "status": "delayed",
-          "note": "到着済み",
+          "time": "18:05",
+          "actualTime": "18:05",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "喜界島"
@@ -5506,9 +5506,9 @@
         {
           "label": "3808便 沖永良部発",
           "time": "18:10",
-          "actualTime": "18:20",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "18:10",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -5522,7 +5522,7 @@
           "time": "18:40",
           "actualTime": "18:40",
           "status": "normal",
-          "note": "到着済み",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5536,7 +5536,7 @@
           "time": "20:10",
           "actualTime": "20:10",
           "status": "normal",
-          "note": "到着済み",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "徳之島"
