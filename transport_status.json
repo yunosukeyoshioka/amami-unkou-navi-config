@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-17T19:43:21.037Z",
+  "updatedAt": "2026-11-18T02:16:53.923Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -1932,7 +1932,7 @@
       "mode": "air",
       "hubAirportName": "奄美空港",
       "status": "delayed",
-      "note": "本日35便中10便に遅延・欠航等があります。",
+      "note": "本日38便中3便に遅延・欠航等があります。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
@@ -1941,7 +1941,7 @@
           "date": "2026-11-18",
           "actualTime": "08:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2037,9 +2037,9 @@
           "label": "3721便 鹿児島発",
           "time": "08:25",
           "date": "2026-11-18",
-          "actualTime": "08:25",
-          "status": "normal",
-          "note": "営業開始時間前",
+          "actualTime": "08:45",
+          "status": "delayed",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2137,7 +2137,7 @@
           "date": "2026-11-18",
           "actualTime": "08:50",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2151,7 +2151,7 @@
           "date": "2026-11-18",
           "actualTime": "09:15",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2165,7 +2165,7 @@
           "date": "2026-11-18",
           "actualTime": "09:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2264,7 +2264,7 @@
           "date": "2026-11-18",
           "actualTime": "09:45",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2278,13 +2278,27 @@
           "date": "2026-11-18",
           "actualTime": "10:05",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
             "徳之島"
           ],
           "departureLocation": "徳之島空港",
+          "arrivalLocation": "奄美空港"
+        },
+        {
+          "label": "545便 成田発",
+          "time": "10:05",
+          "date": "2026-11-18",
+          "actualTime": "09:51",
+          "status": "delayed",
+          "note": "到着済み",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "departureLocation": "成田空港",
           "arrivalLocation": "奄美空港"
         },
         {
@@ -2551,7 +2565,7 @@
           "date": "2026-11-18",
           "actualTime": "10:30",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -2651,12 +2665,26 @@
           "arrivalLocation": "奄美空港"
         },
         {
+          "label": "546便 成田行き",
+          "time": "10:45",
+          "date": "2026-11-18",
+          "actualTime": "10:45",
+          "status": "normal",
+          "note": "出発済み",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "成田空港"
+        },
+        {
           "label": "3841便 徳之島行き",
           "time": "10:55",
           "date": "2026-11-18",
-          "actualTime": "10:55",
-          "status": "normal",
-          "note": "営業開始時間前",
+          "actualTime": "11:45",
+          "status": "delayed",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2671,7 +2699,7 @@
           "date": "2026-11-18",
           "actualTime": "11:10",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2684,9 +2712,9 @@
           "label": "3727便 鹿児島発",
           "time": "11:15",
           "date": "2026-11-18",
-          "actualTime": "11:25",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "11:15",
+          "status": "normal",
+          "note": "まもなく到着",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2698,9 +2726,9 @@
           "label": "381便 鹿児島発",
           "time": "11:15",
           "date": "2026-11-18",
-          "actualTime": "11:33",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "11:15",
+          "status": "normal",
+          "note": "まもなく到着",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2882,7 +2910,7 @@
           "date": "2026-11-18",
           "actualTime": "11:25",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3068,9 +3096,9 @@
           "label": "3726便 鹿児島行き",
           "time": "11:45",
           "date": "2026-11-18",
-          "actualTime": "11:50",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "11:45",
+          "status": "normal",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3079,26 +3107,12 @@
           "arrivalLocation": "鹿児島空港"
         },
         {
-          "label": "6222便 福島行き",
+          "label": "382便 鹿児島行き",
           "time": "11:55",
           "date": "2026-11-18",
           "actualTime": "11:55",
           "status": "normal",
-          "note": null,
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "福島空港"
-        },
-        {
-          "label": "382便 鹿児島行き",
-          "time": "11:55",
-          "date": "2026-11-18",
-          "actualTime": "12:10",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3196,7 +3210,7 @@
           "date": "2026-11-18",
           "actualTime": "12:05",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3292,9 +3306,9 @@
           "label": "3729便 鹿児島発",
           "time": "12:45",
           "date": "2026-11-18",
-          "actualTime": "13:00",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "12:45",
+          "status": "normal",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3474,9 +3488,9 @@
           "label": "3728便 鹿児島行き",
           "time": "13:15",
           "date": "2026-11-18",
-          "actualTime": "13:25",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "13:15",
+          "status": "normal",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3572,9 +3586,9 @@
           "label": "659便 東京(羽田)発",
           "time": "13:40",
           "date": "2026-11-18",
-          "actualTime": "14:00",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "13:40",
+          "status": "normal",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3754,9 +3768,9 @@
           "label": "3731便 鹿児島発",
           "time": "14:10",
           "date": "2026-11-18",
-          "actualTime": "14:25",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "14:10",
+          "status": "normal",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3852,15 +3866,29 @@
           "label": "658便 東京(羽田)行き",
           "time": "14:25",
           "date": "2026-11-18",
-          "actualTime": "14:35",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "14:25",
+          "status": "normal",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
           ],
           "departureLocation": "奄美空港",
           "arrivalLocation": "羽田空港"
+        },
+        {
+          "label": "203便 大阪(関西)発",
+          "time": "14:35",
+          "date": "2026-11-18",
+          "actualTime": "14:35",
+          "status": "normal",
+          "note": "定刻",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "departureLocation": "関西空港",
+          "arrivalLocation": "奄美空港"
         },
         {
           "label": "0203便 大阪(関西)発（予定）",
@@ -3950,9 +3978,9 @@
           "label": "3730便 鹿児島行き",
           "time": "14:40",
           "date": "2026-11-18",
-          "actualTime": "14:50",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "14:40",
+          "status": "normal",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3966,7 +3994,7 @@
           "date": "2026-11-18",
           "actualTime": "14:45",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4064,7 +4092,7 @@
           "date": "2026-11-18",
           "actualTime": "15:15",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -4072,6 +4100,20 @@
           ],
           "departureLocation": "奄美空港",
           "arrivalLocation": "喜界空港"
+        },
+        {
+          "label": "202便 大阪(関西)行き",
+          "time": "15:15",
+          "date": "2026-11-18",
+          "actualTime": "15:15",
+          "status": "normal",
+          "note": "定刻",
+          "direction": "departure",
+          "islands": [
+            "奄美大島"
+          ],
+          "departureLocation": "奄美空港",
+          "arrivalLocation": "関西空港"
         },
         {
           "label": "JAL便 鹿児島行き（予定）",
@@ -4247,7 +4289,7 @@
           "date": "2026-11-18",
           "actualTime": "16:25",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4436,7 +4478,7 @@
           "date": "2026-11-18",
           "actualTime": "17:15",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4541,7 +4583,7 @@
           "date": "2026-11-18",
           "actualTime": "17:30",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4555,7 +4597,7 @@
           "date": "2026-11-18",
           "actualTime": "17:35",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4653,7 +4695,7 @@
           "date": "2026-11-18",
           "actualTime": "17:50",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4751,7 +4793,7 @@
           "date": "2026-11-18",
           "actualTime": "17:55",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -4766,7 +4808,7 @@
           "date": "2026-11-18",
           "actualTime": "18:15",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4780,7 +4822,7 @@
           "date": "2026-11-18",
           "actualTime": "18:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4794,7 +4836,7 @@
           "date": "2026-11-18",
           "actualTime": "18:30",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4976,7 +5018,7 @@
           "date": "2026-11-18",
           "actualTime": "19:00",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5077,7 +5119,7 @@
       "mode": "air",
       "hubAirportName": "鹿児島空港",
       "status": "delayed",
-      "note": "本日20便中9便に遅延・欠航等があります。",
+      "note": "本日20便中3便に遅延・欠航等があります。",
       "officialUrl": "https://www.koj-ab.co.jp/flight/today-dom-departure.html",
       "departures": [
         {
@@ -5139,7 +5181,7 @@
         {
           "label": "3780便 喜界島発",
           "time": "10:20",
-          "actualTime": "10:10",
+          "actualTime": "10:15",
           "status": "delayed",
           "note": "到着済み",
           "direction": "arrival",
@@ -5153,7 +5195,7 @@
         {
           "label": "3800便 沖永良部発",
           "time": "10:35",
-          "actualTime": "10:40",
+          "actualTime": "10:25",
           "status": "delayed",
           "note": "到着済み",
           "direction": "arrival",
@@ -5167,9 +5209,9 @@
         {
           "label": "3825便 与論行き",
           "time": "11:15",
-          "actualTime": "11:30",
-          "status": "delayed",
-          "note": "出発済み",
+          "actualTime": "11:15",
+          "status": "normal",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -5181,9 +5223,9 @@
         {
           "label": "3792便 徳之島発",
           "time": "11:15",
-          "actualTime": "11:35",
+          "actualTime": "11:25",
           "status": "delayed",
-          "note": "到着済み",
+          "note": "遅れ",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5197,7 +5239,7 @@
           "time": "11:30",
           "actualTime": "11:30",
           "status": "normal",
-          "note": "出発済み",
+          "note": "搭乗ご案内中",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5211,7 +5253,7 @@
           "time": "13:00",
           "actualTime": "13:00",
           "status": "normal",
-          "note": "出発済み",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -5223,9 +5265,9 @@
         {
           "label": "3794便 徳之島発",
           "time": "14:30",
-          "actualTime": "14:45",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "14:30",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5237,9 +5279,9 @@
         {
           "label": "3826便 与論発",
           "time": "14:45",
-          "actualTime": "15:15",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "14:45",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -5253,7 +5295,7 @@
           "time": "15:00",
           "actualTime": "15:00",
           "status": "normal",
-          "note": "出発済み",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -5267,7 +5309,7 @@
           "time": "15:20",
           "actualTime": "15:20",
           "status": "normal",
-          "note": "出発済み",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "喜界島"
@@ -5281,7 +5323,7 @@
           "time": "16:15",
           "actualTime": "16:15",
           "status": "normal",
-          "note": "出発済み",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5295,7 +5337,7 @@
           "time": "16:20",
           "actualTime": "16:20",
           "status": "normal",
-          "note": "到着済み",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -5307,9 +5349,9 @@
         {
           "label": "3786便 喜界島発",
           "time": "18:05",
-          "actualTime": "18:10",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "18:05",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "喜界島"
@@ -5321,9 +5363,9 @@
         {
           "label": "3808便 沖永良部発",
           "time": "18:10",
-          "actualTime": "18:05",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "18:10",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -5337,7 +5379,7 @@
           "time": "18:40",
           "actualTime": "18:40",
           "status": "normal",
-          "note": "到着済み",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5349,9 +5391,9 @@
         {
           "label": "3798便 徳之島発",
           "time": "20:10",
-          "actualTime": "20:00",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "20:10",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5368,10 +5410,81 @@
       "routeName": "那覇空港発着（JAL・JTA他）",
       "mode": "air",
       "hubAirportName": "那覇空港",
-      "status": "unknown",
-      "note": "取得に失敗しました。公式サイトでご確認ください。",
+      "status": "normal",
+      "note": "本日5便中、欠航はありません。",
       "officialUrl": "https://www.naha-airport.co.jp/flight/today/",
-      "departures": []
+      "departures": [
+        {
+          "label": "3866便 与論発",
+          "time": "13:05",
+          "actualTime": "13:05",
+          "status": "normal",
+          "note": null,
+          "direction": "arrival",
+          "islands": [
+            "与論島"
+          ],
+          "departureLocation": "与論空港",
+          "arrivalLocation": "那覇空港",
+          "date": "2026-11-18"
+        },
+        {
+          "label": "0815便 与論行き",
+          "time": "13:15",
+          "actualTime": "13:15",
+          "status": "normal",
+          "note": "バス搭乗",
+          "direction": "departure",
+          "islands": [
+            "与論島"
+          ],
+          "departureLocation": "那覇空港",
+          "arrivalLocation": "与論空港",
+          "date": "2026-11-18"
+        },
+        {
+          "label": "3716便 沖永良部発",
+          "time": "13:50",
+          "actualTime": "13:50",
+          "status": "normal",
+          "note": null,
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "departureLocation": "沖永良部空港",
+          "arrivalLocation": "那覇空港",
+          "date": "2026-11-18"
+        },
+        {
+          "label": "3715便 沖永良部行き",
+          "time": "14:35",
+          "actualTime": "14:35",
+          "status": "normal",
+          "note": "バス搭乗",
+          "direction": "departure",
+          "islands": [
+            "沖永良部島"
+          ],
+          "departureLocation": "那覇空港",
+          "arrivalLocation": "沖永良部空港",
+          "date": "2026-11-18"
+        },
+        {
+          "label": "0816便 与論発",
+          "time": "15:00",
+          "actualTime": "15:00",
+          "status": "normal",
+          "note": null,
+          "direction": "arrival",
+          "islands": [
+            "与論島"
+          ],
+          "departureLocation": "与論空港",
+          "arrivalLocation": "那覇空港",
+          "date": "2026-11-18"
+        }
+      ]
     },
     {
       "id": "aline_cargo_琉球エキスプレス５",
@@ -5425,9 +5538,9 @@
       "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
       "departures": [
         {
-          "label": "つばさ 名瀬港 入港（予定）",
+          "label": "みさきⅡ 名瀬港 入港（予定）",
           "time": "06:00頃",
-          "date": "2026-11-03",
+          "date": "2026-12-02",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5436,15 +5549,15 @@
           ],
           "arrivalLocation": "名瀬港",
           "isScheduled": true,
-          "vessel": "つばさ",
+          "vessel": "みさきⅡ",
           "routeName": "鹿児島谷山港〜奄美群島",
           "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
           "mode": "cargo"
         },
         {
-          "label": "つばさ 亀徳港 入港（予定）",
+          "label": "みさきⅡ 亀徳港 入港（予定）",
           "time": "12:00頃",
-          "date": "2026-11-03",
+          "date": "2026-12-02",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5453,117 +5566,15 @@
           ],
           "arrivalLocation": "亀徳港",
           "isScheduled": true,
-          "vessel": "つばさ",
+          "vessel": "みさきⅡ",
           "routeName": "鹿児島谷山港〜奄美群島",
           "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
           "mode": "cargo"
         },
         {
-          "label": "つばさ 和泊港 入港（予定）",
-          "time": "16:00頃",
-          "date": "2026-11-03",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "沖永良部島"
-          ],
-          "arrivalLocation": "和泊港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 名瀬港 入港（予定）",
-          "time": "06:00頃",
-          "date": "2026-11-05",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "arrivalLocation": "名瀬港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 亀徳港 入港（予定）",
-          "time": "12:00頃",
-          "date": "2026-11-05",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "徳之島"
-          ],
-          "arrivalLocation": "亀徳港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 和泊港 入港（予定）",
-          "time": "16:00頃",
-          "date": "2026-11-05",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "沖永良部島"
-          ],
-          "arrivalLocation": "和泊港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 名瀬港 入港（予定）",
-          "time": "06:00頃",
-          "date": "2026-11-07",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "arrivalLocation": "名瀬港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 亀徳港 入港（予定）",
-          "time": "12:00頃",
-          "date": "2026-11-07",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "徳之島"
-          ],
-          "arrivalLocation": "亀徳港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 湾港 入港（予定）",
+          "label": "みさきⅡ 湾港 入港（予定）",
           "time": "18:00頃",
-          "date": "2026-11-07",
+          "date": "2026-12-02",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5572,24 +5583,7 @@
           ],
           "arrivalLocation": "湾港",
           "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 名瀬港 入港（予定）",
-          "time": "06:00頃",
-          "date": "2026-11-10",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "arrivalLocation": "名瀬港",
-          "isScheduled": true,
-          "vessel": "つばさ",
+          "vessel": "みさきⅡ",
           "routeName": "鹿児島谷山港〜奄美群島",
           "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
           "mode": "cargo"
@@ -5597,7 +5591,7 @@
         {
           "label": "つばさ 亀徳港 入港（予定）",
           "time": "12:00頃",
-          "date": "2026-11-10",
+          "date": "2026-12-03",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5614,7 +5608,7 @@
         {
           "label": "つばさ 和泊港 入港（予定）",
           "time": "16:00頃",
-          "date": "2026-11-10",
+          "date": "2026-12-03",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5629,26 +5623,9 @@
           "mode": "cargo"
         },
         {
-          "label": "つばさ 名瀬港 入港（予定）",
-          "time": "06:00頃",
-          "date": "2026-11-12",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "arrivalLocation": "名瀬港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 亀徳港 入港（予定）",
+          "label": "みさきⅡ 亀徳港 入港（予定）",
           "time": "12:00頃",
-          "date": "2026-11-12",
+          "date": "2026-12-04",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5657,15 +5634,15 @@
           ],
           "arrivalLocation": "亀徳港",
           "isScheduled": true,
-          "vessel": "つばさ",
+          "vessel": "みさきⅡ",
           "routeName": "鹿児島谷山港〜奄美群島",
           "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
           "mode": "cargo"
         },
         {
-          "label": "つばさ 湾港 入港（予定）",
+          "label": "みさきⅡ 湾港 入港（予定）",
           "time": "18:00頃",
-          "date": "2026-11-12",
+          "date": "2026-12-04",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5674,7 +5651,7 @@
           ],
           "arrivalLocation": "湾港",
           "isScheduled": true,
-          "vessel": "つばさ",
+          "vessel": "みさきⅡ",
           "routeName": "鹿児島谷山港〜奄美群島",
           "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
           "mode": "cargo"
@@ -5682,7 +5659,7 @@
         {
           "label": "つばさ 名瀬港 入港（予定）",
           "time": "06:00頃",
-          "date": "2026-11-14",
+          "date": "2026-12-05",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5699,7 +5676,7 @@
         {
           "label": "つばさ 亀徳港 入港（予定）",
           "time": "12:00頃",
-          "date": "2026-11-14",
+          "date": "2026-12-05",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5716,58 +5693,7 @@
         {
           "label": "つばさ 和泊港 入港（予定）",
           "time": "16:00頃",
-          "date": "2026-11-14",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "沖永良部島"
-          ],
-          "arrivalLocation": "和泊港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 名瀬港 入港（予定）",
-          "time": "06:00頃",
-          "date": "2026-11-17",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "arrivalLocation": "名瀬港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 亀徳港 入港（予定）",
-          "time": "12:00頃",
-          "date": "2026-11-17",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "徳之島"
-          ],
-          "arrivalLocation": "亀徳港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 和泊港 入港（予定）",
-          "time": "16:00頃",
-          "date": "2026-11-17",
+          "date": "2026-12-05",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5784,7 +5710,7 @@
         {
           "label": "みさきⅡ 名瀬港 入港（予定）",
           "time": "06:00頃",
-          "date": "2026-11-19",
+          "date": "2026-12-08",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5801,7 +5727,7 @@
         {
           "label": "みさきⅡ 亀徳港 入港（予定）",
           "time": "12:00頃",
-          "date": "2026-11-19",
+          "date": "2026-12-08",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5818,75 +5744,7 @@
         {
           "label": "みさきⅡ 和泊港 入港（予定）",
           "time": "16:00頃",
-          "date": "2026-11-19",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "沖永良部島"
-          ],
-          "arrivalLocation": "和泊港",
-          "isScheduled": true,
-          "vessel": "みさきⅡ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 亀徳港 入港（予定）",
-          "time": "12:00頃",
-          "date": "2026-11-20",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "徳之島"
-          ],
-          "arrivalLocation": "亀徳港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "つばさ 湾港 入港（予定）",
-          "time": "18:00頃",
-          "date": "2026-11-20",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "喜界島"
-          ],
-          "arrivalLocation": "湾港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "みさきⅡ 亀徳港 入港（予定）",
-          "time": "12:00頃",
-          "date": "2026-11-21",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "徳之島"
-          ],
-          "arrivalLocation": "亀徳港",
-          "isScheduled": true,
-          "vessel": "みさきⅡ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
-          "label": "みさきⅡ 和泊港 入港（予定）",
-          "time": "16:00頃",
-          "date": "2026-11-21",
+          "date": "2026-12-08",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5903,7 +5761,7 @@
         {
           "label": "つばさ 名瀬港 入港（予定）",
           "time": "06:00頃",
-          "date": "2026-11-25",
+          "date": "2026-12-09",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5918,26 +5776,9 @@
           "mode": "cargo"
         },
         {
-          "label": "つばさ 亀徳港 入港（予定）",
-          "time": "12:00頃",
-          "date": "2026-11-25",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "徳之島"
-          ],
-          "arrivalLocation": "亀徳港",
-          "isScheduled": true,
-          "vessel": "つばさ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
           "label": "つばさ 湾港 入港（予定）",
           "time": "18:00頃",
-          "date": "2026-11-25",
+          "date": "2026-12-09",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5954,7 +5795,7 @@
         {
           "label": "みさきⅡ 名瀬港 入港（予定）",
           "time": "06:00頃",
-          "date": "2026-11-26",
+          "date": "2026-12-10",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -5969,26 +5810,9 @@
           "mode": "cargo"
         },
         {
-          "label": "みさきⅡ 亀徳港 入港（予定）",
-          "time": "12:00頃",
-          "date": "2026-11-26",
-          "status": "unknown",
-          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
-          "direction": "arrival",
-          "islands": [
-            "徳之島"
-          ],
-          "arrivalLocation": "亀徳港",
-          "isScheduled": true,
-          "vessel": "みさきⅡ",
-          "routeName": "鹿児島谷山港〜奄美群島",
-          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
-          "mode": "cargo"
-        },
-        {
           "label": "みさきⅡ 和泊港 入港（予定）",
           "time": "16:00頃",
-          "date": "2026-11-26",
+          "date": "2026-12-10",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -6005,7 +5829,7 @@
         {
           "label": "つばさ 名瀬港 入港（予定）",
           "time": "06:00頃",
-          "date": "2026-11-27",
+          "date": "2026-12-11",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -6022,7 +5846,7 @@
         {
           "label": "つばさ 亀徳港 入港（予定）",
           "time": "12:00頃",
-          "date": "2026-11-27",
+          "date": "2026-12-11",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -6039,7 +5863,7 @@
         {
           "label": "つばさ 湾港 入港（予定）",
           "time": "18:00頃",
-          "date": "2026-11-27",
+          "date": "2026-12-11",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -6056,7 +5880,7 @@
         {
           "label": "みさきⅡ 名瀬港 入港（予定）",
           "time": "06:00頃",
-          "date": "2026-11-28",
+          "date": "2026-12-12",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -6073,7 +5897,7 @@
         {
           "label": "みさきⅡ 亀徳港 入港（予定）",
           "time": "12:00頃",
-          "date": "2026-11-28",
+          "date": "2026-12-12",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -6090,7 +5914,7 @@
         {
           "label": "みさきⅡ 和泊港 入港（予定）",
           "time": "16:00頃",
-          "date": "2026-11-28",
+          "date": "2026-12-12",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -6107,7 +5931,7 @@
         {
           "label": "つばさ 名瀬港 入港（予定）",
           "time": "06:00頃",
-          "date": "2026-12-01",
+          "date": "2026-12-15",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -6124,7 +5948,7 @@
         {
           "label": "つばさ 亀徳港 入港（予定）",
           "time": "12:00頃",
-          "date": "2026-12-01",
+          "date": "2026-12-15",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -6141,7 +5965,7 @@
         {
           "label": "つばさ 和泊港 入港（予定）",
           "time": "16:00頃",
-          "date": "2026-12-01",
+          "date": "2026-12-15",
           "status": "unknown",
           "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
           "direction": "arrival",
@@ -6149,6 +5973,516 @@
             "沖永良部島"
           ],
           "arrivalLocation": "和泊港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 名瀬港 入港（予定）",
+          "time": "06:00頃",
+          "date": "2026-12-16",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "arrivalLocation": "名瀬港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 亀徳港 入港（予定）",
+          "time": "12:00頃",
+          "date": "2026-12-16",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "arrivalLocation": "亀徳港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 湾港 入港（予定）",
+          "time": "18:00頃",
+          "date": "2026-12-16",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "喜界島"
+          ],
+          "arrivalLocation": "湾港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 名瀬港 入港（予定）",
+          "time": "06:00頃",
+          "date": "2026-12-17",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "arrivalLocation": "名瀬港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 亀徳港 入港（予定）",
+          "time": "12:00頃",
+          "date": "2026-12-17",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "arrivalLocation": "亀徳港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 和泊港 入港（予定）",
+          "time": "16:00頃",
+          "date": "2026-12-17",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "arrivalLocation": "和泊港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 名瀬港 入港（予定）",
+          "time": "06:00頃",
+          "date": "2026-12-18",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "arrivalLocation": "名瀬港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 亀徳港 入港（予定）",
+          "time": "12:00頃",
+          "date": "2026-12-18",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "arrivalLocation": "亀徳港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 湾港 入港（予定）",
+          "time": "18:00頃",
+          "date": "2026-12-18",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "喜界島"
+          ],
+          "arrivalLocation": "湾港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 名瀬港 入港（予定）",
+          "time": "06:00頃",
+          "date": "2026-12-19",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "arrivalLocation": "名瀬港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 亀徳港 入港（予定）",
+          "time": "12:00頃",
+          "date": "2026-12-19",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "arrivalLocation": "亀徳港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 和泊港 入港（予定）",
+          "time": "16:00頃",
+          "date": "2026-12-19",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "arrivalLocation": "和泊港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 名瀬港 入港（予定）",
+          "time": "06:00頃",
+          "date": "2026-12-22",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "arrivalLocation": "名瀬港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 亀徳港 入港（予定）",
+          "time": "12:00頃",
+          "date": "2026-12-22",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "arrivalLocation": "亀徳港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 和泊港 入港（予定）",
+          "time": "16:00頃",
+          "date": "2026-12-22",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "arrivalLocation": "和泊港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 名瀬港 入港（予定）",
+          "time": "06:00頃",
+          "date": "2026-12-23",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "arrivalLocation": "名瀬港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 亀徳港 入港（予定）",
+          "time": "12:00頃",
+          "date": "2026-12-23",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "arrivalLocation": "亀徳港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 湾港 入港（予定）",
+          "time": "18:00頃",
+          "date": "2026-12-23",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "喜界島"
+          ],
+          "arrivalLocation": "湾港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 名瀬港 入港（予定）",
+          "time": "06:00頃",
+          "date": "2026-12-24",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "arrivalLocation": "名瀬港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 亀徳港 入港（予定）",
+          "time": "12:00頃",
+          "date": "2026-12-24",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "arrivalLocation": "亀徳港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 和泊港 入港（予定）",
+          "time": "16:00頃",
+          "date": "2026-12-24",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "arrivalLocation": "和泊港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 名瀬港 入港（予定）",
+          "time": "06:00頃",
+          "date": "2026-12-25",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "arrivalLocation": "名瀬港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 亀徳港 入港（予定）",
+          "time": "12:00頃",
+          "date": "2026-12-25",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "arrivalLocation": "亀徳港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 湾港 入港（予定）",
+          "time": "18:00頃",
+          "date": "2026-12-25",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "喜界島"
+          ],
+          "arrivalLocation": "湾港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 名瀬港 入港（予定）",
+          "time": "06:00頃",
+          "date": "2026-12-26",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "arrivalLocation": "名瀬港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 亀徳港 入港（予定）",
+          "time": "12:00頃",
+          "date": "2026-12-26",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "arrivalLocation": "亀徳港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "みさきⅡ 和泊港 入港（予定）",
+          "time": "16:00頃",
+          "date": "2026-12-26",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "arrivalLocation": "和泊港",
+          "isScheduled": true,
+          "vessel": "みさきⅡ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 名瀬港 入港（予定）",
+          "time": "06:00頃",
+          "date": "2026-12-27",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "arrivalLocation": "名瀬港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 亀徳港 入港（予定）",
+          "time": "12:00頃",
+          "date": "2026-12-27",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "徳之島"
+          ],
+          "arrivalLocation": "亀徳港",
+          "isScheduled": true,
+          "vessel": "つばさ",
+          "routeName": "鹿児島谷山港〜奄美群島",
+          "officialUrl": "https://www.kyoudougumikaiun.co.jp/",
+          "mode": "cargo"
+        },
+        {
+          "label": "つばさ 湾港 入港（予定）",
+          "time": "18:00頃",
+          "date": "2026-12-27",
+          "status": "unknown",
+          "note": "公式時刻表・配船表に基づく予定です。実際の運航状況は公式サイトでご確認ください。",
+          "direction": "arrival",
+          "islands": [
+            "喜界島"
+          ],
+          "arrivalLocation": "湾港",
           "isScheduled": true,
           "vessel": "つばさ",
           "routeName": "鹿児島谷山港〜奄美群島",
