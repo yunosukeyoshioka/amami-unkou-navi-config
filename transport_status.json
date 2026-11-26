@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-25T15:57:25.252Z",
+  "updatedAt": "2026-11-26T00:10:23.030Z",
   "operators": [
     {
       "id": "aline_ferry",
@@ -8,27 +8,13 @@
       "routeName": "鹿児島〜奄美〜沖縄",
       "mode": "ferry",
       "status": "unknown",
-      "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+      "note": "通常運航致しております。",
       "officialUrl": "https://aline-ferry.com/status/",
       "departures": [
         {
           "label": "下り便 名瀬港 入港",
           "time": "05:00",
           "date": "2026-11-28",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "isScheduled": false,
-          "departureLocation": "鹿児島新港",
-          "arrivalLocation": "名瀬港"
-        },
-        {
-          "label": "下り便 名瀬港 入港",
-          "time": "05:00",
-          "date": "2026-11-30",
           "status": "normal",
           "note": "通常運航致しております。",
           "direction": "arrival",
@@ -42,9 +28,23 @@
         {
           "label": "下り便 名瀬港 入港",
           "time": "05:00",
+          "date": "2026-11-30",
+          "status": "normal",
+          "note": "通常運航致しております。",
+          "direction": "arrival",
+          "islands": [
+            "奄美大島"
+          ],
+          "isScheduled": false,
+          "departureLocation": "鹿児島新港",
+          "arrivalLocation": "名瀬港"
+        },
+        {
+          "label": "下り便 名瀬港 入港",
+          "time": "05:00",
           "date": "2026-12-02",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -57,8 +57,8 @@
           "label": "下り便 名瀬港 出港",
           "time": "05:50",
           "date": "2026-11-28",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -85,8 +85,8 @@
           "label": "下り便 名瀬港 出港",
           "time": "05:50",
           "date": "2026-12-02",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -116,8 +116,8 @@
           "label": "上り便 鹿児島新港 入港",
           "time": "08:30",
           "date": "2026-11-30",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -150,8 +150,8 @@
           "label": "下り便 亀徳港 入港",
           "time": "09:10",
           "date": "2026-11-28",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -178,8 +178,8 @@
           "label": "下り便 亀徳港 入港",
           "time": "09:10",
           "date": "2026-12-02",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -192,8 +192,8 @@
           "label": "下り便 亀徳港 出港",
           "time": "09:40",
           "date": "2026-11-28",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -220,8 +220,8 @@
           "label": "下り便 亀徳港 出港",
           "time": "09:40",
           "date": "2026-12-02",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -234,8 +234,8 @@
           "label": "下り便 和泊港 入港",
           "time": "11:30",
           "date": "2026-11-28",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -262,8 +262,8 @@
           "label": "下り便 和泊港 入港",
           "time": "11:30",
           "date": "2026-12-02",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -276,8 +276,8 @@
           "label": "下り便 和泊港 出港",
           "time": "12:00",
           "date": "2026-11-28",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -304,8 +304,8 @@
           "label": "下り便 和泊港 出港",
           "time": "12:00",
           "date": "2026-12-02",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -332,8 +332,8 @@
           "label": "上り便 与論港 出港",
           "time": "12:10",
           "date": "2026-11-29",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -360,8 +360,8 @@
           "label": "下り便 与論港 入港",
           "time": "13:40",
           "date": "2026-11-28",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -388,8 +388,8 @@
           "label": "下り便 与論港 入港",
           "time": "13:40",
           "date": "2026-12-02",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -416,8 +416,8 @@
           "label": "上り便 和泊港 入港",
           "time": "14:10",
           "date": "2026-11-29",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -458,8 +458,8 @@
           "label": "上り便 和泊港 出港",
           "time": "14:40",
           "date": "2026-11-29",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -500,8 +500,8 @@
           "label": "上り便 亀徳港 入港",
           "time": "16:30",
           "date": "2026-11-29",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -542,8 +542,8 @@
           "label": "上り便 亀徳港 出港",
           "time": "17:00",
           "date": "2026-11-29",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -570,8 +570,8 @@
           "label": "下り便 鹿児島新港 出港",
           "time": "18:00",
           "date": "2026-11-27",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -604,8 +604,8 @@
           "label": "下り便 鹿児島新港 出港",
           "time": "18:00",
           "date": "2026-12-01",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -635,8 +635,8 @@
           "label": "上り便 名瀬港 入港",
           "time": "20:30",
           "date": "2026-11-29",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -677,8 +677,8 @@
           "label": "上り便 名瀬港 出港",
           "time": "21:20",
           "date": "2026-11-29",
-          "status": "conditional",
-          "note": "■11月25日(水)那覇港07：00発/上り便…条件付き運航",
+          "status": "normal",
+          "note": "通常運航致しております。",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -709,7 +709,7 @@
       "routeName": "鹿児島〜奄美〜沖縄",
       "mode": "ferry",
       "status": "conditional",
-      "note": "24件の寄港地で条件付運航等があります。",
+      "note": "12件の寄港地で条件付運航等があります。",
       "officialUrl": "https://marixline.com/",
       "departures": [
         {
@@ -1514,302 +1514,6 @@
         },
         {
           "label": "上り便 那覇港 出港",
-          "time": "11/24 07:00",
-          "date": "2026-11-24",
-          "status": "normal",
-          "note": "通常運航",
-          "direction": "departure",
-          "islands": [],
-          "departureLocation": "那覇港",
-          "arrivalLocation": "本部港"
-        },
-        {
-          "label": "上り便 本部港 入港",
-          "time": "11/24 09:00",
-          "date": "2026-11-24",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "arrival",
-          "islands": [],
-          "departureLocation": "那覇港",
-          "arrivalLocation": "本部港"
-        },
-        {
-          "label": "上り便 本部港 出港",
-          "time": "11/24 09:20",
-          "date": "2026-11-24",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "departure",
-          "islands": [],
-          "departureLocation": "本部港",
-          "arrivalLocation": "与論港"
-        },
-        {
-          "label": "上り便 与論港 入港",
-          "time": "11/24 11:50",
-          "date": "2026-11-24",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "arrival",
-          "islands": [
-            "与論島"
-          ],
-          "departureLocation": "本部港",
-          "arrivalLocation": "与論港"
-        },
-        {
-          "label": "上り便 与論港 出港",
-          "time": "11/24 12:10",
-          "date": "2026-11-24",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "departure",
-          "islands": [
-            "与論島"
-          ],
-          "departureLocation": "与論港",
-          "arrivalLocation": "和泊港"
-        },
-        {
-          "label": "上り便 和泊港 入港",
-          "time": "11/24 14:10",
-          "date": "2026-11-24",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "arrival",
-          "islands": [
-            "沖永良部島"
-          ],
-          "departureLocation": "与論港",
-          "arrivalLocation": "和泊港"
-        },
-        {
-          "label": "上り便 和泊港 出港",
-          "time": "11/24 14:40",
-          "date": "2026-11-24",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "departure",
-          "islands": [
-            "沖永良部島"
-          ],
-          "departureLocation": "和泊港",
-          "arrivalLocation": "亀徳港"
-        },
-        {
-          "label": "上り便 亀徳港 入港",
-          "time": "11/24 16:30",
-          "date": "2026-11-24",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "arrival",
-          "islands": [
-            "徳之島"
-          ],
-          "departureLocation": "和泊港",
-          "arrivalLocation": "亀徳港"
-        },
-        {
-          "label": "上り便 亀徳港 出港",
-          "time": "11/24 17:00",
-          "date": "2026-11-24",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "departure",
-          "islands": [
-            "徳之島"
-          ],
-          "departureLocation": "亀徳港",
-          "arrivalLocation": "名瀬港"
-        },
-        {
-          "label": "下り便 鹿児島新港 出港",
-          "time": "11/24 18:00",
-          "date": "2026-11-24",
-          "status": "normal",
-          "note": "通常運航",
-          "direction": "departure",
-          "islands": [],
-          "departureLocation": "鹿児島新港",
-          "arrivalLocation": "名瀬港"
-        },
-        {
-          "label": "上り便 名瀬港 入港",
-          "time": "11/24 20:30",
-          "date": "2026-11-24",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "departureLocation": "亀徳港",
-          "arrivalLocation": "名瀬港"
-        },
-        {
-          "label": "上り便 名瀬港 出港",
-          "time": "11/24 21:20",
-          "date": "2026-11-24",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "departureLocation": "名瀬港",
-          "arrivalLocation": "鹿児島新港"
-        },
-        {
-          "label": "下り便 名瀬港 入港",
-          "time": "11/25 05:00",
-          "date": "2026-11-25",
-          "status": "normal",
-          "note": "通常運航",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "departureLocation": "鹿児島新港",
-          "arrivalLocation": "名瀬港"
-        },
-        {
-          "label": "下り便 名瀬港 出港",
-          "time": "11/25 05:50",
-          "date": "2026-11-25",
-          "status": "normal",
-          "note": "通常運航",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "departureLocation": "名瀬港",
-          "arrivalLocation": "亀徳港"
-        },
-        {
-          "label": "上り便 鹿児島新港 入港",
-          "time": "11/25 08:30",
-          "date": "2026-11-25",
-          "status": "normal",
-          "note": "通常運航",
-          "direction": "arrival",
-          "islands": [],
-          "departureLocation": "名瀬港",
-          "arrivalLocation": "鹿児島新港"
-        },
-        {
-          "label": "下り便 亀徳港 入港",
-          "time": "11/25 09:10",
-          "date": "2026-11-25",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "arrival",
-          "islands": [
-            "徳之島"
-          ],
-          "departureLocation": "名瀬港",
-          "arrivalLocation": "亀徳港"
-        },
-        {
-          "label": "下り便 亀徳港 出港",
-          "time": "11/25 09:40",
-          "date": "2026-11-25",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "departure",
-          "islands": [
-            "徳之島"
-          ],
-          "departureLocation": "亀徳港",
-          "arrivalLocation": "和泊港"
-        },
-        {
-          "label": "下り便 和泊港 入港",
-          "time": "11/25 11:30",
-          "date": "2026-11-25",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "arrival",
-          "islands": [
-            "沖永良部島"
-          ],
-          "departureLocation": "亀徳港",
-          "arrivalLocation": "和泊港"
-        },
-        {
-          "label": "下り便 和泊港 出港",
-          "time": "11/25 12:00",
-          "date": "2026-11-25",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "departure",
-          "islands": [
-            "沖永良部島"
-          ],
-          "departureLocation": "和泊港",
-          "arrivalLocation": "与論港"
-        },
-        {
-          "label": "下り便 与論港 入港",
-          "time": "11/25 13:40",
-          "date": "2026-11-25",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "arrival",
-          "islands": [
-            "与論島"
-          ],
-          "departureLocation": "和泊港",
-          "arrivalLocation": "与論港"
-        },
-        {
-          "label": "下り便 与論港 出港",
-          "time": "11/25 14:10",
-          "date": "2026-11-25",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "departure",
-          "islands": [
-            "与論島"
-          ],
-          "departureLocation": "与論港",
-          "arrivalLocation": "本部港"
-        },
-        {
-          "label": "下り便 本部港 入港",
-          "time": "11/25 16:40",
-          "date": "2026-11-25",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "arrival",
-          "islands": [],
-          "departureLocation": "与論港",
-          "arrivalLocation": "本部港"
-        },
-        {
-          "label": "下り便 本部港 出港",
-          "time": "11/25 17:10",
-          "date": "2026-11-25",
-          "status": "conditional",
-          "note": "条件付運航",
-          "direction": "departure",
-          "islands": [],
-          "departureLocation": "本部港",
-          "arrivalLocation": "那覇港"
-        },
-        {
-          "label": "下り便 那覇港 入港",
-          "time": "11/25 19:00",
-          "date": "2026-11-25",
-          "status": "normal",
-          "note": "通常運航",
-          "direction": "arrival",
-          "islands": [],
-          "departureLocation": "本部港",
-          "arrivalLocation": "那覇港"
-        },
-        {
-          "label": "上り便 那覇港 出港",
           "time": "11/26 07:00",
           "date": "2026-11-26",
           "status": "normal",
@@ -1997,8 +1701,8 @@
           "label": "下り便 亀徳港 入港",
           "time": "11/27 09:10",
           "date": "2026-11-27",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "conditional",
+          "note": "条件付運航",
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -2010,8 +1714,8 @@
           "label": "下り便 亀徳港 出港",
           "time": "11/27 09:40",
           "date": "2026-11-27",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "conditional",
+          "note": "条件付運航",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -2023,8 +1727,8 @@
           "label": "下り便 和泊港 入港",
           "time": "11/27 11:30",
           "date": "2026-11-27",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "conditional",
+          "note": "条件付運航",
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -2036,8 +1740,8 @@
           "label": "下り便 和泊港 出港",
           "time": "11/27 12:00",
           "date": "2026-11-27",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "conditional",
+          "note": "条件付運航",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -2049,8 +1753,8 @@
           "label": "下り便 与論港 入港",
           "time": "11/27 13:40",
           "date": "2026-11-27",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "conditional",
+          "note": "条件付運航",
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -2062,8 +1766,8 @@
           "label": "下り便 与論港 出港",
           "time": "11/27 14:10",
           "date": "2026-11-27",
-          "status": "normal",
-          "note": "通常運航",
+          "status": "conditional",
+          "note": "条件付運航",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -2112,17 +1816,17 @@
       "routeName": "奄美空港発着（JAL・Peach・スカイマーク他）",
       "mode": "air",
       "hubAirportName": "奄美空港",
-      "status": "delayed",
-      "note": "本日36便中16便に遅延・欠航等があります。",
+      "status": "normal",
+      "note": "本日32便中、欠航はありません。",
       "officialUrl": "https://amami-airport.co.jp/flight/today",
       "departures": [
         {
           "label": "3681便 福岡発",
           "time": "08:20",
           "date": "2026-11-26",
-          "actualTime": "08:35",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "08:20",
+          "status": "normal",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2216,11 +1920,11 @@
         },
         {
           "label": "3721便 鹿児島発",
-          "time": "08:25",
+          "time": "08:30",
           "date": "2026-11-26",
-          "actualTime": "08:25",
+          "actualTime": "08:30",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "到着済み",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2316,9 +2020,9 @@
           "label": "3722便 鹿児島行き",
           "time": "08:50",
           "date": "2026-11-26",
-          "actualTime": "09:00",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "08:50",
+          "status": "normal",
+          "note": "出発済み",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -2360,7 +2064,7 @@
           "date": "2026-11-26",
           "actualTime": "09:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "ゲートへお越し下さい",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2431,27 +2135,13 @@
           "date": "2026-11-26",
           "actualTime": "10:05",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島",
             "徳之島"
           ],
           "departureLocation": "徳之島空港",
-          "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "545便 成田発",
-          "time": "10:05",
-          "date": "2026-11-26",
-          "actualTime": "10:29",
-          "status": "delayed",
-          "note": "営業開始時間前",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "departureLocation": "成田空港",
           "arrivalLocation": "奄美空港"
         },
         {
@@ -2718,7 +2408,7 @@
           "date": "2026-11-26",
           "actualTime": "10:30",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -2818,20 +2508,6 @@
           "arrivalLocation": "奄美空港"
         },
         {
-          "label": "546便 成田行き",
-          "time": "10:45",
-          "date": "2026-11-26",
-          "actualTime": "11:05",
-          "status": "delayed",
-          "note": "営業開始時間前",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "成田空港"
-        },
-        {
           "label": "APJ便 成田行き（予定）",
           "time": "10:45",
           "date": "2026-12-01",
@@ -2893,7 +2569,7 @@
           "date": "2026-11-26",
           "actualTime": "10:55",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2934,11 +2610,11 @@
         },
         {
           "label": "3861便 与論行き",
-          "time": "11:10",
+          "time": "11:05",
           "date": "2026-11-26",
-          "actualTime": "11:10",
+          "actualTime": "11:05",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -2953,7 +2629,7 @@
           "date": "2026-11-26",
           "actualTime": "11:15",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -2967,7 +2643,7 @@
           "date": "2026-11-26",
           "actualTime": "11:15",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3147,9 +2823,9 @@
           "label": "2465便 大阪(伊丹)発",
           "time": "11:25",
           "date": "2026-11-26",
-          "actualTime": "11:45",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "11:25",
+          "status": "normal",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3307,7 +2983,7 @@
           "date": "2026-11-26",
           "actualTime": "11:45",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3347,9 +3023,9 @@
           "label": "382便 鹿児島行き",
           "time": "11:55",
           "date": "2026-11-26",
-          "actualTime": "12:15",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "11:55",
+          "status": "normal",
+          "note": "定刻",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3445,9 +3121,9 @@
           "label": "2464便 大阪(伊丹)行き",
           "time": "12:05",
           "date": "2026-11-26",
-          "actualTime": "12:25",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "12:05",
+          "status": "normal",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3543,9 +3219,9 @@
           "label": "3729便 鹿児島発",
           "time": "12:45",
           "date": "2026-11-26",
-          "actualTime": "13:00",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "12:45",
+          "status": "normal",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3697,9 +3373,9 @@
           "label": "3728便 鹿児島行き",
           "time": "13:15",
           "date": "2026-11-26",
-          "actualTime": "13:25",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "13:15",
+          "status": "normal",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -3795,9 +3471,9 @@
           "label": "659便 東京(羽田)発",
           "time": "13:40",
           "date": "2026-11-26",
-          "actualTime": "14:20",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "13:40",
+          "status": "normal",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -3949,9 +3625,9 @@
           "label": "3731便 鹿児島発",
           "time": "14:10",
           "date": "2026-11-26",
-          "actualTime": "14:30",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "14:10",
+          "status": "normal",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4047,9 +3723,9 @@
           "label": "658便 東京(羽田)行き",
           "time": "14:25",
           "date": "2026-11-26",
-          "actualTime": "14:55",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "14:25",
+          "status": "normal",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4084,20 +3760,6 @@
           "isScheduled": true,
           "departureLocation": "奄美空港",
           "arrivalLocation": "羽田空港"
-        },
-        {
-          "label": "203便 大阪(関西)発",
-          "time": "14:35",
-          "date": "2026-11-26",
-          "actualTime": "14:54",
-          "status": "delayed",
-          "note": "営業開始時間前",
-          "direction": "arrival",
-          "islands": [
-            "奄美大島"
-          ],
-          "departureLocation": "関西空港",
-          "arrivalLocation": "奄美空港"
         },
         {
           "label": "0203便 大阪(関西)発（予定）",
@@ -4187,9 +3849,9 @@
           "label": "3730便 鹿児島行き",
           "time": "14:40",
           "date": "2026-11-26",
-          "actualTime": "15:00",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "14:40",
+          "status": "normal",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4227,11 +3889,11 @@
         },
         {
           "label": "3867便 沖縄(那覇)発",
-          "time": "14:45",
+          "time": "14:50",
           "date": "2026-11-26",
-          "actualTime": "14:45",
+          "actualTime": "14:50",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4322,20 +3984,6 @@
           "isScheduled": true,
           "departureLocation": "那覇空港",
           "arrivalLocation": "奄美空港"
-        },
-        {
-          "label": "202便 大阪(関西)行き",
-          "time": "15:15",
-          "date": "2026-11-26",
-          "actualTime": "15:30",
-          "status": "delayed",
-          "note": "営業開始時間前",
-          "direction": "departure",
-          "islands": [
-            "奄美大島"
-          ],
-          "departureLocation": "奄美空港",
-          "arrivalLocation": "関西空港"
         },
         {
           "label": "APJ便 大阪(関西)行き（予定）",
@@ -4427,7 +4075,7 @@
           "date": "2026-11-26",
           "actualTime": "15:40",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -4610,7 +4258,7 @@
           "date": "2026-11-26",
           "actualTime": "16:50",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4715,7 +4363,7 @@
           "date": "2026-11-26",
           "actualTime": "17:15",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島",
@@ -4820,7 +4468,7 @@
           "date": "2026-11-26",
           "actualTime": "17:30",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -4862,7 +4510,7 @@
           "date": "2026-11-26",
           "actualTime": "17:35",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -4960,7 +4608,7 @@
           "date": "2026-11-26",
           "actualTime": "17:50",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5058,7 +4706,7 @@
           "date": "2026-11-26",
           "actualTime": "17:55",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島",
@@ -5071,9 +4719,9 @@
           "label": "388便 鹿児島行き",
           "time": "18:15",
           "date": "2026-11-26",
-          "actualTime": "19:05",
-          "status": "delayed",
-          "note": "営業開始時間前",
+          "actualTime": "18:15",
+          "status": "normal",
+          "note": "定刻",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5115,7 +4763,7 @@
           "date": "2026-11-26",
           "actualTime": "18:20",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5157,7 +4805,7 @@
           "date": "2026-11-26",
           "actualTime": "18:30",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "定刻",
           "direction": "arrival",
           "islands": [
             "奄美大島"
@@ -5311,7 +4959,7 @@
           "date": "2026-11-26",
           "actualTime": "19:00",
           "status": "normal",
-          "note": "営業開始時間前",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "奄美大島"
@@ -5383,8 +5031,8 @@
       "routeName": "鹿児島空港発着（JAL・JAC他）",
       "mode": "air",
       "hubAirportName": "鹿児島空港",
-      "status": "delayed",
-      "note": "本日18便中8便に遅延・欠航等があります。",
+      "status": "normal",
+      "note": "本日18便中、欠航はありません。",
       "officialUrl": "https://www.koj-ab.co.jp/flight/today-dom-departure.html",
       "departures": [
         {
@@ -5446,9 +5094,9 @@
         {
           "label": "3780便 喜界島発",
           "time": "10:25",
-          "actualTime": "10:35",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "10:25",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "喜界島"
@@ -5460,9 +5108,9 @@
         {
           "label": "3800便 沖永良部発",
           "time": "10:35",
-          "actualTime": "10:45",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "10:35",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -5474,9 +5122,9 @@
         {
           "label": "3825便 与論行き",
           "time": "11:15",
-          "actualTime": "11:25",
-          "status": "delayed",
-          "note": "出発済み",
+          "actualTime": "11:15",
+          "status": "normal",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "与論島"
@@ -5488,9 +5136,9 @@
         {
           "label": "3792便 徳之島発",
           "time": "11:15",
-          "actualTime": "11:25",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "11:15",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5504,7 +5152,7 @@
           "time": "13:00",
           "actualTime": "13:00",
           "status": "normal",
-          "note": "出発済み",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5518,7 +5166,7 @@
           "time": "13:50",
           "actualTime": "13:50",
           "status": "normal",
-          "note": "出発済み",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "喜界島"
@@ -5530,9 +5178,9 @@
         {
           "label": "3826便 与論発",
           "time": "14:45",
-          "actualTime": "14:50",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "14:45",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "与論島"
@@ -5546,7 +5194,7 @@
           "time": "15:00",
           "actualTime": "15:00",
           "status": "normal",
-          "note": "出発済み",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "沖永良部島"
@@ -5560,7 +5208,7 @@
           "time": "16:15",
           "actualTime": "16:15",
           "status": "normal",
-          "note": "出発済み",
+          "note": "搭乗手続き受付中",
           "direction": "departure",
           "islands": [
             "徳之島"
@@ -5572,9 +5220,9 @@
         {
           "label": "3794便 徳之島発",
           "time": "16:15",
-          "actualTime": "16:30",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "16:15",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5586,9 +5234,9 @@
         {
           "label": "3786便 喜界島発",
           "time": "16:35",
-          "actualTime": "16:40",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "16:35",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "喜界島"
@@ -5602,7 +5250,7 @@
           "time": "18:10",
           "actualTime": "18:10",
           "status": "normal",
-          "note": "到着済み",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "沖永良部島"
@@ -5616,7 +5264,7 @@
           "time": "18:40",
           "actualTime": "18:40",
           "status": "normal",
-          "note": "到着済み",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5628,9 +5276,9 @@
         {
           "label": "3798便 徳之島発",
           "time": "20:10",
-          "actualTime": "20:00",
-          "status": "delayed",
-          "note": "到着済み",
+          "actualTime": "20:10",
+          "status": "normal",
+          "note": null,
           "direction": "arrival",
           "islands": [
             "徳之島"
@@ -5647,10 +5295,81 @@
       "routeName": "那覇空港発着（JAL・JTA他）",
       "mode": "air",
       "hubAirportName": "那覇空港",
-      "status": "unknown",
-      "note": "取得に失敗しました。公式サイトでご確認ください。",
+      "status": "normal",
+      "note": "本日5便中、欠航はありません。",
       "officialUrl": "https://www.naha-airport.co.jp/flight/today/",
-      "departures": []
+      "departures": [
+        {
+          "label": "3866便 与論発",
+          "time": "13:10",
+          "actualTime": "13:10",
+          "status": "normal",
+          "note": null,
+          "direction": "arrival",
+          "islands": [
+            "与論島"
+          ],
+          "departureLocation": "与論空港",
+          "arrivalLocation": "那覇空港",
+          "date": "2026-11-26"
+        },
+        {
+          "label": "0815便 与論行き",
+          "time": "13:15",
+          "actualTime": "13:15",
+          "status": "normal",
+          "note": "バス搭乗",
+          "direction": "departure",
+          "islands": [
+            "与論島"
+          ],
+          "departureLocation": "那覇空港",
+          "arrivalLocation": "与論空港",
+          "date": "2026-11-26"
+        },
+        {
+          "label": "3716便 沖永良部発",
+          "time": "13:50",
+          "actualTime": "13:50",
+          "status": "normal",
+          "note": null,
+          "direction": "arrival",
+          "islands": [
+            "沖永良部島"
+          ],
+          "departureLocation": "沖永良部空港",
+          "arrivalLocation": "那覇空港",
+          "date": "2026-11-26"
+        },
+        {
+          "label": "3715便 沖永良部行き",
+          "time": "14:35",
+          "actualTime": "14:35",
+          "status": "normal",
+          "note": "バス搭乗",
+          "direction": "departure",
+          "islands": [
+            "沖永良部島"
+          ],
+          "departureLocation": "那覇空港",
+          "arrivalLocation": "沖永良部空港",
+          "date": "2026-11-26"
+        },
+        {
+          "label": "0816便 与論発",
+          "time": "15:00",
+          "actualTime": "15:00",
+          "status": "normal",
+          "note": null,
+          "direction": "arrival",
+          "islands": [
+            "与論島"
+          ],
+          "departureLocation": "与論空港",
+          "arrivalLocation": "那覇空港",
+          "date": "2026-11-26"
+        }
+      ]
     },
     {
       "id": "aline_cargo_琉球エキスプレス５",
